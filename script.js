@@ -180,7 +180,6 @@ const numbersSection = document.querySelector('.numbers-grid');
 if (numbersSection) {
     numberObserver.observe(numbersSection);
 }
-
 // Gestion du mode sombre
 function initDarkMode() {
     const themeToggle = document.querySelector('.theme-toggle');
