@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,7 +22,7 @@
             </div>
             <div class="nav-content">
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="index.php" class="active">Accueil</a></li>
                     <li class="dropdown">
                         <a href="#" onclick="return false;">L'établissement</a>
                         <ul class="dropdown-menu">
@@ -53,7 +52,7 @@
                     <li><a href="#actualites">Actualités</a></li>
                     <li><a href="#ufa">UFA</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="vie-lyceenne.html">MBN</a></li>
+                    <li><a href="vie-lyceenne.php">Vie Lycéenne</a></li>
                 </ul>
                 <button class="menu-btn">
                     <span></span>
@@ -124,7 +123,7 @@
         <section id="vie-lyceenne" class="vie-lycee-section">
             <div class="container">
                 <div class="buttons-grid">
-                    <a href="vie-lyceenne.html" class="info-button">
+                    <a href="vie-lyceenne.php" class="info-button">
                         <i class="fas fa-school"></i>
                         <span>La vie au lycée</span>
                         <p class="button-subtitle">MDL, CVL, Internat, Restauration, CDI...</p>

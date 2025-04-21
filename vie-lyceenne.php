@@ -21,36 +21,37 @@
             </div>
             <div class="nav-content">
                 <ul class="nav-links">
-                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.php">Accueil</a></li>
                     <li class="dropdown">
-                        <a href="#">L'établissement</a>
+                        <a href="#" onclick="return false;">L'établissement</a>
                         <ul class="dropdown-menu">
-                            <li><a href="presentation.html">Présentation</a></li>
-                            <li><a href="equipe.html">L'équipe</a></li>
-                            <li><a href="infrastructures.html">Nos infrastructures</a></li>
+                            <li><a href="index.php#contact">Présentation</a></li>
+                            <li><a href="index.php#contact">L'équipe</a></li>
+                            <li><a href="index.php#vie-lyceenne">Nos infrastructures</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="formations.html">Nos formations</a>
+                        <a href="index.php#formations">Nos formations</a>
                         <ul class="dropdown-menu">
-                            <li><a href="formations.html#general">Enseignement général & technologique</a></li>
-                            <li><a href="formations.html#professionnel">Enseignement Professionnel</a></li>
-                            <li><a href="formations.html#superieur">Enseignement supérieur</a></li>
-                            <li><a href="formations.html#apprentissage">Apprentissage</a></li>
-                            <li><a href="formations.html#orientation">Orientation</a></li>
+                            <li><a href="index.php#general">Enseignement général & technologique</a></li>
+                            <li><a href="index.php#industrie">Enseignement Professionnel</a></li>
+                            <li><a href="index.php#industrie">Enseignement supérieur</a></li>
+                            <li><a href="index.php#industrie">Apprentissage</a></li>
+                            <li><a href="index.php#contact">Orientation</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#">Espace pour les professionnels</a>
+                        <a href="#" onclick="return false;">Espace pour les professionnels</a>
                         <ul class="dropdown-menu">
-                            <li><a href="stages.html">Stages</a></li>
-                            <li><a href="alternance.html">Alternance</a></li>
-                            <li><a href="partenariats.html">Partenariats</a></li>
+                            <li><a href="index.php#contact">Stages</a></li>
+                            <li><a href="index.php#contact">Alternance</a></li>
+                            <li><a href="index.php#contact">Partenariats</a></li>
                         </ul>
                     </li>
-                    <li><a href="actualites.html">Actualités</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="mbn.html">MBN</a></li>
+                    <li><a href="index.php#actualites">Actualités</a></li>
+                    <li><a href="index.php#ufa">UFA</a></li>
+                    <li><a href="index.php#contact">Contact</a></li>
+                    <li><a href="vie-lyceenne.php" class="active">Vie Lycéenne</a></li>
                 </ul>
                 <button class="menu-btn">
                     <span></span>
@@ -63,7 +64,7 @@
 
     <main>
         <!-- Ajout du bouton retour -->
-        <a href="index.html" class="back-home">
+        <a href="index.php" class="back-home">
             <i class="fas fa-arrow-left"></i>
             <span>Retour à l'accueil</span>
         </a>
