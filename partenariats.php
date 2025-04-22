@@ -178,8 +178,8 @@
                     <h3>BTS TC</h3>
                     <div class="partenaires-grid">
                         <div class="partenaire-card">
-                            <div class="logo-container">
-                                <img src="images/partenaires/aere-logo.png" alt="AERE" class="partenaire-logo">
+                            <div class="logo-container icon-only">
+                                <i class="fas fa-industry icon-main"></i>
                             </div>
                             <div class="partenaire-content">
                                 <h4>« AERE » à Habsheim</h4>
@@ -187,8 +187,8 @@
                         </div>
                         
                         <div class="partenaire-card">
-                            <div class="logo-container">
-                                <img src="images/partenaires/baltzinger-logo.png" alt="BALTZINGER" class="partenaire-logo">
+                            <div class="logo-container icon-only">
+                                <i class="fas fa-tools icon-main"></i>
                             </div>
                             <div class="partenaire-content">
                                 <h4>« BALTZINGER » à Saint-Louis et Illzach</h4>
@@ -198,12 +198,12 @@
                     
                     <h3>Pass ingénieur, un enseignement d'exploration de 2de</h3>
                     <div class="partenaires-grid">
-                        <div class="partenaire-card">
-                            <div class="logo-container">
+                        <div class="partenaire-card sdis-card">
+                            <div class="logo-container full-image sdis-image">
                                 <img src="images/logos/le-commandant-alain-bettinger-(a-g-)-et-le-capitaine-gilles-higelin-du-centre-de-secours-principal-de-saint-louis-sont-fiers-du-travail-accompli-par-leurs-equipes-photo-l-alsace-nadine-muller-1617785636.jpg" alt="SDIS de ST LOUIS" class="partenaire-logo">
-                            </div>
-                            <div class="partenaire-content">
-                                <h4>« SDIS de ST LOUIS », sauveteurs nautiques</h4>
+                                <div class="sdis-overlay">
+                                    <h4>« SDIS de ST LOUIS », sauveteurs nautiques</h4>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -214,7 +214,7 @@
                     <h2>Nos partenaires « projet/stage »</h2>
                     <div class="partenaires-grid">
                         <div class="partenaire-card">
-                            <div class="logo-container">
+                            <div class="logo-container full-image">
                                 <img src="images/logos/Endress+Hauser_Logo.jpg" alt="ENDRESS+HAUSER" class="partenaire-logo">
                             </div>
                             <div class="partenaire-content">
@@ -224,7 +224,7 @@
                         </div>
                         
                         <div class="partenaire-card">
-                            <div class="logo-container">
+                            <div class="logo-container full-image">
                                 <img src="images/logos/S0-diesel-psa-peugeot-citroen-propose-sa-solution-a-l-europe-107370.jpg" alt="PSA Peugeot-Citroen" class="partenaire-logo">
                             </div>
                             <div class="partenaire-content">

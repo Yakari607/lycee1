@@ -255,7 +255,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 180px;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Conteneur avec icône seulement */
+.logo-container.icon-only {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    padding: 0;
+}
+
+/* Icône principale (remplace l'image) */
+.icon-main {
+    font-size: 5rem;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.partenaire-card:hover .icon-main {
+    transform: scale(1.2);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Conteneur avec image plein écran */
+.logo-container.full-image {
+    padding: 0;
+    height: 250px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.full-image .partenaire-logo {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .partenaire-card.small .logo-container {
@@ -270,6 +304,41 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    width: 90%;
+    height: 90%;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.partenaire-card:hover .partenaire-logo {
+    transform: scale(1.05);
+}
+
+/* Icône superposée */
+.icon-overlay {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.partenaire-card:hover .icon-overlay {
+    opacity: 1;
+    color: var(--accent-color);
+    transform: rotate(15deg);
+}
+
+/* Dark mode ajustement pour les icônes */
+[data-theme="dark"] .icon-overlay {
+    background-color: rgba(30, 30, 30, 0.8);
+    color: var(--accent-color);
 }
 
 .partenaire-content {
@@ -420,6 +489,24 @@
     border: 1px solid var(--border-color);
 }
 
+/* Ajustement spécifique pour les logos des partenaires de projet/stage */
+.partenaires-section h2 + .partenaires-grid .logo-container.full-image {
+    height: 280px;
+}
+
+/* Optimisation pour mieux afficher les logos des partenaires */
+.partenaire-card .logo-container img {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mode sombre pour les images */
+[data-theme="dark"] .partenaire-card .logo-container img {
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
 /* Media Queries */
 @media (max-width: 992px) {
     .partenariat-hero {
@@ -534,5 +621,78 @@
     
     .large-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Styles spécifiques pour la carte SDIS */
+.sdis-card {
+    background: none;
+    box-shadow: none;
+}
+
+.sdis-card .logo-container.sdis-image {
+    height: 400px;
+    padding: 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sdis-card .partenaire-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.sdis-card:hover .partenaire-logo {
+    transform: scale(1.05);
+}
+
+.sdis-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 2rem 1.5rem;
+    color: white;
+}
+
+.sdis-overlay h4 {
+    color: white;
+    font-size: 1.4rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Ajustements pour le mode sombre */
+[data-theme="dark"] .sdis-card .logo-container.sdis-image {
+    border: 1px solid var(--border-color);
+}
+
+/* Media Queries pour SDIS */
+@media (max-width: 768px) {
+    .sdis-card .logo-container.sdis-image {
+        height: 300px;
+    }
+    
+    .sdis-overlay h4 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .sdis-card .logo-container.sdis-image {
+        height: 250px;
+    }
+    
+    .sdis-overlay {
+        padding: 1.5rem 1rem;
+    }
+    
+    .sdis-overlay h4 {
+        font-size: 1.1rem;
     }
 } 
