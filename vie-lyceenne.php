@@ -128,7 +128,7 @@
                             <span class="news-tag">Service</span>
                             <h3>Le restaurant scolaire</h3>
                             <p>Une restauration de qualité avec des menus équilibrés et variés. Notre équipe de restauration s'engage à vous proposer des repas sains et savoureux.</p>
-                            <a href="#" class="read-more">En savoir plus</a>
+                            <a href="restaurant-scolaire.php" class="read-more">En savoir plus</a>
                         </div>
                     </article>
 
