@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La vie au lycée - Lycée Jean Mermoz</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="vie-lyceenne.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages/vie-lyceenne.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -13,8 +13,8 @@
     <nav class="main-nav">
         <div class="nav-container">
             <div class="logo">
-                <img src="images/Logo_de_la_République_française_(1999).svg.png" alt="Logo République Française" class="logo-rf">
-                <img src="images/LOGO-UFA-MERMOZ-1.jpg" alt="Logo UFA Jean-Mermoz" class="logo-ufa">
+                <img src="images/logos/Logo_de_la_République_française_(1999).svg.png" alt="Logo République Française" class="logo-rf">
+                <img src="images/logos/LOGO-UFA-MERMOZ-1.jpg" alt="Logo UFA Jean-Mermoz" class="logo-ufa">
                 <div class="logo-text">
                     <h1>Lycée Jean-Mermoz</h1>
                     <span class="slogan">Excellence et Innovation</span>
@@ -83,7 +83,7 @@
                     <!-- UNSS -->
                     <article class="news-card">
                         <div class="news-image">
-                            <img src="images/sport-_choisir_header_light.jpg" alt="UNSS">
+                            <img src="images/activites/sport-_choisir_header_light.jpg" alt="UNSS">
                         </div>
                         <div class="news-content">
                             <span class="news-tag">Sport</span>
@@ -96,7 +96,7 @@
                     <!-- Club Cinéma -->
                     <article class="news-card">
                         <div class="news-image">
-                            <img src="images/sala-cine.jpg" alt="Club Cinéma">
+                            <img src="images/activites/sala-cine.jpg" alt="Club Cinéma">
                         </div>
                         <div class="news-content">
                             <span class="news-tag">Culture</span>
@@ -109,7 +109,7 @@
                     <!-- Café des langues -->
                     <article class="news-card"> 
                         <div class="news-image">
-                            <img src="images/cafe-bienfaits-inconvenients-6.jpg" alt="Café des langues">
+                            <img src="images/activites/cafe-bienfaits-inconvenients-6.jpg" alt="Café des langues">
                         </div>
                         <div class="news-content">
                             <span class="news-tag">Langues</span>
@@ -122,7 +122,7 @@
                     <!-- Restaurant scolaire -->
                     <article class="news-card">
                         <div class="news-image">
-                            <img src="images/Restauration-scolaire.png" alt="Restaurant scolaire">
+                            <img src="images/activites/Restauration-scolaire.png" alt="Restaurant scolaire">
                         </div>
                         <div class="news-content">
                             <span class="news-tag">Service</span>
@@ -135,7 +135,7 @@
                     <!-- Internat -->
                     <article class="news-card">
                         <div class="news-image">
-                            <img src="images/-tablissement-internat-guez-balzac-17224.jpg" alt="L'internat">
+                            <img src="images/activites/-tablissement-internat-guez-balzac-17224.jpg" alt="L'internat">
                         </div>
                         <div class="news-content">
                             <span class="news-tag">Hébergement</span>
@@ -154,7 +154,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-info">
-                    <img src="images/LOGO-UFA-MERMOZ-1.jpg" alt="Logo UFA Jean-Mermoz" class="footer-logo">
+                    <img src="images/logos/LOGO-UFA-MERMOZ-1.jpg" alt="Logo UFA Jean-Mermoz" class="footer-logo">
                     <p>&copy; 2024 Lycée Jean Mermoz - Saint-Louis</p>
                 </div>
                 <div class="footer-links">
@@ -170,6 +170,6 @@
         <i class="fas fa-moon"></i>
     </button>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

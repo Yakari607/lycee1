@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lycée Jean Mermoz - Saint-Louis</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages/index.css">
     <!-- Font Awesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -14,8 +14,8 @@
     <nav class="main-nav">
         <div class="nav-container">
             <div class="logo">
-                <img src="images/Logo_de_la_République_française_(1999).svg.png" alt="Logo République Française" class="logo-rf">
-                <img src="images/LOGO-UFA-MERMOZ-1.jpg" alt="Logo UFA Jean-Mermoz" class="logo-ufa">
+                <img src="images/logos/Logo_de_la_République_française_(1999).svg.png" alt="Logo République Française" class="logo-rf">
+                <img src="images/logos/LOGO-UFA-MERMOZ-1.jpg" alt="Logo UFA Jean-Mermoz" class="logo-ufa">
                 <div class="logo-text">
                     <h1>Lycée Jean-Mermoz</h1>
                     <span class="slogan">Excellence et Innovation</span>
@@ -100,7 +100,7 @@
                         </article>
                         <article class="news-card">
                             <div class="news-image">
-                                <img src="images/c-est-la-rentree-ce-lundi-au-lycee-jean-mermoz-de-saint-louis-avec-une-17e-classe-de-seconde-qui-vient-s-ajouter-a-des-effectifs-consequents-qui-font-du-lycee-ludovicien-le-plus-grand-d-alsace-photo-l-alsace-1567245623.jpg" alt="Journée Portes Ouvertes">
+                                <img src="images/batiments/c-est-la-rentree-ce-lundi-au-lycee-jean-mermoz-de-saint-louis-avec-une-17e-classe-de-seconde-qui-vient-s-ajouter-a-des-effectifs-consequents-qui-font-du-lycee-ludovicien-le-plus-grand-d-alsace-photo-l-alsace-1567245623.jpg" alt="Journée Portes Ouvertes">
                                 <div class="news-date">
                                     <time datetime="2024-01-03">3 janvier 2024</time>
                                 </div>
@@ -144,7 +144,7 @@
         </section>
 
         <!-- Section Formations -->
-        <section id="formations" class="formations-section">
+        <section id="formations" class="filiere-section industrie-section">
             <div class="container">
                 <h2 class="section-title">Nos filières</h2>
                 
@@ -671,7 +671,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-info">
-                    <img src="images/LOGO-UFA-MERMOZ-1.jpg" alt="Logo UFA Jean-Mermoz" class="footer-logo">
+                    <img src="images/logos/LOGO-UFA-MERMOZ-1.jpg" alt="Logo UFA Jean-Mermoz" class="footer-logo">
                     <p>&copy; 2024 Lycée Jean Mermoz - Saint-Louis</p>
                 </div>
                 <div class="footer-links">
@@ -687,6 +687,6 @@
         <i class="fas fa-moon"></i>
     </button>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

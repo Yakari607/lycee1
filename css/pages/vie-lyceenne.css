@@ -3,7 +3,7 @@
 /* Hero section */
 .vie-lyceenne-hero {
     height: 300px;
-    background: linear-gradient(rgba(0, 0, 145, 0.7), rgba(0, 0, 145, 0.8)), url('images/c-est-la-rentree-ce-lundi-au-lycee-jean-mermoz-de-saint-louis-avec-une-17e-classe-de-seconde-qui-vient-s-ajouter-a-des-effectifs-consequents-qui-font-du-lycee-ludovicien-le-plus-grand-d-alsace-photo-l-alsace-1567245623.jpg');
+    background: linear-gradient(rgba(0, 0, 145, 0.7), rgba(0, 0, 145, 0.8)), url('../../images/batiments/c-est-la-rentree-ce-lundi-au-lycee-jean-mermoz-de-saint-louis-avec-une-17e-classe-de-seconde-qui-vient-s-ajouter-a-des-effectifs-consequents-qui-font-du-lycee-ludovicien-le-plus-grand-d-alsace-photo-l-alsace-1567245623.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
