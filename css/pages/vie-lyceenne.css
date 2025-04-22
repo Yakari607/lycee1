@@ -3,7 +3,7 @@
 /* Hero section */
 .vie-lyceenne-hero {
     height: 300px;
-    background: linear-gradient(rgba(0, 0, 145, 0.7), rgba(0, 0, 145, 0.8)), url('../../images/batiments/c-est-la-rentree-ce-lundi-au-lycee-jean-mermoz-de-saint-louis-avec-une-17e-classe-de-seconde-qui-vient-s-ajouter-a-des-effectifs-consequents-qui-font-du-lycee-ludovicien-le-plus-grand-d-alsace-photo-l-alsace-1567245623.jpg');
+    background: url('../../images/batiments/c-est-la-rentree-ce-lundi-au-lycee-jean-mermoz-de-saint-louis-avec-une-17e-classe-de-seconde-qui-vient-s-ajouter-a-des-effectifs-consequents-qui-font-du-lycee-ludovicien-le-plus-grand-d-alsace-photo-l-alsace-1567245623.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -21,7 +21,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5));
 }
 
 .vie-lyceenne-hero .hero-content {
@@ -152,6 +152,11 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1.5rem;
     }
+    
+    .back-home {
+        top: 90px;
+        left: 15px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -187,8 +192,10 @@
     /* Back button responsive */
     .back-home {
         padding: 0.6rem 1.2rem;
-        margin: 1.5rem;
+        margin: 1rem;
         font-size: 0.9rem;
+        top: 80px;
+        left: 10px;
     }
     
     .back-home i {
@@ -199,11 +206,13 @@
 @media (max-width: 576px) {
     /* Hero section for small devices */
     .vie-lyceenne-hero {
-        height: 220px;
+        height: 200px;
+        margin-top: 60px;
     }
     
     .vie-lyceenne-hero h1 {
         font-size: 1.8rem;
+        margin-bottom: 0.5rem;
     }
     
     .vie-lyceenne-hero p {
@@ -212,7 +221,7 @@
     
     /* Activities section for small devices */
     .activities-section {
-        padding: 1.5rem 1rem;
+        padding: 1.5rem 0.75rem;
     }
     
     .activities-section .news-card {
@@ -235,7 +244,19 @@
     /* Back button for small devices */
     .back-home {
         padding: 0.5rem 1rem;
-        margin: 1rem;
+        margin: 0.75rem;
         font-size: 0.85rem;
+        top: 70px;
+        left: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .back-home span {
+        display: none; /* Cacher le texte sur très petits écrans */
+    }
+    
+    .back-home i {
+        margin-right: 0;
+        font-size: 1rem;
     }
 } 

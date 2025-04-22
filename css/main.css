@@ -470,7 +470,7 @@ body {
 .hero {
     position: relative;
     height: 60vh;
-    background: url('images/c-est-la-rentree-ce-lundi-au-lycee-jean-mermoz-de-saint-louis-avec-une-17e-classe-de-seconde-qui-vient-s-ajouter-a-des-effectifs-consequents-qui-font-du-lycee-ludovicien-le-plus-grand-d-alsace-photo-l-alsace-1567245623.jpg') no-repeat center center;
+    background: url('../images/batiments/c-est-la-rentree-ce-lundi-au-lycee-jean-mermoz-de-saint-louis-avec-une-17e-classe-de-seconde-qui-vient-s-ajouter-a-des-effectifs-consequents-qui-font-du-lycee-ludovicien-le-plus-grand-d-alsace-photo-l-alsace-1567245623.jpg') no-repeat center center;
     background-size: cover;
     color: var(--white);
     display: flex;
@@ -572,6 +572,43 @@ body {
     .cta-button {
         width: 80%;
         text-align: center;
+    }
+
+    /* Ajustement des actualités sur mobile */
+    .news-grid {
+        flex-wrap: nowrap;
+        padding: 15px 30px;
+    }
+    
+    .news-card {
+        flex: 0 0 calc(100% - 20px);
+        max-width: calc(100% - 20px);
+        min-width: calc(100% - 20px);
+        max-height: 420px; /* Hauteur maximale réduite */
+        overflow: hidden;
+    }
+    
+    .news-image {
+        height: 180px; /* Hauteur d'image réduite */
+    }
+    
+    .news-content {
+        padding: 15px; /* Padding réduit */
+    }
+    
+    .news-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .news-content p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 0.5rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Limite à 3 lignes */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 }
 
@@ -1603,4 +1640,67 @@ body {
 
 .ufa-card.highlight .ufa-list li::before {
     color: rgba(255, 255, 255, 0.9);
+}
+
+/* Styles pour les onglets de filières */
+.filiere-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.filiere-filter a {
+    padding: 10px 15px;
+    background-color: var(--white);
+    color: var(--text-color);
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.filiere-filter a:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filiere-filter a.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .filiere-filter a {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .filiere-filter a:hover,
+[data-theme="dark"] .filiere-filter a.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .filiere-filter {
+        gap: 8px;
+        overflow-x: auto;
+        padding: 0.5rem;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+    }
+    
+    .filiere-filter a {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
 } 

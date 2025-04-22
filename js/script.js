@@ -247,7 +247,10 @@ function initFormationTabs() {
     }
 
     navButtons.forEach(button => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (e) => {
+            // Empêcher le comportement de lien par défaut
+            e.preventDefault();
+            
             // Retirer la classe active de tous les boutons
             navButtons.forEach(btn => btn.classList.remove('active'));
             
@@ -259,13 +262,20 @@ function initFormationTabs() {
             showBlock(targetSection);
 
             // Faire défiler jusqu'à la section
-            const formationsSection = document.querySelector('.formations-section');
-            formationsSection.scrollIntoView({ behavior: 'smooth' });
+            const formationsSection = document.querySelector('.filiere-section');
+            if (formationsSection) {
+                formationsSection.scrollIntoView({ behavior: 'smooth' });
+            }
         });
     });
 
-    // Initialiser l'affichage du premier bloc si aucun n'est actif
-    if (!document.querySelector('.formation-block.active') && navButtons.length > 0) {
+    // Initialiser l'affichage du bon bloc selon le bouton actif
+    const activeButton = document.querySelector('.formation-nav-btn.active');
+    if (activeButton) {
+        const targetSection = activeButton.dataset.section;
+        showBlock(targetSection);
+    } else if (navButtons.length > 0) {
+        // Fallback sur le premier bouton si aucun n'est actif
         const firstButton = navButtons[0];
         firstButton.classList.add('active');
         const targetSection = firstButton.dataset.section;

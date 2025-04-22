@@ -149,18 +149,18 @@
                 <h2 class="section-title">Nos filières</h2>
                 
                 <!-- Navigation des formations -->
-                <div class="formations-nav">
-                    <button class="formation-nav-btn active" data-section="seconde">Classe de Seconde</button>
-                    <button class="formation-nav-btn" data-section="general">Voie Générale</button>
-                    <button class="formation-nav-btn" data-section="langues">Langues Vivantes</button>
-                    <button class="formation-nav-btn" data-section="industrie">Métiers de l'Industrie</button>
-                    <button class="formation-nav-btn" data-section="tertiaire">Métiers du Tertiaire</button>
-                    <button class="formation-nav-btn" data-section="artisanat">Artisanat</button>
-                    <button class="formation-nav-btn" data-section="services">Services aux Personnes</button>
+                <div class="filiere-filter formations-nav">
+                    <a href="#seconde" class="formation-nav-btn" data-section="seconde">Classe de Seconde</a>
+                    <a href="#general" class="formation-nav-btn active" data-section="general">Voie Générale</a>
+                    <a href="#langues" class="formation-nav-btn" data-section="langues">Langues Vivantes</a>
+                    <a href="#industrie" class="formation-nav-btn" data-section="industrie">Métiers de l'Industrie</a>
+                    <a href="#tertiaire" class="formation-nav-btn" data-section="tertiaire">Métiers du Tertiaire</a>
+                    <a href="#artisanat" class="formation-nav-btn" data-section="artisanat">Artisanat</a>
+                    <a href="#services" class="formation-nav-btn" data-section="services">Services aux Personnes</a>
                 </div>
 
                 <!-- Classe de Seconde -->
-                <div class="formation-block active" id="seconde">
+                <div class="formation-block" id="seconde">
                     <div class="formation-header">
                         <h3>Classe de Seconde</h3>
                         <p class="formation-intro">Une année pour découvrir et choisir son orientation</p>
@@ -219,7 +219,7 @@
                 </div>
 
                 <!-- Voie Générale -->
-                <div class="formation-block" id="general">
+                <div class="formation-block active" id="general">
                     <div class="formation-header">
                         <h3>Formations Générales et Technologiques</h3>
                         <p class="formation-intro">Préparez votre avenir avec nos filières d'excellence</p>
