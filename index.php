@@ -134,7 +134,7 @@
                         <span>Formations</span>
                         <p class="button-subtitle">Générale, Technologique, Professionnelle</p>
                     </a>
-                    <a href="#contact" class="info-button">
+                    <a href="partenariats.php" class="info-button">
                         <i class="fas fa-handshake"></i>
                         <span>Nos partenaires</span>
                         <p class="button-subtitle">Entreprises, Institutions, International</p>

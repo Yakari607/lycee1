@@ -194,8 +194,7 @@
                         <div class="info-card">
                             <i class="fas fa-user-plus"></i>
                             <h3>Inscription</h3>
-                            <p>Inscriptions en ligne ou auprès de l'intendance.</p>
-                            <a href="#" class="btn-secondary">Accéder au portail</a>
+                            <p>Inscriptions auprès de l'intendance.</p>
                         </div>
                         <div class="info-card">
                             <i class="fas fa-hand-holding-heart"></i>

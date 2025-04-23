@@ -273,7 +273,7 @@
                         
                         <div class="partenaire-card small">
                             <div class="logo-container">
-                                <img src="images/logos/PICTO-APPLI-E.Leclerc.png" alt="CRYOSTAR" class="partenaire-logo">
+                                <img src="images/logos/images.png" alt="CRYOSTAR" class="partenaire-logo">
                             </div>
                             <div class="partenaire-content">
                                 <h4>CRYOSTAR</h4>
@@ -283,7 +283,7 @@
                         
                         <div class="partenaire-card small">
                             <div class="logo-container">
-                                <img src="images/partenaires/leclerc-logo.png" alt="E.LECLERC" class="partenaire-logo">
+                                <img src="images/logos/PICTO-APPLI-E.Leclerc.png" alt="E.LECLERC" class="partenaire-logo">
                             </div>
                             <div class="partenaire-content">
                                 <h4>E.LECLERC</h4>
