@@ -63,6 +63,19 @@
         </div>
     </nav>
 
+    <?php
+    // Connexion à la base de données
+    require_once 'includes/db_connect.php';
+    
+    // Récupération de la date de semaine (pour tous les jours)
+    $stmt = $db->query("SELECT date_semaine FROM jours LIMIT 1");
+    $date_semaine = $stmt->fetch(PDO::FETCH_COLUMN);
+    
+    // Récupération des jours de la semaine
+    $stmt_jours = $db->query("SELECT id, jour FROM jours ORDER BY id");
+    $jours = $stmt_jours->fetchAll(PDO::FETCH_ASSOC);
+    ?>
+
     <main>
         <!-- Bouton retour -->
         <a href="vie-lyceenne.php" class="back-home">
@@ -104,108 +117,58 @@
 
                 <div class="menu-tabs">
                     <div class="tab-buttons">
-                        <button class="menu-tab-btn active" data-day="lundi">Lundi</button>
-                        <button class="menu-tab-btn" data-day="mardi">Mardi</button>
-                        <button class="menu-tab-btn" data-day="mercredi">Mercredi</button>
-                        <button class="menu-tab-btn" data-day="jeudi">Jeudi</button>
-                        <button class="menu-tab-btn" data-day="vendredi">Vendredi</button>
+                        <?php foreach ($jours as $index => $jour): ?>
+                            <button class="menu-tab-btn <?= ($index === 0) ? 'active' : '' ?>" data-day="<?= $jour['jour'] ?>"><?= ucfirst($jour['jour']) ?></button>
+                        <?php endforeach; ?>
                     </div>
 
                     <div class="menu-date">
-                        <h3>Menu du <span id="current-date">15 au 19 juillet 2024</span></h3>
+                        <h3>Menu du <span id="current-date"><?= $date_semaine ?></span></h3>
                     </div>
 
                     <!-- Menus par jour -->
-                    <div class="menu-content active" id="menu-lundi">
-                        <div class="meal-category">
-                            <h4>Entrées</h4>
-                            <ul class="meal-items">
-                                <li>Salade de tomates et mozzarella <span class="bio-label">Bio</span></li>
-                                <li>Terrine de légumes</li>
-                                <li>Carottes râpées aux agrumes <span class="local-label">Local</span></li>
-                            </ul>
+                    <?php foreach ($jours as $index => $jour): ?>
+                        <div class="menu-content <?= ($index === 0) ? 'active' : '' ?>" id="menu-<?= $jour['jour'] ?>">
+                            <?php
+                            // Récupération des catégories
+                            $stmt_categories = $db->query("SELECT id, nom FROM categories ORDER BY id");
+                            $categories = $stmt_categories->fetchAll(PDO::FETCH_ASSOC);
+                            
+                            foreach ($categories as $categorie): 
+                                // Récupération des repas pour ce jour et cette catégorie
+                                $stmt_repas = $db->prepare("
+                                    SELECT nom, bio, local, vegetarien 
+                                    FROM repas 
+                                    WHERE jour_id = :jour_id AND categorie_id = :categorie_id
+                                ");
+                                $stmt_repas->execute([
+                                    ':jour_id' => $jour['id'],
+                                    ':categorie_id' => $categorie['id']
+                                ]);
+                                $repas = $stmt_repas->fetchAll(PDO::FETCH_ASSOC);
+                            ?>
+                                <div class="meal-category">
+                                    <h4><?= $categorie['nom'] ?></h4>
+                                    <ul class="meal-items">
+                                        <?php foreach ($repas as $plat): ?>
+                                            <li>
+                                                <?= $plat['nom'] ?>
+                                                <?php if ($plat['bio']): ?>
+                                                    <span class="bio-label">Bio</span>
+                                                <?php endif; ?>
+                                                <?php if ($plat['local']): ?>
+                                                    <span class="local-label">Local</span>
+                                                <?php endif; ?>
+                                                <?php if ($plat['vegetarien']): ?>
+                                                    <span class="veggie-label">Végé</span>
+                                                <?php endif; ?>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
-
-                        <div class="meal-category">
-                            <h4>Plats</h4>
-                            <ul class="meal-items">
-                                <li>Filet de poulet à la provençale <span class="local-label">Local</span></li>
-                                <li>Boulettes végétariennes aux légumes <span class="veggie-label">Végé</span></li>
-                                <li>Accompagnement : Ratatouille et riz basmati <span class="bio-label">Bio</span></li>
-                            </ul>
-                        </div>
-
-                        <div class="meal-category">
-                            <h4>Fromages & Laitages</h4>
-                            <ul class="meal-items">
-                                <li>Yaourt nature <span class="bio-label">Bio</span></li>
-                                <li>Comté AOP</li>
-                                <li>Fromage blanc</li>
-                            </ul>
-                        </div>
-
-                        <div class="meal-category">
-                            <h4>Desserts</h4>
-                            <ul class="meal-items">
-                                <li>Fruit de saison <span class="bio-label">Bio</span></li>
-                                <li>Tarte aux pommes</li>
-                                <li>Compote de fruits</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Répéter pour les autres jours avec des menus différents -->
-                    <div class="menu-content" id="menu-mardi">
-                        <!-- Contenu pour mardi -->
-                        <div class="meal-category">
-                            <h4>Entrées</h4>
-                            <ul class="meal-items">
-                                <li>Taboulé à la menthe <span class="bio-label">Bio</span></li>
-                                <li>Salade de concombres</li>
-                                <li>Betteraves en vinaigrette <span class="local-label">Local</span></li>
-                            </ul>
-                        </div>
-
-                        <div class="meal-category">
-                            <h4>Plats</h4>
-                            <ul class="meal-items">
-                                <li>Lasagnes à la bolognaise</li>
-                                <li>Gratin de légumes et pois chiches <span class="veggie-label">Végé</span></li>
-                                <li>Accompagnement : Salade verte <span class="bio-label">Bio</span></li>
-                            </ul>
-                        </div>
-
-                        <div class="meal-category">
-                            <h4>Fromages & Laitages</h4>
-                            <ul class="meal-items">
-                                <li>Petit suisse</li>
-                                <li>Brie</li>
-                                <li>Fromage blanc aux fruits</li>
-                            </ul>
-                        </div>
-
-                        <div class="meal-category">
-                            <h4>Desserts</h4>
-                            <ul class="meal-items">
-                                <li>Fruit de saison <span class="local-label">Local</span></li>
-                                <li>Mousse au chocolat</li>
-                                <li>Crème caramel</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Répéter ce bloc pour mercredi, jeudi et vendredi -->
-                    <div class="menu-content" id="menu-mercredi">
-                        <!-- Contenu similaire avec menus différents -->
-                    </div>
-
-                    <div class="menu-content" id="menu-jeudi">
-                        <!-- Contenu similaire avec menus différents -->
-                    </div>
-
-                    <div class="menu-content" id="menu-vendredi">
-                        <!-- Contenu similaire avec menus différents -->
-                    </div>
+                    <?php endforeach; ?>
                 </div>
 
                 <div class="info-pratiques">
