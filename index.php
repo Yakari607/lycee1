@@ -10,20 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <?php
-    // Connexion à la base de données
-    require_once 'includes/db_connect.php';
-    
-    // Récupération des actualités
-    try {
-        $stmt = $db->query("SELECT * FROM actualites ORDER BY date_publication DESC LIMIT 5");
-        $actualites = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    } catch (PDOException $e) {
-        $actualites = [];
-        $error_message = "Erreur lors de la récupération des actualités: " . $e->getMessage();
-    }
-    ?>
-    
     <!-- Navigation principale -->
     <nav class="main-nav">
         <div class="nav-container">
@@ -93,50 +79,44 @@
         <section id="actualites" class="news-section">
             <div class="container">
                 <h2 class="section-title">Actualités</h2>
-                
-                <?php if (isset($error_message)): ?>
-                    <div class="alert alert-danger"><?php echo $error_message; ?></div>
-                <?php endif; ?>
-                
-                <?php if (!empty($actualites)): ?>
-                    <div class="news-slider-container">
-                        <button class="slider-nav prev" aria-label="Actualité précédente">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <div class="news-grid">
-                            <?php foreach ($actualites as $actualite): 
-                                // Formatage de la date
-                                $date = new DateTime($actualite['date_publication']);
-                                $date_fr = $date->format('j F Y');
-                                $date_fr = str_replace(
-                                    ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-                                    ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
-                                    $date_fr
-                                );
-                            ?>
-                                <article class="news-card <?php echo $actualite['is_important'] ? 'highlight' : ''; ?>">
-                                    <div class="news-image">
-                                        <img src="<?php echo htmlspecialchars($actualite['image']); ?>" alt="<?php echo htmlspecialchars($actualite['titre']); ?>">
-                                        <div class="news-date">
-                                            <time datetime="<?php echo $actualite['date_publication']; ?>"><?php echo $date_fr; ?></time>
-                                        </div>
-                                    </div>
-                                    <div class="news-content">
-                                        <span class="news-tag"><?php echo htmlspecialchars($actualite['categorie']); ?></span>
-                                        <h3><?php echo htmlspecialchars($actualite['titre']); ?></h3>
-                                        <p><?php echo substr(htmlspecialchars($actualite['contenu']), 0, 150) . '...'; ?></p>
-                                        <a href="actualite.php?id=<?php echo $actualite['id']; ?>" class="read-more">Lire la suite</a>
-                                    </div>
-                                </article>
-                            <?php endforeach; ?>
-                        </div>
-                        <button class="slider-nav next" aria-label="Actualité suivante">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
+                <div class="news-slider-container">
+                    <button class="slider-nav prev" aria-label="Actualité précédente">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="news-grid">
+                        <article class="news-card">
+                            <div class="news-image">
+                                <img src="images/images.jpeg" alt="Visite à Strasbourg">
+                                <div class="news-date">
+                                    <time datetime="2024-02-21">21 février 2024</time>
+                                </div>
+                            </div>
+                            <div class="news-content">
+                                <span class="news-tag">Événement</span>
+                                <h3>Des Mermoziens à Strasbourg</h3>
+                                <p>Les élèves de 1PACCE inscrits en Section européenne Allemand se sont rendus à Strasbourg pour y retrouver leurs correspondants allemands.</p>
+                                <a href="#actualites" class="read-more">Lire la suite</a>
+                            </div>
+                        </article>
+                        <article class="news-card">
+                            <div class="news-image">
+                                <img src="images/batiments/c-est-la-rentree-ce-lundi-au-lycee-jean-mermoz-de-saint-louis-avec-une-17e-classe-de-seconde-qui-vient-s-ajouter-a-des-effectifs-consequents-qui-font-du-lycee-ludovicien-le-plus-grand-d-alsace-photo-l-alsace-1567245623.jpg" alt="Journée Portes Ouvertes">
+                                <div class="news-date">
+                                    <time datetime="2024-01-03">3 janvier 2024</time>
+                                </div>
+                            </div>
+                            <div class="news-content">
+                                <span class="news-tag">Information</span>
+                                <h3>Journée Portes Ouvertes 2025</h3>
+                                <p>Venez découvrir notre établissement lors de notre prochaine journée portes ouvertes.</p>
+                                <a href="#actualites" class="read-more">Lire la suite</a>
+                            </div>
+                        </article>
                     </div>
-                <?php else: ?>
-                    <p class="no-news">Aucune actualité à afficher pour le moment.</p>
-                <?php endif; ?>
+                    <button class="slider-nav next" aria-label="Actualité suivante">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
             </div>
         </section>
 

@@ -100,116 +100,97 @@
 
                 <!-- Contenu détaillé -->
                 <div class="formation-content">
-                    <!-- Parcours de formation avec timeline chronologique -->
-                    <div class="formation-block parcours-block">
-                        <h3 class="parcours-title">Le parcours de formation</h3>
+                    <div class="formation-block">
+                        <h3><i class="fas fa-graduation-cap"></i> Le parcours de formation</h3>
                         
-                        <div class="timeline-container">
-                            <div class="timeline">
-                                <div class="timeline-top">
-                                    <div class="timeline-item">
-                                        <div class="timeline-content">
-                                            <h4>Découverte</h4>
-                                            <ul>
-                                                <li>15h enseignements pros</li>
-                                                <li>11h50 enseignements généraux</li>
-                                                <li>6 semaines de stage</li>
-                                            </ul>
-                                        </div>
-                                        <div class="timeline-badge">
-                                            <span class="timeline-badge-label badge-seconde">Seconde</span>
-                                            <div class="timeline-badge-circle badge-seconde"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="timeline-item">
-                                        <div class="timeline-content">
-                                            <h4>Pratique professionnelle</h4>
-                                            <ul>
-                                                <li>8 semaines de stage</li>
-                                                <li>Compétences professionnelles</li>
-                                            </ul>
-                                        </div>
-                                        <div class="timeline-badge">
-                                            <span class="timeline-badge-label badge-premiere">Première</span>
-                                            <div class="timeline-badge-circle badge-premiere"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="timeline-item">
-                                        <div class="timeline-content">
-                                            <h4>Perfection&shy;nement</h4>
-                                            <ul>
-                                                <li>Préparation à l'examen</li>
-                                                <li>8 semaines de stage</li>
-                                            </ul>
-                                        </div>
-                                        <div class="timeline-badge">
-                                            <span class="timeline-badge-label badge-terminale">Terminale</span>
-                                            <div class="timeline-badge-circle badge-terminale"></div>
-                                        </div>
+                        <div class="timeline-title">
+                            <h4>Le parcours en un coup d'œil</h4>
+                            <p>Découvrez les étapes clés de votre formation en Bac Pro Métiers de l'Accueil</p>
+                        </div>
+                        
+                        <div class="parcours-timeline">
+                            <div class="timeline-container">
+                                <div class="timeline-node" id="node-1">
+                                    <div class="timeline-circle">1</div>
+                                    <div class="timeline-content">
+                                        <h4><i class="fas fa-door-open"></i> Conditions d'accès</h4>
+                                        <ul>
+                                            <li>Élèves venant de 3<sup>ème</sup> générale et 3<sup>ème</sup> prépa-métiers</li>
+                                            <li>Élèves issus d'un CAP</li>
+                                        </ul>
                                     </div>
                                 </div>
                                 
-                                <div class="timeline-bottom">
-                                    <div class="timeline-item">
-                                        <div class="timeline-badge">
-                                            <span class="timeline-badge-label badge-access">Accès</span>
-                                            <div class="timeline-badge-circle badge-access"></div>
-                                        </div>
-                                        <div class="timeline-content">
-                                            <h4>Entrée en formation</h4>
-                                            <ul>
-                                                <li>Élèves 3<sup>ème</sup> générale</li>
-                                                <li>Élèves issus d'un CAP</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="timeline-item">
-                                        <div class="timeline-badge">
-                                            <span class="timeline-badge-label badge-orientation">Orientation</span>
-                                            <div class="timeline-badge-circle badge-orientation"></div>
-                                        </div>
-                                        <div class="timeline-content">
-                                            <h4>Choix de formation</h4>
-                                            <ul>
-                                                <li>Bac Pro Métiers de l'Accueil</li>
-                                                <li>Métiers du Commerce</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="timeline-item">
-                                        <div class="timeline-badge">
-                                            <span class="timeline-badge-label badge-certification">Certification</span>
-                                            <div class="timeline-badge-circle badge-certification"></div>
-                                        </div>
-                                        <div class="timeline-content">
-                                            <h4>Attestation</h4>
-                                            <ul>
-                                                <li>Validation des acquis</li>
-                                                <li>Certification intermédiaire</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="timeline-item">
-                                        <div class="timeline-badge">
-                                            <span class="timeline-badge-label badge-diplome">Diplôme</span>
-                                            <div class="timeline-badge-circle badge-diplome"></div>
-                                        </div>
-                                        <div class="timeline-content">
-                                            <h4>Bac Pro</h4>
-                                            <div class="timeline-info">
-                                                <div class="info-badge">
-                                                    <i class="fas fa-graduation-cap"></i>
-                                                    <span>Niveau 4</span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="timeline-node" id="node-2">
+                                    <div class="timeline-circle">2</div>
+                                    <div class="timeline-content">
+                                        <h4><i class="fas fa-exchange-alt"></i> Choix en fin de 2nde</h4>
+                                        <p>Bac Pro Métiers de l'Accueil ou Métiers du Commerce et de la Vente Option A</p>
                                     </div>
                                 </div>
+                                
+                                <div class="timeline-node" id="node-3">
+                                    <div class="timeline-circle">3</div>
+                                    <div class="timeline-content">
+                                        <h4><i class="fas fa-clock"></i> 30h00 de cours</h4>
+                                        <ul>
+                                            <li><strong>15h</strong> - Enseignements professionnels</li>
+                                            <li><strong>3h10</strong> - Consolidation, Accompagnement Personnalisé & Orientation</li>
+                                            <li><strong>11h50</strong> - Enseignements généraux</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-node" id="node-4">
+                                    <div class="timeline-circle">4</div>
+                                    <div class="timeline-content">
+                                        <h4><i class="fas fa-award"></i> En fin de 1<sup>ère</sup></h4>
+                                        <p>Obtention d'une Attestation de réussite intermédiaire</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-node" id="node-5">
+                                    <div class="timeline-circle">5</div>
+                                    <div class="timeline-content">
+                                        <h4><i class="fas fa-building"></i> 22 sem. de stages</h4>
+                                        <p>Une formation qui s'appuie sur une réelle immersion en entreprise</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-node" id="node-6">
+                                    <div class="timeline-circle">6</div>
+                                    <div class="timeline-content">
+                                        <h4><i class="fas fa-graduation-cap"></i> Un Bac Pro...</h4>
+                                        <p>Obtention d'un Bac Professionnel Métiers de l'Accueil à la fin de la 3<sup>ème</sup> année</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="parcours-grid">
+                            <div class="parcours-card">
+                                <h4>Seconde</h4>
+                                <ul>
+                                    <li>Enseignement général</li>
+                                    <li>Enseignement professionnel</li>
+                                    <li>Périodes de formation en milieu professionnel</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-card">
+                                <h4>Première</h4>
+                                <ul>
+                                    <li>Approfondissement des compétences</li>
+                                    <li>Spécialisation dans l'accueil</li>
+                                    <li>Périodes de stage en entreprise</li>
+                                </ul>
+                            </div>
+                            <div class="parcours-card">
+                                <h4>Terminale</h4>
+                                <ul>
+                                    <li>Validation des acquis</li>
+                                    <li>Préparation à l'examen</li>
+                                    <li>Définition du projet professionnel</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -253,6 +234,36 @@
                             <div class="debouche-item">
                                 <i class="fas fa-globe"></i>
                                 <span>Conseiller-e commercial-le de voyage</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="formation-block">
+                        <h3><i class="fas fa-check-circle"></i> Les qualités requises</h3>
+                        <div class="qualites-grid">
+                            <div class="qualite-item">
+                                <i class="fas fa-comments"></i>
+                                <span>Communication aisée</span>
+                            </div>
+                            <div class="qualite-item">
+                                <i class="fas fa-smile"></i>
+                                <span>Sens du relationnel</span>
+                            </div>
+                            <div class="qualite-item">
+                                <i class="fas fa-tasks"></i>
+                                <span>Organisation</span>
+                            </div>
+                            <div class="qualite-item">
+                                <i class="fas fa-laptop"></i>
+                                <span>Maîtrise des outils numériques</span>
+                            </div>
+                            <div class="qualite-item">
+                                <i class="fas fa-language"></i>
+                                <span>Compétences linguistiques</span>
+                            </div>
+                            <div class="qualite-item">
+                                <i class="fas fa-handshake"></i>
+                                <span>Capacité d'adaptation</span>
                             </div>
                         </div>
                     </div>
