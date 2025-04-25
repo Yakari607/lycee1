@@ -270,33 +270,39 @@
 
                     <div class="formation-block">
                         <h3><i class="fas fa-road"></i> Et après le Bac Pro …</h3>
-                        <div class="apres-bac">
-                            <div class="apres-bac-item">
-                                <h4>1- Insertion Professionnelle</h4>
-                                <p>Le Diplôme du Bac Pro Métiers de l'Accueil est un diplôme professionnel qui permet de se présenter sur le marché du travail.</p>
-                            </div>
-                            
-                            <div class="apres-bac-item">
-                                <h4>2- Mention Complémentaire</h4>
-                                <p>Il est également possible de compléter sa formation avec une Mention Complémentaire (MC en 1 an) :</p>
-                                <ul>
-                                    <li>MC Accueil dans les transports</li>
-                                    <li>MC Accueil-Réception</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="apres-bac-item">
-                                <h4>3- BTS ou Licences Pro</h4>
-                                <p>Avec un très bon dossier ou une mention à l'examen, une poursuite d'études en BTS est envisageable.</p>
-                                <ul>
-                                    <li>BTS Management Commercial Opérationnel</li>
-                                    <li>BTS Négociation et Digitalisation de la Relation Client</li>
-                                    <li>BTS Support à l'Action Managériale</li>
-                                    <li>BTS Professions Immobilières</li>
-                                    <li>BTS Tourisme</li>
-                                    <li>Licence professionnelle dans les secteurs de la banque ou des assurances (Licence Conseil en Assurance et Services Financiers de Saint Louis-Colmar)</li>
-                                    <li>Licence d'économie-gestion</li>
-                                </ul>
+                        <button class="collapsible-header">
+                            Découvrir les poursuites d'études et débouchés
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="collapsible-content">
+                            <div class="apres-bac">
+                                <div class="apres-bac-item">
+                                    <h4>1- Insertion Professionnelle</h4>
+                                    <p>Le Diplôme du Bac Pro Métiers de l'Accueil est un diplôme professionnel qui permet de se présenter sur le marché du travail.</p>
+                                </div>
+                                
+                                <div class="apres-bac-item">
+                                    <h4>2- Mention Complémentaire</h4>
+                                    <p>Il est également possible de compléter sa formation avec une Mention Complémentaire (MC en 1 an) :</p>
+                                    <ul>
+                                        <li>MC Accueil dans les transports</li>
+                                        <li>MC Accueil-Réception</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="apres-bac-item">
+                                    <h4>3- BTS ou Licences Pro</h4>
+                                    <p>Avec un très bon dossier ou une mention à l'examen, une poursuite d'études en BTS est envisageable.</p>
+                                    <ul>
+                                        <li>BTS Management Commercial Opérationnel</li>
+                                        <li>BTS Négociation et Digitalisation de la Relation Client</li>
+                                        <li>BTS Support à l'Action Managériale</li>
+                                        <li>BTS Professions Immobilières</li>
+                                        <li>BTS Tourisme</li>
+                                        <li>Licence professionnelle dans les secteurs de la banque ou des assurances (Licence Conseil en Assurance et Services Financiers de Saint Louis-Colmar)</li>
+                                        <li>Licence d'économie-gestion</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -376,5 +382,6 @@
     </button>
 
     <script src="js/script.js"></script>
+    <script src="js/page-specific/formation.js"></script>
 </body>
 </html> 
