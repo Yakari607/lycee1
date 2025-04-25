@@ -317,41 +317,96 @@
     font-size: 0.9rem;
 }
 
-/* Qualités requises */
-.qualites-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    gap: 1.2rem;
-    margin-top: 1.2rem;
+/* Mode sombre */
+[data-theme="dark"] .debouche-item {
+    background-color: #2a2a2a;
 }
 
-.qualite-item {
-    background-color: var(--light-bg);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    padding: 1.2rem 0.8rem;
+[data-theme="dark"] .debouche-item i {
+    color: #ccc;
+}
+
+[data-theme="dark"] .debouche-item span {
+    color: #ccc;
+}
+
+/* Qualités requises - Nouveau style */
+.qualites-sections {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.8rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
 }
 
-.qualite-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+.qualite-section {
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.qualite-item i {
-    font-size: 1.7rem;
-    color: var(--accent-color);
+.qualite-section h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.5rem;
 }
 
-.qualite-item span {
-    font-weight: 500;
-    color: var(--text-color);
-    font-size: 0.9rem;
+.qualite-section h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: currentColor;
+}
+
+.qualite-section p {
+    margin-bottom: 0.5rem;
+    color: #666;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.qualite-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Couleurs des titres */
+.qualite-section h4.pink {
+    color: #e83e8c;
+}
+
+.qualite-section h4.green {
+    color: #28a745;
+}
+
+.qualite-section h4.blue {
+    color: #3a54a8;
+}
+
+.qualite-section h4.orange {
+    color: #fd7e14;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .qualites-sections {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Mode sombre */
+[data-theme="dark"] .qualite-section {
+    background-color: #2a2a2a;
+}
+
+[data-theme="dark"] .qualite-section p {
+    color: #ccc;
 }
 
 /* Après Bac */
@@ -681,10 +736,6 @@
     
     .debouches-grid {
         grid-template-columns: 1fr;
-    }
-    
-    .qualites-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
     
     .back-home {

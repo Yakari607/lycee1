@@ -226,30 +226,31 @@
 
                     <div class="formation-block">
                         <h3><i class="fas fa-check-circle"></i> Les qualités requises</h3>
-                        <div class="qualites-grid">
-                            <div class="qualite-item">
-                                <i class="fas fa-comments"></i>
-                                <span>Communication aisée</span>
+                        <div class="qualites-sections">
+                            <div class="qualite-section">
+                                <h4 class="pink">Goût de la Communication</h4>
+                                <p>Vous avez de bonnes aptitudes à la communication.</p>
+                                <p>Vous êtes à l'aise à l'oral et à l'écrit.</p>
+                                <p>Vous pratiquez une langue étrangère.</p>
                             </div>
-                            <div class="qualite-item">
-                                <i class="fas fa-smile"></i>
-                                <span>Sens du relationnel</span>
+                            
+                            <div class="qualite-section">
+                                <h4 class="green">Sens de la Persuasion et de l'Écoute active</h4>
+                                <p>Vous aimez le contact avec le public (clients et usagers).</p>
+                                <p>Vous savez écouter et comprendre votre interlocuteur.</p>
                             </div>
-                            <div class="qualite-item">
-                                <i class="fas fa-tasks"></i>
-                                <span>Organisation</span>
+                            
+                            <div class="qualite-section">
+                                <h4 class="blue">Sens de la Gestion et de l'Organisation</h4>
+                                <p>Vous êtes méthodique et rigoureux.</p>
+                                <p>Vous savez organiser votre travail en vous adaptant aux contraintes extérieures.</p>
+                                <p>Vous savez utiliser les outils numériques.</p>
                             </div>
-                            <div class="qualite-item">
-                                <i class="fas fa-laptop"></i>
-                                <span>Maîtrise des outils numériques</span>
-                            </div>
-                            <div class="qualite-item">
-                                <i class="fas fa-language"></i>
-                                <span>Compétences linguistiques</span>
-                            </div>
-                            <div class="qualite-item">
-                                <i class="fas fa-handshake"></i>
-                                <span>Capacité d'adaptation</span>
+                            
+                            <div class="qualite-section">
+                                <h4 class="orange">Sens des Responsabilités</h4>
+                                <p>Vous êtes capable d'analyser une situation et de proposer des solutions.</p>
+                                <p>Vous êtes capable de travailler en équipe.</p>
                             </div>
                         </div>
                     </div>
