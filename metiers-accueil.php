@@ -184,42 +184,47 @@
                     <div class="formation-block">
                         <h3><i class="fas fa-briefcase"></i> Les débouchés</h3>
                         <p>Dans tout type d'organisation commerciale ou non (administration, association…), le-a diplômé-e occupe des postes de :</p>
-                        <div class="debouches-grid">
-                            <div class="debouche-item">
-                                <i class="fas fa-headset"></i>
-                                <span>Chargé-e d'accueil</span>
+                        <div class="debouches-container">
+                            <div class="debouches-list">
+                                <div class="debouche-item">
+                                    <i class="fas fa-headset"></i>
+                                    <span>Chargé-e d'accueil</span>
+                                </div>
+                                <div class="debouche-item">
+                                    <i class="fas fa-concierge-bell"></i>
+                                    <span>Hôte-sse d'accueil, d'évènementiel</span>
+                                </div>
+                                <div class="debouche-item">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Agent-e d'accueil</span>
+                                </div>
+                                <div class="debouche-item">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <span>Standardiste</span>
+                                </div>
+                                <div class="debouche-item">
+                                    <i class="fas fa-headset"></i>
+                                    <span>Téléopérateur(-trice), téléconseiller-e</span>
+                                </div>
+                                <div class="debouche-item">
+                                    <i class="fas fa-cash-register"></i>
+                                    <span>Chef de vente, de rayon ou de caisse</span>
+                                </div>
+                                <div class="debouche-item">
+                                    <i class="fas fa-user-friends"></i>
+                                    <span>Conseiller de clientèle</span>
+                                </div>
+                                <div class="debouche-item">
+                                    <i class="fas fa-plane"></i>
+                                    <span>Agent-e d'escale</span>
+                                </div>
+                                <div class="debouche-item">
+                                    <i class="fas fa-globe"></i>
+                                    <span>Conseiller-e commercial-le de voyage</span>
+                                </div>
                             </div>
-                            <div class="debouche-item">
-                                <i class="fas fa-concierge-bell"></i>
-                                <span>Hôte-sse d'accueil, d'évènementiel</span>
-                            </div>
-                            <div class="debouche-item">
-                                <i class="fas fa-user-tie"></i>
-                                <span>Agent-e d'accueil</span>
-                            </div>
-                            <div class="debouche-item">
-                                <i class="fas fa-phone-alt"></i>
-                                <span>Standardiste</span>
-                            </div>
-                            <div class="debouche-item">
-                                <i class="fas fa-headset"></i>
-                                <span>Téléopérateur(-trice), téléconseiller-e</span>
-                            </div>
-                            <div class="debouche-item">
-                                <i class="fas fa-cash-register"></i>
-                                <span>Chef de vente, de rayon ou de caisse</span>
-                            </div>
-                            <div class="debouche-item">
-                                <i class="fas fa-user-friends"></i>
-                                <span>Conseiller de clientèle</span>
-                            </div>
-                            <div class="debouche-item">
-                                <i class="fas fa-plane"></i>
-                                <span>Agent-e d'escale</span>
-                            </div>
-                            <div class="debouche-item">
-                                <i class="fas fa-globe"></i>
-                                <span>Conseiller-e commercial-le de voyage</span>
+                            <div class="debouches-image">
+                                <img src="images/metiers/pexels-photo-1181317.webp" alt="Métiers de l'accueil" class="debouche-img">
                             </div>
                         </div>
                     </div>
@@ -320,6 +325,9 @@
                                 Lycée Jean-Mermoz<br>
                                 53 rue du Docteur Hurst<br>
                                 68301 Saint-Louis Cedex
+                                <a href="https://maps.google.com/?q=Lycée+Jean+Mermoz,+53+rue+du+Docteur+Hurst,+68301+Saint-Louis+Cedex,+France" target="_blank" class="map-link" title="Voir sur Google Maps">
+                                    <i class="fas fa-map"></i>
+                                </a>
                             </p>
                             <p><i class="fas fa-phone"></i> 03 89 70 22 70</p>
                         </div>

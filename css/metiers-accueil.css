@@ -1,0 +1,15 @@
+/* Map link styles */
+.map-link {
+    display: inline-block;
+    margin-left: 10px;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.map-link:hover {
+    color: var(--secondary-color);
+}
+
+.map-link i {
+    font-size: 1.2rem;
+} 
