@@ -109,91 +109,77 @@
                         </div>
                         
                         <div class="parcours-timeline">
-                            <div class="timeline-container">
-                                <div class="timeline-node" id="node-1">
-                                    <div class="timeline-circle">1</div>
-                                    <div class="timeline-content">
-                                        <h4><i class="fas fa-door-open"></i> Conditions d'accès</h4>
-                                        <ul>
-                                            <li>Élèves venant de 3<sup>ème</sup> générale et 3<sup>ème</sup> prépa-métiers</li>
-                                            <li>Élèves issus d'un CAP</li>
-                                        </ul>
+                            <div class="horizontal-timeline">
+                                <div class="timeline-track">
+                                    <div class="timeline-line"></div>
+                                    
+                                    <!-- Étape 1 -->
+                                    <div class="timeline-step">
+                                        <div class="timeline-bubble" id="bubble-1">1</div>
+                                        <div class="timeline-box" id="box-1">
+                                            <h4>Conditions d'accès</h4>
+                                            <ul>
+                                                <li>Élèves venant de 3<sup>ème</sup> générale et 3<sup>ème</sup> prépa-métiers</li>
+                                                <li>Élèves issus d'un CAP</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Étape 2 -->
+                                    <div class="timeline-step">
+                                        <div class="timeline-bubble" id="bubble-2">2</div>
+                                        <div class="timeline-box" id="box-2">
+                                            <h4>Choix en fin de 2nde</h4>
+                                            <p>Bac Pro Métiers de l'Accueil ou Métiers du Commerce et de la Vente Option A</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Étape 3 -->
+                                    <div class="timeline-step">
+                                        <div class="timeline-bubble" id="bubble-3">3</div>
+                                        <div class="timeline-box" id="box-3">
+                                            <h4>30h00 de cours</h4>
+                                            <ul>
+                                                <li><strong>15h</strong> - Enseignements professionnels</li>
+                                                <li><strong>3h10</strong> - Consolidation, Accompagnement Personnalisé & Orientation</li>
+                                                <li><strong>11h50</strong> - Enseignements généraux</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                                 
-                                <div class="timeline-node" id="node-2">
-                                    <div class="timeline-circle">2</div>
-                                    <div class="timeline-content">
-                                        <h4><i class="fas fa-exchange-alt"></i> Choix en fin de 2nde</h4>
-                                        <p>Bac Pro Métiers de l'Accueil ou Métiers du Commerce et de la Vente Option A</p>
+                                <div class="timeline-track track-bottom">
+                                    <div class="timeline-line"></div>
+                                    
+                                    <!-- Étape 4 -->
+                                    <div class="timeline-step">
+                                        <div class="timeline-bubble" id="bubble-4">4</div>
+                                        <div class="timeline-box" id="box-4">
+                                            <h4>En fin de 1<sup>ère</sup></h4>
+                                            <p>Obtention d'une Attestation de réussite intermédiaire</p>
+                                        </div>
                                     </div>
-                                </div>
-                                
-                                <div class="timeline-node" id="node-3">
-                                    <div class="timeline-circle">3</div>
-                                    <div class="timeline-content">
-                                        <h4><i class="fas fa-clock"></i> 30h00 de cours</h4>
-                                        <ul>
-                                            <li><strong>15h</strong> - Enseignements professionnels</li>
-                                            <li><strong>3h10</strong> - Consolidation, Accompagnement Personnalisé & Orientation</li>
-                                            <li><strong>11h50</strong> - Enseignements généraux</li>
-                                        </ul>
+                                    
+                                    <!-- Étape 5 -->
+                                    <div class="timeline-step">
+                                        <div class="timeline-bubble" id="bubble-5">5</div>
+                                        <div class="timeline-box" id="box-5">
+                                            <h4>22 sem. de stages</h4>
+                                            <p>Une formation qui s'appuie sur une réelle immersion en entreprise</p>
+                                        </div>
                                     </div>
-                                </div>
-                                
-                                <div class="timeline-node" id="node-4">
-                                    <div class="timeline-circle">4</div>
-                                    <div class="timeline-content">
-                                        <h4><i class="fas fa-award"></i> En fin de 1<sup>ère</sup></h4>
-                                        <p>Obtention d'une Attestation de réussite intermédiaire</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="timeline-node" id="node-5">
-                                    <div class="timeline-circle">5</div>
-                                    <div class="timeline-content">
-                                        <h4><i class="fas fa-building"></i> 22 sem. de stages</h4>
-                                        <p>Une formation qui s'appuie sur une réelle immersion en entreprise</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="timeline-node" id="node-6">
-                                    <div class="timeline-circle">6</div>
-                                    <div class="timeline-content">
-                                        <h4><i class="fas fa-graduation-cap"></i> Un Bac Pro...</h4>
-                                        <p>Obtention d'un Bac Professionnel Métiers de l'Accueil à la fin de la 3<sup>ème</sup> année</p>
+                                    
+                                    <!-- Étape 6 -->
+                                    <div class="timeline-step">
+                                        <div class="timeline-bubble" id="bubble-6">6</div>
+                                        <div class="timeline-box" id="box-6">
+                                            <h4>Un Bac Pro...</h4>
+                                            <p>Obtention d'un Bac Professionnel Métiers de l'Accueil à la fin de la 3<sup>ème</sup> année</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="parcours-grid">
-                            <div class="parcours-card">
-                                <h4>Seconde</h4>
-                                <ul>
-                                    <li>Enseignement général</li>
-                                    <li>Enseignement professionnel</li>
-                                    <li>Périodes de formation en milieu professionnel</li>
-                                </ul>
-                            </div>
-                            <div class="parcours-card">
-                                <h4>Première</h4>
-                                <ul>
-                                    <li>Approfondissement des compétences</li>
-                                    <li>Spécialisation dans l'accueil</li>
-                                    <li>Périodes de stage en entreprise</li>
-                                </ul>
-                            </div>
-                            <div class="parcours-card">
-                                <h4>Terminale</h4>
-                                <ul>
-                                    <li>Validation des acquis</li>
-                                    <li>Préparation à l'examen</li>
-                                    <li>Définition du projet professionnel</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="formation-block">
                         <h3><i class="fas fa-briefcase"></i> Les débouchés</h3>

@@ -164,74 +164,89 @@
     overflow: hidden;
 }
 
-.timeline-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1.2rem;
-    margin: 1.5rem 0;
-    justify-content: space-between;
-}
-
-.timeline-node {
-    position: relative;
-    width: calc(33.333% - 1.2rem);
-    margin-bottom: 1.2rem;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+/* Nouvelle timeline horizontale */
+.horizontal-timeline {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 1.2rem 0.8rem;
-    text-align: center;
+    width: 100%;
+    position: relative;
+    gap: 3rem;
 }
 
-.timeline-circle {
-    width: 50px;
-    height: 50px;
+.timeline-track {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--accent-color);
-    color: white;
-    border-radius: 50%;
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 0.8rem;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-}
-
-#node-1 .timeline-circle { background-color: #f39c12; }
-#node-2 .timeline-circle { background-color: #666; }
-#node-3 .timeline-circle { background-color: #e74c3c; }
-#node-4 .timeline-circle { background-color: #2ecc71; }
-#node-5 .timeline-circle { background-color: #3498db; }
-#node-6 .timeline-circle { background-color: #9b59b6; }
-
-.timeline-content {
+    justify-content: space-between;
+    position: relative;
+    padding: 0 1rem;
     width: 100%;
 }
 
-.timeline-content h4 {
-    color: var(--primary-color);
-    font-size: 1rem;
-    margin-bottom: 0.6rem;
+.timeline-line {
+    position: absolute;
+    height: 4px;
+    background-color: #333;
+    top: 40px;
+    left: 5%;
+    right: 5%;
+    z-index: 1;
+    background: linear-gradient(to right, #f39c12, #9b59b6);
+    border-radius: 2px;
+}
+
+.track-bottom .timeline-line {
+    top: 40px;
+    background: linear-gradient(to right, #e74c3c, #f1c40f);
+}
+
+.timeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 33.333%;
+    z-index: 5;
+}
+
+.timeline-bubble {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.4rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+    z-index: 10;
+    position: relative;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-box {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1.2rem;
+    width: 90%;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-box h4 {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+    text-align: center;
     position: relative;
     padding-bottom: 0.4rem;
 }
 
-.timeline-content h4 i {
-    color: inherit;
-    font-size: 0.9rem;
-}
-
-.timeline-content h4::after {
+.timeline-box h4::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -242,63 +257,28 @@
     background-color: var(--primary-color);
 }
 
-#node-1 .timeline-content h4::after { background-color: #f39c12; }
-#node-2 .timeline-content h4::after { background-color: #666; }
-#node-3 .timeline-content h4::after { background-color: #e74c3c; }
-#node-4 .timeline-content h4::after { background-color: #2ecc71; }
-#node-5 .timeline-content h4::after { background-color: #3498db; }
-#node-6 .timeline-content h4::after { background-color: #9b59b6; }
-
-.timeline-content p, 
-.timeline-content ul {
+.timeline-box p, 
+.timeline-box ul {
     font-size: 0.85rem;
     text-align: left;
 }
 
-.timeline-content ul {
+.timeline-box ul {
     padding-left: 1rem;
     margin-bottom: 0;
 }
 
-.timeline-content li {
+.timeline-box li {
     margin-bottom: 0.25rem;
 }
 
-.timeline-node:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.parcours-card {
-    background-color: var(--light-bg);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    padding: 1.2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.parcours-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-.parcours-card h4 {
-    color: var(--primary-color);
-    font-size: 1.1rem;
-    margin-bottom: 0.8rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.parcours-card ul {
-    padding-left: 1rem;
-}
-
-.parcours-card li {
-    margin-bottom: 0.4rem;
-    color: var(--text-color);
-    font-size: 0.9rem;
-}
+/* Couleurs des bulles */
+#bubble-1 { background-color: #f39c12; }
+#bubble-2 { background-color: #3498db; }
+#bubble-3 { background-color: #1abc9c; }
+#bubble-4 { background-color: #e74c3c; }
+#bubble-5 { background-color: #9b59b6; }
+#bubble-6 { background-color: #f1c40f; }
 
 /* Débouchés */
 .debouches-grid {
@@ -581,8 +561,12 @@
         left: 12px;
     }
     
-    .timeline-node {
-        width: calc(50% - 1.2rem);
+    .timeline-box {
+        width: 95%;
+    }
+    
+    .horizontal-timeline {
+        gap: 2rem;
     }
 }
 
@@ -623,12 +607,49 @@
         left: 8px;
     }
     
-    .timeline-container {
+    .horizontal-timeline {
         flex-direction: column;
+        gap: 0;
     }
     
-    .timeline-node {
+    .timeline-track {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 2.5rem;
+        padding-bottom: 2rem;
+    }
+    
+    .timeline-line {
+        height: 90%;
+        width: 4px;
+        left: 1rem;
+        right: auto;
+        top: 0;
+        background: linear-gradient(to bottom, #f39c12, #1abc9c);
+    }
+    
+    .track-bottom .timeline-line {
+        background: linear-gradient(to bottom, #e74c3c, #f1c40f);
+    }
+    
+    .timeline-step {
         width: 100%;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 1.5rem;
+    }
+    
+    .timeline-bubble {
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+    
+    .timeline-box {
+        width: calc(100% - 70px);
+    }
+    
+    .track-bottom {
+        padding-top: 0;
     }
 }
 
