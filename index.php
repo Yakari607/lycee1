@@ -168,7 +168,7 @@
                     <a href="#general" class="formation-nav-btn active" data-section="general">Voie Générale</a>
                     <a href="#langues" class="formation-nav-btn" data-section="langues">Langues Vivantes</a>
                     <a href="#industrie" class="formation-nav-btn" data-section="industrie">Métiers de l'Industrie</a>
-                    <a href="#tertiaire" class="formation-nav-btn" data-section="tertiaire">Métiers du Tertiaire</a>
+                    <a href="metiers-accueil.php" class="formation-nav-btn" data-section="tertiaire">Métiers du Tertiaire</a>
                     <a href="#artisanat" class="formation-nav-btn" data-section="artisanat">Artisanat</a>
                     <a href="#services" class="formation-nav-btn" data-section="services">Services aux Personnes</a>
                 </div>
@@ -411,20 +411,17 @@
                                     </div>
                                 </div>
                             </div>
+                            
                             <div class="formation-category">
                                 <h4>Bacs Professionnels</h4>
                                 <div class="diplomes-grid">
-                                    <div class="diplome-card">
+                                    <a href="metiers-accueil.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-user-tie"></i>
-                                        <h5>Métiers de l'accueil</h5>
-                                    </div>
+                                        <h5>Métiers de l'Accueil</h5>
+                                    </a>
                                     <div class="diplome-card">
                                         <i class="fas fa-shopping-cart"></i>
                                         <h5>Métiers du Commerce et de la Vente</h5>
-                                    </div>
-                                    <div class="diplome-card">
-                                        <i class="fas fa-tasks"></i>
-                                        <h5>Assistance à la Gestion des Organisations</h5>
                                     </div>
                                 </div>
                             </div>

@@ -227,15 +227,17 @@ body {
 }
 
 .logo-text h1 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--primary-color);
     margin: 0;
-    line-height: 1.2;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
 }
 
 .logo .slogan {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     color: var(--accent-color);
+    margin-top: 0.1rem;
 }
 
 .nav-content {
@@ -472,7 +474,7 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 60vh;
+    height: 44vh;
     background: url('../images/batiments/c-est-la-rentree-ce-lundi-au-lycee-jean-mermoz-de-saint-louis-avec-une-17e-classe-de-seconde-qui-vient-s-ajouter-a-des-effectifs-consequents-qui-font-du-lycee-ludovicien-le-plus-grand-d-alsace-photo-l-alsace-1567245623.jpg') no-repeat center center;
     background-size: cover;
     color: var(--white);
@@ -497,48 +499,56 @@ body {
     position: relative;
     z-index: 2;
     max-width: 600px;
-    padding: var(--spacing-lg);
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    background: rgba(0,0,145,0.10);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: var(--spacing-sm);
+    font-size: 2.2rem;
+    margin-bottom: 0.7rem;
     color: var(--white);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.13);
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: var(--spacing-md);
+    font-size: 1.15rem;
+    margin-bottom: 1.2rem;
     color: var(--white);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.10);
 }
 
 .cta-container {
     display: flex;
-    gap: var(--spacing-md);
+    gap: 1.2rem;
     justify-content: center;
+    margin-top: 1rem;
 }
 
 .cta-button {
     display: inline-block;
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: 0.7rem 1.7rem;
+    font-size: 1rem;
     border-radius: 30px;
+    font-weight: 600;
     text-decoration: none;
-    font-weight: 700;
     transition: all 0.3s ease;
-    font-size: 1.1rem;
 }
 
 .cta-button:first-child {
     background-color: var(--white);
     color: var(--primary-color);
+    border: 2px solid var(--white);
 }
 
 .cta-button:first-child:hover {
     background-color: var(--primary-color);
     color: var(--white);
     transform: translateY(-3px);
+    border-color: var(--primary-color);
 }
 
 .cta-button.secondary {
@@ -640,6 +650,8 @@ body {
 .news-section {
     padding: var(--spacing-xl) 0;
     background-color: var(--white);
+    position: relative;
+    overflow: hidden;
 }
 
 .container {
@@ -652,16 +664,19 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    margin-top: 2rem;
+    justify-content: center;
+    margin: 2rem auto;
     overflow: hidden;
+    padding: 0 50px;
+    max-width: 1200px;
 }
 
 .slider-nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: var(--white);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -689,40 +704,44 @@ body {
 }
 
 .slider-nav i {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .news-grid {
     display: flex;
-    gap: 20px;
-    width: 100%;
-    padding: 20px 60px;
+    gap: 1.5rem;
+    padding: 1rem 0;
     transition: transform 0.5s ease;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1100px;
 }
 
 .news-card {
-    flex: 0 0 calc(50% - 20px);
-    max-width: calc(50% - 20px);
-    min-width: calc(50% - 20px);
-    background-color: var(--card-bg);
-    border-radius: 8px;
+    flex: 0 0 320px;
+    max-width: 320px;
+    min-width: 320px;
+    background-color: var(--white);
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: var(--card-shadow);
-    transition: var(--transition-smooth);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
 }
 
 .news-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--card-shadow-hover);
+    box-shadow: 0 8px 20px rgba(0,0,145,0.12);
 }
 
 .news-image {
-    position: relative;
-    height: 200px;
+    height: 180px;
     overflow: hidden;
+    position: relative;
 }
 
 .news-image img {
@@ -732,23 +751,73 @@ body {
     transition: transform 0.5s ease;
 }
 
+.news-card:hover .news-image img {
+    transform: scale(1.05);
+}
+
 .news-content {
-    padding: 1.5rem;
+    padding: 1.2rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
+.news-tag {
+    display: inline-block;
+    padding: 0.25rem 0.8rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.7rem;
+}
+
 .news-content h3 {
-    margin: 0.5rem 0;
-    font-size: 1.3rem;
+    margin: 0 0 0.7rem 0;
+    font-size: 1.1rem;
     color: var(--primary-color);
+    font-weight: 700;
+    line-height: 1.4;
 }
 
 .news-content p {
-    margin: 1rem 0;
+    font-size: 0.95rem;
     color: var(--text-color);
+    margin-bottom: 1rem;
+    line-height: 1.5;
     flex-grow: 1;
+}
+
+.read-more {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.read-more:hover {
+    color: var(--accent-color);
+}
+
+.read-more::after {
+    content: '→';
+    margin-left: 0.3rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.read-more:hover::after {
+    transform: translateX(3px);
+}
+
+.news-date {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
 }
 
 .news-tag {
@@ -778,54 +847,37 @@ body {
     background-color: var(--card-bg);
 }
 
-[data-theme="dark"] .news-content h3 {
+[data-theme="dark"] .slider-nav {
+    background-color: var(--card-bg);
     color: var(--text-color);
 }
 
-[data-theme="dark"] .news-content p {
-    color: var(--text-color);
+[data-theme="dark"] .slider-nav:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
-[data-theme="dark"] .read-more {
-    color: var(--primary-color);
-}
-
+/* Media queries pour les actualités */
 @media (max-width: 768px) {
-    .news-section {
-        padding: var(--spacing-lg) 0;
+    .news-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    
+    .news-card {
+        flex: 0 0 100%;
+        min-width: 260px;
+        max-width: 320px;
+        margin: 0 auto 1.5rem auto;
     }
     
     .news-slider-container {
-        overflow-x: auto;
         padding: 0 20px;
     }
     
     .slider-nav {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .slider-nav.prev {
-        left: 0;
-    }
-    
-    .slider-nav.next {
-        right: 0;
-    }
-    
-    .slider-nav i {
-        font-size: 1.2rem;
-    }
-    
-    .news-grid {
-        flex-wrap: nowrap;
-        padding: 20px 40px;
-    }
-    
-    .news-card {
-        flex: 0 0 calc(100% - 20px);
-        max-width: calc(100% - 20px);
-        min-width: calc(100% - 20px);
+        display: none;
     }
 }
 
