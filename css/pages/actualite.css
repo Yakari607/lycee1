@@ -23,12 +23,12 @@
     color: white;
     text-decoration: none;
     border-radius: 30px;
-    margin: 2rem;
+    margin: 0;
     font-weight: 500;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-    position: fixed;
-    top: 100px;
+    position: absolute;
+    top: 20px;
     left: 20px;
     z-index: 100;
 }
@@ -55,6 +55,8 @@
     color: white;
     padding: 3rem 0;
     margin-bottom: 2rem;
+    position: relative;
+    padding-top: 4.5rem;
 }
 
 .actualite-meta {
@@ -117,6 +119,15 @@
     margin-bottom: 1.5rem;
 }
 
+/* Réglages spécifiques pour la page de détail d'actualité et ses boutons de partage */
+.actualite-detail {
+    position: relative;
+}
+
+.actualite-detail h3 {
+    margin-top: 0;
+}
+
 /* Boutons de partage */
 .share-buttons {
     background-color: var(--light-bg);
@@ -124,29 +135,35 @@
     border-radius: 8px;
     position: sticky;
     top: 100px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .share-buttons h3 {
     font-size: 1.2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: var(--primary-color);
+    text-align: center;
 }
 
 .social-links {
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 24px;
 }
 
 .social-link {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
 }
 
 .social-link:hover {
@@ -287,16 +304,24 @@
 @media (max-width: 992px) {
     .actualite-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
     .share-buttons {
         position: static;
         margin-bottom: 2rem;
+        padding: 1.5rem 1rem;
+    }
+    
+    .social-links {
+        gap: 20px;
     }
     
     .back-home {
-        top: 80px;
+        font-size: 0.9rem;
+        top: 15px;
         left: 15px;
+        padding: 0.7rem 1.2rem;
     }
     
     .actualite-image {
@@ -319,17 +344,27 @@
     
     .back-home {
         padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
-        top: 70px;
+        font-size: 0.85rem;
+        top: 10px;
         left: 10px;
     }
     
     .actualite-image {
         height: 250px;
     }
+    
+    .social-links {
+        gap: 25px;
+    }
 }
 
 @media (max-width: 576px) {
+    .back-home {
+        padding: 0.5rem 1rem;
+        top: 10px;
+        left: 10px;
+    }
+    
     .back-home span {
         display: none;
     }
@@ -339,7 +374,7 @@
     }
     
     .actualite-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     
     .actualite-text {
@@ -348,5 +383,15 @@
     
     .actualite-image {
         height: 200px;
+    }
+    
+    .social-links {
+        gap: 15px;
+    }
+    
+    .social-link {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
     }
 } 

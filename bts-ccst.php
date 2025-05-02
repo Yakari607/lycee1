@@ -199,7 +199,7 @@
                                 </div>
                             </div>
                             <div class="metier-image">
-                                <img src="images/metiers/pexels-photo-2017802.webp" alt="Métiers du technico-commercial">
+                                <img src="images/metiers/pexels-photo-3760612.webp" alt="Métiers du technico-commercial">
                             </div>
                         </div>
                     </div>

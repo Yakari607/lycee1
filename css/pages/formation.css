@@ -37,7 +37,7 @@ body[data-page="metiers-accueil"] .formation-hero {
 
 /* Specific background for BTS CCST */
 body[data-page="bts-ccst"] .formation-hero {
-    background: url('../../images/metiers/pexels-photo-2017802.webp');
+    background: url('../../images/metiers/pexels-photo-3760612.webp');
     background-size: cover;
     background-position: center top;
 }

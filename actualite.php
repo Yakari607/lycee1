@@ -103,17 +103,17 @@ try {
     </nav>
 
     <main>
-        <!-- Bouton retour -->
-        <a href="index.php#actualites" class="back-home">
-            <i class="fas fa-arrow-left"></i>
-            <span>Retour aux actualités</span>
-        </a>
-
         <?php if (isset($error_message)): ?>
             <div class="alert alert-danger"><?php echo $error_message; ?></div>
         <?php else: ?>
             <article class="actualite-detail">
                 <header class="actualite-header">
+                    <!-- Bouton retour -->
+                    <a href="index.php#actualites" class="back-home">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Retour aux actualités</span>
+                    </a>
+                    
                     <div class="container">
                         <div class="actualite-meta">
                             <span class="actualite-category"><?php echo htmlspecialchars($actualite['categorie']); ?></span>
@@ -137,13 +137,13 @@ try {
                     <div class="share-buttons">
                         <h3>Partager cette actualité</h3>
                         <div class="social-links">
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>" target="_blank" class="social-link facebook">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>" target="_blank" class="social-link facebook" aria-label="Partager sur Facebook">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="https://twitter.com/intent/tweet?url=<?php echo urlencode('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>&text=<?php echo urlencode($actualite['titre']); ?>" target="_blank" class="social-link twitter">
+                            <a href="https://twitter.com/intent/tweet?url=<?php echo urlencode('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>&text=<?php echo urlencode($actualite['titre']); ?>" target="_blank" class="social-link twitter" aria-label="Partager sur Twitter">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="mailto:?subject=<?php echo urlencode($actualite['titre'] . ' - Lycée Jean Mermoz'); ?>&body=<?php echo urlencode('Découvrez cette actualité du Lycée Jean Mermoz : ' . 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>" class="social-link email">
+                            <a href="mailto:?subject=<?php echo urlencode($actualite['titre'] . ' - Lycée Jean Mermoz'); ?>&body=<?php echo urlencode('Découvrez cette actualité du Lycée Jean Mermoz : ' . 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>" class="social-link email" aria-label="Partager par e-mail">
                                 <i class="fas fa-envelope"></i>
                             </a>
                         </div>

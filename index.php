@@ -337,45 +337,45 @@
                             <div class="formation-category">
                                 <h4>BTS Industriels</h4>
                                 <div class="diplomes-grid">
-                                    <div class="diplome-card">
+                                    <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-cogs"></i>
                                         <h5>Conception de produits industriels</h5>
-                                    </div>
-                                    <div class="diplome-card">
+                                    </a>
+                                    <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-atom"></i>
                                         <h5>Traitement des matériaux</h5>
-                                    </div>
-                                    <div class="diplome-card highlight">
+                                    </a>
+                                    <a href="#" class="diplome-card highlight" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-laser"></i>
                                         <h5>Systèmes photoniques</h5>
                                         <p class="unique">Unique en Alsace</p>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="formation-category">
                                 <h4>Bacs Professionnels</h4>
                                 <div class="diplomes-grid">
-                                    <div class="diplome-card">
+                                    <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-tools"></i>
                                         <h5>Maintenance des équipements industriels</h5>
-                                    </div>
-                                    <div class="diplome-card">
+                                    </a>
+                                    <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-industry"></i>
                                         <h5>Technicien d'usinage</h5>
-                                    </div>
-                                    <div class="diplome-card">
+                                    </a>
+                                    <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-bolt"></i>
                                         <h5>Métiers de l'électricité et de ses environnements connectés</h5>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="formation-category">
                                 <h4>CAP</h4>
                                 <div class="diplomes-grid">
-                                    <div class="diplome-card">
+                                    <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-plug"></i>
                                         <h5>Préparation et réalisation d'ouvrages électriques</h5>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -393,22 +393,22 @@
                             <div class="formation-category">
                                 <h4>BTS Tertiaires</h4>
                                 <div class="diplomes-grid">
-                                    <div class="diplome-card">
+                                    <a href="bts-assurance.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-shield-alt"></i>
                                         <h5>Assurance</h5>
-                                    </div>
-                                    <div class="diplome-card">
+                                    </a>
+                                    <a href="bts-comptabilite-gestion.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-calculator"></i>
                                         <h5>Comptabilité-Gestion</h5>
-                                    </div>
-                                    <div class="diplome-card">
+                                    </a>
+                                    <a href="bts-ccst.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-handshake"></i>
                                         <h5>Conseil et Commercialisation de Solutions Techniques</h5>
-                                    </div>
-                                    <div class="diplome-card">
+                                    </a>
+                                    <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-store"></i>
                                         <h5>Management Commercial Opérationnel</h5>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                             
@@ -437,15 +437,15 @@
                     </div>
                     <div class="formation-content">
                         <div class="artisanat-grid">
-                            <div class="diplome-card large">
+                            <a href="#" class="diplome-card large" style="text-decoration: none; color: inherit;">
                                 <i class="fas fa-paint-brush"></i>
                                 <h4>BAC PRO Artisanat et Métiers d'Arts</h4>
                                 <h5>Métiers de l'Enseigne et de la Signalétique</h5>
-                            </div>
-                            <div class="diplome-card large">
+                            </a>
+                            <a href="#" class="diplome-card large" style="text-decoration: none; color: inherit;">
                                 <i class="fas fa-sign"></i>
                                 <h4>CAP Métiers de l'Enseigne et de la Signalétique</h4>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -461,23 +461,23 @@
                             <div class="service-category">
                                 <h4>Aide à la Personne</h4>
                                 <div class="diplomes-grid">
-                                    <div class="diplome-card">
+                                    <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-hand-holding-heart"></i>
                                         <h5>CAP Agent Accompagnant au Grand Âge (AAGA)</h5>
-                                    </div>
-                                    <div class="diplome-card">
+                                    </a>
+                                    <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-users"></i>
                                         <h5>Bac Pro Animation-Enfance et Personnes Âgées (AEPA)</h5>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="service-category">
                                 <h4>Restauration</h4>
                                 <div class="diplomes-grid">
-                                    <div class="diplome-card">
+                                    <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-utensils"></i>
                                         <h5>CAP Production et Service en Restaurations (PSR)</h5>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
