@@ -42,6 +42,13 @@ body[data-page="bts-ccst"] .formation-hero {
     background-position: center top;
 }
 
+/* Specific background for BTS MCO */
+body[data-page="bts-mco"] .formation-hero {
+    background: url('../../images/metiers/pexels-photo-5410084.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
 .formation-hero::before {
     content: '';
     position: absolute;

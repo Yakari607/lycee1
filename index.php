@@ -405,7 +405,7 @@
                                         <i class="fas fa-handshake"></i>
                                         <h5>Conseil et Commercialisation de Solutions Techniques</h5>
                                     </a>
-                                    <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                    <a href="bts-mco.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-store"></i>
                                         <h5>Management Commercial Opérationnel</h5>
                                     </a>
