@@ -419,10 +419,10 @@
                                         <i class="fas fa-user-tie"></i>
                                         <h5>Métiers de l'Accueil</h5>
                                     </a>
-                                    <div class="diplome-card">
+                                    <a href="metiers-commerce-vente.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-shopping-cart"></i>
                                         <h5>Métiers du Commerce et de la Vente</h5>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>

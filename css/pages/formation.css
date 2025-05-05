@@ -49,6 +49,13 @@ body[data-page="bts-mco"] .formation-hero {
     background-position: center;
 }
 
+/* Specific background  bac pro comerce vente */
+body[data-page="metiers-commerce-vente"] .formation-hero {
+    background: url('../../images/metiers/pexels-photo-2954405.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
 .formation-hero::before {
     content: '';
     position: absolute;
