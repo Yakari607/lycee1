@@ -337,11 +337,11 @@
                             <div class="formation-category">
                                 <h4>BTS Industriels</h4>
                                 <div class="diplomes-grid">
-                                    <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                    <a href="bts-cpi.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-cogs"></i>
                                         <h5>Conception de produits industriels</h5>
                                     </a>
-                                    <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                    <a href="bts-tm.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-atom"></i>
                                         <h5>Traitement des matériaux</h5>
                                     </a>
