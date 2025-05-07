@@ -130,7 +130,7 @@
                             </div>
                             
                             <div class="metier-image">
-                                <img src="images/metiers/pexels-photo-8327681.webp" alt="Conception de produits industriels">
+                                <img src="images/formations/free-photo-of-abstrait-rechercher-energie-numerique.jpeg" alt="Conception de produits industriels">
                             </div>
                         </div>
                         

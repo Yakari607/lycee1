@@ -119,6 +119,7 @@ body[data-page="bts-tm"] .formation-hero {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1.5rem;
+    align-items: stretch;
     margin-bottom: 2rem;
 }
 
@@ -742,6 +743,10 @@ body[data-page="bts-tm"] .formation-hero {
     .debouches-image {
         order: -1;
         margin-bottom: 1rem;
+    }
+    
+    .formation-card.image-card {
+        min-height: 220px;
     }
 }
 
@@ -1583,4 +1588,30 @@ body[data-page="bts-tm"] .formation-hero {
 .collapsible-header:hover {
     background-color: var(--primary-color);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.formation-card.image-card {
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+    background: none;
+    box-shadow: none;
+}
+
+.formation-card.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    display: block;
+}
+
+@media (max-width: 992px) {
+    .formation-intro {
+        grid-template-columns: 1fr;
+    }
+    .formation-card.image-card {
+        min-height: 220px;
+    }
 } 

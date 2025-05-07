@@ -345,11 +345,6 @@
                                         <i class="fas fa-atom"></i>
                                         <h5>Traitement des matériaux</h5>
                                     </a>
-                                    <a href="#" class="diplome-card highlight" style="text-decoration: none; color: inherit;">
-                                        <i class="fas fa-laser"></i>
-                                        <h5>Systèmes photoniques</h5>
-                                        <p class="unique">Unique en Alsace</p>
-                                    </a>
                                 </div>
                             </div>
                             <div class="formation-category">
