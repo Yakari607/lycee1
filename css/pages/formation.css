@@ -63,9 +63,16 @@ body[data-page="bts-cpi"] .formation-hero {
     background-position: center;
 }
 
-/* Specific background for BTS CPI */
+/* Specific background for BTS TM */
 body[data-page="bts-tm"] .formation-hero {
     background: url('../../images/formations/pexels-photo-459402.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Specific background for BTS MS */
+body[data-page="bts-ms"] .formation-hero {
+    background: url('../../images/metiers/pexels-photo-3862627.webp');
     background-size: cover;
     background-position: center;
 }
@@ -1063,7 +1070,7 @@ body[data-page="bts-tm"] .formation-hero {
 
 .horaires-cell.header {
     background-color: #3a54a8;
-    color: black;
+    color: white;
     font-weight: 600;
     text-align: center;
     justify-content: center;

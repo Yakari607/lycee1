@@ -341,6 +341,10 @@
                                         <i class="fas fa-cogs"></i>
                                         <h5>Conception de produits industriels</h5>
                                     </a>
+                                    <a href="bts-ms.php" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                        <i class="fas fa-tools"></i>
+                                        <h5>Maintenance des Systèmes</h5>
+                                    </a>
                                     <a href="bts-tm.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-atom"></i>
                                         <h5>Traitement des matériaux</h5>
@@ -522,6 +526,7 @@
                                 <li>BAC PRO Métiers de l'Électricité</li>
                                 <li>BAC PRO Technicien d'Usinage</li>
                                 <li>BTS Conception de Produits Industriels</li>
+                                <li>BTS Maintenance des Systèmes</li>
                                 <li>BTS Management Commercial Opérationnel</li>
                                 <li>BTS Assurance</li>
                             </ul>  
