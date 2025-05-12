@@ -64,9 +64,10 @@
                             <li><a href="#contact">Partenariats</a></li>
                         </ul>
                     </li>
-                    <li><a href="#actualites">Actualités</a></li>
-                    <li><a href="#ufa">UFA</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.php#actualites">Actualités</a></li>
+                    <li><a href="index.php#ufa">UFA</a></li>
+                    <li><a href="voix-apprentis.php">La Voix des Apprentis</a></li>
+                    <li><a href="index.php#contact">Contact</a></li>
                     <li><a href="vie-lyceenne.php">Vie Lycéenne</a></li>
                 </ul>
                 <button class="menu-btn">
