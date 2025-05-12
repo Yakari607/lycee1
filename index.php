@@ -350,7 +350,7 @@
                             <div class="formation-category">
                                 <h4>Bacs Professionnels</h4>
                                 <div class="diplomes-grid">
-                                    <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                    <a href="bac-pro-mspc.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-tools"></i>
                                         <h5>Maintenance des équipements industriels</h5>
                                     </a>
@@ -358,18 +358,18 @@
                                         <i class="fas fa-industry"></i>
                                         <h5>Technicien d'usinage</h5>
                                     </a>
-                                    <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                    <a href="bac-pro-melec.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-bolt"></i>
-                                        <h5>Métiers de l'électricité et de ses environnements connectés</h5>
+                                        <h5>Métiers de l'électricité et de ses environnement (MELEC)</h5>
                                     </a>
                                 </div>
                             </div>
                             <div class="formation-category">
                                 <h4>CAP</h4>
                                 <div class="diplomes-grid">
-                                    <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                    <a href="cap-electricien.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-plug"></i>
-                                        <h5>Préparation et réalisation d'ouvrages électriques</h5>
+                                        <h5>CAP Electricien</h5>
                                     </a>
                                 </div>
                             </div>
