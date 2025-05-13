@@ -386,6 +386,7 @@ if ($is_logged_in) {
                 <h1>Gestion des menus du restaurant scolaire</h1>
                 <div class="admin-actions">
                     <a href="actualites-admin.php" class="btn">Gestion des actualités</a>
+                    <a href="voix-apprentis-admin.php" class="btn">La Voix des Apprentis</a>
                     <a href="?logout=1" class="btn btn-danger">Déconnexion</a>
                 </div>
             </div>

@@ -37,19 +37,52 @@ if ($is_logged_in) {
             mkdir($target_dir, 0755, true);
         }
         
-        $target_file = $target_dir . basename($file["name"]);
-        $file_type = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+        // Extraire le nom de fichier et l'extension
+        $file_name = basename($file["name"]);
+        $file_type = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
         
-        // Générer un nom de fichier unique
-        $file_name = uniqid() . "." . $file_type;
-        $target_file = $target_dir . $file_name;
+        // Générer un nom de fichier unique pour éviter les collisions
+        $new_file_name = uniqid() . '.' . $file_type;
+        $target_file = $target_dir . $new_file_name;
+        
+        // Vérifier si le fichier est bien un fichier image ou PDF selon le dossier cible
+        if (strpos($target_dir, 'images') !== false) {
+            $allowed_types = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+            if (!in_array($file_type, $allowed_types)) {
+                return [
+                    'success' => false,
+                    'message' => "Seuls les fichiers JPG, JPEG, PNG, GIF et WEBP sont autorisés pour les images."
+                ];
+            }
+        } elseif (strpos($target_dir, 'uploads') !== false) {
+            if ($file_type != 'pdf') {
+                return [
+                    'success' => false,
+                    'message' => "Seuls les fichiers PDF sont autorisés pour les documents."
+                ];
+            }
+        }
+        
+        // Vérifier la taille du fichier (10 Mo max)
+        if ($file['size'] > 10 * 1024 * 1024) {
+            return [
+                'success' => false,
+                'message' => "Le fichier est trop volumineux. La taille maximale est de 10 Mo."
+            ];
+        }
         
         // Déplacer le fichier téléchargé
         if (move_uploaded_file($file["tmp_name"], $target_file)) {
-            return $target_file;
+            return [
+                'success' => true,
+                'path' => str_replace('../', '', $target_file)
+            ];
         }
         
-        return false;
+        return [
+            'success' => false,
+            'message' => "Une erreur s'est produite lors du téléchargement. Code: " . $file['error']
+        ];
     }
     
     // Traitement de l'ajout d'un journal
@@ -61,72 +94,100 @@ if ($is_logged_in) {
         $is_supplement = isset($_POST['is_supplement']) ? 1 : 0;
         $journal_id = $_POST['journal_id'] ?? '';
         
+        $upload_error = false;
+        
         // Traitement de l'image
         $image_path = $_POST['image_path'] ?? '';
-        if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+        if (isset($_FILES['image']) && $_FILES['image']['error'] !== UPLOAD_ERR_NO_FILE) {
             $upload_result = upload_file($_FILES['image'], "../images/voix-apprentis/");
-            if ($upload_result !== false) {
-                $image_path = $upload_result;
+            if ($upload_result['success']) {
+                $image_path = $upload_result['path'];
+            } else {
+                $error_message = "Erreur image: " . $upload_result['message'];
+                $upload_error = true;
             }
         }
         
         // Traitement du fichier PDF
         $fichier_pdf = $_POST['fichier_pdf'] ?? '';
-        if (isset($_FILES['fichier_pdf']) && $_FILES['fichier_pdf']['error'] === UPLOAD_ERR_OK) {
+        if (!$upload_error && isset($_FILES['fichier_pdf']) && $_FILES['fichier_pdf']['error'] !== UPLOAD_ERR_NO_FILE) {
             $upload_result = upload_file($_FILES['fichier_pdf'], "../uploads/voix-apprentis/");
-            if ($upload_result !== false) {
-                $fichier_pdf = $upload_result;
+            if ($upload_result['success']) {
+                $fichier_pdf = $upload_result['path'];
+            } else {
+                $error_message = "Erreur PDF: " . $upload_result['message'];
+                $upload_error = true;
             }
         }
         
-        try {
-            if (!empty($journal_id)) {
-                // Mise à jour d'un journal existant
-                $stmt = $db->prepare("UPDATE voix_apprentis_journaux SET numero = :numero, date_publication = :date_publication, theme = :theme, description = :description, is_supplement = :is_supplement" . 
-                    (!empty($image_path) ? ", image = :image" : "") . 
-                    (!empty($fichier_pdf) ? ", fichier_pdf = :fichier_pdf" : "") . 
-                    " WHERE id = :id");
-                $params = [
-                    ':numero' => $numero,
-                    ':date_publication' => $date_publication,
-                    ':theme' => $theme,
-                    ':description' => $description,
-                    ':is_supplement' => $is_supplement,
-                    ':id' => $journal_id
-                ];
-                
-                if (!empty($image_path)) {
-                    $params[':image'] = $image_path;
-                }
-                
-                if (!empty($fichier_pdf)) {
-                    $params[':fichier_pdf'] = $fichier_pdf;
-                }
-                
-                $stmt->execute($params);
-                $success_message = "Journal mis à jour avec succès";
-            } else {
-                // Vérification que les fichiers ont été uploadés
-                if (empty($image_path) || empty($fichier_pdf)) {
-                    $error_message = "Vous devez télécharger une image et un fichier PDF";
-                } else {
-                    // Ajout d'un nouveau journal
-                    $stmt = $db->prepare("INSERT INTO voix_apprentis_journaux (numero, date_publication, theme, description, image, fichier_pdf, is_supplement) 
-                        VALUES (:numero, :date_publication, :theme, :description, :image, :fichier_pdf, :is_supplement)");
-                    $stmt->execute([
+        // Si pas d'erreur d'upload, on enregistre en base de données
+        if (!$upload_error) {
+            try {
+                if (!empty($journal_id)) {
+                    // Mise à jour d'un journal existant
+                    $query = "UPDATE voix_apprentis_journaux SET 
+                              numero = :numero, 
+                              date_publication = :date_publication, 
+                              theme = :theme, 
+                              description = :description, 
+                              is_supplement = :is_supplement";
+                    
+                    if (!empty($image_path)) {
+                        $query .= ", image = :image";
+                    }
+                    
+                    if (!empty($fichier_pdf)) {
+                        $query .= ", fichier_pdf = :fichier_pdf";
+                    }
+                    
+                    $query .= " WHERE id = :id";
+                    
+                    $stmt = $db->prepare($query);
+                    $params = [
                         ':numero' => $numero,
                         ':date_publication' => $date_publication,
                         ':theme' => $theme,
                         ':description' => $description,
-                        ':image' => $image_path,
-                        ':fichier_pdf' => $fichier_pdf,
-                        ':is_supplement' => $is_supplement
-                    ]);
-                    $success_message = "Journal ajouté avec succès";
+                        ':is_supplement' => $is_supplement,
+                        ':id' => $journal_id
+                    ];
+                    
+                    if (!empty($image_path)) {
+                        $params[':image'] = $image_path;
+                    }
+                    
+                    if (!empty($fichier_pdf)) {
+                        $params[':fichier_pdf'] = $fichier_pdf;
+                    }
+                    
+                    $stmt->execute($params);
+                    $success_message = "Journal mis à jour avec succès";
+                } else {
+                    // Vérification que les fichiers ont été uploadés pour un nouveau journal
+                    if (empty($image_path)) {
+                        $error_message = "Vous devez télécharger une image de couverture";
+                    } elseif (empty($fichier_pdf)) {
+                        $error_message = "Vous devez télécharger un fichier PDF";
+                    } else {
+                        // Ajout d'un nouveau journal
+                        $stmt = $db->prepare("INSERT INTO voix_apprentis_journaux 
+                            (numero, date_publication, theme, description, image, fichier_pdf, is_supplement) 
+                            VALUES (:numero, :date_publication, :theme, :description, :image, :fichier_pdf, :is_supplement)");
+                        $stmt->execute([
+                            ':numero' => $numero,
+                            ':date_publication' => $date_publication,
+                            ':theme' => $theme,
+                            ':description' => $description,
+                            ':image' => $image_path,
+                            ':fichier_pdf' => $fichier_pdf,
+                            ':is_supplement' => $is_supplement
+                        ]);
+                        $success_message = "Journal ajouté avec succès";
+                    }
                 }
+            } catch (PDOException $e) {
+                $error_message = "Erreur lors de l'enregistrement : " . $e->getMessage();
             }
-        } catch (PDOException $e) {
-            $error_message = "Erreur lors de l'enregistrement : " . $e->getMessage();
         }
     }
     
@@ -420,6 +481,69 @@ if ($is_logged_in) {
                 align-items: flex-start;
             }
         }
+        
+        .form-help {
+            color: #6c757d;
+            margin-top: 5px;
+        }
+        
+        .file-input-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+        
+        .file-input-wrapper input[type=file] {
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+        
+        .file-input-wrapper .btn {
+            display: inline-block;
+            padding: 8px 12px;
+            margin-right: 5px;
+        }
+        
+        .file-preview {
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background-color: var(--gray-light);
+        }
+        
+        .file-preview img {
+            max-width: 300px;
+            max-height: 200px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 3px;
+            background-color: white;
+            display: block;
+            margin-top: 10px;
+        }
+        
+        .progress-bar {
+            height: 20px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        
+        .progress-bar .progress {
+            height: 100%;
+            background-color: var(--primary-color);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        .alert ul {
+            margin: 5px 0 5px 20px;
+        }
     </style>
 </head>
 <body>
@@ -463,7 +587,7 @@ if ($is_logged_in) {
             <?php endif; ?>
             
             <h2><?= $journal_to_edit ? 'Modifier le journal' : 'Ajouter un nouveau journal' ?></h2>
-            <form method="post" action="" enctype="multipart/form-data">
+            <form method="post" action="" enctype="multipart/form-data" name="save_journal">
                 <?php if ($journal_to_edit): ?>
                     <input type="hidden" name="journal_id" value="<?= $journal_to_edit['id'] ?>">
                     <input type="hidden" name="image_path" value="<?= $journal_to_edit['image'] ?>">
@@ -492,7 +616,10 @@ if ($is_logged_in) {
                 
                 <div class="form-group">
                     <label for="image">Image de couverture</label>
-                    <input type="file" id="image" name="image" accept="image/*" <?= $journal_to_edit ? '' : 'required' ?>>
+                    <input type="file" id="image" name="image" accept="image/jpeg,image/png,image/gif,image/webp" <?= $journal_to_edit ? '' : 'required' ?>>
+                    <div class="form-help">
+                        <small>Formats acceptés: JPG, PNG, GIF, WEBP. Taille max: 10 Mo. Dimension recommandée: 800x600px</small>
+                    </div>
                     <?php if (isset($journal_to_edit) && !empty($journal_to_edit['image'])): ?>
                         <div class="file-preview">
                             <p>Image actuelle :</p>
@@ -503,7 +630,10 @@ if ($is_logged_in) {
                 
                 <div class="form-group">
                     <label for="fichier_pdf">Fichier PDF</label>
-                    <input type="file" id="fichier_pdf" name="fichier_pdf" accept=".pdf" <?= $journal_to_edit ? '' : 'required' ?>>
+                    <input type="file" id="fichier_pdf" name="fichier_pdf" accept="application/pdf" <?= $journal_to_edit ? '' : 'required' ?>>
+                    <div class="form-help">
+                        <small>Format accepté: PDF uniquement. Taille max: 10 Mo.</small>
+                    </div>
                     <?php if (isset($journal_to_edit) && !empty($journal_to_edit['fichier_pdf'])): ?>
                         <div class="file-preview">
                             <p>Fichier actuel :</p>
@@ -513,13 +643,7 @@ if ($is_logged_in) {
                         </div>
                     <?php endif; ?>
                 </div>
-                
-                <div class="form-group">
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="is_supplement" name="is_supplement" <?= isset($journal_to_edit['is_supplement']) && $journal_to_edit['is_supplement'] ? 'checked' : '' ?>>
-                        <label for="is_supplement">Est un supplément</label>
-                    </div>
-                </div>
+        
                 
                 <button type="submit" name="save_journal"><?= $journal_to_edit ? 'Mettre à jour' : 'Ajouter' ?></button>
                 <?php if ($journal_to_edit): ?>
@@ -576,5 +700,155 @@ if ($is_logged_in) {
             <a href="../voix-apprentis.php" class="back-link">Retour à La Voix des Apprentis</a>
         </div>
     <?php endif; ?>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Fonction pour formatter la taille des fichiers
+        function formatFileSize(bytes) {
+            if (bytes < 1024) return bytes + ' octets';
+            else if (bytes < 1048576) return (bytes / 1024).toFixed(2) + ' Ko';
+            else return (bytes / 1048576).toFixed(2) + ' Mo';
+        }
+        
+        // Prévisualisation de l'image
+        const imageInput = document.getElementById('image');
+        if (imageInput) {
+            imageInput.addEventListener('change', function(e) {
+                const file = this.files[0];
+                if (!file) return;
+                
+                // Vérifier le type de fichier
+                const validImageTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+                if (!validImageTypes.includes(file.type)) {
+                    alert('Type de fichier invalide. Veuillez sélectionner une image au format JPG, PNG, GIF ou WEBP.');
+                    this.value = ''; // Réinitialiser l'input
+                    return;
+                }
+                
+                // Vérifier la taille (max 10 Mo)
+                if (file.size > 10 * 1024 * 1024) {
+                    alert('Le fichier est trop volumineux. La taille maximale est de 10 Mo.');
+                    this.value = ''; // Réinitialiser l'input
+                    return;
+                }
+                
+                // Créer ou récupérer la div de prévisualisation
+                let previewDiv = this.nextElementSibling.nextElementSibling;
+                if (!previewDiv || !previewDiv.classList.contains('file-preview')) {
+                    previewDiv = document.createElement('div');
+                    previewDiv.className = 'file-preview';
+                    this.parentNode.appendChild(previewDiv);
+                }
+                
+                // Afficher les informations du fichier
+                previewDiv.innerHTML = `
+                    <p>Aperçu de l'image sélectionnée :</p>
+                    <p><strong>Nom :</strong> ${file.name}</p>
+                    <p><strong>Taille :</strong> ${formatFileSize(file.size)}</p>
+                `;
+                
+                // Créer un aperçu de l'image
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    previewDiv.appendChild(img);
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+        
+        // Affichage des informations pour le fichier PDF
+        const pdfInput = document.getElementById('fichier_pdf');
+        if (pdfInput) {
+            pdfInput.addEventListener('change', function(e) {
+                const file = this.files[0];
+                if (!file) return;
+                
+                // Vérifier le type de fichier
+                if (file.type !== 'application/pdf') {
+                    alert('Seuls les fichiers PDF sont acceptés.');
+                    this.value = ''; // Réinitialiser l'input
+                    return;
+                }
+                
+                // Vérifier la taille (max 10 Mo)
+                if (file.size > 10 * 1024 * 1024) {
+                    alert('Le fichier est trop volumineux. La taille maximale est de 10 Mo.');
+                    this.value = ''; // Réinitialiser l'input
+                    return;
+                }
+                
+                // Créer ou récupérer la div de prévisualisation
+                let previewDiv = this.nextElementSibling.nextElementSibling;
+                if (!previewDiv || !previewDiv.classList.contains('file-preview')) {
+                    previewDiv = document.createElement('div');
+                    previewDiv.className = 'file-preview';
+                    this.parentNode.appendChild(previewDiv);
+                }
+                
+                // Afficher les informations du fichier
+                previewDiv.innerHTML = `
+                    <p>Fichier PDF sélectionné :</p>
+                    <p><strong>Nom :</strong> ${file.name}</p>
+                    <p><strong>Taille :</strong> ${formatFileSize(file.size)}</p>
+                    <div class="file-link">
+                        <i class="fas fa-file-pdf"></i> ${file.name}
+                    </div>
+                `;
+            });
+        }
+        
+        // Confirmation de suppression
+        const deleteLinks = document.querySelectorAll('a[href*="delete_journal"]');
+        deleteLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (!confirm('Êtes-vous sûr de vouloir supprimer ce journal ? Cette action est irréversible.')) {
+                    e.preventDefault();
+                }
+            });
+        });
+        
+        // Validation du formulaire avant soumission
+        const journalForm = document.querySelector('form[name="save_journal"]');
+        if (journalForm) {
+            journalForm.addEventListener('submit', function(e) {
+                const numero = document.getElementById('numero').value;
+                const datePublication = document.getElementById('date_publication').value;
+                
+                if (!numero || isNaN(parseInt(numero)) || parseInt(numero) <= 0) {
+                    alert('Veuillez entrer un numéro de journal valide.');
+                    e.preventDefault();
+                    return;
+                }
+                
+                if (!datePublication) {
+                    alert('Veuillez sélectionner une date de publication.');
+                    e.preventDefault();
+                    return;
+                }
+                
+                // Vérification des fichiers pour un nouveau journal
+                const journalIdInput = document.querySelector('input[name="journal_id"]');
+                if (!journalIdInput) {
+                    const image = document.getElementById('image').files[0];
+                    const pdf = document.getElementById('fichier_pdf').files[0];
+                    
+                    if (!image) {
+                        alert('Veuillez sélectionner une image de couverture.');
+                        e.preventDefault();
+                        return;
+                    }
+                    
+                    if (!pdf) {
+                        alert('Veuillez sélectionner un fichier PDF.');
+                        e.preventDefault();
+                        return;
+                    }
+                }
+            });
+        }
+    });
+    </script>
 </body>
 </html> 
