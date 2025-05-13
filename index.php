@@ -461,7 +461,7 @@
                             <div class="service-category">
                                 <h4>Aide à la Personne</h4>
                                 <div class="diplomes-grid">
-                                    <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                    <a href="cap-aaga.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-hand-holding-heart"></i>
                                         <h5>CAP Agent Accompagnant au Grand Âge (AAGA)</h5>
                                     </a>
@@ -474,7 +474,7 @@
                             <div class="service-category">
                                 <h4>Restauration</h4>
                                 <div class="diplomes-grid">
-                                    <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                    <a href="cap-psr.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-utensils"></i>
                                         <h5>CAP Production et Service en Restaurations (PSR)</h5>
                                     </a>
