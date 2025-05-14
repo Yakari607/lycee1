@@ -3,8 +3,8 @@
  * Navigation bar component for Lycée Jean Mermoz website
  * Include this file in all pages that need the main navigation
  */
-?>
-<!-- En-tête -->
+
+?> <!-- En-tête -->
 <nav class="main-nav">
     <div class="nav-container">
         <div class="logo">
@@ -56,4 +56,5 @@
             </button>
         </div>
     </div>
-</nav> 
+</nav>
+<div class="menu-overlay"></div> 

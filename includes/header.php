@@ -38,5 +38,4 @@ if (!isset($pageTitle)) {
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
-</body>
-</html> 
+<body>
