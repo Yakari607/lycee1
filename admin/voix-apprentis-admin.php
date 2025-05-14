@@ -32,23 +32,38 @@ if ($is_logged_in) {
     
     // Traitement de l'upload de fichier
     function upload_file($file, $target_dir) {
+        // Activons le débogage
+        error_log("Tentative d'upload: " . json_encode($file));
+        error_log("Dossier cible: " . $target_dir);
+        
         // Vérifier si le dossier existe, sinon le créer
         if (!file_exists($target_dir)) {
-            mkdir($target_dir, 0755, true);
+            error_log("Le dossier n'existe pas, tentative de création: " . $target_dir);
+            $mkdir_result = mkdir($target_dir, 0777, true);
+            if (!$mkdir_result) {
+                error_log("Erreur lors de la création du dossier: " . $target_dir);
+                return [
+                    'success' => false,
+                    'message' => "Impossible de créer le dossier de destination. Vérifiez les permissions."
+                ];
+            }
         }
         
         // Extraire le nom de fichier et l'extension
         $file_name = basename($file["name"]);
         $file_type = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
+        error_log("Type de fichier: " . $file_type);
         
         // Générer un nom de fichier unique pour éviter les collisions
         $new_file_name = uniqid() . '.' . $file_type;
         $target_file = $target_dir . $new_file_name;
+        error_log("Fichier cible: " . $target_file);
         
         // Vérifier si le fichier est bien un fichier image ou PDF selon le dossier cible
         if (strpos($target_dir, 'images') !== false) {
             $allowed_types = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
             if (!in_array($file_type, $allowed_types)) {
+                error_log("Type de fichier non autorisé pour les images: " . $file_type);
                 return [
                     'success' => false,
                     'message' => "Seuls les fichiers JPG, JPEG, PNG, GIF et WEBP sont autorisés pour les images."
@@ -56,6 +71,7 @@ if ($is_logged_in) {
             }
         } elseif (strpos($target_dir, 'uploads') !== false) {
             if ($file_type != 'pdf') {
+                error_log("Type de fichier non autorisé pour les documents: " . $file_type);
                 return [
                     'success' => false,
                     'message' => "Seuls les fichiers PDF sont autorisés pour les documents."
@@ -65,18 +81,34 @@ if ($is_logged_in) {
         
         // Vérifier la taille du fichier (10 Mo max)
         if ($file['size'] > 10 * 1024 * 1024) {
+            error_log("Fichier trop volumineux: " . $file['size'] . " octets");
             return [
                 'success' => false,
                 'message' => "Le fichier est trop volumineux. La taille maximale est de 10 Mo."
             ];
         }
         
-        // Déplacer le fichier téléchargé
-        if (move_uploaded_file($file["tmp_name"], $target_file)) {
+        // Essayons de copier le fichier au lieu de le déplacer
+        error_log("Tentative de copie de " . $file["tmp_name"] . " vers " . $target_file);
+        
+        if (copy($file["tmp_name"], $target_file)) {
+            error_log("Fichier copié avec succès");
+            // Si la copie a réussi, on peut supprimer le fichier temporaire
+            @unlink($file["tmp_name"]);
             return [
                 'success' => true,
                 'path' => str_replace('../', '', $target_file)
             ];
+        }
+        
+        error_log("Erreur lors de la copie du fichier.");
+        // Vérifions si le fichier temporaire existe
+        if (!file_exists($file["tmp_name"])) {
+            error_log("Le fichier temporaire n'existe pas: " . $file["tmp_name"]);
+        }
+        // Vérifions si on peut écrire dans le dossier cible
+        if (!is_writable(dirname($target_file))) {
+            error_log("Le dossier cible n'est pas accessible en écriture: " . dirname($target_file));
         }
         
         return [

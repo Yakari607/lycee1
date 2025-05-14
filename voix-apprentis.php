@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <div class="presentation-image">
-                        <img src="images/voix-apprentis/journal-illustration.jpg" alt="La Voix des Apprentis - Journal" class="img-fluid">
+                        <img src="images/voix-apprentis/pexels-ekrulila-3837409.jpg" alt="La Voix des Apprentis - Journal" class="img-fluid">
                     </div>
                 </div>
             </div>
