@@ -44,7 +44,7 @@
                         </ul>
                     </div>
                     <div class="formation-card image-card">
-                        <img src="images/metiers/pexels-anastasia-shuraeva-8466918.jpg" alt="Service en restauration" />
+                        <img src="images/formations/pexels-photo-9461624.webp" alt="Service en restauration" />
                     </div>
                 </div>
 

@@ -306,11 +306,15 @@
                                 <div class="diplomes-grid">
                                     <a href="bac-pro-mspc.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-tools"></i>
-                                        <h5>Maintenance des équipements industriels</h5>
+                                        <h5>Bac Pro Maintenance des Systèmes de Production Connectés (MSPC)</h5>
                                     </a>
                                     <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-industry"></i>
-                                        <h5>Technicien d'usinage</h5>
+                                        <h5>Bac pro technicien en réalisation
+de produits mécaniques option
+réalisation et suivi de productions
+(TRPM)
+</h5>
                                     </a>
                                     <a href="bac-pro-melec.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-bolt"></i>
@@ -381,17 +385,17 @@
                 <!-- Artisanat -->
                 <div class="formation-block" id="artisanat">
                     <div class="formation-header">
-                        <h3>Artisanat et Métiers d'Art</h3>
+                        <h3>Métiers de l’enseigne et de la signalétique</h3>
                         <p class="formation-intro">Des formations créatives et techniques</p>
                     </div>
                     <div class="formation-content">
                         <div class="artisanat-grid">
-                            <a href="#" class="diplome-card large" style="text-decoration: none; color: inherit;">
+                            <a href="bac-pro-metiers-enseigne.php" class="diplome-card large" style="text-decoration: none; color: inherit;">
                                 <i class="fas fa-paint-brush"></i>
-                                <h4>BAC PRO Artisanat et Métiers d'Arts</h4>
+                                <h4>BAC PRO Métiers de l’enseigne et de la signalétique                                </h4>
                                 <h5>Métiers de l'Enseigne et de la Signalétique</h5>
                             </a>
-                            <a href="#" class="diplome-card large" style="text-decoration: none; color: inherit;">
+                            <a href="cap-metiers-enseigne.php" class="diplome-card large" style="text-decoration: none; color: inherit;">
                                 <i class="fas fa-sign"></i>
                                 <h4>CAP Métiers de l'Enseigne et de la Signalétique</h4>
                             </a>

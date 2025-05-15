@@ -23,6 +23,6 @@
 
 <button class="theme-toggle" aria-label="Basculer le mode sombre">
     <i class="fas fa-moon"></i>
-</button>
+</button> 
 </body>
 </html> 
