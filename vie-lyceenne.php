@@ -38,7 +38,7 @@
                             <span class="news-tag">Sport</span>
                             <h3>UNSS</h3>
                             <p>L'Union Nationale du Sport Scolaire propose des activités sportives variées tout au long de l'année. Participez à des compétitions, développez votre esprit d'équipe et dépassez-vous !</p>
-                            <a href="#" class="read-more">En savoir plus</a>
+                            <a href="unss.php" class="read-more">En savoir plus</a>
                         </div>
                     </article>
 
@@ -64,7 +64,7 @@
                             <span class="news-tag">Langues</span>
                             <h3>Café des langues</h3>
                             <p>Un espace d'échange multiculturel pour pratiquer les langues étrangères dans une ambiance conviviale. Améliorez vos compétences linguistiques en situation réelle.</p>
-                            <a href="#" class="read-more">En savoir plus</a>
+                            <a href="cafe-des-langues.php" class="read-more">En savoir plus</a>
                         </div>
                     </article>
 
@@ -90,7 +90,7 @@
                             <span class="news-tag">Hébergement</span>
                             <h3>L'internat</h3>
                             <p>Un cadre de vie adapté pour la réussite de vos études. Bénéficiez d'un environnement propice au travail et d'un accompagnement personnalisé.</p>
-                            <a href="#" class="read-more">En savoir plus</a>
+                            <a href="internat.php" class="read-more">En savoir plus</a>
                         </div>
                     </article>
                 </div>

@@ -248,29 +248,68 @@
                         <p class="formation-intro">Une ouverture sur l'international et le transfrontalier</p>
                     </div>
                     <div class="formation-content">
-                        <div class="langues-grid">
-                            <div class="langue-card">
-                                <i class="fas fa-flag"></i>
-                                <h4>Section ABIBAC</h4>
-                                <p>Double diplôme franco-allemand</p>
+                        <div class="formation-category">
+                            <h4>Formations Internationales</h4>
+                            <div class="diplomes-grid">
+                                <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                    <i class="fas fa-flag"></i>
+                                    <h5>Section ABIBAC</h5>
+                                    <p>Double diplôme franco-allemand</p>
+                                </a>
+                                <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                    <i class="fas fa-globe-europe"></i>
+                                    <h5>Sections EURO ANGLAIS</h5>
+                                    <ul>
+                                        <li>Euro anglais en filières générales et technologiques</li>
+                                        <li>Euro anglais en BAC PRO MELEC</li>
+                                    </ul>
+                                </a>
+                                <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                    <i class="fas fa-laptop-code"></i>
+                                    <h5>eTwinning</h5>
+                                    <p>Projets collaboratifs européens</p>
+                                </a>
                             </div>
-                            <div class="langue-card">
-                                <i class="fas fa-globe-europe"></i>
-                                <h4>Sections Européennes</h4>
-                                <ul>
-                                    <li>Euro anglais en filières générales et technologiques</li>
-                                    <li>Euro anglais en BAC PRO MELEC</li>
-                                </ul>
+                        </div>
+
+                        <div class="formation-category">
+                            <h4>Formations Transfrontalières</h4>
+                            <div class="diplomes-grid">
+                                <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                    <i class="fas fa-handshake"></i>
+                                    <h5>AZUBI BAC PRO</h5>
+                                    <p>Apprentissage transfrontalier en BAC PRO</p>
+                                </a>
+                                <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <h5>Licence Professionnelle Transfrontalière</h5>
+                                    <p>Formation supérieure transfrontalière</p>
+                                </a>
+                                <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <h5>Conseil en Assurance et Services Financiers</h5>
+                                    <p>Formation spécialisée transfrontalière</p>
+                                </a>
                             </div>
-                            <div class="langue-card">
-                                <i class="fas fa-handshake"></i>
-                                <h4>Formations Transfrontalières</h4>
-                                <p>Apprentissage en mixage de publics en BAC PRO et BTS</p>
-                            </div>
-                            <div class="langue-card">
-                                <i class="fas fa-laptop-code"></i>
-                                <h4>Etwinning</h4>
-                                <p>Projets collaboratifs européens</p>
+                        </div>
+
+                        <div class="formation-category">
+                            <h4>Programmes Spéciaux</h4>
+                            <div class="diplomes-grid">
+                                <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                    <i class="fas fa-star"></i>
+                                    <h5>PASS INGENIEUR</h5>
+                                    <p>Programme spécial avec cours renforcés en anglais</p>
+                                    <ul>
+                                        <li>Projets technologiques</li>
+                                        <li>Préparation aux études d'ingénieur</li>
+                                    </ul>
+                                </a>
+                                <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                    <i class="fas fa-wrench"></i>
+                                    <h5>Bac Pro MEI</h5>
+                                    <p>Maintenance des équipements industriels</p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -385,20 +424,22 @@ réalisation et suivi de productions
                 <!-- Artisanat -->
                 <div class="formation-block" id="artisanat">
                     <div class="formation-header">
-                        <h3>Métiers de l’enseigne et de la signalétique</h3>
+                        <h3>Métiers de l'enseigne et de la signalétique</h3>
                         <p class="formation-intro">Des formations créatives et techniques</p>
                     </div>
                     <div class="formation-content">
-                        <div class="artisanat-grid">
-                            <a href="bac-pro-metiers-enseigne.php" class="diplome-card large" style="text-decoration: none; color: inherit;">
-                                <i class="fas fa-paint-brush"></i>
-                                <h4>BAC PRO Métiers de l’enseigne et de la signalétique                                </h4>
-                                <h5>Métiers de l'Enseigne et de la Signalétique</h5>
-                            </a>
-                            <a href="cap-metiers-enseigne.php" class="diplome-card large" style="text-decoration: none; color: inherit;">
-                                <i class="fas fa-sign"></i>
-                                <h4>CAP Métiers de l'Enseigne et de la Signalétique</h4>
-                            </a>
+                        <div class="formation-category">
+                            <h4>Nos formations</h4>
+                            <div class="diplomes-grid">
+                                <a href="bac-pro-metiers-enseigne.php" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                    <i class="fas fa-paint-brush"></i>
+                                    <h5>BAC PRO Métiers de l'enseigne et de la signalétique</h5>
+                                </a>
+                                <a href="cap-metiers-enseigne.php" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                    <i class="fas fa-sign"></i>
+                                    <h5>CAP Métiers de l'Enseigne et de la Signalétique</h5>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
