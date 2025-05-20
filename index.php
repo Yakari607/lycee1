@@ -194,6 +194,7 @@
                                 <div class="filiere-header">
                                     <i class="fas fa-graduation-cap"></i>
                                     <h4>Bac Général</h4>
+                                    <a href="bac-general.php" class="read-more">En savoir plus</a>
                                 </div>
                                 <div class="filiere-details">
                                     <h5>Spécialités proposées</h5>
@@ -211,6 +212,7 @@
                                 <div class="filiere-header">
                                     <i class="fas fa-microchip"></i>
                                     <h4>STI2D</h4>
+                                    <a href="sti2d.php" class="read-more">En savoir plus</a>
                                 </div>
                                 <div class="filiere-details">
                                     <h5>Sciences et Technologies de l'Industrie et du Développement Durable</h5>
@@ -226,6 +228,7 @@
                                 <div class="filiere-header">
                                     <i class="fas fa-chart-pie"></i>
                                     <h4>STMG</h4>
+                                    <a href="bac-stmg.php" class="read-more">En savoir plus</a>
                                 </div>
                                 <div class="filiere-details">
                                     <h5>Sciences et Technologies du Management et de la Gestion</h5>

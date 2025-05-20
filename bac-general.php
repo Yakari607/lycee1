@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/pages/formation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        .program-grid {
+                .program-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
@@ -32,7 +32,7 @@
             left: 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
         }
         
         .program-card:hover {
@@ -41,7 +41,7 @@
         }
         
         .program-card h4 {
-            color: var(--primary);
+            color: var(--primary-color);
             margin-bottom: 1rem;
             font-size: 1.5rem;
             display: flex;
@@ -50,7 +50,7 @@
         }
         
         .program-card h4 i {
-            background-color: var(--primary);
+            background-color: var(--primary-color);
             color: white;
             width: 36px;
             height: 36px;
@@ -69,7 +69,7 @@
         }
         
         .timetable-header {
-            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             color: white;
             padding: 1.5rem;
             text-align: center;
@@ -109,7 +109,7 @@
         }
         
         .highlight-cell {
-            background-color: rgba(var(--primary-rgb), 0.1);
+            background-color: rgba(0, 0, 145, 0.1);
             font-weight: 600;
         }
         
@@ -130,7 +130,7 @@
             padding: 1.5rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             transition: transform 0.3s ease;
-            border-left: 4px solid var(--primary);
+            border-left: 4px solid var(--primary-color);
         }
         
         .specialty-item:hover {
@@ -138,65 +138,75 @@
         }
         
         .specialty-item h4 {
-            color: var(--primary);
+            color: var(--primary-color);
             margin-bottom: 0.5rem;
             font-size: 1.2rem;
         }
         
         .specialty-item p {
-            color: var(--text);
+            color: var(--text-color);
             font-size: 0.9rem;
         }
         
-        .menu-section {
+        .portrait-section {
             margin: 3rem 0;
         }
         
-        .menu-card {
+        .portrait-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .portrait-card {
             background-color: var(--white);
             border-radius: 10px;
+            overflow: hidden;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .portrait-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .portrait-image {
+            height: 200px;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             overflow: hidden;
         }
         
-        .menu-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 5px;
-            background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
+        .portrait-image i {
+            font-size: 5rem;
+            color: var(--primary-color);
+            opacity: 0.3;
         }
         
-        .menu-card h4 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            padding-left: 1rem;
+        .portrait-content {
+            padding: 1.5rem;
         }
         
-        .menu-card ul {
-            list-style-type: none;
-            padding-left: 1rem;
-        }
-        
-        .menu-card li {
+        .portrait-content h4 {
+            color: var(--primary-color);
             margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
+            font-size: 1.2rem;
         }
         
-        .menu-card li::before {
-            content: '\f00c';
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-            color: var(--primary);
-            position: absolute;
-            left: 0;
-            top: 2px;
+        .portrait-content p {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .portrait-content .portrait-quote {
+            font-style: italic;
+            color: var(--gray);
+            position: relative;
+            padding-left: 1rem;
+            border-left: 3px solid var(--primary-color);
         }
         
         @media (max-width: 768px) {
@@ -205,6 +215,10 @@
             }
             
             .specialty-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .portrait-grid {
                 grid-template-columns: 1fr;
             }
             

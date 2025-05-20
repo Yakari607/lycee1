@@ -1737,4 +1737,70 @@ body[data-page="bts-ms"] .formation-hero {
     .content-card {
         padding: 15px;
     }
+}
+
+/* Menus de spécialités proposés (Bac Général) */
+.menu-specialites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+.menu-specialites-card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.menu-specialites-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+  transform: translateY(-4px);
+}
+.menu-specialites-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  gap: 0.7rem;
+}
+.menu-specialites-title i {
+  font-size: 1.3rem;
+  color: var(--accent-color);
+}
+.menu-specialites-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.menu-specialites-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.2rem;
+  position: relative;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+.menu-specialites-list li::before {
+  content: '\f058';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 0.95em;
+}
+@media (max-width: 600px) {
+  .menu-specialites-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .menu-specialites-card {
+    padding: 1.2rem 0.8rem;
+  }
 } 

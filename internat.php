@@ -32,7 +32,7 @@
             left: 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
         }
         
         .internat-section {
@@ -52,32 +52,22 @@
             left: 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
         }
         
         .internat-section h3 {
-            color: var(--primary);
+            color: var(--primary-color);
             margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-            padding-bottom: 0.5rem;
+            font-size: 1.5rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
         }
         
         .internat-section h3 i {
-            background-color: var(--primary);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
+            margin-right: 0.75rem;
         }
         
-        .internat-facilities {
+        .facilities-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 1.5rem;
@@ -85,303 +75,116 @@
         }
         
         .facility-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            background-color: var(--light-bg);
-            padding: 1.2rem;
+            background-color: var(--gray-light);
+            padding: 1.5rem;
             border-radius: 8px;
-            transition: all 0.3s ease;
-            border-left: 4px solid var(--primary);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid var(--primary-color);
         }
         
         .facility-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
         }
         
         .facility-item i {
-            font-size: 1.8rem;
-            color: var(--primary);
-            min-width: 40px;
-            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
         }
         
-        /* Nouveau style amélioré pour le tableau des horaires */
-        .schedule-container {
-            margin-top: 2rem;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            background-color: white;
-        }
-        
-        .schedule-header {
-            background: linear-gradient(135deg, var(--primary) 0%, #3a7bd5 100%);
-            color: white;
-            padding: 1.5rem;
-            text-align: center;
-            font-size: 1.3rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .schedule-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
-        }
-        
-        .schedule-header i {
-            margin-right: 10px;
-            font-size: 1.4rem;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-        
-        .timeline-schedule {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
-        
-        .timeline-item {
-            display: flex;
-            border-bottom: 1px solid #eaeaea;
-            transition: all 0.3s ease;
-        }
-        
-        .timeline-item:last-child {
-            border-bottom: none;
-        }
-        
-        .timeline-item:hover {
-            background-color: rgba(0,0,0,0.02);
-        }
-        
-        .timeline-time {
-            flex: 0 0 150px;
-            padding: 1.2rem;
-            font-weight: 600;
-            color: var(--primary);
-            background-color: #f8f9fa;
-            border-right: 1px solid #eaeaea;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        
-        .timeline-time::after {
-            content: '';
-            position: absolute;
-            right: -6px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 12px;
-            height: 12px;
-            background-color: var(--primary);
-            border-radius: 50%;
-            z-index: 1;
-        }
-        
-        .timeline-activity {
-            flex: 1;
-            padding: 1.2rem 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .timeline-icon {
-            width: 36px;
-            height: 36px;
-            background-color: #e8f4ff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-size: 1rem;
-            flex-shrink: 0;
-        }
-        
-        .timeline-text {
-            flex: 1;
-        }
-        
-        .timeline-text small {
-            display: block;
-            color: #6c757d;
-            margin-top: 0.3rem;
-            font-style: italic;
+        .facility-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary-color);
         }
         
         .schedule-table {
             width: 100%;
             border-collapse: collapse;
-            background-color: white;
-            display: none;
-        }
-        
-        .schedule-table th,
-        .schedule-table td {
-            padding: 1rem 1.5rem;
-            border: none;
-            border-bottom: 1px solid #eaeaea;
-        }
-        
-        .schedule-table th {
-            background-color: #f8f9fa;
-            color: var(--primary);
-            text-align: left;
-            font-weight: 600;
-            font-size: 1rem;
-        }
-        
-        .schedule-table tr:last-child td {
-            border-bottom: none;
-        }
-        
-        .schedule-table tr:hover {
-            background-color: rgba(0,0,0,0.02);
-        }
-        
-        .schedule-time {
-            font-weight: 600;
-            color: var(--primary);
-            white-space: nowrap;
-            background-color: #f8f9fa;
-            border-right: 1px solid #eaeaea;
-        }
-        
-        .important-note {
-            background-color: #fff8e1;
-            border-left: 4px solid #ffc107;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        
-        .important-note h4 {
-            color: #f57c00;
-            margin-bottom: 0.8rem;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .important-note h4 i {
-            color: #f57c00;
-        }
-        
-        .important-note ul {
-            padding-left: 1.5rem;
-        }
-        
-        .important-note li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .gallery-item {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            position: relative;
-            height: 250px;
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-        
-        .gallery-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
-            color: white;
-            padding: 1rem;
-            font-weight: 500;
-        }
-        
-        .two-columns {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
             margin-top: 1.5rem;
         }
         
-        .column-content {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 1.5rem;
+        .schedule-table th, .schedule-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
         }
         
-        .column-content h4 {
-            color: var(--primary);
-            margin-bottom: 1rem;
+        .schedule-table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .schedule-table tr:nth-child(even) {
+            background-color: var(--gray-light);
+        }
+        
+        .schedule-table tr:hover {
+            background-color: rgba(0, 0, 145, 0.05);
+        }
+        
+        .room-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .room-card {
+            background-color: var(--gray-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .room-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
             font-size: 1.2rem;
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 0.5rem;
-            display: inline-block;
+        }
+        
+        .room-card ul {
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .room-card li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #000066 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .highlight-box h3 {
+            color: white !important;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .highlight-box p {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
         }
         
         @media (max-width: 768px) {
-            .internat-facilities {
-                grid-template-columns: 1fr;
-            }
-            
-            .image-gallery {
-                grid-template-columns: 1fr;
-            }
-            
-            .two-columns {
-                grid-template-columns: 1fr;
-            }
-            
-            .timeline-time {
-                flex: 0 0 100px;
-                padding: 1rem 0.8rem;
-                font-size: 0.9rem;
-            }
-            
-            .timeline-activity {
+            .internat-content {
                 padding: 1rem;
             }
             
-            .timeline-icon {
-                width: 30px;
-                height: 30px;
-                font-size: 0.8rem;
+            .facilities-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .room-info {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -391,276 +194,160 @@
     <?php include 'includes/navbar.php'; ?>
 
     <main>
-        <!-- Ajout du bouton retour -->
+        <!-- Bouton retour -->
         <a href="vie-lyceenne.php" class="back-home">
             <i class="fas fa-arrow-left"></i>
-            <span>Retour à la vie au lycée</span>
+            <span>Retour à la vie lycéenne</span>
         </a>
 
-        <section class="vie-lyceenne-hero" style="background-image: url('images/activites/-tablissement-internat-guez-balzac-17224.jpg'); background-position: center; background-size: cover;">
+        <section class="vie-lyceenne-hero" style="background: url('images/activites/-tablissement-internat-guez-balzac-17224.jpg'); background-size: cover; background-position: center;">
             <div class="hero-content">
                 <h1>L'Internat</h1>
-                <p>Un lieu de vie convivial pour réussir sa scolarité</p>
+                <p>Un cadre de vie idéal pour la réussite des élèves</p>
             </div>
         </section>
 
         <div class="internat-content">
-            <div class="internat-intro">
-                <h2>Présentation de l'internat</h2>
-                <p>L'internat est un lieu de vie convivial, encadré par les Conseillers Principaux d'Education et les Assistants d'Education. Le respect du Règlement Intérieur permet le bon fonctionnement de la vie en collectivité.</p>
-                <p>Différents personnels du lycée contribuent à la mise en œuvre du meilleur accueil possible : Infirmières, agents d'entretien, agent de service de la restauration.</p>
-                <p>L'internat dispose d'une capacité d'accueil d'une centaine d'internes. Il est mixte et accueille les lycéens, les apprentis ainsi que les étudiants des Sections de Technicien Supérieur.</p>
-                
-                <div class="image-gallery">
-                    <div class="gallery-item">
-                        <img src="images/activites/-tablissement-internat-guez-balzac-17224.jpg" alt="Vue extérieure de l'internat">
-                        <div class="gallery-caption">Vue extérieure de l'internat</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/activites/Restauration-scolaire.png" alt="Espace commun de l'internat">
-                        <div class="gallery-caption">Espace de restauration</div>
-                    </div>
-                </div>
-            </div>
+            <section class="internat-intro">
+                <h2>L'internat du lycée Jean Mermoz</h2>
+                <p>L'internat du lycée Jean-Mermoz est un espace de vie conçu pour favoriser la réussite scolaire et l'épanouissement personnel des élèves. Il offre un environnement propice au travail, à la détente et à la vie en collectivité.</p>
+                <p>Notre internat mixte accueille les élèves du lundi au vendredi dans un cadre moderne et confortable, permettant aux jeunes de se concentrer pleinement sur leurs études.</p>
+            </section>
 
-            <div class="internat-section">
-                <h3><i class="fas fa-couch"></i> Détente et loisirs</h3>
-                <p>Les internes disposent d'espaces spacieux et conviviaux. En effet, le bâtiment offre un cadre de vie et un espace agréables pour tous.</p>
+            <section class="internat-section">
+                <h3><i class="fas fa-home"></i> Un cadre de vie agréable</h3>
+                <p>L'internat du lycée Jean Mermoz propose un environnement sécurisé et convivial qui comprend :</p>
                 
-                <div class="internat-facilities">
+                <div class="facilities-grid">
                     <div class="facility-item">
-                        <i class="fas fa-sofa"></i>
-                        <span>Foyer équipé de fauteuils et tables basses</span>
+                        <i class="fas fa-bed"></i>
+                        <h4>Chambres confortables</h4>
+                        <p>Des chambres modernes et bien équipées pour 2 à 4 élèves</p>
                     </div>
                     <div class="facility-item">
-                        <i class="fas fa-chess"></i>
-                        <span>Nombreux jeux de société</span>
+                        <i class="fas fa-wifi"></i>
+                        <h4>Connexion WiFi</h4>
+                        <p>Accès internet dans toutes les chambres</p>
                     </div>
                     <div class="facility-item">
-                        <i class="fas fa-gamepad"></i>
-                        <span>Billard et trois Baby-foot</span>
+                        <i class="fas fa-book"></i>
+                        <h4>Salles d'étude</h4>
+                        <p>Espaces dédiés au travail individuel et collectif</p>
                     </div>
                     <div class="facility-item">
-                        <i class="fas fa-tv"></i>
-                        <span>Salle de télévision avec vidéo projecteur</span>
-                    </div>
-                    <div class="facility-item">
-                        <i class="fas fa-dumbbell"></i>
-                        <span>Salle de musculation (1 fois/semaine)</span>
-                    </div>
-                    <div class="facility-item">
-                        <i class="fas fa-music"></i>
-                        <span>Sono pour l'organisation de soirées</span>
+                        <i class="fas fa-couch"></i>
+                        <h4>Espaces détente</h4>
+                        <p>Lieux de convivialité pour se relaxer</p>
                     </div>
                 </div>
-                
-                <div class="image-gallery">
-                    <div class="gallery-item">
-                        <img src="images/activites/sala-cine.jpg" alt="Salle de détente">
-                        <div class="gallery-caption">Salle de détente et projection</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/activites/sport-_choisir_header_light.jpg" alt="Activités sportives">
-                        <div class="gallery-caption">Activités sportives proposées</div>
-                    </div>
-                </div>
-            </div>
+            </section>
 
-            <div class="internat-section">
-                <h3><i class="fas fa-bed"></i> Les chambres</h3>
+            <section class="internat-section">
+                <h3><i class="fas fa-gamepad"></i> Les équipements de loisirs</h3>
+                <p>Pour permettre aux internes de se détendre après les cours, l'internat dispose de plusieurs équipements :</p>
                 
-                <div class="two-columns">
-                    <div>
-                        <p>Les chambres sont spacieuses. Elles sont composées chacune de deux modules de trois lits. Elles comportent leurs propres sanitaires (deux toilettes, deux douches et trois lavabos).</p>
-                        <p>Chaque interne dispose d'un lit, d'une table de chevet, d'une armoire individuelle et d'un bureau.</p>
-                        <p>Les encadrants affectent les chambres aux internes selon les critères suivants : sexe, âge, niveau d'études et section.</p>
-                    </div>
-                    <div class="column-content">
-                        <h4>Équipements des chambres</h4>
-                        <ul>
-                            <li>Lit individuel</li>
-                            <li>Bureau de travail</li>
-                            <li>Table de chevet</li>
-                            <li>Armoire individuelle</li>
-                            <li>Sanitaires privatifs (douches, toilettes, lavabos)</li>
-                            <li>Accès Wi-Fi</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="image-gallery">
-                    <div class="gallery-item">
-                        <img src="images/activites/cafe-bienfaits-inconvenients-6.jpg" alt="Espace commun">
-                        <div class="gallery-caption">Espace commun de détente</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/activites/-tablissement-internat-guez-balzac-17224.jpg" alt="Vue du bâtiment">
-                        <div class="gallery-caption">Vue du bâtiment de l'internat</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="internat-section">
-                <h3><i class="fas fa-clock"></i> Horaires et organisation</h3>
-                <p><strong>Ouverture :</strong> Du lundi 17h00 au vendredi matin 7h30. Les internes disposent d'une salle de dépôt en vie scolaire pour y déposer leurs bagages le lundi matin.</p>
-                <p><strong>Fermeture :</strong> Les vendredis soir, samedis soir, dimanches soir, veilles de jour férié et jours fériés, vacances scolaires. L'internat est également fermé en journée de 7h30 à 17h00.</p>
-                
-                <div class="schedule-container">
-                    <div class="schedule-header">
-                        <i class="fas fa-calendar-alt"></i> Emploi du temps quotidien
-                    </div>
-                    <div class="timeline-schedule">
-                        <div class="timeline-item">
-                            <div class="timeline-time">07h00 – 07h30</div>
-                            <div class="timeline-activity">
-                                <div class="timeline-icon"><i class="fas fa-bed"></i></div>
-                                <div class="timeline-text">Réveil, toilette, petit-déjeuner <br><small>(Accès au self à partir 7h00 et au plus tard à 7h30)</small></div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">07h30</div>
-                            <div class="timeline-activity">
-                                <div class="timeline-icon"><i class="fas fa-door-closed"></i></div>
-                                <div class="timeline-text">Fermeture de l'internat</div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">07h40</div>
-                            <div class="timeline-activity">
-                                <div class="timeline-icon"><i class="fas fa-door-closed"></i></div>
-                                <div class="timeline-text">Fermeture du self</div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">17h00</div>
-                            <div class="timeline-activity">
-                                <div class="timeline-icon"><i class="fas fa-door-open"></i></div>
-                                <div class="timeline-text">Ouverture de l'internat, accès aux chambres</div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">18h00</div>
-                            <div class="timeline-activity">
-                                <div class="timeline-icon"><i class="fas fa-user"></i></div>
-                                <div class="timeline-text">Appel dans les chambres</div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">18h10 – 18h20</div>
-                            <div class="timeline-activity">
-                                <div class="timeline-icon"><i class="fas fa-utensils"></i></div>
-                                <div class="timeline-text">Service du repas (accès au self)</div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">19h00</div>
-                            <div class="timeline-activity">
-                                <div class="timeline-icon"><i class="fas fa-door-closed"></i></div>
-                                <div class="timeline-text">Fermeture du restaurant</div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">19h30</div>
-                            <div class="timeline-activity">
-                                <div class="timeline-icon"><i class="fas fa-user"></i></div>
-                                <div class="timeline-text">Appel (sauf BTS) dans les chambres ou en salle d'études</div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">19h30 – 21h00</div>
-                            <div class="timeline-activity">
-                                <div class="timeline-icon"><i class="fas fa-book"></i></div>
-                                <div class="timeline-text">Etudes (jusqu'à 20h30 pour les sections pro)</div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">21h00 – 22h00</div>
-                            <div class="timeline-activity">
-                                <div class="timeline-icon"><i class="fas fa-moon"></i></div>
-                                <div class="timeline-text">Détente, toilette, rangement</div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">22h00</div>
-                            <div class="timeline-activity">
-                                <div class="timeline-icon"><i class="fas fa-user"></i></div>
-                                <div class="timeline-text">Appel dans les chambres</div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">22h00 à 22h30</div>
-                            <div class="timeline-activity">
-                                <div class="timeline-icon"><i class="fas fa-ban"></i></div>
-                                <div class="timeline-text">Les circulations dans les couloirs et les douches sont interdites.<br>La présence dans sa chambre est impérative</div>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">22h30</div>
-                            <div class="timeline-activity">
-                                <div class="timeline-icon"><i class="fas fa-moon"></i></div>
-                                <div class="timeline-text">Coucher et extinction des feux</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="internat-section">
-                <h3><i class="fas fa-book"></i> Travail scolaire</h3>
-                <p>La vie à l'internat s'organise autour de trois pôles essentiels au bon déroulement de la scolarité de chacun.</p>
-                
-                <div class="two-columns">
-                    <div class="column-content">
-                        <h4>Espaces de travail</h4>
-                        <ul>
-                            <li>Une durée minimale d'études est obligatoire</li>
-                            <li>Plusieurs salles d'études (entraide, exposé) sont disponibles</li>
-                            <li>Une salle informatique est mise à disposition des internes</li>
-                            <li>Un réseau Wi-Fi est accessible</li>
-                            <li>Un espace bibliothèque est en cours de création</li>
-                        </ul>
-                    </div>
-                    <div class="column-content">
-                        <h4>Accompagnement</h4>
-                        <ul>
-                            <li>Encadrement par l'équipe éducative</li>
-                            <li>Suivi personnalisé des études</li>
-                            <li>Entraide entre élèves encouragée</li>
-                            <li>Environnement propice à la concentration</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="internat-section">
-                <h3><i class="fas fa-moon"></i> Repos</h3>
-                <div class="two-columns">
-                    <div class="column-content">
-                        <h4>Règles de vie</h4>
-                        <ul>
-                            <li>Respect du calme dans les locaux</li>
-                            <li>Respect du calme durant le temps d'étude</li>
-                            <li>Respect des horaires de couvre-feu</li>
-                        </ul>
-                    </div>
-                    <div class="column-content">
-                        <h4>Bien-être</h4>
-                        <ul>
-                            <li>Cadre calme et sécurisé</li>
-                            <li>Espaces de détente adaptés</li>
-                            <li>Équilibre entre travail et repos</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="important-note">
-                <h4><i class="fas fa-exclamation-circle"></i> À NOTER :</h4>
                 <ul>
-                    <li>Les élèves de la 3ème Pré-Professionnelle et des collèges voisins ne sont pas accueillis à l'internat.</li>
-                    <li>Sous réserve de modification du fonctionnement général et du Règlement Intérieur.</li>
-                    <li>La demande d'admission est établie lors de l'inscription. Un courrier de refus ou d'acceptation est envoyé en juillet ou fin août selon la date de la demande.</li>
+                    <li>Une cafétéria avec distributeurs de boissons et snacks</li>
+                    <li>Une salle de télévision équipée d'un grand écran</li>
+                    <li>Une salle de billard</li>
+                    <li>Des espaces de jeux de société</li>
+                    <li>Des lieux de détente confortables</li>
                 </ul>
+            </section>
+
+            <section class="internat-section">
+                <h3><i class="fas fa-clock"></i> L'organisation de la journée</h3>
+                <p>La vie à l'internat est rythmée par un emploi du temps précis qui structure la journée :</p>
+                
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Horaire</th>
+                            <th>Activité</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>7h00</td>
+                            <td>Lever et toilette</td>
+                        </tr>
+                        <tr>
+                            <td>7h15 - 7h45</td>
+                            <td>Petit-déjeuner au restaurant scolaire</td>
+                        </tr>
+                        <tr>
+                            <td>8h00 - 17h45</td>
+                            <td>Cours et activités scolaires</td>
+                        </tr>
+                        <tr>
+                            <td>18h00 - 19h00</td>
+                            <td>Étude surveillée obligatoire</td>
+                        </tr>
+                        <tr>
+                            <td>19h00 - 19h45</td>
+                            <td>Dîner au restaurant scolaire</td>
+                        </tr>
+                        <tr>
+                            <td>19h45 - 21h30</td>
+                            <td>Temps libre et activités</td>
+                        </tr>
+                        <tr>
+                            <td>21h30 - 22h00</td>
+                            <td>Retour dans les chambres et préparation au coucher</td>
+                        </tr>
+                        <tr>
+                            <td>22h00</td>
+                            <td>Extinction des lumières</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="internat-section">
+                <h3><i class="fas fa-graduation-cap"></i> L'accompagnement aux études</h3>
+                <p>L'internat n'est pas qu'un lieu d'hébergement, c'est aussi un espace d'apprentissage et de soutien scolaire :</p>
+                
+                <ul>
+                    <li>Une étude surveillée obligatoire chaque soir de 18h à 19h</li>
+                    <li>Un accès à des ressources pédagogiques (livres, ordinateurs)</li>
+                    <li>Une aide aux devoirs disponible sur demande</li>
+                    <li>Un suivi personnalisé par les assistants d'éducation</li>
+                </ul>
+                
+                <p>Cette organisation permet aux élèves d'acquérir de bonnes méthodes de travail et de développer leur autonomie.</p>
+            </section>
+
+            <section class="internat-section">
+                <h3><i class="fas fa-door-open"></i> Les chambres</h3>
+                <p>L'internat dispose de chambres modernes et fonctionnelles réparties par sections :</p>
+                
+                <div class="room-info">
+                    <div class="room-card">
+                        <h4>Équipement des chambres</h4>
+                        <ul>
+                            <li>Lits confortables avec rangement intégré</li>
+                            <li>Bureaux individuels avec lampe de travail</li>
+                            <li>Armoires personnelles</li>
+                            <li>Connexion WiFi</li>
+                            <li>Salle de bain ou sanitaires à proximité</li>
+                        </ul>
+                    </div>
+                    <div class="room-card">
+                        <h4>Organisation</h4>
+                        <ul>
+                            <li>Chambres de 2 à 4 élèves</li>
+                            <li>Répartition par niveau et filière quand c'est possible</li>
+                            <li>Sections filles et garçons séparées</li>
+                            <li>Présence de personnel d'encadrement à chaque étage</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <div class="highlight-box">
+                <h3>Un lieu de vie et d'apprentissage</h3>
+                <p>L'internat du lycée Jean Mermoz offre bien plus qu'un simple hébergement.</p>
+                <p>C'est un véritable lieu de vie qui favorise la réussite scolaire, l'autonomie et l'épanouissement personnel.</p>
             </div>
         </div>
     </main>
