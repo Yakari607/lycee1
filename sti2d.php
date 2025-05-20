@@ -798,25 +798,34 @@
                     <h3><i class="fas fa-clock"></i> Horaires et coefficients</h3>
                     <div class="timetable-container">
                         <div class="timetable-header">
-                            <i class="fas fa-table"></i> Horaires hebdomadaires et coefficients du Baccalauréat STI2D
+                            <i class="fas fa-table"></i> Horaires et coefficients du Baccalauréat STI2D
                         </div>
                         <div class="table-responsive">
                             <table class="timetable">
                                 <thead>
                                     <tr>
                                         <th>Enseignements</th>
-                                        <th>Classe de 1<sup>ère</sup></th>
-                                        <th>Classe de Terminale</th>
-                                        <th>Coefficient Bac</th>
+                                        <th>Horaire<br>Classe de 1ère</th>
+                                        <th>Horaire<br>Classe de Terminale</th>
+                                        <th>Coefficient<br>Baccalauréat</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr><td colspan="4" class="timetable-subheader"><strong>Enseignements communs</strong></td></tr>
+                                    <tr>
+                                        <td class="subject-name">Enseignements communs</td>
+                                        <td colspan="3"></td>
+                                    </tr>
                                     <tr>
                                         <td class="subject-name">Français</td>
                                         <td>3 h</td>
                                         <td>-</td>
                                         <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="subject-name">Histoire-géographie</td>
+                                        <td>1 h 30</td>
+                                        <td>1 h 30</td>
+                                        <td>5</td>
                                     </tr>
                                     <tr>
                                         <td class="subject-name">Philosophie</td>
@@ -825,16 +834,10 @@
                                         <td>4</td>
                                     </tr>
                                     <tr>
-                                        <td class="subject-name">Histoire - Géographie</td>
-                                        <td>1 h 30</td>
-                                        <td>1 h 30</td>
-                                        <td>5</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="subject-name">Langues vivantes A et B (+ ETLV en LVA)</td>
-                                        <td>4 h (dont 1h ETLV)</td>
-                                        <td>4 h (dont 1h ETLV)</td>
-                                        <td>LVA: 5, LVB: 5</td>
+                                        <td class="subject-name">Langues vivantes 1 et 2 + enseignement technologique en langue vivante A</td>
+                                        <td>4 h (dont 1 h d'ETLV)</td>
+                                        <td>4 h (dont 1 h d'ETLV)</td>
+                                        <td>LVA : 5<br>LVB : 5</td>
                                     </tr>
                                     <tr>
                                         <td class="subject-name">Mathématiques</td>
@@ -843,79 +846,87 @@
                                         <td>5</td>
                                     </tr>
                                     <tr>
-                                        <td class="subject-name">Éducation Physique et Sportive</td>
+                                        <td class="subject-name">Enseignement moral et civique</td>
+                                        <td>18 h annuelles</td>
+                                        <td>18 h annuelles</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="subject-name">EPS</td>
                                         <td>2 h</td>
                                         <td>2 h</td>
                                         <td>5</td>
                                     </tr>
                                     <tr>
-                                        <td class="subject-name">Enseignement Moral et Civique</td>
-                                        <td>18h annuelles</td>
-                                        <td>18h annuelles</td>
+                                        <td class="subject-name">Accompagnement personnalisé</td>
+                                        <td colspan="2">Selon les besoins des élèves</td>
                                         <td>-</td>
                                     </tr>
-                                    <tr><td colspan="4" class="timetable-subheader"><strong>Enseignements de spécialité</strong></td></tr>
                                     <tr>
-                                        <td class="subject-name">Physique-chimie et mathématiques (spécifique STI2D)</td>
-                                        <td>6 h</td>
-                                        <td>6 h</td>
-                                        <td>16</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="subject-name">Ingénierie, Innovation et Développement Durable (2I2D) avec un enseignement spécifique (AC, EE, ITEC ou SIN)</td>
+                                        <td class="subject-name">Accompagnement au choix de l'orientation</td>
+                                        <td colspan="2">Selon les besoins des élèves</td>
                                         <td>-</td>
-                                        <td>12 h</td>
-                                        <td>16</td>
                                     </tr>
                                     <tr>
-                                        <td class="subject-name">Innovation Technologique (IT)</td>
-                                        <td>3 h</td>
+                                        <td class="subject-name">Heures de vie de classe</td>
+                                        <td colspan="2">Selon les besoins des élèves</td>
                                         <td>-</td>
-                                        <td>5</td>
                                     </tr>
-                                     <tr>
-                                        <td class="subject-name">Ingénierie et Développement Durable (I2D)</td>
-                                        <td>9 h</td>
-                                        <td>-</td>
-                                        <td>5</td>
-                                    </tr>
-                                    <tr><td colspan="4" class="timetable-subheader"><strong>Épreuves finales</strong></td></tr>
                                     <tr>
-                                        <td class="subject-name">Grand Oral</td>
+                                        <td class="subject-name">Grand Oral (sur les deux spécialités de Terminale)</td>
                                         <td>-</td>
                                         <td>-</td>
                                         <td>14</td>
                                     </tr>
                                     <tr>
-                                        <td class="subject-name">Contrôle continu (bulletins de 1<sup>ère</sup> et Terminale)</td>
+                                        <td class="subject-name">Bulletins de Première et de Terminale</td>
                                         <td>-</td>
                                         <td>-</td>
                                         <td>10</td>
                                     </tr>
+                                    <tr><td colspan="4" class="timetable-subheader"><strong>Enseignements de spécialité</strong></td></tr>
+                                    <tr>
+                                        <td class="subject-name highlight-cell">I2D - Ingénierie et Développement Durable (en Première)</td>
+                                        <td class="highlight-cell">9 h</td>
+                                        <td class="highlight-cell">-</td>
+                                        <td class="highlight-cell">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="subject-name highlight-cell">IT - Innovation Technologique (en Première)</td>
+                                        <td class="highlight-cell">3 h</td>
+                                        <td class="highlight-cell">-</td>
+                                        <td class="highlight-cell">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="subject-name highlight-cell">2I2D - Ingénierie, Innovation et Développement Durable avec un enseignement spécifique (en Terminale)</td>
+                                        <td class="highlight-cell">-</td>
+                                        <td class="highlight-cell">12 h</td>
+                                        <td class="highlight-cell">16</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="subject-name highlight-cell">Physique-Chimie et Mathématiques</td>
+                                        <td class="highlight-cell">6 h</td>
+                                        <td class="highlight-cell">6 h</td>
+                                        <td class="highlight-cell">16</td>
+                                    </tr>
                                     <tr><td colspan="4" class="timetable-subheader"><strong>Enseignements facultatifs (1 au choix)</strong></td></tr>
                                     <tr>
-                                        <td class="subject-name">Arts Plastiques</td>
+                                        <td class="subject-name">Euro anglais</td>
+                                        <td>1 h</td>
+                                        <td>1 h</td>
+                                        <td>Pts > 10</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="subject-name">Arts plastiques</td>
                                         <td>2 h</td>
                                         <td>2 h</td>
-                                        <td>Points > 10</td>
+                                        <td>Pts > 10</td>
                                     </tr>
                                     <tr>
                                         <td class="subject-name">Théâtre</td>
                                         <td>2 h</td>
                                         <td>2 h</td>
-                                        <td>Points > 10</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="subject-name">Musique</td>
-                                        <td>2 h</td>
-                                        <td>2 h</td>
-                                        <td>Points > 10</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="subject-name">Section Euro Anglais</td>
-                                        <td>1 h</td>
-                                        <td>1 h</td>
-                                        <td>Mention Européenne</td>
+                                        <td>Pts > 10</td>
                                     </tr>
                                 </tbody>
                             </table>

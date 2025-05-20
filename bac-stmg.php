@@ -412,7 +412,7 @@
                                         <td>10</td>
                                     </tr>
                                     <tr>
-                                        <td colspan="4" style="background-color: #f8f9fa; font-weight: 600;">Enseignements facultatifs</td>
+                                        <td colspan="4" class="timetable-subheader"><strong>Enseignements facultatifs</strong></td>
                                     </tr>
                                     <tr>
                                         <td class="subject-name">Arts plastiques</td>

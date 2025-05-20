@@ -254,7 +254,7 @@
                         <div class="formation-category">
                             <h4>Formations Internationales</h4>
                             <div class="diplomes-grid">
-                                <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                <a href="abibac.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                     <i class="fas fa-flag"></i>
                                     <h5>Section ABIBAC</h5>
                                     <p>Double diplôme franco-allemand</p>
@@ -278,7 +278,7 @@
                         <div class="formation-category">
                             <h4>Formations Transfrontalières</h4>
                             <div class="diplomes-grid">
-                                <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                <a href="azubi-bac-pro.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                     <i class="fas fa-handshake"></i>
                                     <h5>AZUBI BAC PRO</h5>
                                     <p>Apprentissage transfrontalier en BAC PRO</p>
