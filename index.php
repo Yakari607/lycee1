@@ -158,6 +158,7 @@
                             <div class="seconde-card highlight">
                                 <i class="fas fa-star"></i>
                                 <h4>PASS INGENIEUR</h4>
+                                <a href="pass-ingenieur.php" class="read-more">En savoir plus</a>
                                 <p>Programme spécial pour les élèves de seconde</p>
                                 <ul>
                                     <li>Cours renforcés en anglais</li>
@@ -259,7 +260,7 @@
                                     <h5>Section ABIBAC</h5>
                                     <p>Double diplôme franco-allemand</p>
                                 </a>
-                                <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                <a href="section-europeenne.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                     <i class="fas fa-globe-europe"></i>
                                     <h5>Sections EURO ANGLAIS</h5>
                                     <ul>
@@ -267,7 +268,7 @@
                                         <li>Euro anglais en BAC PRO MELEC</li>
                                     </ul>
                                 </a>
-                                <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                <a href="etwinning.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                     <i class="fas fa-laptop-code"></i>
                                     <h5>eTwinning</h5>
                                     <p>Projets collaboratifs européens</p>
@@ -288,34 +289,9 @@
                                     <h5>Licence Professionnelle Transfrontalière</h5>
                                     <p>Formation supérieure transfrontalière</p>
                                 </a>
-                                <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
-                                    <i class="fas fa-shield-alt"></i>
-                                    <h5>Conseil en Assurance et Services Financiers</h5>
-                                    <p>Formation spécialisée transfrontalière</p>
-                                </a>
                             </div>
                         </div>
-
-                        <div class="formation-category">
-                            <h4>Programmes Spéciaux</h4>
-                            <div class="diplomes-grid">
-                                <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
-                                    <i class="fas fa-star"></i>
-                                    <h5>PASS INGENIEUR</h5>
-                                    <p>Programme spécial avec cours renforcés en anglais</p>
-                                    <ul>
-                                        <li>Projets technologiques</li>
-                                        <li>Préparation aux études d'ingénieur</li>
-                                    </ul>
-                                </a>
-                                <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
-                                    <i class="fas fa-wrench"></i>
-                                    <h5>Bac Pro MEI</h5>
-                                    <p>Maintenance des équipements industriels</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    </div> <!-- Fin de la section Langues Vivantes -->
                 </div>
 
                 <!-- Métiers de l'Industrie -->
@@ -697,5 +673,48 @@ réalisation et suivi de productions
     </button>
 
     <script src="js/script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navBtns = document.querySelectorAll('.formation-nav-btn');
+        const blocks = document.querySelectorAll('.formation-block');
+
+        function showSection(section) {
+            navBtns.forEach(b => b.classList.remove('active'));
+            blocks.forEach(b => b.classList.remove('active'));
+            // Active le bouton et le bloc correspondant
+            navBtns.forEach(btn => {
+                if (btn.getAttribute('data-section') === section) {
+                    btn.classList.add('active');
+                }
+            });
+            const block = document.getElementById(section);
+            if (block) block.classList.add('active');
+        }
+
+        navBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const href = btn.getAttribute('href');
+                // Si c'est un lien vers une page, on laisse le comportement par défaut
+                if (href && href.endsWith('.php')) return;
+
+                e.preventDefault();
+                const section = btn.getAttribute('data-section');
+                showSection(section);
+                // Met à jour le hash dans l'URL sans recharger
+                history.replaceState(null, '', '#' + section);
+            });
+        });
+
+        // Affiche la bonne section au chargement selon le hash
+        const hash = window.location.hash.replace('#', '');
+        if (hash && document.getElementById(hash)) {
+            showSection(hash);
+        } else {
+            // Par défaut, active la première section
+            const defaultSection = navBtns[0].getAttribute('data-section');
+            showSection(defaultSection);
+        }
+    });
+    </script>
 </body>
 </html>

@@ -16,7 +16,11 @@
         <!-- Bouton retour -->
         <a href="index.php#formations" class="back-home">
             <i class="fas fa-arrow-left"></i>
-            <span>Retour aux formations</span>
+            <span>    <!-- Bouton retour -->
+        <a href="index.php" class="back-home">
+            <i class="fas fa-arrow-left"></i>
+            <span>Retour à l'accueil</span>
+        </a></span>
         </a>
 
         <section class="formation-hero">
