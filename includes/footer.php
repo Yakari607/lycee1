@@ -5,17 +5,25 @@
  */
 ?>
 <!-- Footer -->
-<footer class="footer">
+<footer class="footer bg-dark text-white py-4 mt-5">
     <div class="container">
-        <div class="footer-content">
-            <div class="footer-info">
-                <img src="images/logos/LOGO-UFA-MERMOZ-1.jpg" alt="Logo UFA Jean-Mermoz" class="footer-logo">
-                <p>&copy; <?php echo date('Y'); ?> Lycée Jean Mermoz - Saint-Louis</p>
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; <?php echo date('Y'); ?> Lycée Jean Mermoz</p>
+                <p>Tous droits réservés.</p>
             </div>
-            <div class="footer-links">
-                <a href="#">Mentions légales</a>
-                <a href="#">Accessibilité</a>
-                <a href="#">Plan du site</a>
+            <div class="col-md-6 text-md-end">
+                <p>
+                    <a href="https://www.education.gouv.fr/" target="_blank" class="text-white">Ministère de l'Éducation Nationale</a> | 
+                    <a href="https://www.ac-strasbourg.fr/" target="_blank" class="text-white">Académie de Strasbourg</a>
+                </p>
+                <p>
+                    <small>
+                        <a href="mentions-legales.php" class="text-white-50">Mentions légales</a> | 
+                        <a href="politique-confidentialite.php" class="text-white-50">Politique de confidentialité</a> | 
+                        <a href="admin/login.php" class="text-white-50">Accès</a>
+                    </small>
+                </p>
             </div>
         </div>
     </div>
