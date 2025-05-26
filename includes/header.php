@@ -15,6 +15,12 @@
 if (!isset($pageTitle)) {
     $pageTitle = "Lycée Jean Mermoz - Saint-Louis";
 }
+
+// Déterminer si nous sommes dans un sous-dossier
+$base_path = '';
+if (strpos($_SERVER['PHP_SELF'], '/admin/') !== false) {
+    $base_path = '../';
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -25,17 +31,17 @@ if (!isset($pageTitle)) {
     <title><?php echo $pageTitle; ?> - Lycée Jean Mermoz</title>
     
     <!-- Common CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="<?php echo $base_path; ?>css/main.css">
     
     <!-- Page specific CSS if provided -->
     <?php if (isset($pageSpecificCSS) && !empty($pageSpecificCSS)): ?>
-    <link rel="stylesheet" href="<?php echo $pageSpecificCSS; ?>">
+    <link rel="stylesheet" href="<?php echo $base_path . $pageSpecificCSS; ?>">
     <?php endif; ?>
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="<?php echo $base_path; ?>images/favicon.ico" type="image/x-icon">
 </head>
 <body>

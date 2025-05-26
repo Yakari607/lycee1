@@ -3,6 +3,14 @@
  * Footer component for Lycée Jean Mermoz website
  * Include this file in all pages that need the footer
  */
+
+// Déterminer si nous sommes dans un sous-dossier (si pas déjà défini)
+if (!isset($base_path)) {
+    $base_path = '';
+    if (strpos($_SERVER['PHP_SELF'], '/admin/') !== false) {
+        $base_path = '../';
+    }
+}
 ?>
 <!-- Footer -->
 <footer class="footer bg-dark text-white py-4 mt-5">
@@ -19,9 +27,9 @@
                 </p>
                 <p>
                     <small>
-                        <a href="mentions-legales.php" class="text-white-50">Mentions légales</a> | 
-                        <a href="politique-confidentialite.php" class="text-white-50">Politique de confidentialité</a> | 
-                        <a href="admin/login.php" class="text-white-50">Accès</a>
+                        <a href="<?php echo $base_path; ?>mentions-legales.php" class="text-white-50">Mentions légales</a> | 
+                        <a href="<?php echo $base_path; ?>politique-confidentialite.php" class="text-white-50">Politique de confidentialité</a> | 
+                        <a href="<?php echo $base_path; ?>admin/login.php" class="text-white-50">Accès</a>
                     </small>
                 </p>
             </div>
