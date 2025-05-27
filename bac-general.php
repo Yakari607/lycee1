@@ -244,7 +244,7 @@
             <span>Retour aux formations</span>
         </a>
 
-        <section class="formation-hero" style="background-image: url('images/formations/pexels-pixabay-210126.jpg');">
+        <section class="formation-hero" style="background-image: url('images/formations/pexels-pixabay-159740.jpg');">
             <div class="hero-content">
                 <h1>Le Bac Général</h1>
                 <p>Une formation d'excellence pour réussir vos études supérieures</p>
@@ -261,7 +261,7 @@
                         <p>Le Baccalauréat Général est une formation d'excellence qui prépare les élèves à la poursuite d'études supérieures longues. Il permet d'acquérir une solide culture générale et des méthodes de travail rigoureuses, tout en se spécialisant progressivement dans des domaines qui correspondent aux centres d'intérêt et au projet d'orientation de l'élève.</p>
                     </div>
                     <div class="formation-card image-card">
-                        <img src="images/formations/pexels-photo-2898199.jpeg" alt="Élèves en cours" />
+                        <img src="images/metiers/pexels-ekrulila-2293019.jpg" alt="Élèves en cours" />
                     </div>
                 </div>
 
@@ -324,35 +324,46 @@
                 </div>
 
                 <!-- Menus de spécialités -->
-                <div class="menu-section">
+                <div class="formation-block">
                     <h3><i class="fas fa-th-list"></i> Menus de spécialités proposés</h3>
                     <p>Le lycée propose des ensembles cohérents de spécialités qui préparent à différents parcours d'études supérieures :</p>
                     
-                    <div class="menu-card">
-                        <h4>Menu Sciences</h4>
-                        <ul>
-                            <li>Mathématiques</li>
-                            <li>Physique-Chimie</li>
-                            <li>Sciences de la Vie et de la Terre</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="menu-card">
-                        <h4>Menu Sciences Économiques</h4>
-                        <ul>
-                            <li>Mathématiques</li>
-                            <li>Sciences Économiques et Sociales</li>
-                            <li>Histoire-Géographie, Géopolitique et Sciences Politiques</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="menu-card">
-                        <h4>Menu Humanités</h4>
-                        <ul>
-                            <li>Humanités, Littérature et Philosophie</li>
-                            <li>Histoire-Géographie, Géopolitique et Sciences Politiques</li>
-                            <li>Sciences Économiques et Sociales</li>
-                        </ul>
+                    <div class="menu-specialites-grid">
+                        <div class="menu-specialites-card">
+                            <div class="menu-specialites-title">
+                                <i class="fas fa-flask"></i>
+                                Menu Sciences
+                            </div>
+                            <ul class="menu-specialites-list">
+                                <li>Mathématiques</li>
+                                <li>Physique-Chimie</li>
+                                <li>Sciences de la Vie et de la Terre</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="menu-specialites-card">
+                            <div class="menu-specialites-title">
+                                <i class="fas fa-chart-line"></i>
+                                Menu Sciences Économiques
+                            </div>
+                            <ul class="menu-specialites-list">
+                                <li>Mathématiques</li>
+                                <li>Sciences Économiques et Sociales</li>
+                                <li>Histoire-Géographie, Géopolitique et Sciences Politiques</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="menu-specialites-card">
+                            <div class="menu-specialites-title">
+                                <i class="fas fa-book"></i>
+                                Menu Humanités
+                            </div>
+                            <ul class="menu-specialites-list">
+                                <li>Humanités, Littérature et Philosophie</li>
+                                <li>Histoire-Géographie, Géopolitique et Sciences Politiques</li>
+                                <li>Sciences Économiques et Sociales</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 

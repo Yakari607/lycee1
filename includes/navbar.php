@@ -54,6 +54,7 @@ if (strpos($_SERVER['PHP_SELF'], '/admin/') !== false) {
                 <li><a href="<?php echo $base_path; ?>index.php#ufa">UFA</a></li>
                 <li><a href="<?php echo $base_path; ?>index.php#contact">Contact</a></li>
                 <li><a href="<?php echo $base_path; ?>vie-lyceenne.php">Vie Lycéenne</a></li>
+                <li><a href="<?php echo $base_path; ?>cdi.php">CDI</a></li>
             </ul>
             <button class="menu-btn">
                 <span></span>
