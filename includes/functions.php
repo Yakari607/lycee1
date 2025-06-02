@@ -87,4 +87,33 @@ function verify_csrf_token($token) {
     }
     return true;
 }
+
+/**
+ * Fonction pour ajouter automatiquement le préfixe aux noms de tables
+ * @param string $sql La requête SQL avec des noms de tables sans préfixe
+ * @return string La requête SQL avec les noms de tables préfixés
+ */
+function addTablePrefix($sql) {
+    global $table_prefix;
+    
+    // Liste des tables trouvées dans les requêtes SQL
+    $tables = [
+        'actualites',
+        'medias_partage',
+        'voix_apprentis_journaux',
+        'jours',
+        'categories',
+        'restaurant_media',
+        'your_table' // Remplacer par le vrai nom si nécessaire
+    ];
+    
+    // Remplacer chaque nom de table par sa version préfixée
+    foreach ($tables as $table) {
+        // Assure que le remplacement n'est fait que pour les noms de tables complets
+        // en utilisant des délimiteurs (espace, parenthèse, etc.)
+        $sql = preg_replace('/\b' . $table . '\b/', $table_prefix . $table, $sql);
+    }
+    
+    return $sql;
+}
 ?> 
