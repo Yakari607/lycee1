@@ -40,7 +40,12 @@
             </div>
         </section>
 
-        <?php if (isset($error_message)): ?>
+        <!-- Section Actualités -->
+        <section class="news-section">
+            <div class="container">
+                <h2 class="section-title">Actualités</h2>
+                
+                <?php if (isset($error_message)): ?>
                     <div class="alert alert-danger"><?php echo $error_message; ?></div>
                 <?php endif; ?>
                 
@@ -49,40 +54,45 @@
                         <button class="slider-nav prev" aria-label="Actualité précédente">
                             <i class="fas fa-chevron-left"></i>
                         </button>
-                        <div class="news-grid">
-                            <?php foreach ($actualites as $actualite): 
-                                // Formatage de la date
-                                $date = new DateTime($actualite['date_publication']);
-                                $date_fr = $date->format('j F Y');
-                                $date_fr = str_replace(
-                                    ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-                                    ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
-                                    $date_fr
-                                );
-                            ?>
-                                <article class="news-card <?php echo $actualite['is_important'] ? 'highlight' : ''; ?>">
-                                    <div class="news-image">
-                                        <img src="<?php echo htmlspecialchars($actualite['image']); ?>" alt="<?php echo htmlspecialchars($actualite['titre']); ?>">
-                                        <div class="news-date">
-                                            <time datetime="<?php echo $actualite['date_publication']; ?>"><?php echo $date_fr; ?></time>
+                        <div class="news-grid-wrapper">
+                            <div class="news-grid">
+                                <?php foreach ($actualites as $actualite): 
+                                    // Formatage de la date
+                                    $date = new DateTime($actualite['date_publication']);
+                                    $date_fr = $date->format('j F Y');
+                                    $date_fr = str_replace(
+                                        ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                                        ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
+                                        $date_fr
+                                    );
+                                ?>
+                                    <article class="news-card <?php echo $actualite['is_important'] ? 'highlight' : ''; ?>">
+                                        <div class="news-image">
+                                            <img src="<?php echo htmlspecialchars($actualite['image']); ?>" alt="<?php echo htmlspecialchars($actualite['titre']); ?>">
+                                            <div class="news-date">
+                                                <time datetime="<?php echo $actualite['date_publication']; ?>"><?php echo $date_fr; ?></time>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="news-content">
-                                        <span class="news-tag"><?php echo htmlspecialchars($actualite['categorie']); ?></span>
-                                        <h3><?php echo htmlspecialchars($actualite['titre']); ?></h3>
-                                        <p><?php echo substr(htmlspecialchars($actualite['contenu']), 0, 150) . '...'; ?></p>
-                                        <a href="actualite.php?id=<?php echo $actualite['id']; ?>" class="read-more">Lire la suite</a>
-                                    </div>
-                                </article>
-                            <?php endforeach; ?>
+                                        <div class="news-content">
+                                            <span class="news-tag"><?php echo htmlspecialchars($actualite['categorie']); ?></span>
+                                            <h3><?php echo htmlspecialchars($actualite['titre']); ?></h3>
+                                            <p><?php echo substr(htmlspecialchars($actualite['contenu']), 0, 150) . '...'; ?></p>
+                                            <a href="actualite.php?id=<?php echo $actualite['id']; ?>" class="read-more">Lire la suite</a>
+                                        </div>
+                                    </article>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
                         <button class="slider-nav next" aria-label="Actualité suivante">
                             <i class="fas fa-chevron-right"></i>
                         </button>
-                        </div>
-                        <?php else: ?>
+                    </div>
+                <?php else: ?>
                     <p class="no-news">Aucune actualité à afficher pour le moment.</p>
                 <?php endif; ?>
+                
+            </div>
+        </section>
 
         <!-- Section Vie au Lycée -->
         <section id="vie-lyceenne" class="vie-lycee-section">
@@ -663,6 +673,7 @@ réalisation et suivi de productions
                     <a href="#contact">Mentions légales</a>
                     <a href="#contact">Accessibilité</a>
                     <a href="#contact">Plan du site</a>
+                    <a href="admin/login.php">Administration</a>
                 </div>
             </div>
         </div>

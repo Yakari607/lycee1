@@ -113,31 +113,136 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Carrousel d'actualités avec les flèches
+    // NOUVEAU SLIDER ACTUALITÉS - Simple et fonctionnel
+    const newsGrid = document.querySelector('.news-grid');
+    const newsCards = document.querySelectorAll('.news-card');
     const sliderNavPrev = document.querySelector('.slider-nav.prev');
     const sliderNavNext = document.querySelector('.slider-nav.next');
-    const newsGrid = document.querySelector('.news-grid');
-    
-    if (sliderNavPrev && sliderNavNext && newsGrid) {
-        const newsCards = newsGrid.querySelectorAll('.news-card');
+
+    if (newsGrid && newsCards.length > 0 && sliderNavPrev && sliderNavNext) {
         let currentIndex = 0;
-        const cardWidth = newsCards.length > 0 ? newsCards[0].offsetWidth : 0;
-        const cardMargin = 20; // Marge entre les cartes
         
-        // Fonction pour faire défiler les cartes
-        const scrollCards = (direction) => {
-            if (direction === 'next' && currentIndex < newsCards.length - 1) {
-                currentIndex++;
-            } else if (direction === 'prev' && currentIndex > 0) {
-                currentIndex--;
+        // NOUVEAU CALCUL MOBILE - Simple et efficace
+        function getVisibleCards() {
+            if (window.innerWidth <= 576) {
+                // Mobile : TOUJOURS 1 seule carte
+                return 1;
+            } else if (window.innerWidth <= 768) {
+                // Tablette : TOUJOURS 1 seule carte
+                return 1;
+            } else if (window.innerWidth <= 992) {
+                // Petit desktop : 2-3 cartes
+                return Math.min(3, newsCards.length);
+            } else {
+                // Grand écran : calcul automatique
+                const container = document.querySelector('.news-slider-container');
+                const containerWidth = container.offsetWidth - 120;
+                const cardWidth = 320;
+                const gap = 24;
+                const cardsPerView = Math.floor((containerWidth + gap) / (cardWidth + gap));
+                return Math.max(1, Math.min(cardsPerView, newsCards.length));
+            }
+        }
+        
+        function updateSlider() {
+            const visibleCards = getVisibleCards();
+            const maxIndex = newsCards.length - visibleCards;
+            
+            // Limiter l'index
+            currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
+            
+            // NOUVEAU CALCUL MOBILE - Ultra simple
+            let cardWidth, gap, translateX;
+            
+            if (window.innerWidth <= 576) {
+                // Mobile : largeur dynamique basée sur l'écran
+                cardWidth = Math.min(280, window.innerWidth - 130);
+                gap = 16;
+                translateX = -(currentIndex * (cardWidth + gap));
+            } else if (window.innerWidth <= 768) {
+                // Tablette : carte fixe
+                cardWidth = 300;
+                gap = 24;
+                translateX = -(currentIndex * (cardWidth + gap));
+            } else {
+                // Desktop : calcul normal
+                cardWidth = 320;
+                gap = 24;
+                translateX = -(currentIndex * (cardWidth + gap));
             }
             
-            const translateValue = currentIndex * -(cardWidth + cardMargin);
-            newsGrid.style.transform = `translateX(${translateValue}px)`;
-        };
+            newsGrid.style.transform = `translateX(${translateX}px)`;
+            
+            // Gestion des boutons - Simple
+            const shouldShowButtons = newsCards.length > 1;
+            
+            if (shouldShowButtons) {
+                sliderNavPrev.style.display = 'flex';
+                sliderNavNext.style.display = 'flex';
+                
+                sliderNavPrev.disabled = currentIndex === 0;
+                sliderNavNext.disabled = currentIndex >= maxIndex;
+            } else {
+                sliderNavPrev.style.display = 'none';
+                sliderNavNext.style.display = 'none';
+            }
+            
+            // Debug simple
+            console.log('Slider:', { currentIndex, maxIndex, translateX, cardWidth, screenWidth: window.innerWidth });
+        }
         
-        sliderNavPrev.addEventListener('click', () => scrollCards('prev'));
-        sliderNavNext.addEventListener('click', () => scrollCards('next'));
+        // Navigation
+        sliderNavPrev.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlider();
+            }
+        });
+        
+        sliderNavNext.addEventListener('click', () => {
+            const visibleCards = getVisibleCards();
+            const maxIndex = newsCards.length - visibleCards;
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateSlider();
+            }
+        });
+        
+        // Support tactile simple
+        let startX = 0;
+        let isDragging = false;
+        
+        newsGrid.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+        });
+        
+        newsGrid.addEventListener('touchend', (e) => {
+            if (!isDragging) return;
+            
+            const endX = e.changedTouches[0].clientX;
+            const deltaX = startX - endX;
+            
+            if (Math.abs(deltaX) > 50) {
+                if (deltaX > 0) {
+                    // Swipe vers la gauche - slide suivant
+                    sliderNavNext.click();
+                } else {
+                    // Swipe vers la droite - slide précédent
+                    sliderNavPrev.click();
+                }
+            }
+            
+            isDragging = false;
+        });
+        
+        // Initialisation
+        updateSlider();
+        
+        // Redimensionnement
+        window.addEventListener('resize', () => {
+            setTimeout(updateSlider, 100);
+        });
     }
 });
 
@@ -176,7 +281,7 @@ const numberObserver = new IntersectionObserver((entries) => {
 });
 
 const numbersSection = document.querySelector('.numbers-grid');
-if (numbersSection) {
+if (numbersSection) {s
     numberObserver.observe(numbersSection);
 }
 // Gestion du mode sombre

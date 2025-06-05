@@ -405,6 +405,7 @@
                     <a href="#">Mentions légales</a>
                     <a href="#">Accessibilité</a>
                     <a href="#">Plan du site</a>
+                    <a href="admin/login.php">Administration</a>
                 </div>
             </div>
         </div>

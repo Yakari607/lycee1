@@ -293,16 +293,10 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <a href="index.php" class="navbar-brand">Administration</a>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a href="index.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : '' ?>">Tableau de bord</a>
-            </li>
-            <li class="nav-item">
                 <a href="upload-media.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'upload-media.php' ? 'active' : '' ?>">Médias partagés</a>
             </li>
             <li class="nav-item">
                 <a href="actualites-admin.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'actualites-admin.php' ? 'active' : '' ?>">Actualités</a>
-            </li>
-            <li class="nav-item">
-                <a href="restaurant-admin.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'restaurant-admin.php' ? 'active' : '' ?>">Restaurant</a>
             </li>
             <li class="nav-item">
                 <a href="menu-admin.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'menu-admin.php' ? 'active' : '' ?>">Menus</a>
