@@ -3,7 +3,12 @@
 $host = 'lyceemerqagora.mysql.db'; // Généralement fourni par votre hébergeur
 $dbname = 'lyceemerqagora';  // Nom de la base de données que vous avez créée sur l'hébergeur
 $user = 'lyceemerqagora';      // Nom d'utilisateur MySQL fourni par votre hébergeur
-$password = 'Mermoz68300Illzach';      // Mot de passe MySQL fourni par votre hébergeur
+$password = 'Mermoz68300Illzach';    
+
+$host = 'localhost';
+$dbname = 'lycee1';
+$user = 'root';
+$password = '';// Mot de passe MySQL fourni par votre hébergeur
 
 // Préfixe pour les tables de ce projet (pour éviter les conflits dans une base partagée)
 $table_prefix = 'lycee1_';
