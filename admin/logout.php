@@ -1,7 +1,7 @@
 <?php
 /**
  * Page de déconnexion pour l'administration
- * Lycée Jean Mermoz - Saint-Louis
+ * Lycée Jean-Mermoz - Saint-Louis
  */
 
 // Démarrer la session
@@ -28,7 +28,7 @@ session_destroy();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Déconnexion - Administration Lycée Jean Mermoz</title>
+    <title>Déconnexion - Administration Lycée Jean-Mermoz</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -144,7 +144,7 @@ session_destroy();
             <h1 class="logout-title">Déconnexion réussie</h1>
             
             <p class="logout-message">
-                Vous avez été déconnecté(e) avec succès de l'interface d'administration du Lycée Jean Mermoz.
+                Vous avez été déconnecté(e) avec succès de l'interface d'administration du Lycée Jean-Mermoz.
                 <br><br>
                 Merci pour votre session de travail.
             </p>

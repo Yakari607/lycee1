@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lycée Jean Mermoz - Saint-Louis</title>
+    <title>Lycée Jean-Mermoz - Saint-Louis</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/pages/index.css">
     <!-- Font Awesome pour les icônes -->
@@ -31,7 +31,7 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h1>Lycée Jean Mermoz</h1>
+                <h1>Lycée Jean-Mermoz</h1>
                 <p class="hero-subtitle">Un établissement d'excellence au service de la réussite de tous</p>
                 <div class="cta-container">
                     <a href="#formations" class="cta-button">Découvrir nos filières</a>
@@ -488,80 +488,6 @@ réalisation et suivi de productions
                 </div>
             </div>
         </section>
-        
-        <!-- Section UFA -->
-        <section id="ufa" class="ufa-section">
-            <div class="container">
-                <h2 class="section-title">L'UFA Jean Mermoz</h2>
-                <div class="ufa-content">
-                    <div class="ufa-intro">
-                        <p>L'Unité de Formation par Apprentissage (UFA) du Lycée Jean Mermoz propose des formations en alternance de qualité, alliant enseignement théorique et expérience professionnelle.</p>
-                    </div>
-                    
-                    <div class="ufa-grid">
-                        <div class="ufa-card">
-                            <div class="ufa-card-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <h3>Nos formations en apprentissage</h3>
-                            <p>Un large choix de formations professionnalisantes du CAP au BTS dans les domaines industriels et tertiaires.</p>
-                            <ul class="ufa-list">
-                                <li>CAP Métiers de l'Enseigne et de la Signalétique</li>
-                                <li>BAC PRO Métiers de l'Électricité</li>
-                                <li>BAC PRO Technicien d'Usinage</li>
-                                <li>BTS Conception de Produits Industriels</li>
-                                <li>BTS Maintenance des Systèmes</li>
-                                <li>BTS Management Commercial Opérationnel</li>
-                                <li>BTS Assurance</li>
-                            </ul>  
-                        </div>
-                        
-                        <div class="ufa-card">
-                            <div class="ufa-card-icon">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <h3>Les avantages de l'alternance</h3>
-                            <ul class="ufa-list">
-                                <li><strong>Formation rémunérée</strong> - Gagnez en indépendance financière</li>
-                                <li><strong>Expérience professionnelle</strong> - Acquisition d'une expérience concrète</li>
-                                <li><strong>Insertion facilitée</strong> - 70% des apprentis trouvent un emploi dans les 7 mois</li>
-                                <li><strong>Double statut</strong> - Bénéficiez du statut étudiant et salarié</li>
-                                <li><strong>Formation gratuite</strong> - Prise en charge des frais par l'entreprise</li>
-                                <li><strong>Suivi personnalisé</strong> - Accompagnement par des tuteurs dédiés</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="ufa-card highlight">
-                            <div class="ufa-card-icon">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <h3>Notre réseau d'entreprises partenaires</h3>
-                            <p>L'UFA Jean Mermoz entretient des relations privilégiées avec plus de 150 entreprises dans la région trinationale (France, Allemagne, Suisse).</p>
-                            <p>Notre Bureau des Entreprises vous accompagne dans votre recherche de contrat d'apprentissage.</p>
-                            <a href="#contact" class="ufa-btn">Contacter notre Bureau des Entreprises</a>
-                        </div>
-                    </div>
-                    
-                    <div class="ufa-testimonials">
-                        <h3>Ce que disent nos apprentis</h3>
-                        <div class="testimonial-grid">
-                            <div class="testimonial-card">
-                                <blockquote>
-                                    "L'alternance à l'UFA Jean Mermoz m'a permis d'acquérir une solide expérience professionnelle tout en obtenant mon diplôme. J'ai été embauché dans mon entreprise d'accueil dès la fin de ma formation."
-                                </blockquote>
-                                <cite>Thomas, diplômé BTS CPI</cite>
-                            </div>
-                            <div class="testimonial-card">
-                                <blockquote>
-                                    "Les formateurs sont très investis et l'accompagnement est personnalisé. La formation en apprentissage est exigeante mais très enrichissante."
-                                </blockquote>
-                                <cite>Emma, apprentie en BAC PRO</cite>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Section Contact -->
@@ -667,7 +593,7 @@ réalisation et suivi de productions
             <div class="footer-content">
                 <div class="footer-info">
                     <img src="images/logos/LOGO-UFA-MERMOZ-1.jpg" alt="Logo UFA Jean-Mermoz" class="footer-logo">
-                    <p>&copy; 2024 Lycée Jean Mermoz - Saint-Louis</p>
+                    <p>&copy; 2024 Lycée Jean-Mermoz - Saint-Louis</p>
                 </div>
                 <div class="footer-links">
                     <a href="#contact">Mentions légales</a>

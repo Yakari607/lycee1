@@ -2,7 +2,7 @@
 
     <footer class="admin-footer">
         <div class="container">
-            <p>&copy; <?php echo date('Y'); ?> Lycée Jean Mermoz - Interface d'administration</p>
+            <p>&copy; <?php echo date('Y'); ?> Lycée Jean-Mermoz - Interface d'administration</p>
         </div>
     </footer>
 

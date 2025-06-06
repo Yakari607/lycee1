@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UFA - Unité de Formation par Apprentissage - Lycée Jean Mermoz</title>
+    <title>UFA - Unité de Formation par Apprentissage - Lycée Jean-Mermoz</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/pages/formation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -171,7 +171,7 @@
 
         <section class="formation-hero" style="background-image: url('images/formations/pexels-kampus-8815880.jpg');">
             <div class="hero-content">
-                <h1>UFA Jean Mermoz</h1>
+                <h1>UFA Jean-Mermoz</h1>
                 <p>Unité de Formation par Apprentissage</p>
             </div>
         </section>
@@ -183,7 +183,7 @@
                     <div class="formation-card">
                         <h2>Présentation de l'UFA</h2>
                         <div class="formation-type">Formation par apprentissage</div>
-                        <p>L'UFA du lycée Jean Mermoz, intégrée au lycée, est une Unité de Formation par Apprentissage particulièrement atypique. En effet, sa carte de formation compte <strong>15 diplômes relevant de l'apprentissage</strong> pour un total de <strong>125 apprentis</strong>.</p>
+                        <p>L'UFA du lycée Jean-Mermoz, intégrée au lycée, est une Unité de Formation par Apprentissage particulièrement atypique. En effet, sa carte de formation compte <strong>15 diplômes relevant de l'apprentissage</strong> pour un total de <strong>125 apprentis</strong>.</p>
                         <p>Ces chiffres s'expliquent par la volonté et la priorité que l'établissement s'est donné de privilégier la mise en œuvre du <strong>mixage de publics</strong> avec les formations relevant du lycée technologique et des sections d'enseignement professionnel.</p>
                         <p>Atypique encore par le nombre très élevé d'enseignants qui a largement dépassé le cap des <strong>65 personnes</strong>.</p>
                     </div>
@@ -432,7 +432,7 @@
             <div class="footer-content">
                 <div class="footer-info">
                     <img src="images/logos/LOGO-UFA-MERMOZ-1.jpg" alt="Logo UFA Jean-Mermoz" class="footer-logo">
-                    <p>&copy; 2024 Lycée Jean Mermoz - Saint-Louis</p>
+                    <p>&copy; 2024 Lycée Jean-Mermoz - Saint-Louis</p>
                 </div>
                 <div class="footer-links">
                     <a href="#">Mentions légales</a>

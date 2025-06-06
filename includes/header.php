@@ -1,6 +1,6 @@
 <?php
 /**
- * Header component for Lycée Jean Mermoz website
+ * Header component for Lycée Jean-Mermoz website
  * Contains common meta tags and CSS links
  * 
  * Usage: 
@@ -13,7 +13,7 @@
 
 // Set default title if not provided
 if (!isset($pageTitle)) {
-    $pageTitle = "Lycée Jean Mermoz - Saint-Louis";
+    $pageTitle = "Lycée Jean-Mermoz - Saint-Louis";
 }
 
 // Déterminer si nous sommes dans un sous-dossier
@@ -27,8 +27,8 @@ if (strpos($_SERVER['PHP_SELF'], '/admin/') !== false) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site officiel du Lycée Jean Mermoz à Saint-Louis, Alsace. Formation professionnelle, technologique et générale.">
-    <title><?php echo $pageTitle; ?> - Lycée Jean Mermoz</title>
+    <meta name="description" content="Site officiel du Lycée Jean-Mermoz à Saint-Louis, Alsace. Formation professionnelle, technologique et générale.">
+    <title><?php echo $pageTitle; ?> - Lycée Jean-Mermoz</title>
     
     <!-- Common CSS -->
     <link rel="stylesheet" href="<?php echo $base_path; ?>css/main.css">

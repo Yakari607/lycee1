@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion administration - Lycée Jean Mermoz</title>
+    <title>Connexion administration - Lycée Jean-Mermoz</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         * {
@@ -142,7 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="login-container">
         <div class="logo">
-            <img src="../images/logos/LOGO-UFA-MERMOZ-1.jpg" alt="Logo Lycée Jean Mermoz">
+            <img src="../images/logos/LOGO-UFA-MERMOZ-1.jpg" alt="Logo Lycée Jean-Mermoz">
         </div>
         
         <h1>Connexion Administration</h1>

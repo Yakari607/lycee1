@@ -1,6 +1,6 @@
-# Site Web du Lycée Jean Mermoz
+# Site Web du Lycée Jean-Mermoz
 
-Ce projet contient les fichiers source pour le site web du Lycée Jean Mermoz. La structure est conçue pour être facilement intégrable dans WordPress.
+Ce projet contient les fichiers source pour le site web du Lycée Jean-Mermoz. La structure est conçue pour être facilement intégrable dans WordPress.
 
 ## Structure du Projet
 

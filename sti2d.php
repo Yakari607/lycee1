@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bac STI2D - Sciences et Technologies de l'Industrie et du Développement Durable - Lycée Jean Mermoz</title>
-    <meta name="description" content="Découvrez le Baccalauréat STI2D proposé au Lycée Jean Mermoz : une formation axée sur l'industrie, l'innovation technologique et le développement durable.">
+    <title>Bac STI2D - Sciences et Technologies de l'Industrie et du Développement Durable - Lycée Jean-Mermoz</title>
+    <meta name="description" content="Découvrez le Baccalauréat STI2D proposé au Lycée Jean-Mermoz : une formation axée sur l'industrie, l'innovation technologique et le développement durable.">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/pages/formation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -1010,7 +1010,7 @@
             <div class="footer-content">
                 <div class="footer-info">
                     <img src="images/logos/LOGO-UFA-MERMOZ-1.jpg" alt="Logo UFA Jean-Mermoz" class="footer-logo">
-                    <p>&copy; 2024 Lycée Jean Mermoz - Saint-Louis</p>
+                    <p>&copy; 2024 Lycée Jean-Mermoz - Saint-Louis</p>
                 </div>
                 <div class="footer-links">
                     <a href="#">Mentions légales</a>

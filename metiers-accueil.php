@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAC PRO Métiers de l'Accueil - Lycée Jean Mermoz</title>
+    <title>BAC PRO Métiers de l'Accueil - Lycée Jean-Mermoz</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/pages/formation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -42,7 +42,7 @@
                         <h2>Métiers de la Relation Client</h2>
                         <div class="admission-info">
                             <i class="fas fa-user-graduate"></i>
-                            <span><strong>24 places</strong> proposées au lycée Jean Mermoz<br>dont <strong>12</strong> en Bac Pro Métiers de l'Accueil</span>
+                            <span><strong>24 places</strong> proposées au lycée Jean-Mermoz<br>dont <strong>12</strong> en Bac Pro Métiers de l'Accueil</span>
                         </div>
                     </div>
                 </div>
@@ -290,7 +290,7 @@
                             
                             <div class="contact-block">
                                 <h4>Apprentissage</h4>
-                                <p>Directeur Délégué de l'UFA Jean Mermoz<br>
+                                <p>Directeur Délégué de l'UFA Jean-Mermoz<br>
                                 <a href="mailto:ddufa@lyceemermoz.fr">ddufa@lyceemermoz.fr</a></p>
                                 
                                 <p>Chargée de Développement de l'Apprentissage<br>
@@ -310,7 +310,7 @@
             <div class="footer-content">
                 <div class="footer-info">
                     <img src="images/logos/LOGO-UFA-MERMOZ-1.jpg" alt="Logo UFA Jean-Mermoz" class="footer-logo">
-                    <p>&copy; 2024 Lycée Jean Mermoz - Saint-Louis</p>
+                    <p>&copy; 2024 Lycée Jean-Mermoz - Saint-Louis</p>
                 </div>
                 <div class="footer-links">
                     <a href="#">Mentions légales</a>

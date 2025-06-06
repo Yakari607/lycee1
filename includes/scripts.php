@@ -1,6 +1,6 @@
 <?php
 /**
- * Scripts component for Lycée Jean Mermoz website
+ * Scripts component for Lycée Jean-Mermoz website
  * Contains common JavaScript includes
  * 
  * Usage: 

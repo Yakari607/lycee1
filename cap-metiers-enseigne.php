@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAP Métiers de l'Enseigne et de la Signalétique - Lycée Jean Mermoz</title>
+    <title>CAP Métiers de l'Enseigne et de la Signalétique - Lycée Jean-Mermoz</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/pages/formation.css">
     <!-- Font Awesome pour les icônes -->
@@ -184,7 +184,7 @@
         <div class="footer-content">
             <div class="footer-info">
                 <img src="images/logos/LOGO-UFA-MERMOZ-1.jpg" alt="Logo UFA Jean-Mermoz" class="footer-logo">
-                <p>&copy; 2024 Lycée Jean Mermoz - Saint-Louis</p>
+                <p>&copy; 2024 Lycée Jean-Mermoz - Saint-Louis</p>
             </div>
             <div class="footer-links">
                 <a href="#">Mentions légales</a>

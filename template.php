@@ -1,6 +1,6 @@
 <?php
 /**
- * Template file for Lycée Jean Mermoz website
+ * Template file for Lycée Jean-Mermoz website
  * This template demonstrates how to use all components
  */
 

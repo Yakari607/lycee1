@@ -41,7 +41,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo htmlspecialchars($actualite['titre']); ?> - Lycée Jean Mermoz</title>
+    <title><?php echo htmlspecialchars($actualite['titre']); ?> - Lycée Jean-Mermoz</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/pages/actualite.css">
     <!-- Font Awesome pour les icônes -->
@@ -92,7 +92,7 @@ try {
                             <a href="https://twitter.com/intent/tweet?url=<?php echo urlencode('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>&text=<?php echo urlencode($actualite['titre']); ?>" target="_blank" class="social-link twitter" aria-label="Partager sur Twitter">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="mailto:?subject=<?php echo urlencode($actualite['titre'] . ' - Lycée Jean Mermoz'); ?>&body=<?php echo urlencode('Découvrez cette actualité du Lycée Jean Mermoz : ' . 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>" class="social-link email" aria-label="Partager par e-mail">
+                            <a href="mailto:?subject=<?php echo urlencode($actualite['titre'] . ' - Lycée Jean-Mermoz'); ?>&body=<?php echo urlencode('Découvrez cette actualité du Lycée Jean-Mermoz : ' . 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>" class="social-link email" aria-label="Partager par e-mail">
                                 <i class="fas fa-envelope"></i>
                             </a>
                         </div>
@@ -150,7 +150,7 @@ try {
             <div class="footer-content">
                 <div class="footer-info">
                     <img src="images/logos/LOGO-UFA-MERMOZ-1.jpg" alt="Logo UFA Jean-Mermoz" class="footer-logo">
-                    <p>&copy; 2024 Lycée Jean Mermoz - Saint-Louis</p>
+                    <p>&copy; 2024 Lycée Jean-Mermoz - Saint-Louis</p>
                 </div>
                 <div class="footer-links">
                     <a href="#">Mentions légales</a>

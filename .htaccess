@@ -1,4 +1,12 @@
-DirectoryIndex index.php
+# Désactiver l'affichage des erreurs pour la production
+# php_flag display_errors off
+
+# Page par défaut
+DirectoryIndex index.php index-simple.php
+
+# Désactiver l'affichage des répertoires
 Options -Indexes
-php_flag display_errors on
-php_value error_reporting E_ALL 
+
+# Types MIME pour les fichiers CSS et JS
+AddType text/css .css
+AddType application/javascript .js 

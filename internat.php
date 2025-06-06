@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'Internat - Lycée Jean Mermoz</title>
+    <title>L'Internat - Lycée Jean-Mermoz</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/pages/vie-lyceenne.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -209,14 +209,14 @@
 
         <div class="internat-content">
             <section class="internat-intro">
-                <h2>L'internat du lycée Jean Mermoz</h2>
+                <h2>L'internat du lycée Jean-Mermoz</h2>
                 <p>L'internat du lycée Jean-Mermoz est un espace de vie conçu pour favoriser la réussite scolaire et l'épanouissement personnel des élèves. Il offre un environnement propice au travail, à la détente et à la vie en collectivité.</p>
                 <p>Notre internat mixte accueille les élèves du lundi au vendredi dans un cadre moderne et confortable, permettant aux jeunes de se concentrer pleinement sur leurs études.</p>
             </section>
 
             <section class="internat-section">
                 <h3><i class="fas fa-home"></i> Un cadre de vie agréable</h3>
-                <p>L'internat du lycée Jean Mermoz propose un environnement sécurisé et convivial qui comprend :</p>
+                <p>L'internat du lycée Jean-Mermoz propose un environnement sécurisé et convivial qui comprend :</p>
                 
                 <div class="facilities-grid">
                     <div class="facility-item">
@@ -346,7 +346,7 @@
 
             <div class="highlight-box">
                 <h3>Un lieu de vie et d'apprentissage</h3>
-                <p>L'internat du lycée Jean Mermoz offre bien plus qu'un simple hébergement.</p>
+                <p>L'internat du lycée Jean-Mermoz offre bien plus qu'un simple hébergement.</p>
                 <p>C'est un véritable lieu de vie qui favorise la réussite scolaire, l'autonomie et l'épanouissement personnel.</p>
             </div>
         </div>
@@ -358,7 +358,7 @@
             <div class="footer-content">
                 <div class="footer-info">
                     <img src="images/logos/LOGO-UFA-MERMOZ-1.jpg" alt="Logo UFA Jean-Mermoz" class="footer-logo">
-                    <p>&copy; 2024 Lycée Jean Mermoz - Saint-Louis</p>
+                    <p>&copy; 2024 Lycée Jean-Mermoz - Saint-Louis</p>
                 </div>
                 <div class="footer-links">
                     <a href="#">Mentions légales</a>

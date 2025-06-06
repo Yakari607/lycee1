@@ -1,6 +1,6 @@
 <?php
 /**
- * Footer component for Lycée Jean Mermoz website
+ * Footer component for Lycée Jean-Mermoz website
  * Include this file in all pages that need the footer
  */
 
@@ -17,7 +17,7 @@ if (!isset($base_path)) {
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <p>&copy; <?php echo date('Y'); ?> Lycée Jean Mermoz</p>
+                <p>&copy; <?php echo date('Y'); ?> Lycée Jean-Mermoz</p>
                 <p>Tous droits réservés.</p>
             </div>
             <div class="col-md-6 text-md-end">

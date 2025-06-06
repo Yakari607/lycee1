@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bac Général - Lycée Jean Mermoz</title>
+    <title>Bac Général - Lycée Jean-Mermoz</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/pages/formation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -275,7 +275,7 @@
                             <p>Un ensemble d'enseignements communs à toutes les premières. Il s'agit d'acquérir les mêmes bases, qui seront approfondies selon les spécialités choisies.</p>
                             <ul>
                                 <li>Français (en Première) / Philosophie (en Terminale)</li>
-                                <li>Histoire-géographie</li>
+                                <li>Histoire-Géographie</li>
                                 <li>Enseignement moral et civique</li>
                                 <li>Langues vivantes A et B</li>
                                 <li>Éducation physique et sportive</li>
@@ -284,8 +284,8 @@
                         </div>
                         <div class="program-card">
                             <h4><i class="fas fa-microscope"></i> Les spécialités</h4>
-                            <p>En première, il faut choisir 3 spécialités. Des « menus », des ensembles de 3 spécialités qui ont une certaine cohérence sont disponibles au lycée. Il est possible de sélectionner 3 spécialités qui ne forment pas un menu.</p>
-                            <p>En fin de première, une des spécialités est abandonnée. Cela signifie que l'épreuve du baccalauréat de cette spécialité est passée en fin de première, et son enseignement n'est donc pas poursuivi en Terminale.</p>
+                            <p>En Première, il faut choisir 3 spécialités. Des « menus », des ensembles de 3 spécialités qui ont une certaine cohérence, sont disponibles au lycée. Il est possible de sélectionner 3 spécialités qui ne forment pas un menu.</p>
+                            <p>En fin de Première, une des spécialités est abandonnée. Cela signifie que l'épreuve du baccalauréat de cette spécialité est passée en fin de première, et son enseignement n'est donc pas poursuivi en Terminale.</p>
                         </div>
                     </div>
                 </div>
@@ -293,7 +293,7 @@
                 <!-- Spécialités -->
                 <div class="specialty-section">
                     <h3><i class="fas fa-atom"></i> Les spécialités proposées</h3>
-                    <p>Le lycée Jean Mermoz propose les spécialités suivantes :</p>
+                    <p>Le lycée Jean-Mermoz propose les spécialités suivantes :</p>
                     
                     <div class="specialty-grid">
                         <div class="specialty-item">
@@ -399,7 +399,7 @@
                                         <td>8</td>
                                     </tr>
                                     <tr>
-                                        <td class="subject-name">Histoire-géographie</td>
+                                        <td class="subject-name">Histoire-Géographie</td>
                                         <td>3 h</td>
                                         <td>3 h</td>
                                         <td>5</td>
@@ -531,6 +531,8 @@
                                 <p>Découvrez également nos autres filières de baccalauréat :</p>
                                 <ul>
                                     <li><a href="bac-stmg.php">Bac STMG - Sciences et Technologies du Management et de la Gestion</a></li>
+                                    <li><a href="sti2d.php">Bac STI2D - Sciences et Technologies de l'Industrie et du Développement Durable</a></li>
+                                </ul>
                                 </ul>
                             </div>
                         </div>
@@ -563,7 +565,7 @@
                                     <i class="fas fa-map"></i>
                                 </a>
                             </p>
-                            <p><i class="fas fa-phone"></i> +33 389 70 22 71</p>
+                            <p><i class="fas fa-phone"></i> +33 389 70 22 70</p>
                         </div>
                         <div class="contact-info">
                             <div class="contact-block">
@@ -585,7 +587,7 @@
             <div class="footer-content">
                 <div class="footer-info">
                     <img src="images/logos/LOGO-UFA-MERMOZ-1.jpg" alt="Logo UFA Jean-Mermoz" class="footer-logo">
-                    <p>&copy; 2024 Lycée Jean Mermoz - Saint-Louis</p>
+                    <p>&copy; 2024 Lycée Jean-Mermoz - Saint-Louis</p>
                 </div>
                 <div class="footer-links">
                     <a href="#">Mentions légales</a>

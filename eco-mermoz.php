@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Éco-Mermoz - Lycée Jean Mermoz</title>
+    <title>Éco-Mermoz - Lycée Jean-Mermoz</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/pages/formation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -281,7 +281,7 @@
         <section class="formation-hero" style="background-image: url('images/formations/pexels-pixabay-159740.jpg');">
             <div class="hero-content">
                 <h1>ÉCO-MERMOZ</h1>
-                <p>« Le lycée Jean Mermoz, un modèle de développement durable ! »</p>
+                <p>« Le lycée Jean-Mermoz, un modèle de développement durable ! »</p>
             </div>
         </section>
 
@@ -570,8 +570,8 @@
                                     <p>Chaque année, depuis 2020, 2 troupeaux de 6 brebis amenées par un éleveur local (Alternature) prennent place pour brouter l'herbe des espaces verts, du mois d'avril au mois d'octobre. Cela permet d'éviter l'usage des engins de débroussaillement et de participer à la recréation d'une biodiversité, notamment liée aux insectes.</p>
                                     
                                     <div class="eco-image-container" style="text-align: center; margin: 1.5rem 0;">
-                                        <img src="images/formations/moutton.jpg" alt="Agneau né au lycée Jean Mermoz" style="max-width: 350%; max-height: 350px; height: 180px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); object-fit: cover; display: block; margin: 0 auto;">
-                                        <p style="font-style: italic; margin-top: 0.8rem; color: #666; font-size: 0.9rem; text-align: center;">Un agneau né au lycée Jean Mermoz</p>
+                                        <img src="images/formations/moutton.jpg" alt="Agneau né au lycée Jean-Mermoz" style="max-width: 350%; max-height: 350px; height: 180px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); object-fit: cover; display: block; margin: 0 auto;">
+                                        <p style="font-style: italic; margin-top: 0.8rem; color: #666; font-size: 0.9rem; text-align: center;">Un agneau né au lycée Jean-Mermoz</p>
                                     </div>
                                 </div>
                             </div>
@@ -1331,7 +1331,7 @@
             <div class="footer-content">
                 <div class="footer-info">
                     <img src="images/logos/LOGO-UFA-MERMOZ-1.jpg" alt="Logo UFA Jean-Mermoz" class="footer-logo">
-                    <p>&copy; 2024 Lycée Jean Mermoz - Saint-Louis</p>
+                    <p>&copy; 2024 Lycée Jean-Mermoz - Saint-Louis</p>
                 </div>
                 <div class="footer-links">
                     <a href="#">Mentions légales</a>

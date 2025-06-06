@@ -1,6 +1,6 @@
 <?php
 /**
- * Navigation bar component for Lycée Jean Mermoz website
+ * Navigation bar component for Lycée Jean-Mermoz website
  * Include this file in all pages that need the main navigation
  */
 
