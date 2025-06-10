@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+    <!-- Liens d'évitement pour la navigation clavier - RGAA 4 -->
+    <div class="skip-links">
+        <a href="#main" class="skip-link">Aller au contenu principal</a>
+        <a href="#nav" class="skip-link">Aller à la navigation</a>
+        <a href="#formations" class="skip-link">Aller aux formations</a>
+        <a href="#contact" class="skip-link">Aller au formulaire de contact</a>
+    </div>
+
 <?php
     // Connexion à la base de données
     require_once 'includes/db_connect.php';
@@ -28,7 +36,7 @@
     <?php include 'includes/navbar.php'; ?>
 
 
-    <main>
+    <main id="main" role="main">
         <section class="hero">
             <div class="hero-content">
                 <h1>Lycée Jean-Mermoz</h1>
@@ -95,35 +103,36 @@
         </section>
 
         <!-- Section Vie au Lycée -->
-        <section id="vie-lyceenne" class="vie-lycee-section">
+        <section id="vie-lyceenne" class="vie-lycee-section" aria-labelledby="titre-vie-lycee">
             <div class="container">
-                <div class="buttons-grid">
-                    <a href="vie-lyceenne.php" class="info-button">
-                        <i class="fas fa-school"></i>
+                <h2 id="titre-vie-lycee" class="sr-only">Vie au lycée</h2>
+                <div class="buttons-grid" role="navigation" aria-label="Navigation rapide de la vie lycéenne">
+                    <a href="vie-lyceenne.php" class="info-button" aria-describedby="desc-vie-lycee">
+                        <i class="fas fa-school" aria-hidden="true"></i>
                         <span>La vie au lycée</span>
-                        <p class="button-subtitle">MDL, CVL, Internat, Restauration, CDI...</p>
+                        <p id="desc-vie-lycee" class="button-subtitle">MDL, CVL, Internat, Restauration, CDI...</p>
                     </a>
-                    <a href="#formations" class="info-button">
-                        <i class="fas fa-graduation-cap"></i>
+                    <a href="#formations" class="info-button" aria-describedby="desc-formations">
+                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                         <span>Formations</span>
-                        <p class="button-subtitle">Générale, Technologique, Professionnelle</p>
+                        <p id="desc-formations" class="button-subtitle">Générale, Technologique, Professionnelle</p>
                     </a>
-                    <a href="partenariats.php" class="info-button">
-                        <i class="fas fa-handshake"></i>
+                    <a href="partenariats.php" class="info-button" aria-describedby="desc-partenaires">
+                        <i class="fas fa-handshake" aria-hidden="true"></i>
                         <span>Nos partenaires</span>
-                        <p class="button-subtitle">Entreprises, Institutions, International</p>
+                        <p id="desc-partenaires" class="button-subtitle">Entreprises, Institutions, International</p>
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- Section Formations -->
-        <section id="formations" class="filiere-section industrie-section">
+        <section id="formations" class="filiere-section industrie-section" aria-labelledby="titre-formations">
             <div class="container">
-                <h2 class="section-title">Nos filières</h2>
+                <h2 id="titre-formations" class="section-title">Nos filières</h2>
                 
                 <!-- Navigation des formations -->
-                <div class="filiere-filter formations-nav">
+                <nav class="filiere-filter formations-nav" aria-label="Navigation des filières de formation">
                     <a href="#seconde" class="formation-nav-btn" data-section="seconde">Classe de Seconde</a>
                     <a href="#general" class="formation-nav-btn active" data-section="general">Voie Générale</a>
                     <a href="#langues" class="formation-nav-btn" data-section="langues">Langues Vivantes</a>
@@ -131,7 +140,7 @@
                     <a href="metiers-accueil.php" class="formation-nav-btn" data-section="tertiaire">Métiers du Tertiaire</a>
                     <a href="#artisanat" class="formation-nav-btn" data-section="artisanat">Artisanat</a>
                     <a href="#services" class="formation-nav-btn" data-section="services">Services aux Personnes</a>
-                </div>
+                </nav>
 
                 <!-- Classe de Seconde -->
                 <div class="formation-block" id="seconde">
@@ -203,9 +212,9 @@
                         <div class="filieres-grid">
                             <div class="filiere-card">
                                 <div class="filiere-header">
-                                    <i class="fas fa-graduation-cap"></i>
+                                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                                     <h4>Bac Général</h4>
-                                    <a href="bac-general.php" class="read-more">En savoir plus</a>
+                                    <a href="bac-general.php" class="read-more">En savoir plus sur le Bac Général</a>
                                 </div>
                                 <div class="filiere-details">
                                     <h5>Spécialités proposées</h5>
@@ -221,9 +230,9 @@
                             </div>
                             <div class="filiere-card">
                                 <div class="filiere-header">
-                                    <i class="fas fa-microchip"></i>
+                                    <i class="fas fa-microchip" aria-hidden="true"></i>
                                     <h4>STI2D</h4>
-                                    <a href="sti2d.php" class="read-more">En savoir plus</a>
+                                    <a href="sti2d.php" class="read-more">En savoir plus sur STI2D</a>
                                 </div>
                                 <div class="filiere-details">
                                     <h5>Sciences et Technologies de l'Industrie et du Développement Durable</h5>
@@ -237,9 +246,9 @@
                             </div>
                             <div class="filiere-card">
                                 <div class="filiere-header">
-                                    <i class="fas fa-chart-pie"></i>
+                                    <i class="fas fa-chart-pie" aria-hidden="true"></i>
                                     <h4>STMG</h4>
-                                    <a href="bac-stmg.php" class="read-more">En savoir plus</a>
+                                    <a href="bac-stmg.php" class="read-more">En savoir plus sur STMG</a>
                                 </div>
                                 <div class="filiere-details">
                                     <h5>Sciences et Technologies du Management et de la Gestion</h5>
@@ -469,20 +478,20 @@ réalisation et suivi de productions
             </div>
         </section>
 
-        <section class="key-numbers">
+        <section class="key-numbers" aria-labelledby="titre-chiffres">
             <div class="container">
-                <h2 class="section-title">Chiffres clés</h2>
-                <div class="numbers-grid">
-                    <div class="number-card">
-                        <strong class="number">1200</strong>
+                <h2 id="titre-chiffres" class="section-title">Chiffres clés</h2>
+                <div class="numbers-grid" role="group" aria-label="Statistiques du lycée">
+                    <div class="number-card" role="presentation">
+                        <strong class="number" aria-label="mille deux cents">1200</strong>
                         <span>Élèves</span>
                     </div>
-                    <div class="number-card">
-                        <strong class="number">100</strong>
+                    <div class="number-card" role="presentation">
+                        <strong class="number" aria-label="cent">100</strong>
                         <span>Enseignants</span>
                     </div>
-                    <div class="number-card">
-                        <strong class="number">95</strong>
+                    <div class="number-card" role="presentation">
+                        <strong class="number" aria-label="quatre-vingt-quinze pourcent">95</strong>
                         <span>% de réussite au bac</span>
                     </div>
                 </div>
@@ -491,17 +500,17 @@ réalisation et suivi de productions
     </main>
 
     <!-- Section Contact -->
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section" aria-labelledby="titre-contact">
         <div class="container">
-            <h2 class="section-title">Besoin de renseignements ?</h2>
+            <h2 id="titre-contact" class="section-title">Besoin de renseignements ?</h2>
             <div class="contact-container">
                 <div class="contact-accordion">
-                    <button class="accordion-btn">
+                    <button class="accordion-btn" aria-expanded="false" aria-controls="contact-details">
                         <span>Qui contacter ?</span>
-                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
                     </button>
-                    <div class="accordion-content">
-                        <table class="contact-table">
+                    <div id="contact-details" class="accordion-content">
+                        <table class="contact-table" role="table" aria-label="Liste des contacts du lycée">
                             <tr>
                                 <td>Proviseure</td>
                                 <td>Mme Marie-Carmen GRANDHAYE</td>
@@ -546,41 +555,72 @@ réalisation et suivi de productions
                     </div>
                 </div>
 
-                <form class="contact-form">
+                <form class="contact-form" novalidate>
+                    <h3>Formulaire de contact</h3>
                     <div class="form-row">
                         <div class="form-group">
-                            <input type="text" id="nom" name="nom" placeholder="NOM & PRÉNOM *" required>
+                            <label for="nom">
+                                Nom et Prénom 
+                                <span class="required" aria-label="champ obligatoire">*</span>
+                            </label>
+                            <input type="text" id="nom" name="nom" aria-required="true" required 
+                                   aria-describedby="nom-error">
+                            <div id="nom-error" class="error-message" aria-live="polite"></div>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="societe" name="societe" placeholder="SOCIÉTÉ">
+                            <label for="societe">Société (optionnel)</label>
+                            <input type="text" id="societe" name="societe">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="E-MAIL *" required>
+                            <label for="email">
+                                Adresse e-mail 
+                                <span class="required" aria-label="champ obligatoire">*</span>
+                            </label>
+                            <input type="email" id="email" name="email" aria-required="true" required 
+                                   aria-describedby="email-error">
+                            <div id="email-error" class="error-message" aria-live="polite"></div>
                         </div>
                         <div class="form-group">
-                            <input type="tel" id="telephone" name="telephone" placeholder="N° TÉLÉPHONE *" required>
+                            <label for="telephone">
+                                Numéro de téléphone 
+                                <span class="required" aria-label="champ obligatoire">*</span>
+                            </label>
+                            <input type="tel" id="telephone" name="telephone" aria-required="true" required 
+                                   aria-describedby="telephone-error">
+                            <div id="telephone-error" class="error-message" aria-live="polite"></div>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group message-group">
-                            <textarea id="message" name="message" placeholder="MESSAGE *" required></textarea>
+                            <label for="message">
+                                Votre message 
+                                <span class="required" aria-label="champ obligatoire">*</span>
+                            </label>
+                            <textarea id="message" name="message" aria-required="true" required 
+                                      aria-describedby="message-error"></textarea>
+                            <div id="message-error" class="error-message" aria-live="polite"></div>
                         </div>
                         <div class="form-group submit-group">
-                            <p class="form-note">* Champs obligatoires</p>
-                            <button type="submit" class="submit-btn">Envoyer</button>
+                            <p class="form-note">
+                                <span class="required">*</span> Champs obligatoires
+                            </p>
+                            <button type="submit" class="submit-btn" aria-describedby="form-status">
+                                Envoyer le message
+                            </button>
+                            <div id="form-status" class="form-status" aria-live="polite"></div>
                         </div>
                     </div>
                 </form>
                 
                 <div class="contact-info">
                     <div class="info-row">
-                        <p><i class="fas fa-phone"></i> +33 389 70 22 70</p>
-                        <p><i class="fas fa-envelope"></i> <a href="mailto:ce.0680066c@ac-strasbourg.fr">ce.0680066c@ac-strasbourg.fr</a></p>
+                        <p><i class="fas fa-phone" aria-hidden="true"></i> <span class="sr-only">Téléphone : </span>+33 389 70 22 70</p>
+                        <p><i class="fas fa-envelope" aria-hidden="true"></i> <span class="sr-only">Email : </span><a href="mailto:ce.0680066c@ac-strasbourg.fr">ce.0680066c@ac-strasbourg.fr</a></p>
                     </div>
                     <div class="info-row">
-                        <p><i class="fas fa-map-marker-alt"></i> 53 rue du Docteur Hurst, 68301 Saint-Louis Cedex</p>
+                        <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span class="sr-only">Adresse : </span>53 rue du Docteur Hurst, 68301 Saint-Louis Cedex</p>
                     </div>
                 </div>
             </div>

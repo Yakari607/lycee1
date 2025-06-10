@@ -158,6 +158,95 @@ body {
     padding-top: 80px;
 }
 
+/* ACCESSIBILITÉ - STYLES DE FOCUS CONFORMES RGAA 4 */
+/* Focus visible pour tous les éléments interactifs */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+.dropdown a:focus,
+.cta-button:focus,
+.submit-btn:focus,
+.slider-nav:focus,
+.menu-btn:focus,
+.theme-toggle:focus {
+    outline: 2px solid #000091 !important;
+    outline-offset: 2px !important;
+    box-shadow: 0 0 0 4px rgba(0, 0, 145, 0.2) !important;
+    background-color: rgba(0, 0, 145, 0.1) !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Focus spécifique pour les liens de navigation */
+.nav-links a:focus {
+    background-color: rgba(0, 0, 145, 0.05) !important;
+    color: var(--primary-color) !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Focus spécifique pour les dropdown triggers */
+.nav-links .dropdown-trigger:focus {
+    background-color: rgba(0, 0, 145, 0.05) !important;
+    color: var(--primary-color) !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Focus pour les éléments de dropdown */
+.dropdown-menu a:focus {
+    background-color: #e7f3ff;
+    color: #000091;
+}
+
+/* Focus pour le mode sombre */
+[data-theme="dark"] a:focus,
+[data-theme="dark"] button:focus,
+[data-theme="dark"] input:focus,
+[data-theme="dark"] textarea:focus {
+    outline-color: #4646ff !important;
+    box-shadow: 0 0 0 4px rgba(70, 70, 255, 0.3) !important;
+    background-color: rgba(70, 70, 255, 0.1) !important;
+}
+
+/* Liens d'évitement pour navigation clavier */
+.skip-links {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    z-index: 9999;
+    background: #000091;
+    padding: 0;
+}
+
+.skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    color: white;
+    background: #000091;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0 0 4px 0;
+    transition: all 0.3s ease;
+}
+
+.skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    left: 0;
+    top: 0;
+    overflow: visible;
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
@@ -198,6 +287,20 @@ body {
     transition: all 0.3s ease;
 }
 
+.main-nav.scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.main-nav.scrolled .nav-container {
+    height: 70px;
+}
+
+[data-theme="dark"] .main-nav.scrolled {
+    background: rgba(45, 45, 45, 0.95);
+}
+
 .nav-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -206,6 +309,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 80px;
+    min-height: 80px;
     background: var(--white);
     border-bottom: 1px solid var(--border-color);
 }
@@ -252,15 +356,26 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+    align-items: center;
 }
 
 .nav-links a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
-    padding: 0.5rem 0;
+    padding: 0.75rem 0.75rem;
     position: relative;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.nav-links > li > a:hover:not(.dropdown-trigger) {
+    color: var(--primary-color);
+    background-color: rgba(0, 0, 145, 0.05);
 }
 
 .nav-links a::after {
@@ -382,9 +497,9 @@ body {
         right: -1rem;
         flex-direction: column;
         background-color: var(--white);
-        width: 250px;
-        border-radius: 4px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        width: 280px;
+        border-radius: 8px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
         opacity: 0;
         visibility: hidden;
         transform: translateY(10px);
@@ -392,6 +507,8 @@ body {
         z-index: 999;
         padding: 1rem;
         border: 1px solid var(--border-color);
+        max-height: 70vh;
+        overflow-y: auto;
     }
     
     .nav-links.active {
@@ -428,8 +545,10 @@ body {
     }
     
     .nav-links a {
-        display: block;
-        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0.75rem;
     }
     
     .dropdown-menu a {
@@ -459,7 +578,7 @@ body {
 
 @media (max-width: 576px) {
     .logo-text h1 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     .logo img {
@@ -467,7 +586,18 @@ body {
     }
     
     .slogan {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+    }
+    
+    .nav-links {
+        width: 95vw;
+        right: 2.5%;
+        left: 2.5%;
+        max-width: none;
+    }
+    
+    .nav-container {
+        padding: 0 0.5rem;
     }
 }
 
@@ -1167,6 +1297,139 @@ body {
 
 .submit-btn:hover {
     background-color: #000066;
+}
+
+/* Styles pour les formulaires accessibles */
+.form-group label {
+    display: block;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.required {
+    color: #e1000f;
+    font-weight: bold;
+}
+
+.error-message {
+    color: #e1000f;
+    font-size: 0.8rem;
+    margin-top: 3px;
+    min-height: 1rem;
+    display: block;
+}
+
+.form-status {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.form-status.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Styles pour les boutons de navigation dropdown */
+.dropdown-trigger {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.75rem 0.75rem;
+    position: relative;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    line-height: 1;
+}
+
+.dropdown-trigger::after {
+    content: ' ▼';
+    font-size: 0.7em;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown[aria-expanded="true"] .dropdown-trigger::after {
+    transform: rotate(180deg);
+}
+
+.dropdown-trigger:hover {
+    color: var(--primary-color);
+    background-color: rgba(0, 0, 145, 0.05);
+}
+
+.dropdown-trigger:active {
+    background-color: rgba(0, 0, 145, 0.1);
+}
+
+/* Menu overlay pour mobile */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Améliorations pour les dropdowns */
+.dropdown-trigger:focus {
+    color: var(--primary-color);
+    outline: none;
+    background-color: rgba(0, 0, 145, 0.05);
+}
+
+/* Classes d'accessibilité pour lecteurs d'écran */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
 }
 
 .contact-info {

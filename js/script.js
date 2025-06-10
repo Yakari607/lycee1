@@ -13,56 +13,155 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.querySelector('.menu-btn');
     const navLinks = document.querySelector('.nav-links');
     const mainNav = document.querySelector('.main-nav');
+    const menuOverlay = document.querySelector('.menu-overlay');
     
     // Menu mobile toggle
-    if (menuBtn) {
+    if (menuBtn && navLinks) {
         menuBtn.addEventListener('click', () => {
-            menuBtn.classList.toggle('open');
-            navLinks.classList.toggle('active');
+            const isOpen = navLinks.classList.contains('active');
+            
+            menuBtn.classList.toggle('open', !isOpen);
+            navLinks.classList.toggle('active', !isOpen);
+            
+            // Gérer l'overlay
+            if (menuOverlay) {
+                menuOverlay.classList.toggle('active', !isOpen);
+            }
+            
+            // Empêcher le défilement quand le menu est ouvert
+            document.body.style.overflow = !isOpen ? 'hidden' : '';
+        });
+        
+        // Fermer le menu quand on clique sur l'overlay
+        if (menuOverlay) {
+            menuOverlay.addEventListener('click', () => {
+                menuBtn.classList.remove('open');
+                navLinks.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+        
+        // Fermer le menu avec la touche Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navLinks && navLinks.classList.contains('active')) {
+                menuBtn.classList.remove('open');
+                navLinks.classList.remove('active');
+                if (menuOverlay) {
+                    menuOverlay.classList.remove('active');
+                }
+                document.body.style.overflow = '';
+            }
         });
     }
     
-    // Gestion des dropdowns sur mobile et desktop
+    // Gestion des dropdowns sur mobile et desktop - ARIA conforme
     const dropdowns = document.querySelectorAll('.dropdown');
     
     dropdowns.forEach(dropdown => {
-        const dropdownLink = dropdown.querySelector('a');
+        const dropdownTrigger = dropdown.querySelector('.dropdown-trigger') || dropdown.querySelector('a');
         const dropdownMenu = dropdown.querySelector('.dropdown-menu');
         
-        // Sur mobile
-        if (window.innerWidth <= 992) {
-            dropdownLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                dropdown.classList.toggle('active');
-                
-                // Ferme tous les autres dropdowns
+        // Gestion clavier et souris pour les dropdowns
+        function toggleDropdown(dropdown, show) {
+            const isExpanded = show !== undefined ? show : !dropdown.classList.contains('active');
+            const trigger = dropdown.querySelector('.dropdown-trigger') || dropdown.querySelector('a');
+            const menu = dropdown.querySelector('.dropdown-menu');
+            
+            // Mise à jour de l'état
+            dropdown.classList.toggle('active', isExpanded);
+            if (trigger.setAttribute) {
+                trigger.setAttribute('aria-expanded', isExpanded);
+            }
+            
+            // Fermer les autres dropdowns
+            if (isExpanded) {
                 dropdowns.forEach(otherDropdown => {
                     if (otherDropdown !== dropdown) {
-                        otherDropdown.classList.remove('active');
+                        toggleDropdown(otherDropdown, false);
                     }
                 });
-                
-                // Toggle l'affichage du menu
-                if (dropdown.classList.contains('active')) {
-                    dropdownMenu.style.display = 'block';
-                    dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + 'px';
-                } else {
-                    dropdownMenu.style.maxHeight = '0';
-                    setTimeout(() => {
-                        dropdownMenu.style.display = 'none';
-                    }, 300);
+            }
+            
+            // Animation du menu
+            if (isExpanded) {
+                menu.style.display = 'block';
+                menu.style.maxHeight = menu.scrollHeight + 'px';
+            } else {
+                menu.style.maxHeight = '0';
+                setTimeout(() => {
+                    menu.style.display = 'none';
+                }, 300);
+            }
+        }
+        
+        // Événements clic et clavier
+        if (dropdownTrigger) {
+            dropdownTrigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleDropdown(dropdown);
+            });
+            
+            // Navigation clavier conforme RGAA
+            dropdownTrigger.addEventListener('keydown', (e) => {
+                switch(e.key) {
+                    case 'Enter':
+                    case ' ':
+                        e.preventDefault();
+                        toggleDropdown(dropdown);
+                        break;
+                    case 'Escape':
+                        e.preventDefault();
+                        toggleDropdown(dropdown, false);
+                        dropdownTrigger.focus();
+                        break;
+                    case 'ArrowDown':
+                        e.preventDefault();
+                        toggleDropdown(dropdown, true);
+                        // Focus le premier élément du menu
+                        const firstMenuItem = dropdownMenu.querySelector('a');
+                        if (firstMenuItem) firstMenuItem.focus();
+                        break;
                 }
             });
         }
+        
+        // Navigation dans les menus déroulants
+        const menuItems = dropdownMenu.querySelectorAll('a');
+        menuItems.forEach((item, index) => {
+            item.addEventListener('keydown', (e) => {
+                switch(e.key) {
+                    case 'Escape':
+                        e.preventDefault();
+                        toggleDropdown(dropdown, false);
+                        dropdownTrigger.focus();
+                        break;
+                    case 'ArrowUp':
+                        e.preventDefault();
+                        const prevItem = menuItems[index - 1] || menuItems[menuItems.length - 1];
+                        prevItem.focus();
+                        break;
+                    case 'ArrowDown':
+                        e.preventDefault();
+                        const nextItem = menuItems[index + 1] || menuItems[0];
+                        nextItem.focus();
+                        break;
+                }
+            });
+        });
     });
     
     // Fermer le menu mobile lors du clic sur un lien
-    const navLinksItems = document.querySelectorAll('.nav-links a:not(.dropdown > a)');
+    const navLinksItems = document.querySelectorAll('.nav-links a:not(.dropdown-trigger)');
     navLinksItems.forEach(item => {
         item.addEventListener('click', () => {
-            if (window.innerWidth <= 992 && !item.parentElement.classList.contains('dropdown')) {
+            if (window.innerWidth <= 992 && navLinks && navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
                 menuBtn.classList.remove('open');
+                if (menuOverlay) {
+                    menuOverlay.classList.remove('active');
+                }
+                document.body.style.overflow = '';
             }
         });
     });
@@ -82,20 +181,40 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialisation des sections de formation
     initFormationTabs();
     
-    // Gestion de l'accordéon de contact
+    // Gestion de l'accordéon de contact - ACCESSIBLE RGAA 4
     const accordionBtn = document.querySelector('.accordion-btn');
     const accordionContent = document.querySelector('.accordion-content');
     
     if (accordionBtn && accordionContent) {
+        // Gestion du clic
         accordionBtn.addEventListener('click', function() {
-            this.classList.toggle('active');
-            accordionContent.classList.toggle('active');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
             
-            // Ajuster la hauteur maximale pour l'animation
-            if (accordionContent.classList.contains('active')) {
+            // Mise à jour des attributs ARIA
+            this.setAttribute('aria-expanded', !isExpanded);
+            this.classList.toggle('active', !isExpanded);
+            accordionContent.classList.toggle('active', !isExpanded);
+            
+            // Animation de l'icône
+            const icon = this.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-chevron-down', isExpanded);
+                icon.classList.toggle('fa-chevron-up', !isExpanded);
+            }
+            
+            // Ajuster la hauteur pour l'animation
+            if (!isExpanded) {
                 accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
             } else {
                 accordionContent.style.maxHeight = '0';
+            }
+        });
+        
+        // Navigation clavier
+        accordionBtn.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
             }
         });
     }
