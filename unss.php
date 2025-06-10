@@ -329,9 +329,27 @@
 <button class="theme-toggle" aria-label="Basculer le mode sombre">
     <i class="fas fa-moon"></i>
 </button>
+    <?php
+    // Connexion à la base de données pour les plaquettes
+    require_once 'includes/db_connect.php';
+    
+    // Inclure et afficher les plaquettes pour cette page
+    include 'includes/plaquettes.php';
+    display_plaquettes();
+    ?>
+
 </body>
 </html>
 
     <script src="js/script.js"></script>
+    <?php
+    // Connexion à la base de données pour les plaquettes
+    require_once 'includes/db_connect.php';
+    
+    // Inclure et afficher les plaquettes pour cette page
+    include 'includes/plaquettes.php';
+    display_plaquettes();
+    ?>
+
 </body>
 </html> 

@@ -311,6 +311,16 @@
         </section>
     </main>
 
+    
+    <?php
+    // Connexion à la base de données pour les plaquettes
+    require_once 'includes/db_connect.php';
+    
+    // Inclure et afficher les plaquettes pour cette page
+    include 'includes/plaquettes.php';
+    display_plaquettes();
+    ?>
+
     <!-- Footer -->
     <!-- Footer -->
 <footer class="footer">

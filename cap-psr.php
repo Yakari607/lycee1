@@ -16,11 +16,7 @@
         <!-- Bouton retour -->
         <a href="index.php#formations" class="back-home">
             <i class="fas fa-arrow-left"></i>
-            <span>    <!-- Bouton retour -->
-        <a href="index.php" class="back-home">
-            <i class="fas fa-arrow-left"></i>
             <span>Retour à l'accueil</span>
-        </a></span>
         </a>
 
         <section class="formation-hero" style="background-image: url('images/metiers/pexels-quang-nguyen-vinh-222549-2165933.jpg');">
@@ -272,6 +268,15 @@
             </div>
         </section>
     </main>
+
+    <?php
+    // Connexion à la base de données pour les plaquettes
+    require_once 'includes/db_connect.php';
+    
+    // Inclure et afficher les plaquettes pour cette page
+    include 'includes/plaquettes.php';
+    display_plaquettes();
+    ?>
 
     <!-- Footer -->
     <footer class="footer">

@@ -166,5 +166,14 @@ try {
     </button>
 
     <script src="js/script.js"></script>
+    <?php
+    // Connexion à la base de données pour les plaquettes
+    require_once 'includes/db_connect.php';
+    
+    // Inclure et afficher les plaquettes pour cette page
+    include 'includes/plaquettes.php';
+    display_plaquettes();
+    ?>
+
 </body>
 </html> 

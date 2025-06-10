@@ -499,133 +499,15 @@ réalisation et suivi de productions
         </section>
     </main>
 
-    <!-- Section Contact -->
-    <section id="contact" class="contact-section" aria-labelledby="titre-contact">
-        <div class="container">
-            <h2 id="titre-contact" class="section-title">Besoin de renseignements ?</h2>
-            <div class="contact-container">
-                <div class="contact-accordion">
-                    <button class="accordion-btn" aria-expanded="false" aria-controls="contact-details">
-                        <span>Qui contacter ?</span>
-                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                    </button>
-                    <div id="contact-details" class="accordion-content">
-                        <table class="contact-table" role="table" aria-label="Liste des contacts du lycée">
-                            <tr>
-                                <td>Proviseure</td>
-                                <td>Mme Marie-Carmen GRANDHAYE</td>
-                                <td>+33 389.70.22.70</td>
-                            </tr>
-                            <tr>
-                                <td>Proviseure adjointe, sections générales et technologiques</td>
-                                <td>Mme Marie HIMBERT</td>
-                                <td>+33 389.70.22.70</td>
-                            </tr>
-                            <tr>
-                                <td>Proviseur adjoint, sections professionnelles et BTS</td>
-                                <td>M Mathieu CLOSSE</td>
-                                <td>+33 389.70.22.70</td>
-                            </tr>
-                            <tr>
-                                <td>Directeur Délégué à l'UFA</td>
-                                <td>M Emmanuel DANGEL</td>
-                                <td>+33 389.70.22.71</td>
-                            </tr>
-                            <tr>
-                                <td>Responsable du Bureau des Entreprises</td>
-                                <td>M Bruno SCHAFFNER</td>
-                                <td>+33 389.70.22.70</td>
-                            </tr>
-                            <tr>
-                                <td>Intendant/Agent comptable</td>
-                                <td>M Nicolas MERLET</td>
-                                <td>+33 389.70.22.70</td>
-                            </tr>
-                            <tr>
-                                <td>Directeur délégué, département de génie industriel</td>
-                                <td>M Thomas NIEDERST</td>
-                                <td>+33 389.70.22.76</td>
-                            </tr>
-                            <tr>
-                                <td>Directrice déléguée, département tertiaire et biotechnologies</td>
-                                <td>Mme Brigitte PAJOT</td>
-                                <td>+33 389.70.22.77</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-
-                <form class="contact-form" novalidate>
-                    <h3>Formulaire de contact</h3>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="nom">
-                                Nom et Prénom 
-                                <span class="required" aria-label="champ obligatoire">*</span>
-                            </label>
-                            <input type="text" id="nom" name="nom" aria-required="true" required 
-                                   aria-describedby="nom-error">
-                            <div id="nom-error" class="error-message" aria-live="polite"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="societe">Société (optionnel)</label>
-                            <input type="text" id="societe" name="societe">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">
-                                Adresse e-mail 
-                                <span class="required" aria-label="champ obligatoire">*</span>
-                            </label>
-                            <input type="email" id="email" name="email" aria-required="true" required 
-                                   aria-describedby="email-error">
-                            <div id="email-error" class="error-message" aria-live="polite"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="telephone">
-                                Numéro de téléphone 
-                                <span class="required" aria-label="champ obligatoire">*</span>
-                            </label>
-                            <input type="tel" id="telephone" name="telephone" aria-required="true" required 
-                                   aria-describedby="telephone-error">
-                            <div id="telephone-error" class="error-message" aria-live="polite"></div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group message-group">
-                            <label for="message">
-                                Votre message 
-                                <span class="required" aria-label="champ obligatoire">*</span>
-                            </label>
-                            <textarea id="message" name="message" aria-required="true" required 
-                                      aria-describedby="message-error"></textarea>
-                            <div id="message-error" class="error-message" aria-live="polite"></div>
-                        </div>
-                        <div class="form-group submit-group">
-                            <p class="form-note">
-                                <span class="required">*</span> Champs obligatoires
-                            </p>
-                            <button type="submit" class="submit-btn" aria-describedby="form-status">
-                                Envoyer le message
-                            </button>
-                            <div id="form-status" class="form-status" aria-live="polite"></div>
-                        </div>
-                    </div>
-                </form>
-                
-                <div class="contact-info">
-                    <div class="info-row">
-                        <p><i class="fas fa-phone" aria-hidden="true"></i> <span class="sr-only">Téléphone : </span>+33 389 70 22 70</p>
-                        <p><i class="fas fa-envelope" aria-hidden="true"></i> <span class="sr-only">Email : </span><a href="mailto:ce.0680066c@ac-strasbourg.fr">ce.0680066c@ac-strasbourg.fr</a></p>
-                    </div>
-                    <div class="info-row">
-                        <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span class="sr-only">Adresse : </span>53 rue du Docteur Hurst, 68301 Saint-Louis Cedex</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
+    <?php
+    // Connexion à la base de données pour les plaquettes
+    require_once 'includes/db_connect.php';
+    
+    // Inclure et afficher les plaquettes pour cette page
+    include 'includes/plaquettes.php';
+    display_plaquettes();
+    ?>
 
     <!-- Footer -->
     <footer class="footer">
