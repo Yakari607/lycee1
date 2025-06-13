@@ -442,8 +442,17 @@ include 'header.php';
                     <td><?= $plaquette['id'] ?></td>
                     <td class="truncate"><?= htmlspecialchars($plaquette['titre']) ?></td>
                     <td class="truncate"><?= htmlspecialchars($plaquette['description'] ?? '') ?></td>
-                    <td class="truncate" title="<?= implode(', ', $pages_display) ?>">
-                        <?= count($pages_display) ?> page(s)
+                    <td class="pages-list">
+                        <?php if (count($pages_display) > 0): ?>
+                            <div class="pages-count"><?= count($pages_display) ?> page(s):</div>
+                            <div class="pages-details">
+                                <?php foreach ($pages_display as $index => $page_name): ?>
+                                    <span class="page-tag"><?= htmlspecialchars($page_name) ?></span><?= $index < count($pages_display) - 1 ? ', ' : '' ?>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php else: ?>
+                            <span class="text-muted">Aucune page</span>
+                        <?php endif; ?>
                     </td>
                     <td>
                         <div class="color-preview" style="background-color: <?= $plaquette['couleur_fond'] ?>; width: 30px; height: 20px; border-radius: 3px; border: 1px solid #ddd;"></div>
@@ -546,6 +555,33 @@ include 'header.php';
         font-style: italic;
     }
     
+    .pages-list {
+        max-width: 250px;
+        min-width: 200px;
+    }
+    
+    .pages-count {
+        font-weight: bold;
+        color: #495057;
+        margin-bottom: 5px;
+        font-size: 0.9em;
+    }
+    
+    .pages-details {
+        font-size: 0.85em;
+        line-height: 1.4;
+    }
+    
+    .page-tag {
+        background-color: #e9ecef;
+        padding: 2px 6px;
+        border-radius: 3px;
+        display: inline-block;
+        margin: 1px 2px;
+        color: #495057;
+        font-size: 0.8em;
+    }
+    
     @media (max-width: 768px) {
         .actions {
             flex-direction: column;
@@ -553,6 +589,20 @@ include 'header.php';
         
         .truncate {
             max-width: 100px;
+        }
+        
+        .pages-list {
+            max-width: 180px;
+            min-width: 150px;
+        }
+        
+        .pages-details {
+            font-size: 0.8em;
+        }
+        
+        .page-tag {
+            font-size: 0.75em;
+            padding: 1px 4px;
         }
     }
 </style>

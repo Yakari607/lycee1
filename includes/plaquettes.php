@@ -43,7 +43,7 @@ function display_plaquettes($page_name = null) {
     
     echo '<section class="plaquettes-section" aria-labelledby="titre-plaquettes">';
     echo '<div class="container">';
-    echo '<h2 id="titre-plaquettes" class="section-title">Téléchargements</h2>';
+    echo '<h2 id="titre-plaquettes" class="section-title">Documents à télécharger</h2>';
     echo '<div class="plaquettes-grid">';
     
     foreach ($plaquettes as $plaquette) {
@@ -53,10 +53,10 @@ function display_plaquettes($page_name = null) {
         $pdf_path = htmlspecialchars($plaquette['fichier_pdf']);
         $image_path = !empty($plaquette['image_couverture']) ? htmlspecialchars($plaquette['image_couverture']) : '';
         
-        echo '<div class="plaquette-card" style="background-color: ' . $background_color . ';">';
+        echo '<div class="plaquette-card">';
         
         if ($image_path) {
-            echo '<div class="plaquette-image">';
+            echo '<div class="plaquette-image" style="border-top: 5px solid ' . $background_color . ';">';
             echo '<img src="' . $image_path . '" alt="' . $titre . '" loading="lazy">';
             echo '</div>';
         }
@@ -69,9 +69,9 @@ function display_plaquettes($page_name = null) {
         }
         
         echo '<div class="plaquette-actions">';
-        echo '<a href="' . $pdf_path . '" class="btn-download" target="_blank" rel="noopener">';
-        echo '<i class="fas fa-download" aria-hidden="true"></i>';
-        echo '<span>Télécharger la plaquette</span>';
+        echo '<a href="' . $pdf_path . '" class="btn-download" target="_blank" rel="noopener" style="background-color: ' . $background_color . ';">';
+        echo '<i class="fas fa-file-pdf" aria-hidden="true"></i>';
+        echo '<span>Télécharger le document</span>';
         echo '</a>';
         echo '</div>';
         echo '</div>';
@@ -88,28 +88,51 @@ function plaquettes_styles() {
     echo '<style>
     .plaquettes-section {
         padding: 3rem 0;
-        background-color: var(--gray-light, #f8f9fa);
+        background-color: #f9f9fa;
+        border-top: 1px solid #e9e9e9;
+        border-bottom: 1px solid #e9e9e9;
+    }
+    
+    .plaquettes-section .section-title {
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+        font-weight: 600;
+        color: #1e3a8a;
+    }
+    
+    .plaquettes-section .section-title:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 80px;
+        height: 4px;
+        background-color: #1e3a8a;
     }
     
     .plaquettes-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 2rem;
         margin-top: 2rem;
     }
     
     .plaquette-card {
-        border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        border-radius: 2px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
         overflow: hidden;
         transition: all 0.3s ease;
-        color: white;
+        color: #333;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
     
     .plaquette-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
     }
     
     .plaquette-image {
@@ -117,80 +140,104 @@ function plaquettes_styles() {
         height: 180px;
         overflow: hidden;
         position: relative;
+        background-color: #f5f5f5;
     }
     
     .plaquette-image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: transform 0.3s ease;
-    }
-    
-    .plaquette-card:hover .plaquette-image img {
-        transform: scale(1.05);
     }
     
     .plaquette-content {
         padding: 1.5rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
     }
     
     .plaquette-content h3 {
         margin: 0 0 1rem 0;
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         font-weight: 600;
-        color: white;
+        color: #1e3a8a;
     }
     
     .plaquette-content p {
         margin: 0 0 1.5rem 0;
         font-size: 0.95rem;
-        opacity: 0.9;
-        line-height: 1.5;
+        color: #555;
+        line-height: 1.6;
+        flex-grow: 1;
     }
     
     .plaquette-actions {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
+        margin-top: auto;
     }
     
     .btn-download {
         display: inline-flex;
         align-items: center;
+        justify-content: center;
         gap: 0.5rem;
-        background: rgba(255, 255, 255, 0.2);
+        background: #0056b3;
         color: white;
         padding: 0.75rem 1.25rem;
-        border-radius: 8px;
+        border-radius: 2px;
         text-decoration: none;
         font-weight: 500;
-        transition: all 0.3s ease;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.2s ease;
+        width: 100%;
+        border: none;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
     }
     
     .btn-download:hover {
-        background: rgba(255, 255, 255, 0.3);
-        transform: translateY(-2px);
+        opacity: 0.9;
         color: white;
         text-decoration: none;
     }
     
     .btn-download i {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
     
     /* Mode sombre */
     [data-theme="dark"] .plaquettes-section {
-        background-color: var(--card-bg, #2d2d2d);
+        background-color: #1a1a1a;
+        border-color: #333;
+    }
+    
+    [data-theme="dark"] .plaquettes-section .section-title {
+        color: #e0e0e0;
+    }
+    
+    [data-theme="dark"] .plaquettes-section .section-title:after {
+        background-color: #4a6baf;
     }
     
     [data-theme="dark"] .plaquette-card {
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        background-color: #2d2d2d;
+        color: #e0e0e0;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     }
     
     [data-theme="dark"] .plaquette-card:hover {
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    }
+    
+    [data-theme="dark"] .plaquette-content h3 {
+        color: #e0e0e0;
+    }
+    
+    [data-theme="dark"] .plaquette-content p {
+        color: #bbb;
+    }
+    
+    [data-theme="dark"] .plaquette-image {
+        background-color: #222;
     }
     
     /* Responsive */
@@ -204,38 +251,18 @@ function plaquettes_styles() {
             gap: 1.5rem;
         }
         
-        .plaquette-image {
-            height: 150px;
-        }
-        
         .plaquette-content {
             padding: 1.25rem;
-        }
-        
-        .plaquette-content h3 {
-            font-size: 1.1rem;
-        }
-        
-        .btn-download {
-            padding: 0.65rem 1rem;
-            font-size: 0.9rem;
         }
     }
     
     @media (max-width: 480px) {
         .plaquettes-grid {
-            grid-template-columns: 1fr;
             gap: 1rem;
         }
         
-        .plaquette-actions {
-            flex-direction: column;
-            align-items: stretch;
-        }
-        
-        .btn-download {
-            justify-content: center;
-            width: 100%;
+        .plaquette-image {
+            height: 160px;
         }
     }
     </style>';
