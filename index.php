@@ -497,6 +497,57 @@ réalisation et suivi de productions
                 </div>
             </div>
         </section>
+
+        <!-- Section UFA et Enseignements Professionnels -->
+        <section class="ufa-pro-section" aria-labelledby="titre-ufa-pro">
+            <div class="container">
+                <div class="ufa-pro-grid">
+                    <div class="ufa-card">
+                        <div class="ufa-header">
+                            <i class="fas fa-university" aria-hidden="true"></i>
+                            <h3>Unité de Formation par Apprentissage (UFA)</h3>
+                        </div>
+                        <div class="ufa-content">
+                            <p>Notre UFA propose des formations en alternance pour préparer votre avenir professionnel.</p>
+                            <ul>
+                                <li>Formation rémunérée</li>
+                                <li>Expérience professionnelle</li>
+                                <li>Accompagnement personnalisé</li>
+                            </ul>
+                            <a href="ufa.php" class="cta-button">Découvrir l'UFA</a>
+                        </div>
+                    </div>
+                    <div class="pro-card">
+                        <div class="pro-header">
+                            <i class="fas fa-briefcase" aria-hidden="true"></i>
+                            <h3>Enseignements Professionnels</h3>
+                        </div>
+                        <div class="pro-content">
+                            <p>Des formations qualifiantes adaptées au monde du travail dans divers secteurs.</p>
+                            <div class="pro-sectors">
+                                <div class="sector">
+                                    <i class="fas fa-industry"></i>
+                                    <span>Industrie</span>
+                                </div>
+                                <div class="sector">
+                                    <i class="fas fa-store"></i>
+                                    <span>Commerce</span>
+                                </div>
+                                <div class="sector">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>Électricité</span>
+                                </div>
+                                <div class="sector">
+                                    <i class="fas fa-hand-holding-heart"></i>
+                                    <span>Services</span>
+                                </div>
+                            </div>
+                            <a href="#formations" class="cta-button">Voir les formations</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     

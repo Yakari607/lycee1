@@ -283,33 +283,33 @@ select:focus,
     right: 0;
     background: var(--white);
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
 .main-nav.scrolled {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(8px);
 }
 
 .main-nav.scrolled .nav-container {
-    height: 70px;
+    height: 60px;
 }
 
 [data-theme="dark"] .main-nav.scrolled {
-    background: rgba(45, 45, 45, 0.95);
+    background: rgba(45, 45, 45, 0.98);
 }
 
 .nav-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
-    min-height: 80px;
+    height: 65px;
+    min-height: 65px;
     background: var(--white);
     border-bottom: 1px solid var(--border-color);
 }
@@ -317,11 +317,11 @@ select:focus,
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.75rem;
 }
 
 .logo img {
-    height: 40px;
+    height: 35px;
     width: auto;
 }
 
@@ -331,17 +331,19 @@ select:focus,
 }
 
 .logo-text h1 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--primary-color);
     margin: 0;
-    line-height: 1.1;
-    letter-spacing: 0.5px;
+    line-height: 1.2;
+    letter-spacing: 0.3px;
+    font-weight: 600;
 }
 
 .logo .slogan {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--accent-color);
     margin-top: 0.1rem;
+    font-weight: 400;
 }
 
 .nav-content {
@@ -352,7 +354,7 @@ select:focus,
 
 .nav-links {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -363,7 +365,7 @@ select:focus,
     color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
-    padding: 0.75rem 0.75rem;
+    padding: 0.6rem 0.8rem;
     position: relative;
     transition: all 0.3s ease;
     border-radius: 4px;
@@ -371,6 +373,7 @@ select:focus,
     align-items: center;
     justify-content: center;
     line-height: 1;
+    font-size: 0.9rem;
 }
 
 .nav-links > li > a:hover:not(.dropdown-trigger) {
@@ -403,12 +406,12 @@ select:focus,
     top: 100%;
     left: 0;
     background-color: var(--white);
-    min-width: 200px;
+    min-width: 220px;
     border-radius: 4px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     opacity: 0;
     visibility: hidden;
-    transform: translateY(10px);
+    transform: translateY(8px);
     transition: all 0.3s ease;
     z-index: 1000;
     padding: 0.5rem 0;
@@ -427,10 +430,11 @@ select:focus,
 
 .dropdown-menu a {
     display: block;
-    padding: 0.7rem 1rem;
+    padding: 0.6rem 1rem;
     color: var(--text-color);
     text-decoration: none;
     transition: background-color 0.3s ease;
+    font-size: 0.85rem;
 }
 
 .dropdown-menu a:hover {
@@ -448,10 +452,10 @@ select:focus,
 
 .menu-btn span {
     display: block;
-    width: 25px;
-    height: 3px;
+    width: 22px;
+    height: 2px;
     background-color: var(--text-color);
-    margin: 5px 0;
+    margin: 4px 0;
     transition: all 0.3s ease;
 }
 
@@ -578,26 +582,24 @@ select:focus,
 
 @media (max-width: 576px) {
     .logo-text h1 {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
-    
+
     .logo img {
         height: 30px;
     }
-    
+
     .slogan {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
     }
-    
+
     .nav-links {
-        width: 95vw;
-        right: 2.5%;
-        left: 2.5%;
-        max-width: none;
+        padding: 0.5rem 0;
     }
-    
+
     .nav-container {
-        padding: 0 0.5rem;
+        height: 60px;
+        padding: 0 1rem;
     }
 }
 
