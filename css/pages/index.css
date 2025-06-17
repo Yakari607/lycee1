@@ -3,7 +3,7 @@
 /* Section Vie au Lycée */
 .vie-lycee-section {
     padding: 3rem 0;
-    background-color: var(--white);
+    background-color: var(--background-color);
 }
 
 .buttons-grid {
@@ -58,7 +58,7 @@
 }
 
 [data-theme="dark"] .button-subtitle {
-    color: var(--gray-light);
+    color: #ffffff;
 }
 
 /* Contact Accordion */
@@ -609,7 +609,7 @@
 /* Section UFA et Enseignements Professionnels */
 .ufa-pro-section {
     padding: 3rem 0;
-    background-color: var(--white);
+    background-color: var(--background-color);
 }
 
 .ufa-pro-grid {
@@ -754,7 +754,7 @@
 
 /* Mode sombre */
 [data-theme="dark"] .ufa-pro-section {
-    background-color: var(--dark-bg);
+    background-color: var(--background-color);
 }
 
 [data-theme="dark"] .ufa-card, 

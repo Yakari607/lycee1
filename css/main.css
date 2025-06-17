@@ -1619,7 +1619,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
-    padding-top: 80px;
+    padding-top: 65px;
 }
 
 /* ACCESSIBILITÉ - STYLES DE FOCUS CONFORMES RGAA 4 */
@@ -2110,4 +2110,31 @@ select:focus,
 [data-theme="dark"] .form-group input::placeholder,
 [data-theme="dark"] .form-group textarea::placeholder {
     color: var(--gray);
+}
+
+[data-theme="dark"] .hero::before {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="dark"] .hero-content {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .hero h1,
+[data-theme="dark"] .hero-subtitle {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .cta-button.secondary {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .cta-button:first-child {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+[data-theme="dark"] .logo-text h1 {
+    color: var(--primary-color);
 } 
