@@ -95,53 +95,6 @@
     flex-grow: 1;
 }
 
-/* Back to home button */
-.back-home {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.8rem 1.5rem;
-    background-color: var(--primary-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    margin: 2rem;
-    font-weight: 500;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    position: fixed;
-    top: 100px;
-    left: 20px;
-    z-index: 100;
-}
-
-.back-home i {
-    margin-right: 0.5rem;
-    transition: transform 0.3s ease;
-}
-
-.back-home:hover {
-    background-color: var(--white);
-    color: var(--primary-color);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    transform: translateY(-3px);
-}
-
-.back-home:hover i {
-    transform: translateX(-3px);
-}
-
-/* Dark mode styles */
-[data-theme="dark"] .back-home {
-    background-color: var(--primary-color);
-    color: var(--white);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-[data-theme="dark"] .back-home:hover {
-    background-color: var(--white);
-    color: var(--primary-color);
-}
-
 /* Media Queries */
 @media (max-width: 992px) {
     .activities-section {
@@ -151,11 +104,6 @@
     .activities-section .news-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1.5rem;
-    }
-    
-    .back-home {
-        top: 90px;
-        left: 15px;
     }
 }
 
@@ -187,19 +135,6 @@
     
     .activities-section .news-image {
         height: 200px;
-    }
-    
-    /* Back button responsive */
-    .back-home {
-        padding: 0.6rem 1.2rem;
-        margin: 1rem;
-        font-size: 0.9rem;
-        top: 80px;
-        left: 10px;
-    }
-    
-    .back-home i {
-        font-size: 0.9rem;
     }
 }
 
@@ -239,24 +174,5 @@
     .activities-section .news-content h3 {
         font-size: 1.2rem;
         margin: 0.3rem 0;
-    }
-    
-    /* Back button for small devices */
-    .back-home {
-        padding: 0.5rem 1rem;
-        margin: 0.75rem;
-        font-size: 0.85rem;
-        top: 70px;
-        left: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-    
-    .back-home span {
-        display: none; /* Cacher le texte sur très petits écrans */
-    }
-    
-    .back-home i {
-        margin-right: 0;
-        font-size: 1rem;
     }
 } 

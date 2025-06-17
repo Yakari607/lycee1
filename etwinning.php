@@ -11,11 +11,11 @@
 <body data-page="etwinning">
     <?php include 'includes/navbar.php'; ?>
     <main>
-        <a href="index.php#langues" class="back-home">
+        <a href="index.php" class="back-home">
             <i class="fas fa-arrow-left"></i>
-            <span>Retour aux formations</span>
+            <span>Retour à l'accueil</span>
         </a>
-        <section class="formation-hero" style="background-image: url('images/formations/pexels-diohasbi-3280130.jpg');">
+        <section class="formation-hero" style="background-image: url('images/formations/pexels-photo-9461624.webp');">
             <div class="hero-content">
                 <h1>eTwinning</h1>
                 <p>Une plateforme collaborative européenne pour l'éducation</p>

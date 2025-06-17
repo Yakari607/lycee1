@@ -16,7 +16,7 @@
         <!-- Bouton retour -->
         <a href="index.php#langues" class="back-home">
             <i class="fas fa-arrow-left"></i>
-            <span>Retour aux formations</span>
+            <span>retour à l'accueil</span>
         </a>
 
         <section class="formation-hero" style="background-image: url('images/formations/pexels-kampus-8815880.jpg');">

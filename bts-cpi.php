@@ -14,13 +14,9 @@
 
     <main>
         <!-- Bouton retour -->
-        <a href="index.php#formations" class="back-home">
-            <i class="fas fa-arrow-left"></i>
-            <span>    <!-- Bouton retour -->
         <a href="index.php" class="back-home">
             <i class="fas fa-arrow-left"></i>
             <span>Retour à l'accueil</span>
-        </a></span>
         </a>
 
         <section class="formation-hero">
@@ -153,7 +149,7 @@
                                         <p>Accès à des logiciels CAO professionnels et des équipements modernes pour la conception et le prototypage</p>
                                     </div>
                                     <div class="atout-image">
-                                        <img src="images/metiers/Capture d’écran 2025-05-06 à 13.12.53.png" alt="Équipements CAO">
+                                        <img src="images/metiers/Capture d'écran 2025-05-06 à 13.12.53.png" alt="Équipements CAO">
                                     </div>
                                 </div>
                             </div>
