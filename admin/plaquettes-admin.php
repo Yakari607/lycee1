@@ -46,11 +46,11 @@ function upload_file($file, $target_dir) {
         }
     }
     
-    // Vérifier la taille du fichier (10 Mo max)
-    if ($file['size'] > 10 * 1024 * 1024) {
+    // Vérifier la taille du fichier (50 Mo max)
+    if ($file['size'] > 50 * 1024 * 1024) {
         return [
             'success' => false,
-            'message' => "Le fichier est trop volumineux. La taille maximale est de 10 Mo."
+            'message' => "Le fichier est trop volumineux. La taille maximale est de 50 Mo."
         ];
     }
     
@@ -373,7 +373,7 @@ include 'header.php';
         <label for="image_couverture">Image de couverture</label>
         <input type="file" id="image_couverture" name="image_couverture" accept="image/jpeg,image/png,image/gif,image/webp">
         <div class="form-help">
-            <small>Formats acceptés: JPG, PNG, GIF, WEBP. Taille max: 10 Mo. Dimension recommandée: 400x300px</small>
+            <small>Formats acceptés: JPG, PNG, GIF, WEBP. Taille max: 50 Mo. Dimension recommandée: 400x300px</small>
         </div>
         <?php if (isset($plaquette_to_edit) && !empty($plaquette_to_edit['image_couverture'])): ?>
             <div class="file-preview">
@@ -387,7 +387,7 @@ include 'header.php';
         <label for="fichier_pdf">Fichier PDF *</label>
         <input type="file" id="fichier_pdf" name="fichier_pdf" accept="application/pdf" <?= $plaquette_to_edit ? '' : 'required' ?>>
         <div class="form-help">
-            <small>Format accepté: PDF uniquement. Taille max: 10 Mo.</small>
+            <small>Format accepté: PDF uniquement. Taille max: 50 Mo.</small>
         </div>
         <?php if (isset($plaquette_to_edit) && !empty($plaquette_to_edit['fichier_pdf'])): ?>
             <div class="file-preview">

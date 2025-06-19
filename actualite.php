@@ -59,59 +59,54 @@ try {
         </a>
 
         <section class="actualite-content">
-            <?php if (isset($error_message)): ?>
-                <div class="alert alert-danger"><?php echo $error_message; ?></div>
-            <?php else: ?>
-                <article class="actualite-detail">
-                    <header class="actualite-header">
-                        <div class="container">
-                            <div class="actualite-meta">
-                                <span class="actualite-category"><?php echo htmlspecialchars($actualite['categorie']); ?></span>
-                                <time class="actualite-date" datetime="<?php echo $actualite['date_publication']; ?>"><?php echo $date_fr; ?></time>
-                            </div>
-                            <h1 class="actualite-title"><?php echo htmlspecialchars($actualite['titre']); ?></h1>
+        <?php if (isset($error_message)): ?>
+            <div class="alert alert-danger"><?php echo $error_message; ?></div>
+        <?php else: ?>
+            <article class="actualite-detail">
+                <header class="actualite-header">
+                    <div class="container">
+                        <div class="actualite-meta">
+                            <span class="actualite-category"><?php echo htmlspecialchars($actualite['categorie']); ?></span>
+                            <time class="actualite-date" datetime="<?php echo $actualite['date_publication']; ?>"><?php echo $date_fr; ?></time>
                         </div>
-                    </header>
-                    
-                    <?php if (!empty($actualite['image'])): ?>
-                    <div class="actualite-image">
-                        <img src="<?php echo htmlspecialchars($actualite['image']); ?>" alt="<?php echo htmlspecialchars($actualite['titre']); ?>">
+                        <h1 class="actualite-title"><?php echo htmlspecialchars($actualite['titre']); ?></h1>
                     </div>
-                    <?php endif; ?>
-                    
-                    <div class="actualite-content container">
+                </header>
+                
+                <?php if (!empty($actualite['image'])): ?>
+                <div class="actualite-image">
+                    <img src="<?php echo htmlspecialchars($actualite['image']); ?>" alt="<?php echo htmlspecialchars($actualite['titre']); ?>" loading="lazy">
+                </div>
+                <?php else: ?>
+                <div class="actualite-image-placeholder">
+                    <div class="no-image-news">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Image non disponible</span>
+                    </div>
+                </div>
+                <?php endif; ?>
+                
+                <div class="actualite-content-wrapper">
+                    <div class="container">
                         <div class="actualite-text">
                             <?php echo nl2br(htmlspecialchars($actualite['contenu'])); ?>
                         </div>
-                        
-                        <div class="share-buttons">
-                            <h3>Partager cette actualité</h3>
-                            <div class="social-links">
-                                <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>" target="_blank" class="social-link facebook" aria-label="Partager sur Facebook">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="https://twitter.com/intent/tweet?url=<?php echo urlencode('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>&text=<?php echo urlencode($actualite['titre']); ?>" target="_blank" class="social-link twitter" aria-label="Partager sur Twitter">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="mailto:?subject=<?php echo urlencode($actualite['titre'] . ' - Lycée Jean-Mermoz'); ?>&body=<?php echo urlencode('Découvrez cette actualité du Lycée Jean-Mermoz : ' . 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>" class="social-link email" aria-label="Partager par e-mail">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                            </div>
-                        </div>
                     </div>
-                </article>
+                </div>
+            </article>
 
-                <!-- Actualités similaires -->
-                <section class="related-news">
-                    <div class="container">
-                        <h2>Autres actualités</h2>
-                        <div class="related-grid">
-                            <?php
-                            try {
-                                $stmt = $db->prepare("SELECT * FROM actualites WHERE id != :id ORDER BY date_publication DESC LIMIT 3");
-                                $stmt->execute(['id' => $id]);
-                                $related_actualites = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                                
+            <!-- Actualités similaires -->
+            <section class="related-news">
+                <div class="container">
+                    <h2>Autres actualités</h2>
+                    <div class="related-grid">
+                        <?php
+                        try {
+                            $stmt = $db->prepare("SELECT * FROM actualites WHERE id != :id AND date_publication <= NOW() ORDER BY date_publication DESC LIMIT 3");
+                            $stmt->execute(['id' => $id]);
+                            $related_actualites = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                            
+                            if (!empty($related_actualites)):
                                 foreach ($related_actualites as $related_actualite):
                                     // Formatage de la date
                                     $rel_date = new DateTime($related_actualite['date_publication']);
@@ -121,28 +116,51 @@ try {
                                         ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
                                         $rel_date_fr
                                     );
-                            ?>
-                                <article class="related-card">
-                                    <div class="related-image">
-                                        <img src="<?php echo htmlspecialchars($related_actualite['image']); ?>" alt="<?php echo htmlspecialchars($related_actualite['titre']); ?>">
+                        ?>
+                            <article class="related-card">
+                                <div class="related-image">
+                                    <?php if (!empty($related_actualite['image'])): ?>
+                                        <img src="<?php echo htmlspecialchars($related_actualite['image']); ?>" alt="<?php echo htmlspecialchars($related_actualite['titre']); ?>" loading="lazy">
+                                    <?php else: ?>
+                                        <div class="no-image-related">
+                                            <i class="fas fa-newspaper"></i>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="related-content">
+                                    <span class="related-tag"><?php echo htmlspecialchars($related_actualite['categorie']); ?></span>
+                                    <h3><?php echo htmlspecialchars($related_actualite['titre']); ?></h3>
+                                    <time datetime="<?php echo $related_actualite['date_publication']; ?>"><?php echo $rel_date_fr; ?></time>
+                                    <div class="related-excerpt">
+                                        <?php 
+                                        $excerpt = substr(strip_tags($related_actualite['contenu']), 0, 120);
+                                        echo htmlspecialchars($excerpt);
+                                        if (strlen($related_actualite['contenu']) > 120) echo '...';
+                                        ?>
                                     </div>
-                                    <div class="related-content">
-                                        <span class="related-tag"><?php echo htmlspecialchars($related_actualite['categorie']); ?></span>
-                                        <h3><?php echo htmlspecialchars($related_actualite['titre']); ?></h3>
-                                        <time datetime="<?php echo $related_actualite['date_publication']; ?>"><?php echo $rel_date_fr; ?></time>
-                                        <a href="actualite.php?id=<?php echo $related_actualite['id']; ?>" class="read-more">Lire la suite</a>
-                                    </div>
-                                </article>
-                            <?php 
+                                    <a href="actualite.php?id=<?php echo $related_actualite['id']; ?>" class="read-more-related">
+                                        Lire la suite <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </article>
+                        <?php 
                                 endforeach;
-                            } catch (PDOException $e) {
-                                echo "<p>Impossible de charger les actualités similaires.</p>";
-                            }
-                            ?>
-                        </div>
+                            else:
+                        ?>
+                            <div class="no-related">
+                                <i class="fas fa-info-circle"></i>
+                                <p>Aucune autre actualité à afficher pour le moment.</p>
+                            </div>
+                        <?php
+                            endif;
+                        } catch (PDOException $e) {
+                            echo '<div class="error-related"><i class="fas fa-exclamation-triangle"></i><p>Impossible de charger les actualités similaires.</p></div>';
+                        }
+                        ?>
                     </div>
-                </section>
-            <?php endif; ?>
+                </div>
+            </section>
+        <?php endif; ?>
         </section>
     </main>
 
@@ -176,6 +194,23 @@ try {
     include 'includes/plaquettes.php';
     display_plaquettes();
     ?>
+
+    <script>
+        // Animation d'apparition progressive
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.actualite-content, .related-news');
+            elements.forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+    </script>
 
 </body>
 </html> 

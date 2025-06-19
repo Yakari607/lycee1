@@ -478,25 +478,7 @@ réalisation et suivi de productions
             </div>
         </section>
 
-        <section class="key-numbers" aria-labelledby="titre-chiffres">
-            <div class="container">
-                <h2 id="titre-chiffres" class="section-title">Chiffres clés</h2>
-                <div class="numbers-grid" role="group" aria-label="Statistiques du lycée">
-                    <div class="number-card" role="presentation">
-                        <strong class="number" aria-label="mille deux cents">1200</strong>
-                        <span>Élèves</span>
-                    </div>
-                    <div class="number-card" role="presentation">
-                        <strong class="number" aria-label="cent">100</strong>
-                        <span>Enseignants</span>
-                    </div>
-                    <div class="number-card" role="presentation">
-                        <strong class="number" aria-label="quatre-vingt-quinze pourcent">95</strong>
-                        <span>% de réussite au bac</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <!-- Section UFA et Enseignements Professionnels -->
         <section class="ufa-pro-section" aria-labelledby="titre-ufa-pro">
@@ -550,6 +532,26 @@ réalisation et suivi de productions
         </section>
     </main>
 
+    <section class="key-numbers" aria-labelledby="titre-chiffres">
+            <div class="container">
+                <h2 id="titre-chiffres" class="section-title">Chiffres clés</h2>
+                <div class="numbers-grid" role="group" aria-label="Statistiques du lycée">
+                    <div class="number-card" role="presentation">
+                        <strong class="number" aria-label="mille deux cents">1200</strong>
+                        <span>Élèves</span>
+                    </div>
+                    <div class="number-card" role="presentation">
+                        <strong class="number" aria-label="cent">100</strong>
+                        <span>Enseignants</span>
+                    </div>
+                    <div class="number-card" role="presentation">
+                        <strong class="number" aria-label="quatre-vingt-quinze pourcent">95</strong>
+                        <span>% de réussite au bac</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     
     <?php
     // Connexion à la base de données pour les plaquettes
@@ -572,6 +574,9 @@ réalisation et suivi de productions
                     <a href="#contact">Mentions légales</a>
                     <a href="#contact">Accessibilité</a>
                     <a href="#contact">Plan du site</a>
+                    <a href="https://lyceemermoz-my.sharepoint.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-cloud"></i> SharePoint
+                    </a>
                     <a href="admin/login.php">Administration</a>
                 </div>
             </div>
