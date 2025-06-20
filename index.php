@@ -535,7 +535,7 @@
                                     <span>Services</span>
                                 </div>
                             </div>
-                            <a href="#formations" class="cta-button">Voir les formations</a>
+                            <a href="enseignements-pro.php" class="cta-button">Voir les formations</a>
                         </div>
                     </div>
                 </div>
