@@ -345,13 +345,9 @@
                                         <i class="fas fa-tools"></i>
                                         <h5>Bac Pro Maintenance des Systèmes de Production Connectés (MSPC)</h5>
                                     </a>
-                                    <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                    <a href="bac-pro-trpm.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-industry"></i>
-                                        <h5>Bac pro technicien en réalisation
-de produits mécaniques option
-réalisation et suivi de productions
-(TRPM)
-</h5>
+                                        <h5>Bac Pro Technicien en Réalisation de Produits Mécaniques (TRPM)</h5>
                                     </a>
                                     <a href="bac-pro-melec.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-bolt"></i>
@@ -405,6 +401,11 @@ réalisation et suivi de productions
                             <div class="formation-category">
                                 <h4>Bacs Professionnels</h4>
                                 <div class="diplomes-grid">
+                                    <a href="bac-pro-agora.php" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                        <i class="fas fa-clipboard-list"></i>
+                                        <h5>BAC PRO AGOrA</h5>
+                                        <p>Assistance à la Gestion des Organisations et de leurs Activités</p>
+                                    </a>
                                     <a href="metiers-accueil.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-user-tie"></i>
                                         <h5>Métiers de l'Accueil</h5>
@@ -412,6 +413,16 @@ réalisation et suivi de productions
                                     <a href="metiers-commerce-vente.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-shopping-cart"></i>
                                         <h5>Métiers du Commerce et de la Vente</h5>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="formation-category">
+                                <h4>CAP</h4>
+                                <div class="diplomes-grid">
+                                    <a href="cap-epc.php" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                        <i class="fas fa-store-alt"></i>
+                                        <h5>CAP Équipier Polyvalent du Commerce</h5>
                                     </a>
                                 </div>
                             </div>
@@ -457,7 +468,7 @@ réalisation et suivi de productions
                                         <i class="fas fa-hand-holding-heart"></i>
                                         <h5>CAP Agent Accompagnant au Grand Âge (AAGA)</h5>
                                     </a>
-                                    <a href="#" class="diplome-card" style="text-decoration: none; color: inherit;">
+                                    <a href="bac-pro-aepa.php" class="diplome-card" style="text-decoration: none; color: inherit;">
                                         <i class="fas fa-users"></i>
                                         <h5>Bac Pro Animation-Enfance et Personnes Âgées (AEPA)</h5>
                                     </a>

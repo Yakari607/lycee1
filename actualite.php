@@ -88,8 +88,8 @@ try {
                 
                 <div class="actualite-content-wrapper">
                     <div class="container">
-                        <div class="actualite-text">
-                            <?php echo nl2br(htmlspecialchars($actualite['contenu'])); ?>
+                    <div class="actualite-text">
+                        <?php echo nl2br(htmlspecialchars($actualite['contenu'])); ?>
                         </div>
                     </div>
                 </div>
@@ -107,15 +107,15 @@ try {
                             $related_actualites = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             
                             if (!empty($related_actualites)):
-                                foreach ($related_actualites as $related_actualite):
-                                    // Formatage de la date
-                                    $rel_date = new DateTime($related_actualite['date_publication']);
-                                    $rel_date_fr = $rel_date->format('j F Y');
-                                    $rel_date_fr = str_replace(
-                                        ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-                                        ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
-                                        $rel_date_fr
-                                    );
+                            foreach ($related_actualites as $related_actualite):
+                                // Formatage de la date
+                                $rel_date = new DateTime($related_actualite['date_publication']);
+                                $rel_date_fr = $rel_date->format('j F Y');
+                                $rel_date_fr = str_replace(
+                                    ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                                    ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
+                                    $rel_date_fr
+                                );
                         ?>
                             <article class="related-card">
                                 <div class="related-image">
@@ -144,7 +144,7 @@ try {
                                 </div>
                             </article>
                         <?php 
-                                endforeach;
+                            endforeach;
                             else:
                         ?>
                             <div class="no-related">

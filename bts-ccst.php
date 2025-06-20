@@ -21,8 +21,8 @@
 
         <section class="formation-hero">
             <div class="hero-content">
-                <h1>BTS Conseil et Commercialisation de Solutions Techniques</h1>
-                <p>Formation supérieure qualifiante</p>
+                <h1>BTS Conseil et Commercialisation de Solutions Techniques (CCST)</h1>
+                <p>Ex BTS TC - Formation sous statut scolaire ou par apprentissage</p>
             </div>
         </section>
 
@@ -376,7 +376,9 @@
                                     <i class="fas fa-map"></i>
                                 </a>
                             </p>
-                            <p><i class="fas fa-phone"></i> 03 89 70 22 70</p>
+                            <p><i class="fas fa-phone"></i> Lycée 03 89 70 22 70</p>
+                            <p><i class="fas fa-phone"></i> UFA 03 89 70 22 71</p>
+                            <p><a href="https://www.facebook.com/btstcsaintlouis" target="_blank"><i class="fab fa-facebook"></i> Facebook BTS TC Saint Louis</a></p>
                         </div>
                         
                         <div class="contact-info">
@@ -384,11 +386,13 @@
                                 <h4>Voie Scolaire</h4>
                                 <p>Directrice Déléguée aux Formations Professionnelles et Technologiques<br>
                                 <a href="mailto:ddfpt.tertiaire@lyceemermoz.fr">ddfpt.tertiaire@lyceemermoz.fr</a></p>
+                                <p>Coordonnatrice BTS TC<br>
+                                <a href="mailto:coordo.ccst@lyceemermoz.fr">coordo.ccst@lyceemermoz.fr</a></p>
                             </div>
                             
                             <div class="contact-block">
                                 <h4>Apprentissage</h4>
-                                <p>Directeur Délégué de l'UFA Jean-Mermoz<br>
+                                <p>Directeur Délégué à l'UFA Jean Mermoz<br>
                                 <a href="mailto:ddufa@lyceemermoz.fr">ddufa@lyceemermoz.fr</a></p>
                                 
                                 <p>Chargée de Développement de l'Apprentissage<br>
@@ -397,6 +401,12 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                
+                <!-- Slogan -->
+                <div class="formation-slogan">
+                    <h2>BTS CCST</h2>
+                    <p>…UNE FORMATION<br>Une double compétence technique et commerciale…</p>
                 </div>
             </div>
         </section>

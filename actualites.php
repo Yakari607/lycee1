@@ -121,63 +121,63 @@ try {
                     </div>
                     
                     <div class="actualites-grid">
-                        <?php foreach ($actualites as $actualite): ?>
-                            <?php
-                            // Formatage de la date
-                            $date = new DateTime($actualite['date_publication']);
-                            $date_fr = $date->format('j F Y');
-                            $date_fr = str_replace(
-                                ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-                                ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
-                                $date_fr
-                            );
-                            ?>
+                    <?php foreach ($actualites as $actualite): ?>
+                        <?php
+                        // Formatage de la date
+                        $date = new DateTime($actualite['date_publication']);
+                        $date_fr = $date->format('j F Y');
+                        $date_fr = str_replace(
+                            ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                            ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
+                            $date_fr
+                        );
+                        ?>
                             <article class="actualite-card <?php echo isset($actualite['is_important']) && $actualite['is_important'] ? 'important' : ''; ?>">
-                                <div class="card-image">
-                                    <?php if (!empty($actualite['image'])): ?>
-                                        <img src="<?php echo htmlspecialchars($actualite['image']); ?>" 
+                            <div class="card-image">
+                                <?php if (!empty($actualite['image'])): ?>
+                                    <img src="<?php echo htmlspecialchars($actualite['image']); ?>" 
                                              alt="<?php echo htmlspecialchars($actualite['titre']); ?>" 
                                              loading="lazy">
-                                    <?php else: ?>
-                                        <div class="no-image">
-                                            <i class="fas fa-newspaper"></i>
-                                        </div>
-                                    <?php endif; ?>
-                                    <div class="card-category">
-                                        <i class="fas fa-tag"></i>
-                                        <?php echo htmlspecialchars($actualite['categorie']); ?>
+                                <?php else: ?>
+                                    <div class="no-image">
+                                        <i class="fas fa-newspaper"></i>
                                     </div>
+                                <?php endif; ?>
+                                <div class="card-category">
+                                        <i class="fas fa-tag"></i>
+                                    <?php echo htmlspecialchars($actualite['categorie']); ?>
+                                </div>
                                     <?php if (isset($actualite['is_important']) && $actualite['is_important']): ?>
                                         <div class="important-badge">
                                             <i class="fas fa-star"></i>
                                         </div>
                                     <?php endif; ?>
-                                </div>
-                                <div class="card-content">
-                                    <h3 class="card-title">
-                                        <a href="actualite.php?id=<?php echo $actualite['id']; ?>">
-                                            <?php echo htmlspecialchars($actualite['titre']); ?>
-                                        </a>
-                                    </h3>
-                                    <div class="card-meta">
-                                        <time datetime="<?php echo $actualite['date_publication']; ?>">
-                                            <i class="fas fa-calendar-alt"></i>
-                                            <?php echo $date_fr; ?>
-                                        </time>
-                                    </div>
-                                    <div class="card-excerpt">
-                                        <?php 
-                                        $excerpt = substr(strip_tags($actualite['contenu']), 0, 150);
-                                        echo htmlspecialchars($excerpt);
-                                        if (strlen($actualite['contenu']) > 150) echo '...';
-                                        ?>
-                                    </div>
-                                    <a href="actualite.php?id=<?php echo $actualite['id']; ?>" class="read-more">
-                                        Lire la suite <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">
+                                    <a href="actualite.php?id=<?php echo $actualite['id']; ?>">
+                                        <?php echo htmlspecialchars($actualite['titre']); ?>
                                     </a>
+                                </h3>
+                                <div class="card-meta">
+                                    <time datetime="<?php echo $actualite['date_publication']; ?>">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <?php echo $date_fr; ?>
+                                    </time>
                                 </div>
-                            </article>
-                        <?php endforeach; ?>
+                                <div class="card-excerpt">
+                                    <?php 
+                                    $excerpt = substr(strip_tags($actualite['contenu']), 0, 150);
+                                    echo htmlspecialchars($excerpt);
+                                    if (strlen($actualite['contenu']) > 150) echo '...';
+                                    ?>
+                                </div>
+                                <a href="actualite.php?id=<?php echo $actualite['id']; ?>" class="read-more">
+                                    Lire la suite <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+                    <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
             </section>
