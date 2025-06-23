@@ -543,6 +543,76 @@
         </section>
     </main>
 
+    <!-- Section Contact -->
+    <section id="contact" class="contact-section" aria-labelledby="titre-contact">
+        <div class="container">
+            <h2 id="titre-contact" class="section-title">Contactez-nous</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Adresse</h3>
+                        <p>
+                            Lycée Jean-Mermoz<br>
+                            53 rue du Docteur Hurst<br>
+                            68301 Saint-Louis Cedex
+                            <a href="https://maps.google.com/?q=Lycée+Jean+Mermoz,+53+rue+du+Docteur+Hurst,+68301+Saint-Louis+Cedex,+France" target="_blank" class="map-link" title="Voir sur Google Maps">
+                                <i class="fas fa-map"></i>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Téléphone</h3>
+                        <p>+33 389 70 22 70</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <a href="mailto:ce.0680066D@ac-strasbourg.fr" class="contact-email">ce.0680066D@ac-strasbourg.fr</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Horaires d'ouverture</h3>
+                        <p>Du lundi au vendredi<br>8h00 - 17h30</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="#" method="post" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom et Prénom</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="information">Demande d'information</option>
+                                <option value="inscription">Inscription</option>
+                                <option value="orientation">Orientation</option>
+                                <option value="stage">Stage/Alternance</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">J'accepte que mes données soient utilisées pour traiter ma demande</label>
+                        </div>
+                        <button type="submit" class="btn-primary">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="key-numbers" aria-labelledby="titre-chiffres">
             <div class="container">
                 <h2 id="titre-chiffres" class="section-title">Chiffres clés</h2>
