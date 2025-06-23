@@ -6,6 +6,7 @@
     <title>UFA - Unité de Formation par Apprentissage - Lycée Jean-Mermoz</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/pages/formation.css">
+    <link rel="stylesheet" href="css/components/parcoursup-cards.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         /* Styles pour les 3 pôles de formation - Design institutionnel */
@@ -246,35 +247,228 @@
                                 </div>
                                 <h4>Pôle BTS Tertiaires et Industriels</h4>
                             </div>
-                            <div class="formations-list">
-                                <div class="formation-item">
-                                    <i class="fas fa-shield-alt"></i>
-                                    <span>BTS Assurance</span>
+                            <div class="parcoursup-grid">
+                                <div class="parcoursup-card">
+                                    <div class="parcoursup-status">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <div class="parcoursup-header">
+                                        <div class="parcoursup-title">
+                                            <i class="fas fa-shield-alt"></i>
+                                            <h4>BTS Assurance</h4>
+                                        </div>
+                                        <p class="parcoursup-subtitle">Brevet de Technicien Supérieur</p>
+                                    </div>
+                                    <div class="parcoursup-body">
+                                        <p class="parcoursup-description">Formation aux métiers de l'assurance, de la gestion des contrats et de la relation client.</p>
+                                        <div class="parcoursup-tags">
+                                            <span class="parcoursup-tag bac">BTS</span>
+                                            <span class="parcoursup-tag pro">Tertiaire</span>
+                                            <span class="parcoursup-tag">2 ans</span>
+                                        </div>
+                                    </div>
+                                    <div class="parcoursup-footer">
+                                        <div class="parcoursup-details">
+                                            <div class="parcoursup-detail">
+                                                <i class="fas fa-user-graduate"></i>
+                                                <span>Niveau 5</span>
+                                            </div>
+                                        </div>
+                                        <a href="bts-assurance.php" class="parcoursup-action">Découvrir</a>
+                                    </div>
                                 </div>
-                                <div class="formation-item">
-                                    <i class="fas fa-calculator"></i>
-                                    <span>BTS Comptabilité-Gestion</span>
+                                
+                                <div class="parcoursup-card">
+                                    <div class="parcoursup-status">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <div class="parcoursup-header">
+                                        <div class="parcoursup-title">
+                                            <i class="fas fa-calculator"></i>
+                                            <h4>BTS Comptabilité-Gestion</h4>
+                                        </div>
+                                        <p class="parcoursup-subtitle">Brevet de Technicien Supérieur</p>
+                                    </div>
+                                    <div class="parcoursup-body">
+                                        <p class="parcoursup-description">Formation aux métiers de la comptabilité, de la gestion et de l'analyse financière.</p>
+                                        <div class="parcoursup-tags">
+                                            <span class="parcoursup-tag bac">BTS</span>
+                                            <span class="parcoursup-tag pro">Tertiaire</span>
+                                            <span class="parcoursup-tag">2 ans</span>
+                                        </div>
+                                    </div>
+                                    <div class="parcoursup-footer">
+                                        <div class="parcoursup-details">
+                                            <div class="parcoursup-detail">
+                                                <i class="fas fa-user-graduate"></i>
+                                                <span>Niveau 5</span>
+                                            </div>
+                                        </div>
+                                        <a href="bts-comptabilite-gestion.php" class="parcoursup-action">Découvrir</a>
+                                    </div>
                                 </div>
-                                <div class="formation-item">
-                                    <i class="fas fa-handshake"></i>
-                                    <span>BTS Conseil et Commercialisation de Solutions Techniques</span>
+                                
+                                <div class="parcoursup-card">
+                                    <div class="parcoursup-status">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <div class="parcoursup-header">
+                                        <div class="parcoursup-title">
+                                            <i class="fas fa-handshake"></i>
+                                            <h4>BTS CCST</h4>
+                                        </div>
+                                        <p class="parcoursup-subtitle">Conseil et Commercialisation de Solutions Techniques</p>
+                                    </div>
+                                    <div class="parcoursup-body">
+                                        <p class="parcoursup-description">Formation aux métiers de la vente de solutions techniques et de la négociation commerciale B2B.</p>
+                                        <div class="parcoursup-tags">
+                                            <span class="parcoursup-tag bac">BTS</span>
+                                            <span class="parcoursup-tag pro">Commercial</span>
+                                            <span class="parcoursup-tag">2 ans</span>
+                                        </div>
+                                    </div>
+                                    <div class="parcoursup-footer">
+                                        <div class="parcoursup-details">
+                                            <div class="parcoursup-detail">
+                                                <i class="fas fa-user-graduate"></i>
+                                                <span>Niveau 5</span>
+                                            </div>
+                                        </div>
+                                        <a href="bts-ccst.php" class="parcoursup-action">Découvrir</a>
+                                    </div>
                                 </div>
-                                <div class="formation-item">
-                                    <i class="fas fa-store"></i>
-                                    <span>BTS Management Commercial Opérationnel (MCO)</span>
+                                
+                                <div class="parcoursup-card">
+                                    <div class="parcoursup-status apprentissage">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <div class="parcoursup-header">
+                                        <div class="parcoursup-title">
+                                            <i class="fas fa-store"></i>
+                                            <h4>BTS MCO</h4>
+                                        </div>
+                                        <p class="parcoursup-subtitle">Management Commercial Opérationnel</p>
+                                    </div>
+                                    <div class="parcoursup-body">
+                                        <p class="parcoursup-description">Formation aux métiers du management d'unité commerciale, de la gestion et de l'animation d'équipe.</p>
+                                        <div class="parcoursup-tags">
+                                            <span class="parcoursup-tag bac">BTS</span>
+                                            <span class="parcoursup-tag pro">Commercial</span>
+                                            <span class="parcoursup-tag">2 ans</span>
+                                        </div>
+                                    </div>
+                                    <div class="parcoursup-footer">
+                                        <div class="parcoursup-details">
+                                            <div class="parcoursup-detail">
+                                                <i class="fas fa-user-graduate"></i>
+                                                <span>Niveau 5</span>
+                                            </div>
+                                            <div class="parcoursup-detail">
+                                                <i class="fas fa-briefcase"></i>
+                                                <span>Apprentissage</span>
+                                            </div>
+                                        </div>
+                                        <a href="bts-mco.php" class="parcoursup-action">Découvrir</a>
+                                    </div>
                                 </div>
-                                <div class="formation-item">
-                                    <i class="fas fa-cogs"></i>
-                                    <span>BTS Conception de Produits Industriels</span>
+                                
+                                <div class="parcoursup-card">
+                                    <div class="parcoursup-status">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <div class="parcoursup-header">
+                                        <div class="parcoursup-title">
+                                            <i class="fas fa-cogs"></i>
+                                            <h4>BTS CPI</h4>
+                                        </div>
+                                        <p class="parcoursup-subtitle">Conception de Produits Industriels</p>
+                                    </div>
+                                    <div class="parcoursup-body">
+                                        <p class="parcoursup-description">Formation aux métiers de la conception et du développement de produits industriels mécaniques.</p>
+                                        <div class="parcoursup-tags">
+                                            <span class="parcoursup-tag bac">BTS</span>
+                                            <span class="parcoursup-tag pro">Industriel</span>
+                                            <span class="parcoursup-tag">2 ans</span>
+                                        </div>
+                                    </div>
+                                    <div class="parcoursup-footer">
+                                        <div class="parcoursup-details">
+                                            <div class="parcoursup-detail">
+                                                <i class="fas fa-user-graduate"></i>
+                                                <span>Niveau 5</span>
+                                            </div>
+                                        </div>
+                                        <a href="bts-cpi.php" class="parcoursup-action">Découvrir</a>
+                                    </div>
                                 </div>
-                                <div class="formation-item unique">
-                                    <i class="fas fa-fire"></i>
-                                    <span>BTS Traitement des Matériaux</span>
-                                    <span class="badge">UNIQUE</span>
+                                
+                                <div class="parcoursup-card">
+                                    <div class="parcoursup-status apprentissage">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <div class="parcoursup-header">
+                                        <div class="parcoursup-title">
+                                            <i class="fas fa-fire"></i>
+                                            <h4>BTS Traitement des Matériaux</h4>
+                                        </div>
+                                        <p class="parcoursup-subtitle">Option Traitements Thermiques</p>
+                                    </div>
+                                    <div class="parcoursup-body">
+                                        <p class="parcoursup-description">Formation unique dans le Grand Est aux techniques de traitement thermique des matériaux métalliques.</p>
+                                        <div class="parcoursup-tags">
+                                            <span class="parcoursup-tag bac">BTS</span>
+                                            <span class="parcoursup-tag pro">Industriel</span>
+                                            <span class="parcoursup-tag">2 ans</span>
+                                            <span class="parcoursup-tag cap">UNIQUE</span>
+                                        </div>
+                                    </div>
+                                    <div class="parcoursup-footer">
+                                        <div class="parcoursup-details">
+                                            <div class="parcoursup-detail">
+                                                <i class="fas fa-user-graduate"></i>
+                                                <span>Niveau 5</span>
+                                            </div>
+                                            <div class="parcoursup-detail">
+                                                <i class="fas fa-briefcase"></i>
+                                                <span>Apprentissage</span>
+                                            </div>
+                                        </div>
+                                        <a href="bts-tm.php" class="parcoursup-action">Découvrir</a>
+                                    </div>
                                 </div>
-                                <div class="formation-item">
-                                    <i class="fas fa-wrench"></i>
-                                    <span>BTS Maintenance des Systèmes</span>
+                                
+                                <div class="parcoursup-card">
+                                    <div class="parcoursup-status apprentissage">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <div class="parcoursup-header">
+                                        <div class="parcoursup-title">
+                                            <i class="fas fa-wrench"></i>
+                                            <h4>BTS Maintenance des Systèmes</h4>
+                                        </div>
+                                        <p class="parcoursup-subtitle">Option Systèmes de Production</p>
+                                    </div>
+                                    <div class="parcoursup-body">
+                                        <p class="parcoursup-description">Formation aux techniques de maintenance industrielle et d'optimisation des équipements de production.</p>
+                                        <div class="parcoursup-tags">
+                                            <span class="parcoursup-tag bac">BTS</span>
+                                            <span class="parcoursup-tag pro">Industriel</span>
+                                            <span class="parcoursup-tag">2 ans</span>
+                                        </div>
+                                    </div>
+                                    <div class="parcoursup-footer">
+                                        <div class="parcoursup-details">
+                                            <div class="parcoursup-detail">
+                                                <i class="fas fa-user-graduate"></i>
+                                                <span>Niveau 5</span>
+                                            </div>
+                                            <div class="parcoursup-detail">
+                                                <i class="fas fa-briefcase"></i>
+                                                <span>Apprentissage</span>
+                                            </div>
+                                        </div>
+                                        <a href="bts-ms.php" class="parcoursup-action">Découvrir</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="pole-highlight">
