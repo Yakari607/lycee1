@@ -7,10 +7,49 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/pages/partenariats.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .partenariat-hero {
+            height: 400px;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/formations/pexels-fauxels-3184398.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        .partenariat-section {
+            position: relative;
+            background-color: var(--background-color);
+            z-index: 1;
+        }
+        
+        .partenariat-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/logos/trench_group_logo.jpeg'), url('images/logos/staubli-black.png'), url('images/logos/crostar.png');
+            background-position: 5% 15%, 95% 85%, 50% 50%;
+            background-repeat: no-repeat;
+            background-size: 15%, 15%, 15%;
+            opacity: 0.03;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        @media (max-width: 768px) {
+            .partenariat-hero {
+                background-attachment: scroll;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- En-tête -->
     <?php include 'includes/navbar.php'; ?>
+
+    <div class="partenariat-bg"></div>
 
     <main>
         <!-- Bouton retour -->
