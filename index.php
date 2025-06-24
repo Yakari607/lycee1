@@ -489,27 +489,10 @@
             </div>
         </section>
 
-
-
         <!-- Section UFA et Enseignements Professionnels -->
         <section class="ufa-pro-section" aria-labelledby="titre-ufa-pro">
             <div class="container">
                 <div class="ufa-pro-grid">
-                    <div class="ufa-card">
-                        <div class="ufa-header">
-                            <i class="fas fa-university" aria-hidden="true"></i>
-                            <h3>Unité de Formation par Apprentissage (UFA)</h3>
-                        </div>
-                        <div class="ufa-content">
-                            <p>Notre UFA propose des formations en alternance pour préparer votre avenir professionnel.</p>
-                            <ul>
-                                <li>Formation rémunérée</li>
-                                <li>Expérience professionnelle</li>
-                                <li>Accompagnement personnalisé</li>
-                            </ul>
-                            <a href="ufa.php" class="cta-button">Découvrir l'UFA</a>
-                        </div>
-                    </div>
                     <div class="pro-card">
                         <div class="pro-header">
                             <i class="fas fa-briefcase" aria-hidden="true"></i>
@@ -536,6 +519,21 @@
                                 </div>
                             </div>
                             <a href="enseignements-pro.php" class="cta-button">Voir les formations</a>
+                        </div>
+                    </div>
+                    <div class="ufa-card">
+                        <div class="ufa-header">
+                            <i class="fas fa-university" aria-hidden="true"></i>
+                            <h3>Unité de Formation par Apprentissage (UFA)</h3>
+                        </div>
+                        <div class="ufa-content">
+                            <p>Notre UFA propose des formations en alternance pour préparer votre avenir professionnel.</p>
+                            <ul>
+                                <li>Formation rémunérée</li>
+                                <li>Expérience professionnelle</li>
+                                <li>Accompagnement personnalisé</li>
+                            </ul>
+                            <a href="ufa.php" class="cta-button">Découvrir l'UFA</a>
                         </div>
                     </div>
                 </div>
