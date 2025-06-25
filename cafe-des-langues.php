@@ -314,7 +314,7 @@
                     <div class="feature-item">
                         <i class="fas fa-comments"></i>
                         <h4>Debating Society</h4>
-                        <p>Animée par l'assistant d'anglais, Colin</p>
+                        <p>Animée par des enseignements et des assisants de Langues</p>
                     </div>
                     <div class="feature-item">
                         <i class="fas fa-book"></i>

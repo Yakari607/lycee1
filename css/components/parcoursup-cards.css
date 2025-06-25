@@ -112,6 +112,11 @@
     color: #e65100;
 }
 
+.parcoursup-tag.bts {
+    background-color: #e8eaf6;
+    color: #3f51b5;
+}
+
 .parcoursup-footer {
     padding: 1rem 1.25rem;
     border-top: 1px solid #f0f0f0;
@@ -234,6 +239,11 @@
 [data-theme="dark"] .parcoursup-tag.cap {
     background-color: #bf360c;
     color: #fff3e0;
+}
+
+[data-theme="dark"] .parcoursup-tag.bts {
+    background-color: #303f9f;
+    color: #e8eaf6;
 }
 
 [data-theme="dark"] .parcoursup-detail {

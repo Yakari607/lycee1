@@ -200,7 +200,7 @@
             <span>Retour à la vie lycéenne</span>
         </a>
 
-        <section class="vie-lyceenne-hero" style="background: url('images/activites/-tablissement-internat-guez-balzac-17224.jpg'); background-size: cover; background-position: center;">
+        <section class="vie-lyceenne-hero" style="background: url('images/metiers/PXL_20250606_101935606.MP.jpg'); background-size: cover; background-position: center;">
             <div class="hero-content">
                 <h1>L'Internat</h1>
                 <p>Un cadre de vie idéal pour la réussite des élèves</p>

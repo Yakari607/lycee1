@@ -28,9 +28,11 @@ if (strpos($_SERVER['PHP_SELF'], '/admin/') !== false) {
                     <a href="#" class="dropdown-trigger" aria-expanded="false" aria-haspopup="true" 
                        id="menu-etablissement">L'établissement</a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="menu-etablissement">
-                        <li role="menuitem"><a href="<?php echo $base_path; ?>index.php#contact">Présentation</a></li>
+                        <li role="menuitem"><a href="<?php echo $base_path; ?>index.php#presentation">Présentation</a></li>
+                        <li role="menuitem"><a href="<?php echo $base_path; ?>mot-proviseur.php">Mot du Proviseur</a></li>
                         <li role="menuitem"><a href="<?php echo $base_path; ?>index.php#contact">L'équipe</a></li>
                         <li role="menuitem"><a href="<?php echo $base_path; ?>index.php#vie-lyceenne">Nos infrastructures</a></li>
+                        <li role="menuitem"><a href="<?php echo $base_path; ?>cio.php">CIO</a></li>
                     </ul>
                 </li>
                 <li class="dropdown" role="menuitem">
@@ -38,9 +40,8 @@ if (strpos($_SERVER['PHP_SELF'], '/admin/') !== false) {
                        id="menu-formations">Nos formations</a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="menu-formations">
                         <li role="menuitem"><a href="<?php echo $base_path; ?>index.php#general">Enseignement général & technologique</a></li>
-                        <li role="menuitem"><a href="<?php echo $base_path; ?>index.php#industrie">Enseignement Professionnel</a></li>
-                        <li role="menuitem"><a href="<?php echo $base_path; ?>index.php#industrie">Enseignement supérieur</a></li>
-                        <li role="menuitem"><a href="<?php echo $base_path; ?>index.php#industrie">Apprentissage</a></li>
+                        <li role="menuitem"><a href="<?php echo $base_path; ?>enseignements-pro.php">Enseignement Professionnel</a></li>
+                        <li role="menuitem"><a href="<?php echo $base_path; ?>enseignements-sup.php">Enseignement supérieur</a></li>
                         <li role="menuitem"><a href="<?php echo $base_path; ?>orientation-bac.php">Orientation</a></li>
                         <li role="menuitem"><a href="<?php echo $base_path; ?>ufa.php">UFA - Apprentissage</a></li>
                     </ul>
@@ -54,9 +55,7 @@ if (strpos($_SERVER['PHP_SELF'], '/admin/') !== false) {
                         <li role="menuitem"><a href="<?php echo $base_path; ?>index.php#contact">Partenariats</a></li>
                     </ul>
                 </li>
-                <li><a href="<?php echo $base_path; ?>index.php#actualites">Actualités</a></li>
-                <li><a href="<?php echo $base_path; ?>index.php#contact">Contact</a></li>
-                <li><a href="<?php echo $base_path; ?>vie-lyceenne.php">Vie Lycéenne</a></li>
+                <li><a href="<?php echo $base_path; ?>restaurant-scolaire.php">Cantine</a></li>                <li><a href="<?php echo $base_path; ?>voix-apprentis.php">La voix des apprentis</a></li>
                 <li><a href="<?php echo $base_path; ?>cdi.php">CDI</a></li>
                 <li><a href="<?php echo $base_path; ?>eco-mermoz.php">Éco-Mermoz</a></li>
             </ul>

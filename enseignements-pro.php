@@ -58,7 +58,6 @@
                                 <div class="parcoursup-details">
                                     <div class="parcoursup-detail">
                                         <i class="fas fa-user-graduate"></i>
-                                        <span>Niveau 4</span>
                                     </div>
                                 </div>
                                 <a href="bac-pro-mspc.php" class="parcoursup-action">Découvrir</a>
@@ -85,7 +84,6 @@
                                 <div class="parcoursup-details">
                                     <div class="parcoursup-detail">
                                         <i class="fas fa-user-graduate"></i>
-                                        <span>Niveau 4</span>
                                     </div>
                                 </div>
                                 <a href="bac-pro-trpm.php" class="parcoursup-action">Découvrir</a>
@@ -112,7 +110,6 @@
                                 <div class="parcoursup-details">
                                     <div class="parcoursup-detail">
                                         <i class="fas fa-user-graduate"></i>
-                                        <span>Niveau 4</span>
                                     </div>
                                 </div>
                                 <a href="bac-pro-melec.php" class="parcoursup-action">Découvrir</a>
@@ -139,7 +136,6 @@
                                 <div class="parcoursup-details">
                                     <div class="parcoursup-detail">
                                         <i class="fas fa-user-graduate"></i>
-                                        <span>Niveau 3</span>
                                     </div>
                                 </div>
                                 <a href="cap-electricien.php" class="parcoursup-action">Découvrir</a>
@@ -172,7 +168,6 @@
                                 <div class="parcoursup-details">
                                     <div class="parcoursup-detail">
                                         <i class="fas fa-user-graduate"></i>
-                                        <span>Niveau 4</span>
                                     </div>
                                 </div>
                                 <a href="bac-pro-agora.php" class="parcoursup-action">Découvrir</a>
@@ -199,7 +194,6 @@
                                 <div class="parcoursup-details">
                                     <div class="parcoursup-detail">
                                         <i class="fas fa-user-graduate"></i>
-                                        <span>Niveau 4</span>
                                     </div>
                                 </div>
                                 <a href="metiers-accueil.php" class="parcoursup-action">Découvrir</a>
@@ -226,7 +220,6 @@
                                 <div class="parcoursup-details">
                                     <div class="parcoursup-detail">
                                         <i class="fas fa-user-graduate"></i>
-                                        <span>Niveau 4</span>
                                     </div>
                                 </div>
                                 <a href="metiers-commerce-vente.php" class="parcoursup-action">Découvrir</a>
@@ -253,7 +246,6 @@
                                 <div class="parcoursup-details">
                                     <div class="parcoursup-detail">
                                         <i class="fas fa-user-graduate"></i>
-                                        <span>Niveau 3</span>
                                     </div>
                                 </div>
                                 <a href="cap-epc.php" class="parcoursup-action">Découvrir</a>
@@ -286,7 +278,6 @@
                                 <div class="parcoursup-details">
                                     <div class="parcoursup-detail">
                                         <i class="fas fa-user-graduate"></i>
-                                        <span>Niveau 4</span>
                                     </div>
                                 </div>
                                 <a href="bac-pro-metiers-enseigne.php" class="parcoursup-action">Découvrir</a>
@@ -313,7 +304,6 @@
                                 <div class="parcoursup-details">
                                     <div class="parcoursup-detail">
                                         <i class="fas fa-user-graduate"></i>
-                                        <span>Niveau 3</span>
                                     </div>
                                 </div>
                                 <a href="cap-metiers-enseigne.php" class="parcoursup-action">Découvrir</a>
@@ -346,7 +336,6 @@
                                 <div class="parcoursup-details">
                                     <div class="parcoursup-detail">
                                         <i class="fas fa-user-graduate"></i>
-                                        <span>Niveau 3</span>
                                     </div>
                                 </div>
                                 <a href="cap-aaga.php" class="parcoursup-action">Découvrir</a>
@@ -373,7 +362,6 @@
                                 <div class="parcoursup-details">
                                     <div class="parcoursup-detail">
                                         <i class="fas fa-user-graduate"></i>
-                                        <span>Niveau 4</span>
                                     </div>
                                 </div>
                                 <a href="bac-pro-aepa.php" class="parcoursup-action">Découvrir</a>
@@ -400,7 +388,6 @@
                                 <div class="parcoursup-details">
                                     <div class="parcoursup-detail">
                                         <i class="fas fa-user-graduate"></i>
-                                        <span>Niveau 3</span>
                                     </div>
                                 </div>
                                 <a href="cap-psr.php" class="parcoursup-action">Découvrir</a>

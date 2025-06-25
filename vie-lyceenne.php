@@ -49,7 +49,7 @@
                         </div>
                         <div class="news-content">
                             <span class="news-tag">Culture</span>
-                            <h3>Club Cinéma</h3>
+                            <h3>Club Euro Cinéma</h3>
                             <p>Découvrez le 7ème art à travers des projections, des analyses de films et des ateliers de création. Développez votre culture cinématographique et votre créativité.</p>
                             <a href="#" class="read-more">En savoir plus</a>
                         </div>
@@ -84,7 +84,7 @@
                     <!-- Internat -->
                     <article class="news-card">
                         <div class="news-image">
-                            <img src="images/activites/-tablissement-internat-guez-balzac-17224.jpg" alt="L'internat">
+                            <img src="images/metiers/PXL_20250606_101935606.MP.jpg" alt="L'internat">
                         </div>
                         <div class="news-content">
                             <span class="news-tag">Hébergement</span>

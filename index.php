@@ -507,7 +507,7 @@
                                 </div>
                                 <div class="sector">
                                     <i class="fas fa-store"></i>
-                                    <span>Commerce</span>
+                                    <span>Tertiaire</span>
                                 </div>
                                 <div class="sector">
                                     <i class="fas fa-bolt"></i>

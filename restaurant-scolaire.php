@@ -127,7 +127,7 @@
                             <i class="fas fa-clock"></i>
                             <h3>Horaires</h3>
                             <ul>
-                                <li>Lundi au vendredi : 11h30 - 13h30</li>
+                                <li>Lundi au vendredi : 11h00 - 13h30</li>
                                 <li>Service continu</li>
                             </ul>
                         </div>
@@ -135,9 +135,12 @@
                             <i class="fas fa-credit-card"></i>
                             <h3>Tarifs</h3>
                             <ul>
-                                <li>Élèves : 3,80€ par repas</li>
+                                <li>lycéens : 4,85€ par repas</li>
+                                <li>Etudiants : 3,50€ par repas</li>
                                 <li>Forfait trimestre : consulter l'intendance</li>
-                                <li>Personnel : 4,50€ par repas</li>
+                                <li>Personnel : 6€ par repas</li>
+                                <li>Invités extérieurs :8,95€ par repas</li>
+
                             </ul>
                         </div>
                         <div class="info-card">
