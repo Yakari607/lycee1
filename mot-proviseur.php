@@ -55,12 +55,13 @@
         }
         
         .formation-hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/batiments/c-est-la-rentree-ce-lundi-au-lycee-jean-mermoz-de-saint-louis-avec-une-17e-classe-de-seconde-qui-vient-s-ajouter-a-des-effectifs-consequents-qui-font-du-lycee-ludovicien-le-plus-grand-d-alsace-photo-l-alsace-1567245623.jpg');
+            background-image: url('images/batiments/c-est-la-rentree-ce-lundi-au-lycee-jean-mermoz-de-saint-louis-avec-une-17e-classe-de-seconde-qui-vient-s-ajouter-a-des-effectifs-consequents-qui-font-du-lycee-ludovicien-le-plus-grand-d-alsace-photo-l-alsace-1567245623.jpg');
             background-size: cover;
             background-position: center;
             color: white;
             position: relative;
             margin-bottom: 2rem;
+            filter: brightness(1.2);
         }
     </style>
 </head>
@@ -118,9 +119,10 @@
                     <p>&copy; 2024 Lycée Jean-Mermoz - Saint-Louis</p>
                 </div>
                 <div class="footer-links">
-                   supprine  <a href="#">Mentions légales</a>
+                    <a href="#">Mentions légales</a>
                     <a href="#">Accessibilité</a>
                     <a href="#">Plan du site</a>
+                    <a href="admin/login.php">Administration</a>
                 </div>
             </div>
         </div>

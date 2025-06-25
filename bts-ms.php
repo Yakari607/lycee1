@@ -156,7 +156,7 @@
                                         <p>De nombreuses opportunités d'emploi dans la région des trois frontières</p>
                                     </div>
                                     <div class="atout-image">
-                                        <img src="images/batiments/pexels-photo-2965260.jpeg" alt="Industrie locale">
+                                        <img src="images/metiers/pexels-gustavo-fring-6720526.jpg" alt="Industrie locale">
                                     </div>
                                 </div>
                                 <div class="atout-slide">
@@ -166,7 +166,7 @@
                                         <p>Formateurs qualifiés ayant une expérience significative dans le domaine de la maintenance industrielle</p>
                                     </div>
                                     <div class="atout-image">
-                                        <img src="images/pexels-rdne-7648055.jpg" alt="Équipe pédagogique">
+                                        <img src="images/metiers/pexels-olly-3855473.jpg" alt="Équipe pédagogique">
                                     </div>
                                 </div>
                             </div>
@@ -363,8 +363,7 @@
                         <div class="contact-info">
                             <div class="contact-block">
                                 <h4>Coordonnateur BTS MS</h4>
-                                <p>Abdel Kanouni<br>
-                                <a href="mailto:abdel.kanouni@ac-strasbourg.fr">abdel.kanouni@ac-strasbourg.fr</a></p>
+                                <a href="mailto:coordo.ms@lyceemermoz.fr">coordo.ms@lyceemermoz.fr</a></p>
                             </div>
                             
                             <div class="contact-block">

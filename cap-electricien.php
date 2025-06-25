@@ -22,7 +22,7 @@
         <section class="formation-hero" style="background-image: url('images/formations/pexels-photo-257736 (1).webp');">
             <div class="hero-content">
                 <h1>CAP Métiers de l'Électricité et de ses Environnements Connectés (Electricien)</h1>
-                <p>Formation sous statut scolaire</p>
+                <p>Formation sous statut scolaire et en apprentissage</p>
             </div>
         </section>
 
@@ -44,7 +44,6 @@
                             <li>Vérifier une installation électrique</li>
                             <li>Dépanner une installation</li>
                         </ul>
-                        <p><strong>24 places proposées au lycée Jean-Mermoz</strong></p>
                     </div>
                     <div class="formation-card image-card">
                         <img src="images/formations/pexels-photo-2898199.jpeg" alt="Électricien en intervention" />
@@ -71,7 +70,7 @@
                                     <div class="timeline-box" id="box-1">
                                         <h4>Conditions d'accès</h4>
                                         <ul>
-                                            <li>Élèves venant de 3<sup>ème</sup> générale et 3<sup>ème</sup> prépa-métiers</li>
+                                            <li>3<sup>ème</sup> générale, 3<sup>ème</sup> prépa-métiers</li> et 3<sup>ème</sup> </li>
                                             <li>Élèves issus d'un CAP</li>
                                         </ul>
                                     </div>
@@ -119,7 +118,7 @@
                                 <div class="timeline-step">
                                     <div class="timeline-bubble" id="bubble-5">5</div>
                                     <div class="timeline-box" id="box-5">
-                                        <h4>22 sem. de stages</h4>
+                                        <h4>14 sem. de stages</h4>
                                         <p>Une formation qui s'appuie sur une réelle immersion en entreprise</p>
                                     </div>
                                 </div>
@@ -252,7 +251,7 @@
                                 <a href="mailto:ddfpt.indus@lyceemermoz.fr">ddfpt.indus@lyceemermoz.fr</a></p>
                                 <p>Coordonnateur CAP Electricien<br>
                                 Kamel Ben-Amor<br>
-                                <a href="mailto:Kamel.Ben-Amor@ac-strasbourg.fr">Kamel.Ben-Amor@ac-strasbourg.fr</a></p>
+                                <a href="mailto:coordo.melec@lyceemermoz.fr">coordo.melec@lyceemermoz.fr</a></p>
                             </div>
                             <div class="contact-block">
                                 <h4>Apprentissage</h4>

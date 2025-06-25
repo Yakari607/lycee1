@@ -39,9 +39,9 @@ if (strpos($_SERVER['PHP_SELF'], '/admin/') !== false) {
                     <a href="#" class="dropdown-trigger" aria-expanded="false" aria-haspopup="true" 
                        id="menu-formations">Nos formations</a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="menu-formations">
-                        <li role="menuitem"><a href="<?php echo $base_path; ?>index.php#general">Enseignement général & technologique</a></li>
+                        <li role="menuitem"><a href="<?php echo $base_path; ?>index.php#general">Enseignement Général & Technologique</a></li>
                         <li role="menuitem"><a href="<?php echo $base_path; ?>enseignements-pro.php">Enseignement Professionnel</a></li>
-                        <li role="menuitem"><a href="<?php echo $base_path; ?>enseignements-sup.php">Enseignement supérieur</a></li>
+                        <li role="menuitem"><a href="<?php echo $base_path; ?>enseignements-sup.php">Enseignement Supérieur</a></li>
                         <li role="menuitem"><a href="<?php echo $base_path; ?>orientation-bac.php">Orientation</a></li>
                         <li role="menuitem"><a href="<?php echo $base_path; ?>ufa.php">UFA - Apprentissage</a></li>
                     </ul>

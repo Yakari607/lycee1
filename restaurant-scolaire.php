@@ -43,7 +43,7 @@
             <div class="container">
                 <div class="intro-text">
                     <h2>Notre engagement pour une alimentation de qualité</h2>
-                    <p>Notre restaurant scolaire propose chaque jour des menus équilibrés élaborés par une équipe professionnelle et attentive. Nous accordons une importance particulière à l'utilisation de produits frais, locaux et de saison. Notre objectif est d'offrir des repas savoureux tout en sensibilisant nos élèves à une alimentation saine et respectueuse de l'environnement.</p>
+                    <p>Notre restaurant scolaire propose chaque jour des menus équilibrés élaborés par une équipe professionnelle et attentive. Nous accoordons une importance particulière à l'utilisation de produits frais, locaux et de saison. Notre objectif est d'offrir des repas savoureux tout en sensibilisant nos élèves à une alimentation saine et respectueuse de l'environnement.</p>
                     <div class="engagement-points">
                         <div class="engagement">
                             <i class="fas fa-carrot"></i>

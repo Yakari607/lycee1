@@ -64,7 +64,7 @@
 
                 <!-- Dans quelles entreprises -->
                 <div class="formation-block">
-                    <h3><i class="fas fa-building"></i> Dans quelles entreprises ?</h3>
+                    <h3><i class="fas fa-building"></i> Dans quelles entreprises et les fonction assurer</h3>
                     <p>Il peut exercer ses activités dans un bureau d'étude, en atelier, sur un chantier ou comme conseiller itinérant, au sein d'une entreprise artisanale ou industrielle.</p>
                     <p>Il travaille seul ou en équipe, avec ou en relation avec :</p>
                     <ul class="relations-list">
@@ -98,21 +98,6 @@
                             <span>Conseiller itinérant</span>
                         </div>
                     </div>
-                </div>
-
-                <!-- Fonctions assurées -->
-                <div class="formation-block">
-                    <h3><i class="fas fa-tasks"></i> Fonctions assurées</h3>
-                    <p>Il peut exercer ses activités dans un bureau d'étude, en atelier, sur un chantier ou comme conseiller itinérant, au sein d'une entreprise artisanale ou industrielle.</p>
-                    <p>Il travaille seul ou en équipe, avec ou en relation avec :</p>
-                    <ul class="relations-list">
-                        <li><i class="fas fa-users"></i> des concepteurs (architectes, prescripteurs, etc.) ;</li>
-                        <li><i class="fas fa-user-cog"></i> des opérateurs ;</li>
-                        <li><i class="fas fa-user-friends"></i> des clients ;</li>
-                        <li><i class="fas fa-landmark"></i> des administrations de tutelle ;</li>
-                        <li><i class="fas fa-shield-alt"></i> des organismes de contrôle et de sécurité ;</li>
-                        <li><i class="fas fa-truck-loading"></i> des fournisseurs.</li>
-                    </ul>
                 </div>
 
                 <!-- Qualités et aptitudes -->

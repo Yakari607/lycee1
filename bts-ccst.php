@@ -45,7 +45,7 @@
 
                     <div class="formation-card">
                         <h2>Le profil</h2>
-                        <p>Pour remplir les missions qui lui sont confiées, le technico-commercial fait preuve :</p>
+                        <p>Pour remplir les missions qui lui sont confiées, le technico-commercial fait preuve:</p>
                         <ul>
                             <li>De qualités de communication à l'oral et à l'écrit</li>
                             <li>De dynamisme et de disponibilité</li>

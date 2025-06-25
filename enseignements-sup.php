@@ -36,7 +36,7 @@
 
                 <!-- BTS Industriels -->
                 <div class="formation-block">
-                    <h3><i class="fas fa-industry"></i> BTS Industriels</h3>
+                    <h3><i class="fas fa-industry"></i> BTS secteur Industriel</h3>
                     <div class="parcoursup-grid">
                         <div class="parcoursup-card">
                             <div class="parcoursup-header">
@@ -63,33 +63,7 @@
                                 <a href="bts-cpi.php" class="parcoursup-action">Découvrir</a>
                             </div>
                         </div>
-                        
-                        <div class="parcoursup-card">
-                            <div class="parcoursup-header">
-                                <div class="parcoursup-title">
-                                    <i class="fas fa-cogs"></i>
-                                    <h4>BTS MS</h4>
-                                </div>
-                                <p class="parcoursup-subtitle">Maintenance des Systèmes</p>
-                            </div>
-                            <div class="parcoursup-body">
-                                <p class="parcoursup-description">Formation aux techniques de maintenance industrielle et d'optimisation des équipements de production.</p>
-                                <div class="parcoursup-tags">
-                                    <span class="parcoursup-tag bts">BTS</span>
-                                    <span class="parcoursup-tag pro">Industrie</span>
-                                    <span class="parcoursup-tag">2 ans</span>
-                                </div>
-                            </div>
-                            <div class="parcoursup-footer">
-                                <div class="parcoursup-details">
-                                    <div class="parcoursup-detail">
-                                        <i class="fas fa-user-graduate"></i>
-                                    </div>
-                                </div>
-                                <a href="bts-ms.php" class="parcoursup-action">Découvrir</a>
-                            </div>
-                        </div>
-                        
+
                         <div class="parcoursup-card">
                             <div class="parcoursup-header">
                                 <div class="parcoursup-title">
@@ -115,12 +89,37 @@
                                 <a href="bts-tm.php" class="parcoursup-action">Découvrir</a>
                             </div>
                         </div>
-                    </div>
+                        
+                        <div class="parcoursup-card">
+                            <div class="parcoursup-header">
+                                <div class="parcoursup-title">
+                                    <i class="fas fa-cogs"></i>
+                                    <h4>BTS MS (par alternance)</h4>
+                                </div>
+                                <p class="parcoursup-subtitle">Maintenance des Systèmes</p>
+                            </div>
+                            <div class="parcoursup-body">
+                                <p class="parcoursup-description">Formation aux techniques de maintenance industrielle et d'optimisation des équipements de production.</p>
+                                <div class="parcoursup-tags">
+                                    <span class="parcoursup-tag bts">BTS</span>
+                                    <span class="parcoursup-tag pro">Industrie</span>
+                                    <span class="parcoursup-tag">2 ans</span>
+                                </div>
+                            </div>
+                            <div class="parcoursup-footer">
+                                <div class="parcoursup-details">
+                                    <div class="parcoursup-detail">
+                                        <i class="fas fa-user-graduate"></i>
+                                    </div>
+                                </div>
+                                <a href="bts-ms.php" class="parcoursup-action">Découvrir</a>
+                            </div>
+                        </div>
                 </div>
 
                 <!-- BTS Tertiaires -->
                 <div class="formation-block">
-                    <h3><i class="fas fa-briefcase"></i> BTS Tertiaires</h3>
+                    <h3><i class="fas fa-briefcase"></i> BTS secteur Tertiaire</h3>
                     <div class="parcoursup-grid">                        
                         <div class="parcoursup-card">
                             <div class="parcoursup-header">

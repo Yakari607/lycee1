@@ -112,7 +112,7 @@
                                     <div class="timeline-step">
                                         <div class="timeline-bubble" id="bubble-5">5</div>
                                         <div class="timeline-box" id="box-5">
-                                            <h4>22 sem. de stages</h4>
+                                            <h4>20 sem. de stages</h4>
                                             <p>Une formation qui s'appuie sur une réelle immersion en entreprise</p>
                                         </div>
                                     </div>
@@ -164,7 +164,7 @@
                                 </div>
                             </div>
                             <div class="debouches-image">
-                                <img src="images/metiers/pexels-photo-8396303.webp" alt="Métiers du Commerce et de la Vente" class="debouche-img">
+                                <img src="images/metiers/pexels-kampus-8476596.jpg" alt="Métiers du Commerce et de la Vente" class="debouche-img">
                             </div>
                         </div>
                     </div>
@@ -219,8 +219,8 @@
                                     <h4>2- Mention Complémentaire</h4>
                                     <p>Il est également possible de compléter sa formation avec une Mention Complémentaire (MC en 1 an) ou un Brevet Professionnel (BP en 2 ans en apprentissage) :</p>
                                     <ul>
-                                        <li>MC Assistance, Conseil, Vente à distance</li>
-                                        <li>MC Vendeur spécialisé en alimentation</li>
+                                        <li>CS Assistance, Conseil, Vente à distance</li>
+                                        <li>CS Vendeur spécialisé en alimentation</li>
                                     </ul>
                                 </div>
                                 

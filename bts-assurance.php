@@ -33,7 +33,7 @@
                     <div class="formation-card">
                         <h2>Le technicien en Assurance</h2>
                         <div class="formation-type">Formation sous statut scolaire ou par apprentissage</div>
-                        <p>Le titulaire de ce BTS est amené à exercer des activités à caractère commercial, technique et de gestion en assurance de biens et de responsabilité ou en assurance de personnes. Il est en relation avec tous types de clients.</p>
+                        <p>Le titulaire de ce BTS est amené à exercer des activités à caractère commercial, technique et de gestion en assurance de biens et de responsabilités ou en assurance de personnes. Il est en relation avec tous types de clients.</p>
                         <p>Il exerce son activité dans les sociétés d'assurances, de courtage, les agences générales ou les banques. Il peut aussi travailler dans les services de gestion de contrats d'assurance des grandes entreprises.</p>
                     </div>
 
@@ -154,7 +154,7 @@
                                 </div>
                             </div>
                             <div class="metier-image">
-                                <img src="images/metiers/pexels-photo-1181317.webp" alt="Métiers de l'assurance">
+                                <img src="images/formations/pexels-mikhail-nilov-7734597.jpg" alt="Métiers de l'assurance">
                             </div>
                         </div>
                     </div>

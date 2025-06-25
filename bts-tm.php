@@ -43,16 +43,16 @@
                         <h2>Les missions</h2>
                         <p>Il gère les chaines de production en traitements thermiques et de surfaces et contrôle la qualité des pièces durcies ou revêtues :</p>
                         <ul>
-                            <li>Traitement anticorrosion sur train d'atterrissage d'avion;</li>
-                            <li>Renforcement des dents de pignons de boîte de vitesse;</li>
-                            <li>Dépôt d'un revêtement biocompatible sur des prothèses de hanche;</li>
+                            <li>Traitement anticorrosion sur train d'atterrissage d'avion</li>
+                            <li>Renforcement des dents de pignons de boîte de vitesse</li>
+                            <li>Dépôt d'un revêtement biocompatible sur des prothèses de hanche</li>
                             <li>…</li>
                         </ul>
                         <p>Il peut aussi travailler dans un laboratoire au développement de nouveaux alliages ou en tant qu'expert en analyse de défaillance :</p>
                         <ul>
-                            <li>Mise au point de nouveaux alliages à base titane pour l'aéronautique;</li>
-                            <li>Contrôles non destructifs dans une usine pétrochimique;</li>
-                            <li>Recherche de cause de rupture sur une canalisation de gaz dans le cadre d'une expertise judiciaire;</li>
+                            <li>Mise au point de nouveaux alliages à base titane pour l'aéronautique</li>
+                            <li>Contrôles non destructifs dans une usine pétrochimique</li>
+                            <li>Recherche de cause de rupture sur une canalisation de gaz dans le cadre d'une expertise judiciaire</li>
                             <li>…</li>
                         </ul>
                     </div>
@@ -64,8 +64,8 @@
                         <h3><i class="fas fa-graduation-cap"></i> Accès à la formation</h3>
                         <p>La candidature à cette formation s'effectue via l'application nationale ParcourSup. Les profils suivants sont particulièrement adaptés à ce diplôme:</p>
                         <ul>
-                            <li>Bac général S, série SI ou SVT;</li>
-                            <li>Bac technologique STI2D ou STL, toutes spécialités;</li>
+                            <li>Bac général S, série SI ou SVT</li>
+                            <li>Bac technologique STI2D ou STL, toutes spécialités</li>
                             <li>Bac pro industriel en lien avec la chimie ou les matériaux.</li>
                         </ul>
                     </div>

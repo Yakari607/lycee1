@@ -113,7 +113,7 @@
                                     <div class="timeline-step">
                                         <div class="timeline-bubble" id="bubble-5">5</div>
                                         <div class="timeline-box" id="box-5">
-                                            <h4>22 sem. de stages</h4>
+                                            <h4>20 sem. de stages</h4>
                                             <p>Une formation qui s'appuie sur une réelle immersion en entreprise</p>
                                         </div>
                                     </div>
@@ -137,15 +137,15 @@
                             <div class="debouches-list">
                                 <div class="debouche-item">
                                     <i class="fas fa-headset"></i>
-                                    <span>Chargé-e d'accueil</span>
+                                    <span>Chargé d'accueil</span>
                                 </div>
                                 <div class="debouche-item">
                                     <i class="fas fa-concierge-bell"></i>
-                                    <span>Hôte-sse d'accueil, d'évènementiel</span>
+                                    <span>Hôtesse d'accueil, d'évènementiel</span>
                                 </div>
                                 <div class="debouche-item">
                                     <i class="fas fa-user-tie"></i>
-                                    <span>Agent-e d'accueil</span>
+                                    <span>Agent d'accueil</span>
                                 </div>
                                 <div class="debouche-item">
                                     <i class="fas fa-phone-alt"></i>
@@ -173,7 +173,7 @@
                                 </div>
                             </div>
                             <div class="debouches-image">
-                                <img src="images/metiers/pexels-photo-1181317.webp" alt="Métiers de l'accueil" class="debouche-img">
+                                <img src="images/metiers/pexels-helenalopes-3215519.jpg" alt="Métiers de l'accueil" class="debouche-img">
                             </div>
                         </div>
                     </div>
@@ -226,8 +226,8 @@
                                     <h4>2- Mention Complémentaire</h4>
                                     <p>Il est également possible de compléter sa formation avec une Mention Complémentaire (MC en 1 an) :</p>
                                     <ul>
-                                        <li>MC Accueil dans les transports</li>
-                                        <li>MC Accueil-Réception</li>
+                                        <li>CS Accueil dans les transports</li>
+                                        <li>CS Accueil-Réception</li>
                                     </ul>
                                 </div>
                                 

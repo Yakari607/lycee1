@@ -22,7 +22,7 @@
         <section class="formation-hero" style="background-image: url('images/formations/pexels-photo-257736 (1).webp');">
             <div class="hero-content">
                 <h1>BAC PRO Métiers de l'Électricité et de ses Environnements Connectés (MELEC)</h1>
-                <p>Formation sous statut scolaire ou par apprentissage transfrontalier</p>
+                <p>Formation sous statut scolaire ou par apprentissage</p>
             </div>
         </section>
 
@@ -44,7 +44,6 @@
                             <li>Vérifier une installation électrique</li>
                             <li>Dépanner une installation</li>
                         </ul>
-                        <p><strong>24 places proposées au lycée Jean-Mermoz</strong></p>
                     </div>
                     <div class="formation-card image-card">
                         <img src="images/formations/pexels-photo-2898199.jpeg" alt="Électricien en intervention" />
@@ -198,11 +197,12 @@
                     <div class="collapsible-content">
                         <div class="apres-bac">
                             <div class="apres-bac-item">
-                                <h4>1- Mention complémentaire</h4>
+                                <h4>1- Certificat de spécialisation</h4>
                                 <p>En un an, vous pouvez vous spécialiser en :</p>
                                 <ul>
-                                    <li>Câbleur</li>
-                                    <li>Ascensoriste</li>
+                                    <li>Technicien ascensoriste</li>
+                                    <li>Technicien en réseaux électrique</li>
+                                    <li>Technicien en énergies renouvelables option A énergie électrique
                                 </ul>
                             </div>
                             <div class="apres-bac-item">
@@ -210,8 +210,9 @@
                                 <p>En deux ans, si vous avez un très bon dossier scolaire, vous pouvez poursuivre en :</p>
                                 <ul>
                                     <li>BTS Electrotechnique</li>
-                                    <li>BTS Technico-commercial</li>
+                                    <li>BTS conseil et Commercialisation de solution technique</li>
                                     <li>BTS Systèmes numériques</li>
+                                    <li>BTS fluides, énergies , domotique</li>
                                 </ul>
                             </div>
                         </div>
@@ -252,7 +253,7 @@
                                 <a href="mailto:ddfpt.indus@lyceemermoz.fr">ddfpt.indus@lyceemermoz.fr</a></p>
                                 <p>Coordonnateur Bac Pro MELEC<br>
                                 Kamel Ben-Amor<br>
-                                <a href="mailto:Kamel.Ben-Amor@ac-strasbourg.fr">Kamel.Ben-Amor@ac-strasbourg.fr</a></p>
+                                <a href="mailto:coordo.melec@lyceemermoz.f">coordo.melec@lyceemermoz.fr</a></p>
                             </div>
                             <div class="contact-block">
                                 <h4>Apprentissage</h4>

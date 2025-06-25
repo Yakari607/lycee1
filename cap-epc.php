@@ -42,7 +42,7 @@
                         </ul>
                     </div>
                     <div class="formation-card image-card">
-                        <img src="images/metiers/pexels-photo-8396303.webp" alt="Équipier polyvalent du commerce" />
+                        <img src="images/metiers/pexels-kampus-8476596.jpg" alt="Équipier polyvalent du commerce" />
                     </div>
                 </div>
 
@@ -52,7 +52,7 @@
                     
                     <div class="timeline-title">
                         <h4>Le parcours en un coup d'œil</h4>
-                        <p>Découvrez les étapes clés de votre formation en CAP EPC</p>
+                        <p>Découvrez les étapes clés de votre formation en CAP Electricien</p>
                     </div>
                     
                     <div class="parcours-timeline">
@@ -66,7 +66,7 @@
                                     <div class="timeline-box" id="box-1">
                                         <h4>Conditions d'accès</h4>
                                         <ul>
-                                            <li>Élèves venant de 3<sup>ème</sup> générale et 3<sup>ème</sup> prépa-métiers</li>
+                                            <li>3<sup>ème</sup> générale, 3<sup>ème</sup> prépa-métiers</li> et 3<sup>ème</sup> </li>
                                             <li>Élèves issus d'un CAP</li>
                                         </ul>
                                     </div>
@@ -78,8 +78,8 @@
                                     <div class="timeline-box" id="box-2">
                                         <h4>Formation</h4>
                                         <ul>
-                                            <li>Enseignement professionnel</li>
-                                            <li>Enseignement général</li>
+                                            <li>14h d'enseignement professionnel</li>
+                                            <li>13h d'enseignement général</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -88,11 +88,11 @@
                                 <div class="timeline-step">
                                     <div class="timeline-bubble" id="bubble-3">3</div>
                                     <div class="timeline-box" id="box-3">
-                                        <h4>Compétences</h4>
+                                        <h4>Certifications</h4>
                                         <ul>
-                                            <li>Réception des produits</li>
-                                            <li>Mise en valeur</li>
-                                            <li>Relation client</li>
+                                            <li>Habilitation électrique</li>
+                                            <li>Sécurité</li>
+                                            <li>Domotique</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -114,7 +114,7 @@
                                 <div class="timeline-step">
                                     <div class="timeline-bubble" id="bubble-5">5</div>
                                     <div class="timeline-box" id="box-5">
-                                        <h4>Périodes de stages</h4>
+                                        <h4>14 sem. de stages</h4>
                                         <p>Une formation qui s'appuie sur une réelle immersion en entreprise</p>
                                     </div>
                                 </div>
@@ -124,7 +124,7 @@
                                     <div class="timeline-bubble" id="bubble-6">6</div>
                                     <div class="timeline-box" id="box-6">
                                         <h4>Un CAP...</h4>
-                                        <p>Obtention du CAP Équipier Polyvalent du Commerce</p>
+                                        <p>Obtention d'un CAPfessionnel Electricien à la fin de la 3<sup>ème</sup> année</p>
                                     </div>
                                 </div>
                             </div>
@@ -148,7 +148,7 @@
                             <div class="debouche-item"><i class="fas fa-tshirt"></i> <span>Vendeur en prêt à porter, en confection</span></div>
                         </div>
                         <div class="debouches-image">
-                            <img src="images/metiers/pexels-elevate-1267337.jpg" alt="Commerce et vente" class="debouche-img">
+                            <img src="images/metiers/pexels-cottonbro-7019313.jpg" alt="Commerce et vente" class="debouche-img">
                         </div>
                     </div>
                 </div>

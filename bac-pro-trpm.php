@@ -31,14 +31,24 @@
                 <!-- Présentation -->
                 <div class="formation-intro">
                     <div class="formation-card">
-                        <h2>La formation Bac Pro TRPM</h2>
+                        <h2>Formation en Production Mécanique</h2>
                         <div class="formation-type">Scolaire ou Apprentissage</div>
-                        <p>C'est une filière où les élèves font de la Production Mécanique. Anciennement Tourneur-Fraiseur, nos élèves fabriquent des pièces mécaniques. Cette production est en majorité exécutée sur Commandes Numériques, avec de la FAO, et une Programmation ISO.</p>
-                        <p>D'un dessin d'ensemble et d'un dessin de définition, issu de la DAO, ils créent toute la gamme de production pour fabriquer ensuite les pièces constituant un ensemble, les mesurer, les assembler.</p>
-                        <p>En entreprise ou en atelier de mécanique, le titulaire de ce bac pro maitrise la mise en œuvre de l'usinage par enlèvement de matière.</p>
+                        <p>Cette filière forme des spécialistes de la fabrication de pièces mécaniques. Nos élèves apprennent à transformer des matériaux en composants précis grâce à des machines modernes à commandes numériques.</p>
+                        <p>Ce qu'ils apprennent :</p>
+                        <ul>
+                            <li>Utiliser des machines automatisées pour découper et façonner les matériaux</li>
+                            <li>Programmer ces machines avec des logiciels spécialisés</li>
+                            <li>Lire et interpréter des plans techniques</li>
+                            <li>Planifier toutes les étapes de fabrication</li>
+                            <li>Contrôler la qualité des pièces produites</li>
+                            <li>Assembler les différents éléments</li>
+                        </ul>
+                        <p>Débouchés :</p>
+                        <p>Les diplômés travaillent dans des ateliers de mécanique ou en entreprise industrielle. Ils maîtrisent les techniques d'usinage, c'est-à-dire l'art de créer des pièces en retirant de la matière avec précision.</p>
+                        <p>Cette formation moderne allie savoir-faire traditionnel et technologies de pointe pour répondre aux besoins de l'industrie d'aujourd'hui.</p>
                     </div>
                     <div class="formation-card image-card">
-                        <img src="images/metiers/pexels-thisisengineering-3862379.jpg" alt="Technicien en usinage" style="border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.12); width:100%; height:auto;">
+                        <img src="images/formations/pexels-daniel-smyth-83914874-10406128.jpg" alt="Technicien en usinage" style="border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.12); width:100%; height:auto;">
                     </div>
                 </div>
 
@@ -66,7 +76,7 @@
                             <div class="debouche-item"><i class="fas fa-laptop-code"></i> <span>Opérateur sur machine à commande numérique</span></div>
                         </div>
                         <div class="debouches-image">
-                            <img src="images/metiers/pexels-photo-3862627.webp" alt="Usinage mécanique" class="debouche-img">
+                            <img src="images/formations/pexels-tkirkgoz-11765538.jpg" alt="Usinage mécanique" class="debouche-img">
                         </div>
                     </div>
                     <div class="secteurs-activite">
@@ -182,7 +192,7 @@
                                 <a href="mailto:ddfpt.indus@lyceemermoz.fr">ddfpt.indus@lyceemermoz.fr</a></p>
                                 <p>Coordonnateur Bac Pro Technicien d'usinage<br>
                                 Salvatore Di-Certo<br>
-                                <a href="mailto:salvatore.di-certo@ac-strasbourg.fr">salvatore.di-certo@ac-strasbourg.fr</a></p>
+                                <a href="mailto:coordo.trpm@lyceemermoz.fr">coordo.trpm@lyceemermoz.fr</a></p>
                             </div>
                             <div class="contact-block">
                                 <h4>Apprentissage</h4>

@@ -38,9 +38,9 @@
                             <li>Prévention des risques liés à l'activité physique et ergonomique (PRAPE)</li>
                             <li>Habilitation électrique</li>
                             <li>Sauveteur secouriste du travail (SST)</li>
-                            <li>22 semaines de périodes de formation en milieu professionnel</li>
+                            <li>20 semaines de périodes de formation en milieu professionnel</li>
                         </ul>
-                        <p><strong>12 places proposées au lycée Jean-Mermoz</strong></p>
+                    
                     </div>
                     <div class="formation-card image-card">
                         <img src="images/formations/pexels-photo-2760241.webp" alt="Technicien maintenance usine" style="border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.12); width:100%; height:auto;">
@@ -69,7 +69,7 @@
                             <div class="horaires-cell">-</div>
 
                             <div class="horaires-cell libelle">Périodes de formation en entreprise</div>
-                            <div class="horaires-cell">22 semaines</div>
+                            <div class="horaires-cell">20 semaines</div>
                             <div class="horaires-cell">-</div>
                         </div>
                         <h4 class="repartition-titre">Répartition du temps de formation</h4>
@@ -101,16 +101,8 @@
                                 <div class="carte-icone"><i class="fas fa-building"></i></div>
                                 <div class="carte-contenu">
                                     <h5>Périodes en entreprise</h5>
-                                    <p>22 semaines</p>
+                                    <p>20 semaines</p>
                                 </div>
-                            </div>
-                            <div class="horaire-carte">
-                                <div class="carte-icone"><i class="fas fa-users"></i></div>
-                                <div class="carte-contenu">
-                                    <h5>Places disponibles</h5>
-                                    <p>12 au lycée Jean-Mermoz</p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -226,7 +218,7 @@
                                 <h4>Voie Scolaire</h4>
                                 <p>Directeur Délégué aux Formations Professionnelles et Technologiques<br>
                                 <a href="mailto:ddfpt.indus@lyceemermoz.fr">ddfpt.indus@lyceemermoz.fr</a></p>
-                                <p>Coordonnateur Bac Pro MEI<br>
+                                <p>Coordonnateur Bac Pro MSPC<br>
                                 Abdelali Kanouni<br>
                                 <a href="mailto:abdelali.kanouni@ac-strasbourg.fr">abdelali.kanouni@ac-strasbourg.fr</a></p>
                             </div>

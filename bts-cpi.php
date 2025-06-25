@@ -50,11 +50,11 @@
                 <div class="formation-content">
                     <div class="formation-block">
                         <h3><i class="fas fa-graduation-cap"></i> Accès à la formation</h3>
-                        <p>La candidature à cette formation s'effectue via l'application nationale ParcourSup. Les profils suivants sont particulièrement adaptés à ce diplôme:</p>
+                        <p>La candidature à cette formation s'effectue via l'application nationale ParcourSup. Les profils suivants sont particulièrement adaptés à ce diplôme :</p>
                         <ul>
-                            <li>Bac général S série SI,</li>
-                            <li>Bac techno STI2D spécialités ITEC, EE, SIN, AC,</li>
-                            <li>Bac pro indus. (EDPI, TU, MEI…).</li>
+                            <li>Bac général S série SI</li>
+                            <li>Bac techno STI2D spécialités ITEC, EE, SIN, AC</li>
+                            <li>Bac pro indus. (EDPI, TRPM, MSPC).</li>
                         </ul>
                     </div>
 
@@ -136,7 +136,7 @@
                                     <div class="atout-content">
                                         <i class="fas fa-handshake"></i>
                                         <h4>Partenariat fort avec le milieu industriel</h4>
-                                        <p>Collaborations étroites avec "PSA, LIEBHERR, JET AVIATION" et d'autres entreprises de premier plan</p>
+                                        <p>Collaborations étroites avec "STELLANTIS, LIEBHERR, JET AVIATION" et d'autres entreprises de premier plan</p>
                                     </div>
                                     <div class="atout-image">
                                         <img src="images/metiers/pexels-fauxels-3184291.jpg" alt="Partenariat industriel">
