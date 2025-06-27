@@ -598,7 +598,7 @@
                     <div class="contact-card">
                         <i class="fas fa-envelope"></i>
                         <h3>Email</h3>
-                        <p><a href="mailto:ce.0680048Y@ac-strasbourg.fr">ce.0680048Y@ac-strasbourg.fr</a></p>
+                        <p><a href="mailto:ce.0680048Y@ac-strasbourg.fr"> ce.0680066c@ac-strasbourg.fr</a></p>
                     </div>
                     
                     <div class="contact-card">

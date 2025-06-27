@@ -18,17 +18,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
     
-    // Vérification simple (pour ce projet)
-    // En production, utilisez une table d'utilisateurs et des mots de passe hachés
-    if ($username === 'admin' && $password === 'admin123') {
-        // Connexion réussie
-        $_SESSION['admin'] = true;
+    try {
+        // Recherche de l'utilisateur dans la base de données
+        $stmt = $db->prepare("SELECT id, username, password_hash, role, active FROM admin_users WHERE username = :username AND active = 1");
+        $stmt->execute([':username' => $username]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
         
-        // Redirection vers la page d'administration principale
-        header('Location: actualites-admin.php');
-        exit;
-    } else {
-        $error = "Nom d'utilisateur ou mot de passe incorrect";
+        // Vérification du mot de passe
+        if ($user && password_verify($password, $user['password_hash'])) {
+            // Connexion réussie
+            $_SESSION['admin'] = true;
+            $_SESSION['admin_id'] = $user['id'];
+            $_SESSION['admin_username'] = $user['username'];
+            $_SESSION['admin_role'] = $user['role'];
+            
+            // Mise à jour de la date de dernière connexion
+            $stmt = $db->prepare("UPDATE admin_users SET last_login = NOW() WHERE id = :id");
+            $stmt->execute([':id' => $user['id']]);
+            
+            // Redirection vers la page d'administration principale
+            header('Location: actualites-admin.php');
+            exit;
+        } else {
+            $error = "Nom d'utilisateur ou mot de passe incorrect";
+        }
+    } catch (PDOException $e) {
+        $error = "Erreur de connexion à la base de données";
+        error_log("Erreur login: " . $e->getMessage());
     }
 }
 ?>

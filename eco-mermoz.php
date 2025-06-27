@@ -611,7 +611,7 @@
                                     <i class="fas fa-chevron-down accordion-icon"></i>
                                 </div>
                                 <div class="accordion-content">
-                                    <p>Le projet est de créer une mare pour les espèces vivant dans un milieu humide. L'association Bufo conseille le lycée. Les travaux, qui débuteront en 2024, seront exécutés par l'entreprise Nature-Techniques. Le projet, s'inscrivant dans le Programme Régional d'Actions en faveur des Mares (PRAM), sera soutenu financièrement par l'Agence de l'Eau Rhin-Meuse.</p>
+                                    <p>Le projet est de créer une mare pour les espèces vivant dans un milieu humide. L'association Bufo conseille le lycée. Les travaux, qui débuteront en 2025, seront exécutés par l'entreprise Nature-Techniques. Le projet, s'inscrivant dans le Programme Régional d'Actions en faveur des Mares (PRAM), sera soutenu financièrement par l'Agence de l'Eau Rhin-Meuse.</p>
                                     <p>Un projet pédagogique parallèle pour les éco-délégués a été mis en place pour accompagner cette démarche, avec la Petite Camargue Alsacienne dans le cadre du projet « Life Biodiv'Est » organisé par la Région Grand-Est et l'Ariena.</p>
                                 </div>
                             </div>
@@ -715,11 +715,12 @@
                             <div class="accordion-item">
                                 <div class="accordion-header">
                                     <i class="fas fa-bottle-water"></i>
-                                    <span>Distribution de gourdes métalliques</span>
+                                    <span>Distribution de gourdes métalliques et d'ecocups</span>
                                     <i class="fas fa-chevron-down accordion-icon"></i>
                                 </div>
                                 <div class="accordion-content">
-                                    <p>Un projet de distribution de gourdes métalliques a été lancé au lycée afin de réduire l'usage du plastique. Il est porté par une classe de Bac Pro Commerce et les éco-délégués, qui ont distribué 500 gourdes pendant l'année 2023/2024, à l'occasion d'un tournoi sportif et de la semaine écocitoyenne.</p>
+                                    <p>Un projet de distribution de gourdes métalliques a été lancé au lycée afin de réduire l'usage du plastique. Il est porté par une classe de Bac Pro Commerce et les éco-délégués, qui ont distribué 500 gourdes pendant l'année 2023/2024, à l'occasion d'un tournoi sportif et de la semaine écocitoyenne.La distribution d'ecocups
+est aussi à l'étude.</p>
                                 </div>
                             </div>
                             
@@ -883,7 +884,7 @@
                                         <li>viandes</li>
                                     </ul>
                                     <p>Elle souhaite cependant augmenter la quantité de produits issus de l'agriculture biologique et locale, en multipliant les partenariats auprès des producteurs et des éleveurs locaux. Les éco-délégués soutiennent cette démarche. L'objectif est de passer de passer de 30 à 50% de produits bio/locaux en deux ans.</p>
-                                    <p>La mise en place d'une filière de pain local est en étude avec Saint-Louis Agglomération et Ecooparc.</p>
+                                    <p>Une filière de pain local est testée en partenariat avec Saint-Louis Agglomération et Ecooparc depuis 2024/2025.</p>
                                 </div>
                             </div>
                             
@@ -895,8 +896,7 @@
                                     <i class="fas fa-chevron-down accordion-icon"></i>
                                 </div>
                                 <div class="accordion-content">
-                                    <p>Les éco-délégués ont travaillé sur le projet d'agrandissement du parc à vélos et de son aménagement (station de réparation).</p>
-                                    <p>Via son programme Alvéole Plus, la Fédération des Usagers de la Bicyclette (FUB) vont financer une partie du projet. Les travaux, qui seront réalisés par l'entreprise Inotechna, sont prévus en 2024.</p>
+                                    <p>Le comité de pilotage travaille actuellement sur le projet.</p>
                                 </div>
                             </div>
                             
@@ -908,7 +908,7 @@
                                     <i class="fas fa-chevron-down accordion-icon"></i>
                                 </div>
                                 <div class="accordion-content">
-                                    <p>La construction de ce gymnase, prévue en 2024/2025, est une opération organisée par la Région Grand-Est. Les professeurs de sport et les éco-délégués travaillent sur la rédaction du cahier des charges.</p>
+                                    <p>La construction de ce gymnase, prévue en 2025/2026, est une opération organisée par la Région Grand-Est. Les professeurs de sport et les éco-délégués travaillent sur la rédaction du cahier des charges.</p>
                                 </div>
                             </div>
                         </div>
@@ -1192,12 +1192,12 @@
                             <div class="accordion-item">
                                 <div class="accordion-header">
                                     <i class="fas fa-bicycle"></i>
-                                    <span>Atelier de réparation de vélos</span>
+                                    <span>Atelier de réparation de vélos et stand d'information</span>
                                     <i class="fas fa-chevron-down accordion-icon"></i>
                                 </div>
                                 <div class="accordion-content">
                                     <p>Un atelier de réparation de vélos a été proposé lors des deux dernières semaines écocitoyenne.</p>
-                                    <p>La première fois, dirigé par La maison du vélo Alsace et la seconde par Les Tisserands d'EBN.</p>
+                                    <p>La première fois, dirigé par La maison du vélo Alsace, la seconde par Les Tisserands d'EBN et la dernière fois par Osez Vélo.</p>
                                 </div>
                             </div>
                             
@@ -1225,7 +1225,7 @@
                                 <div class="accordion-content">
                                     <p>Ces animations ont pour but d'associer les deux axes traités dans la thématique « Santé », à savoir le sport et l'alimentation.</p>
                                     <p>Par exemple, un petit déjeuner sportif a été organisé par les éco-délégués pour une classe de seconde composée d'élèves en situation de handicap, à l'occasion de leur rencontre avec un athlète paralympique.</p>
-                                    <p>Une animation « Vélo smoothies » est également proposé pendant la semaine écocitoyenne. Le but étant de pédaler sur un vélo équipé d'un mixeur de fruits (préalablement sélectionnés avec un producteur local). Cette animation est organisée en partenariat avec Saint-Louis Agglomération et l'Agence Locale de la Maîtrise de l'Energie (ALME). Une classe de 2nde professionnelle a participé à la sélection et la préparation des fruits.</p>
+                                    <p>Une animation « Vélo smoothies » est également proposée pendant les evénements écocitoyens depuis 2024. Le but étant de pédaler sur un vélo équipé d'un mixeur de fruits (préalablement sélectionnés avec un producteur local). Cette animation a été organisée la première année en partenariat avec Saint-Louis Agglomération et l'Agence Locale de la Maîtrise de l'Energie (ALME), la seconde avec l'EPHAD Blanche de Castille. Une classe de 2nde professionnelle a participé à la sélection et la préparation des fruits.</p>
                                 </div>
                             </div>
                             

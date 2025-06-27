@@ -300,6 +300,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </li>
             <li class="nav-item">
                 <a href="menu-admin.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'menu-admin.php' ? 'active' : '' ?>">Menus</a>
+                <a href="manage-users.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'manage-users.php' ? 'active' : '' ?>">Utilisateurs</a>
             </li>
             <li class="nav-item">
                 <a href="voix-apprentis-admin.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'voix-apprentis-admin.php' ? 'active' : '' ?>">Voix des apprentis</a>

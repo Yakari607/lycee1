@@ -20,7 +20,7 @@
             <span>Retour à l'accueil</span>
         </a>
 
-        <section class="formation-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/formations/pexels-thisisengineering-3913025.jpg');">
+        <section class="formation-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/formations/pexels-thisisengineering-3913025.jpg');">
             <div class="hero-content">
                 <h1>Enseignements Professionnels</h1>
                 <p>Découvrez nos formations qualifiantes adaptées au monde du travail dans divers secteurs</p>
