@@ -26,8 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         // Vérification du mot de passe
         if ($user && password_verify($password, $user['password_hash'])) {
-            // Connexion réussie
-            $_SESSION['admin'] = true;
+        // Connexion réussie
+        $_SESSION['admin'] = true;
             $_SESSION['admin_id'] = $user['id'];
             $_SESSION['admin_username'] = $user['username'];
             $_SESSION['admin_role'] = $user['role'];
@@ -35,12 +35,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Mise à jour de la date de dernière connexion
             $stmt = $db->prepare("UPDATE admin_users SET last_login = NOW() WHERE id = :id");
             $stmt->execute([':id' => $user['id']]);
-            
-            // Redirection vers la page d'administration principale
-            header('Location: actualites-admin.php');
-            exit;
-        } else {
-            $error = "Nom d'utilisateur ou mot de passe incorrect";
+        
+        // Redirection vers la page d'administration principale
+        header('Location: actualites-admin.php');
+        exit;
+    } else {
+        $error = "Nom d'utilisateur ou mot de passe incorrect";
         }
     } catch (PDOException $e) {
         $error = "Erreur de connexion à la base de données";

@@ -1,6 +1,7 @@
 <?php
 // Connexion à la base de données
 require_once 'includes/db_connect.php';
+require_once 'includes/actualite-functions.php';
 
 // Récupération de l'ID de l'actualité
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
@@ -89,7 +90,7 @@ try {
                 <div class="actualite-content-wrapper">
                     <div class="container">
                     <div class="actualite-text">
-                        <?php echo nl2br(htmlspecialchars($actualite['contenu'])); ?>
+                        <?php echo process_actualite_content($actualite['contenu'], $actualite['id']); ?>
                         </div>
                     </div>
                 </div>

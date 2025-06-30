@@ -363,6 +363,53 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(updateSlider, 100);
         });
     }
+
+    // === Carrousel d'images actualité ===
+    var carousel = document.querySelector('.actualite-carousel');
+    if (!carousel) return;
+    var slides = carousel.querySelectorAll('.carousel-slide');
+    var prevBtn = carousel.querySelector('.carousel-prev');
+    var nextBtn = carousel.querySelector('.carousel-next');
+    var pagination = carousel.querySelector('.carousel-pagination');
+    var current = 0;
+    var total = slides.length;
+
+    // Crée la pagination
+    if (pagination) {
+        for (let i = 0; i < total; i++) {
+            let dot = document.createElement('span');
+            dot.className = 'carousel-pagination-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('data-index', i);
+            dot.addEventListener('click', function() {
+                showSlide(i);
+            });
+            pagination.appendChild(dot);
+        }
+    }
+
+    function showSlide(idx) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === idx);
+        });
+        var dots = carousel.querySelectorAll('.carousel-pagination-dot');
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === idx);
+        });
+        current = idx;
+    }
+
+    function prevSlide() {
+        showSlide((current - 1 + total) % total);
+    }
+    function nextSlide() {
+        showSlide((current + 1) % total);
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+
+    // Affiche la première slide
+    showSlide(0);
 });
 
 // Animation des nombres

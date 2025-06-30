@@ -55,7 +55,8 @@ if (strpos($_SERVER['PHP_SELF'], '/admin/') !== false) {
                         <li role="menuitem"><a href="<?php echo $base_path; ?>index.php#contact">Partenariats</a></li>
                     </ul>
                 </li>
-                <li><a href="<?php echo $base_path; ?>restaurant-scolaire.php">Cantine</a></li>                <li><a href="<?php echo $base_path; ?>voix-apprentis.php">La voix des apprentis</a></li>
+                <li><a href="<?php echo $base_path; ?>restaurant-scolaire.php">Restaurant scolaire</a></li>
+                <li><a href="<?php echo $base_path; ?>voix-apprentis.php">La voix des apprentis</a></li>
                 <li><a href="<?php echo $base_path; ?>cdi.php">CDI</a></li>
                 <li><a href="<?php echo $base_path; ?>eco-mermoz.php">Éco-Mermoz</a></li>
             </ul>
