@@ -16,10 +16,36 @@ if (isset($_POST['save_actualite'])) {
     $titre = $_POST['titre'] ?? '';
     $contenu = $_POST['contenu'] ?? '';
     $date_publication = $_POST['date_publication'] ?? '';
-    $image = $_POST['image'] ?? '';
     $categorie = $_POST['categorie'] ?? '';
     $is_important = isset($_POST['is_important']) ? 1 : 0;
     $actualite_id = $_POST['actualite_id'] ?? '';
+    
+    // Gestion de l'image de couverture
+    $image = $_POST['image_path'] ?? '';
+    $upload_dir = '../images/actualites/';
+    if (!is_dir($upload_dir)) {
+        mkdir($upload_dir, 0777, true);
+    }
+    if (isset($_FILES['image_couverture']) && $_FILES['image_couverture']['error'] !== UPLOAD_ERR_NO_FILE) {
+        $file = $_FILES['image_couverture'];
+        $ext = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+        $allowed = ['jpg','jpeg','png','gif','webp'];
+        if (in_array($ext, $allowed)) {
+            $new_name = uniqid('actu_') . '.' . $ext;
+            $dest = $upload_dir . $new_name;
+            if (move_uploaded_file($file['tmp_name'], $dest)) {
+                // Supprimer l'ancienne image si on modifie
+                if (!empty($image) && file_exists('../' . $image)) {
+                    @unlink('../' . $image);
+                }
+                $image = 'images/actualites/' . $new_name;
+            } else {
+                $error_message = "Erreur lors de l'upload de l'image de couverture.";
+            }
+        } else {
+            $error_message = "Format d'image non autorisé (JPG, PNG, GIF, WEBP).";
+        }
+    }
     
     try {
         if (!empty($actualite_id)) {
@@ -126,9 +152,10 @@ include 'header.php';
 <?php endif; ?>
 
 <h2><?= $actualite_to_edit ? 'Modifier l\'actualité' : 'Ajouter une nouvelle actualité' ?></h2>
-<form method="post" action="" class="upload-form">
+<form method="post" action="" class="upload-form" enctype="multipart/form-data">
     <?php if ($actualite_to_edit): ?>
         <input type="hidden" name="actualite_id" value="<?= $actualite_to_edit['id'] ?>">
+        <input type="hidden" name="image_path" value="<?= $actualite_to_edit['image'] ?? '' ?>">
     <?php endif; ?>
     
     <div class="form-group">
@@ -182,8 +209,17 @@ include 'header.php';
     </div>
     
     <div class="form-group">
-        <label for="image">URL de l'image</label>
-        <input type="text" id="image" name="image" value="<?= $actualite_to_edit['image'] ?? '' ?>" placeholder="images/actualites/exemple.jpg">
+        <label for="image_couverture">Image de couverture</label>
+        <input type="file" id="image_couverture" name="image_couverture" accept="image/jpeg,image/png,image/gif,image/webp">
+        <div class="form-help">
+            <small>Formats acceptés: JPG, PNG, GIF, WEBP. Taille max: 5 Mo. Dimension recommandée: 800x400px</small>
+        </div>
+        <?php if (isset($actualite_to_edit) && !empty($actualite_to_edit['image'])): ?>
+            <div class="file-preview">
+                <p>Image actuelle :</p>
+                <img src="../<?= $actualite_to_edit['image'] ?>" alt="Image de couverture" style="max-width: 300px; max-height: 150px; border-radius: 6px;">
+            </div>
+        <?php endif; ?>
     </div>
     
     <div class="form-group">

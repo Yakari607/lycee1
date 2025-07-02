@@ -812,18 +812,22 @@
 }
 
 .contact-container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
+    overflow-x: auto;
 }
 
 .contact-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: nowrap;
     gap: 2rem;
     margin-top: 2rem;
+    min-width: 1400px;
 }
 
 .contact-card {
+    min-width: 340px;
+    flex: 1 0 0;
     background: var(--white);
     border-radius: var(--border-radius);
     padding: 2rem;
@@ -864,6 +868,14 @@
 .contact-card a:hover {
     color: var(--accent-color);
     text-decoration: underline;
+}
+
+.contact-card a[href^="mailto:"] {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 100%;
 }
 
 .map-link {
@@ -908,8 +920,21 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .contact-info {
-        grid-template-columns: 1fr;
+        min-width: 900px;
+    }
+    .contact-card {
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-info {
+        flex-direction: column;
+        min-width: 0;
+    }
+    .contact-card {
+        min-width: 0;
     }
 } 

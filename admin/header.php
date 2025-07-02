@@ -309,6 +309,9 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <a href="plaquettes-admin.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'plaquettes-admin.php' ? 'active' : '' ?>">Plaquettes</a>
             </li>
             <li class="nav-item">
+                <a href="videos-youtube-admin.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'videos-youtube-admin.php' ? 'active' : '' ?>">Vidéos YouTube</a>
+            </li>
+            <li class="nav-item">
                 <a href="logout.php" class="nav-link btn-danger">Déconnexion</a>
             </li>
         </ul>

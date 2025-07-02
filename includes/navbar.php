@@ -56,6 +56,7 @@ if (strpos($_SERVER['PHP_SELF'], '/admin/') !== false) {
                     </ul>
                 </li>
                 <li><a href="<?php echo $base_path; ?>restaurant-scolaire.php">Restaurant scolaire</a></li>
+                <li><a href="<?php echo $base_path; ?>videos-youtube.php">Vidéos YouTube</a></li>
                 <li><a href="<?php echo $base_path; ?>voix-apprentis.php">La voix des apprentis</a></li>
                 <li><a href="<?php echo $base_path; ?>cdi.php">CDI</a></li>
                 <li><a href="<?php echo $base_path; ?>eco-mermoz.php">Éco-Mermoz</a></li>

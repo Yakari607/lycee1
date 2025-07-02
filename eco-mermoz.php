@@ -475,6 +475,19 @@
                                     <p>Organisation regroupant le COPIL, les éco-délégués et l'ensemble des acteurs impliqués dans le projet.</p>
                                 </div>
                             </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <i class="fas fa-globe-europe"></i>
+                                    <span>Label  édusanté</span>
+                                    <i class="fas fa-chevron-down accordion-icon"></i>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Le lycée a obtenu en juin 2025 un nouveau label, Edusanté, récompensant les nombreuses actions menées pour favoriser notamment l'alimentation saine et la pratique d'activités physiques.</p>
+                                    <img src="images/metiers/thumbnail_Label_Edusante.png" alt="Label Edusanté" style="width: 120px; height: auto; display: block; margin: 1rem 0;">
+
+                                </div>
+                            </div>
                             
                             <!-- Label E3D -->
                             <div class="accordion-item">
@@ -590,6 +603,16 @@
                                     <p>Il s'agit d'abord de permettre le développement de l'hirondelle, espèce menacée à cause de l'urbanisation. De plus, elle participe à la biodiversité tout en nous protégeant des moustiques tigres, par exemple.</p>
                                 </div>
                             </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <i class="fas fa-dove"></i>
+                                    <span>Alimentation des oiseaux</span>
+                                    <i class="fas fa-chevron-down accordion-icon"></i>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Les éco-délégués se chargent de distribuer les graines aux oiseaux pendant la période nécessaire (Mi-novembre à fin mars).</p>                                </div>
+                            </div>
                             
                             <!-- Matériel pour l'agent paysagiste -->
                             <div class="accordion-item">
@@ -637,6 +660,21 @@
                                     </ul>
                                 </div>
                             </div>
+
+                              <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <i class="fas fa-mountain"></i>
+                                    <span>Protection des orangs-outans</span>
+                                    <i class="fas fa-chevron-down accordion-icon"></i>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>
+Depuis l'année 2024/25, le lycée est en partenariat avec BOS (Borneo Orangutan Survival) Foundation, qui œuvre pour la protection des orangs-outans de Borneo mais aussi d'autres causes comme la déforestation.
+Une vaste campagne de sensibilisation et d'information a été proposée toute au long de l'année ainsi qu'une conférence donnée en février 2025 par le directeur Jamartin Sihite, venu d'Indonésie, et Nadine Berezak-Lazarus, qui représente l'ONG en France.</p>
+<img src="images/metiers/thumbnail_Logo BOS.png" alt="Borneo Orangutan Survival Foundation" style="width: 120px; height: auto; display: block; margin: 1rem 0;">
+                                </div>
+                            </div>
+                            
                             
                             <!-- Lieux de ressourcement -->
                             <div class="accordion-item">
@@ -746,6 +784,20 @@ est aussi à l'étude.</p>
                                 </div>
                                 <div class="accordion-content">
                                     <p>Une boîte à mégots a été installée à l'entrée du lycée, des cendriers portatifs sont distribués aux élèves. L'objectif est d'inciter les élèves a ne plus jeter par terre leurs mégots, devant et aux alentours du lycée. De plus, des campagnes de sensibilisation sur l'effet du tabagisme sur la santé sont organisées. Les infirmières du lycée, la PEEP (Association des parents d'élèves) ont participé à cette opération. La Jeune Chambre Economique de Saint-Louis en est partenaire.</p>
+                                </div>
+                            </div>
+
+                               <!-- Système de gestion des mégots -->
+                               <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <i class="fas fa-smoking-ban"></i>
+                                    <span>lutte contre contre la pollution des plages</span>
+                                    <i class="fas fa-chevron-down accordion-icon"></i>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Une classe de Terminale Pro Commerce est partie à Marseille pour mener une opération de nettoyage et d'étude des déchets sur les plages en mai 2025, dans le cadre de l'opération "Plastique à la loupe" lancée par l'académie et Tara Océan.
+                                    Il faut aussi ajouté le logo ci-joint.</p>
+<img src="images/metiers/thumbnail_LOGO_TARA.png" alt="Tara Océan - lutte contre la pollution des plages" style="width: 120px; height: auto; display: block; margin: 1rem 0;">
                                 </div>
                             </div>
                             
@@ -887,6 +939,20 @@ est aussi à l'étude.</p>
                                     <p>Une filière de pain local est testée en partenariat avec Saint-Louis Agglomération et Ecooparc depuis 2024/2025.</p>
                                 </div>
                             </div>
+
+
+<!-- Augmentation des produits bio/locaux -->
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <i class="fas fa-leaf"></i>
+                                    <span>Participation à la commission des menus</span>
+                                    <i class="fas fa-chevron-down accordion-icon"></i>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Les éco-délégués se relayent pour assister à chacune des commissions des menus, ce qui permet aussi de discuter des projets menés avec la cuisine.</p>
+                                </div>
+                            </div>
+
                             
                             <!-- Agrandissement parc à vélos -->
                             <div class="accordion-item">
@@ -1035,6 +1101,23 @@ est aussi à l'étude.</p>
                                     <p>Les ateliers, proposés par les éco-délégués et les partenaires extérieurs, ont pour but de mettre en valeur les actions portées au lycée à travers les thématiques suivantes : renaturation, gestion des ressources, de l'énergie et des déchets, la santé et bien-être.</p>
                                 </div>
                             </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Printemps écocitoyens</span>
+                                    <i class="fas fa-chevron-down accordion-icon"></i>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>La première année, nous avions organisé une journée écocitoyenne, le public furent des classes de maternelles. Les années suivantes, nous avons organisé la Semaine écocitoyenne (SEC), qui ciblait l'ensemble des élèves. En 2025, notre cible est restée la même, tous les élèves, mais le concept a changé et l'événement est donc devenu le Printemps Ecocitoyen (PEC). Le contenu n'a pas changé. Ainsi, des ateliers et des animations en lien avec les sujets que nous traitons furent proposés, par des éco-délégués et/ou la quinzaine de partenaires extérieurs.                                    </p>
+                                    <p>Deux changements majeurs sont à noter : la périodicité et l'organisation.
+
+Ainsi, l'événement a duré 10 semaines, pendant lesquelles des activités ont été proposées à l'ensemble des classes et ses 2400 élèves !!!</p>
+                                    <p>
+Plusieurs partenaires y participent : Petite Camargue Alsacienne, Ligue de Protection des Oiseaux, Brigade Verte, Borneo Orangutan Survival Foundation, Alter Alsace Energies, Eco-Sulting, Ecooparc, Terre des hommes Alsace, Veolia, Hop'la transition, Le rucher des Lys, la Mairie de St-Louis, St-Louis Agglomération et Osez Vélo.</p>
+                                </div>
+                            </div>
+                            
                             
                             <!-- Découverte des métiers -->
                             <div class="accordion-item">
