@@ -136,6 +136,7 @@
                     <a href="#seconde" class="formation-nav-btn" data-section="seconde">Classe de Seconde</a>
                     <a href="#general" class="formation-nav-btn active" data-section="general">Voie Générale</a>
                     <a href="#langues" class="formation-nav-btn" data-section="langues">Langues Vivantes</a>
+                    <a href="#SSS" class="formation-nav-btn" data-section="SSS">Sections sportives scolaires</a>
                     <a href="#industrie" class="formation-nav-btn" data-section="industrie">Métiers de l'Industrie</a>
                     <a href="metiers-accueil.php" class="formation-nav-btn" data-section="tertiaire">Métiers du Tertiaire</a>
                     <a href="#artisanat" class="formation-nav-btn" data-section="artisanat">Artisanat</a>
@@ -214,7 +215,7 @@
                                 <div class="filiere-header">
                                     <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                                     <h4>Bac Général</h4>
-                                    <a href="bac-general.php" class="read-more">En savoir plus sur le Bac Général</a>
+                                    <a href="bac-general.php" class="read-more">En savoir plus</a>
                                 </div>
                                 <div class="filiere-details">
                                     <h5>Spécialités proposées</h5>
@@ -232,7 +233,7 @@
                                 <div class="filiere-header">
                                     <i class="fas fa-microchip" aria-hidden="true"></i>
                                     <h4>STI2D</h4>
-                                    <a href="sti2d.php" class="read-more">En savoir plus sur STI2D</a>
+                                    <a href="sti2d.php" class="read-more">En savoir plus</a>
                                 </div>
                                 <div class="filiere-details">
                                     <h5>Sciences et Technologies de l'Industrie et du Développement Durable</h5>
@@ -248,7 +249,7 @@
                                 <div class="filiere-header">
                                     <i class="fas fa-chart-pie" aria-hidden="true"></i>
                                     <h4>STMG</h4>
-                                    <a href="bac-stmg.php" class="read-more">En savoir plus sur STMG</a>
+                                    <a href="bac-stmg.php" class="read-more">En savoir plus</a>
                                 </div>
                                 <div class="filiere-details">
                                     <h5>Sciences et Technologies du Management et de la Gestion</h5>
@@ -510,10 +511,6 @@
                                     <span>Tertiaire</span>
                                 </div>
                                 <div class="sector">
-                                    <i class="fas fa-bolt"></i>
-                                    <span>Électricité</span>
-                                </div>
-                                <div class="sector">
                                     <i class="fas fa-hand-holding-heart"></i>
                                     <span>Services</span>
                                 </div>
@@ -546,15 +543,15 @@
                 <h2 id="titre-chiffres" class="section-title">Chiffres clés</h2>
                 <div class="numbers-grid" role="group" aria-label="Statistiques du lycée">
                     <div class="number-card" role="presentation">
-                        <strong class="number" aria-label="mille deux cents">1200</strong>
+                        <strong class="number" aria-label="mille deux cents">2360</strong>
                         <span>Élèves</span>
                     </div>
                     <div class="number-card" role="presentation">
-                        <strong class="number" aria-label="cent">100</strong>
+                        <strong class="number" aria-label="cent">250</strong>
                         <span>Enseignants</span>
                     </div>
                     <div class="number-card" role="presentation">
-                        <strong class="number" aria-label="quatre-vingt-quinze pourcent">95</strong>
+                        <strong class="number" aria-label="quatre-vingt-quinze pourcent">97</strong>
                         <span>% de réussite au bac</span>
                     </div>
                 </div>
@@ -622,11 +619,14 @@
                     <p>&copy; 2024 Lycée Jean-Mermoz - Saint-Louis</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#contact">Mentions légales</a>
-                    <a href="#contact">Accessibilité</a>
+                    <a href="mentions-legales.php">Mentions légales</a>
+                    <a href="accessibilite.php">Accessibilité</a>
                     <a href="#contact">Plan du site</a>
                     <a href="https://lyceemermoz-my.sharepoint.com/" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-cloud"></i> SharePoint
+                    </a>
+                    <a href="https://www.office.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-th"></i> Microsoft 365
                     </a>
                     <a href="admin/login.php">Administration</a>
                 </div>

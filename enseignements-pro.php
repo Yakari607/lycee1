@@ -416,8 +416,8 @@
                     <p>&copy; 2024 Lycée Jean-Mermoz - Saint-Louis</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#contact">Mentions légales</a>
-                    <a href="#contact">Accessibilité</a>
+                    <a href="mentions-legales.php">Mentions légales</a>
+                    <a href="accessibilite.php">Accessibilité</a>
                     <a href="#contact">Plan du site</a>
                     <a href="https://lyceemermoz-my.sharepoint.com/" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-cloud"></i> SharePoint

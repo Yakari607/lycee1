@@ -52,7 +52,7 @@
                     
                     <div class="timeline-title">
                         <h4>Le parcours en un coup d'œil</h4>
-                        <p>Découvrez les étapes clés de votre formation en CAP Electricien</p>
+                        <p>Découvrez les étapes clés de votre formation en CAP Équipier Polyvalent du Commerce</p>
                     </div>
                     
                     <div class="parcours-timeline">
@@ -66,7 +66,7 @@
                                     <div class="timeline-box" id="box-1">
                                         <h4>Conditions d'accès</h4>
                                         <ul>
-                                            <li>3<sup>ème</sup> générale, 3<sup>ème</sup> prépa-métiers</li> et 3<sup>ème</sup> </li>
+                                            <li>3<sup>ème</sup> générale, 3<sup>ème</sup> prépa-métiers</li> et 3<sup>ème SEGPA</sup> </li>
                                             <li>Élèves issus d'un CAP</li>
                                         </ul>
                                     </div>
@@ -88,43 +88,17 @@
                                 <div class="timeline-step">
                                     <div class="timeline-bubble" id="bubble-3">3</div>
                                     <div class="timeline-box" id="box-3">
-                                        <h4>Certifications</h4>
-                                        <ul>
-                                            <li>Habilitation électrique</li>
-                                            <li>Sécurité</li>
-                                            <li>Domotique</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="timeline-track track-bottom">
-                                <div class="timeline-line"></div>
-                                
-                                <!-- Étape 4 -->
-                                <div class="timeline-step">
-                                    <div class="timeline-bubble" id="bubble-4">4</div>
-                                    <div class="timeline-box" id="box-4">
-                                        <h4>En fin de 1<sup>ère</sup></h4>
-                                        <p>Obtention d'une Attestation de réussite intermédiaire</p>
-                                    </div>
-                                </div>
-                                
-                                <!-- Étape 5 -->
-                                <div class="timeline-step">
-                                    <div class="timeline-bubble" id="bubble-5">5</div>
-                                    <div class="timeline-box" id="box-5">
                                         <h4>14 sem. de stages</h4>
                                         <p>Une formation qui s'appuie sur une réelle immersion en entreprise</p>
                                     </div>
                                 </div>
                                 
-                                <!-- Étape 6 -->
+                                <!-- Étape 4 -->
                                 <div class="timeline-step">
-                                    <div class="timeline-bubble" id="bubble-6">6</div>
-                                    <div class="timeline-box" id="box-6">
+                                    <div class="timeline-bubble" id="bubble-4">4</div>
+                                    <div class="timeline-box" id="box-4">
                                         <h4>Un CAP...</h4>
-                                        <p>Obtention d'un CAPfessionnel Electricien à la fin de la 3<sup>ème</sup> année</p>
+                                        <p>Obtention d'un CAP Équipier Polyvalent du Commerce à la fin de la 3<sup>ème</sup> année</p>
                                     </div>
                                 </div>
                             </div>
@@ -189,8 +163,8 @@
                                 <p>Le Diplôme du CAP EPC est un diplôme professionnel qui permet de se présenter sur le marché du travail.</p>
                             </div>
                             <div class="apres-bac-item">
-                                <h4>2- Mention Complémentaire</h4>
-                                <p>Il est également possible de compléter sa formation avec une mention complémentaire Assistance, Conseil, Vente à distance.</p>
+                                <h4>2- Certificat de spécialisation</h4>
+                                <p>Il est également possible de compléter sa formation avec un certificat de spécialisation : Assistance, Conseil, Vente à distance.</p>
                             </div>
                             <div class="apres-bac-item">
                                 <h4>3- Bac Pro</h4>
@@ -208,7 +182,7 @@
                 <div class="hebergement-section">
                     <h3><i class="fas fa-home"></i> Hébergement</h3>
                     <div class="hebergement-content">
-                        <p>Le lycée Jean Mermoz possède un centre d'hébergement mixte.</p>
+                        <p>Le lycée Jean-Mermoz possède un centre d'hébergement mixte.</p>
                         <h4>Conditions d'hébergement</h4>
                         <ul>
                             <li>L'internat est ouvert du lundi matin au vendredi matin.</li>

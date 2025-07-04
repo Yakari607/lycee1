@@ -246,15 +246,15 @@
                         
                         <div class="slideshow-container">
                             <div class="slideshow-slide">
-                                <img src="images/cdi/cdi-photo-1.jpg" alt="Vue du CDI - espace de lecture">
+                                <img src="images/batiments/WhatsApp Image 2025-07-03 at 11.23.12 (2).jpeg" alt="Vue du CDI - espace de lecture">
                             </div>
                             
                             <div class="slideshow-slide">
-                                <img src="images/cdi/cdi-photo-2.jpg" alt="Vue du CDI - postes informatiques">
+                                <img src="images/batiments/WhatsApp Image 2025-07-03 at 11.23.12.jpeg" alt="Vue du CDI - postes informatiques">
                             </div>
                             
                             <div class="slideshow-slide">
-                                <img src="images/cdi/cdi-photo-3.jpg" alt="Vue du CDI - rayonnages">
+                                <img src="images/batiments/WhatsApp Image 2025-07-03 at 11.23.12 (1).jpeg" alt="Vue du CDI - rayonnages">
                             </div>
                             
                             <button class="slideshow-prev"><i class="fas fa-chevron-left"></i></button>
@@ -313,8 +313,8 @@
                     <p>&copy; 2024 Lycée Jean-Mermoz - Saint-Louis</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#">Mentions légales</a>
-                    <a href="#">Accessibilité</a>
+                    <a href="mentions-legales.php">Mentions légales</a>
+                    <a href="accessibilite.php">Accessibilité</a>
                     <a href="#">Plan du site</a>
                 </div>
             </div>

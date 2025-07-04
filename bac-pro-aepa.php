@@ -19,7 +19,7 @@
             <span>Retour aux formation </span>
         </a>
 
-        <section class="formation-hero" style="background-image: url('images/formations/pexels-rdne-7648055.jpg');">
+        <section class="formation-hero" style="background-image: url('images/metiers/pexels-matthiaszomer-339620.jpg');">
             <div class="hero-content">
                 <h1>BAC PRO AEPA</h1>
                 <p>Animation-Enfance et Personnes Agées</p>
@@ -268,8 +268,8 @@
                     <p>&copy; 2024 Lycée Jean-Mermoz - Saint-Louis</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#">Mentions légales</a>
-                    <a href="#">Accessibilité</a>
+                    <a href="mentions-legales.php">Mentions légales</a>
+                    <a href="accessibilite.php">Accessibilité</a>
                     <a href="#">Plan du site</a>
                     <a href="https://lyceemermoz-my.sharepoint.com/" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-cloud"></i> SharePoint

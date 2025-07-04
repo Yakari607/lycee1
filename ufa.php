@@ -339,8 +339,8 @@
                                 </div>
                                 
                                 <div class="parcoursup-card">
-                                    <div class="parcoursup-status apprentissage">
-                                        <i class="fas fa-briefcase"></i>
+                                    <div class="parcoursup-status">
+                                        <i class="fas fa-graduation-cap"></i>
                                     </div>
                                     <div class="parcoursup-header">
                                         <div class="parcoursup-title">
@@ -362,10 +362,6 @@
                                             <div class="parcoursup-detail">
                                                 <i class="fas fa-user-graduate"></i>
                                                 <span>Niveau 5</span>
-                                            </div>
-                                            <div class="parcoursup-detail">
-                                                <i class="fas fa-briefcase"></i>
-                                                <span>Apprentissage</span>
                                             </div>
                                         </div>
                                         <a href="bts-mco.php" class="parcoursup-action">Découvrir</a>
@@ -403,8 +399,8 @@
                                 </div>
                                 
                                 <div class="parcoursup-card">
-                                    <div class="parcoursup-status apprentissage">
-                                        <i class="fas fa-briefcase"></i>
+                                    <div class="parcoursup-status">
+                                        <i class="fas fa-graduation-cap"></i>
                                     </div>
                                     <div class="parcoursup-header">
                                         <div class="parcoursup-title">
@@ -428,18 +424,14 @@
                                                 <i class="fas fa-user-graduate"></i>
                                                 <span>Niveau 5</span>
                                             </div>
-                                            <div class="parcoursup-detail">
-                                                <i class="fas fa-briefcase"></i>
-                                                <span>Apprentissage</span>
-                                            </div>
                                         </div>
                                         <a href="bts-tm.php" class="parcoursup-action">Découvrir</a>
                                     </div>
                                 </div>
                                 
                                 <div class="parcoursup-card">
-                                    <div class="parcoursup-status apprentissage">
-                                        <i class="fas fa-briefcase"></i>
+                                    <div class="parcoursup-status">
+                                        <i class="fas fa-graduation-cap"></i>
                                     </div>
                                     <div class="parcoursup-header">
                                         <div class="parcoursup-title">
@@ -461,10 +453,6 @@
                                             <div class="parcoursup-detail">
                                                 <i class="fas fa-user-graduate"></i>
                                                 <span>Niveau 5</span>
-                                            </div>
-                                            <div class="parcoursup-detail">
-                                                <i class="fas fa-briefcase"></i>
-                                                <span>Apprentissage</span>
                                             </div>
                                         </div>
                                         <a href="bts-ms.php" class="parcoursup-action">Découvrir</a>
@@ -639,8 +627,8 @@
                     <p>&copy; 2024 Lycée Jean-Mermoz - Saint-Louis</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#">Mentions légales</a>
-                    <a href="#">Accessibilité</a>
+                    <a href="mentions-legales.php">Mentions légales</a>
+                    <a href="accessibilite.php">Accessibilité</a>
                     <a href="#">Plan du site</a>
                 </div>
             </div>

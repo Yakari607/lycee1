@@ -28,10 +28,7 @@ if (strpos($_SERVER['PHP_SELF'], '/admin/') !== false) {
                     <a href="#" class="dropdown-trigger" aria-expanded="false" aria-haspopup="true" 
                        id="menu-etablissement">L'établissement</a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="menu-etablissement">
-                        <li role="menuitem"><a href="<?php echo $base_path; ?>index.php#presentation">Présentation</a></li>
-                        <li role="menuitem"><a href="<?php echo $base_path; ?>mot-proviseur.php">Mot du Proviseur</a></li>
-                        <li role="menuitem"><a href="<?php echo $base_path; ?>index.php#contact">L'équipe</a></li>
-                        <li role="menuitem"><a href="<?php echo $base_path; ?>index.php#vie-lyceenne">Nos infrastructures</a></li>
+                        <li role="menuitem"><a href="<?php echo $base_path; ?>mot-proviseur.php">Mot de la Proviseure</a></li>
                         <li role="menuitem"><a href="<?php echo $base_path; ?>cio.php">CIO</a></li>
                     </ul>
                 </li>

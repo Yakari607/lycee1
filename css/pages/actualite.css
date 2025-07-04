@@ -1064,11 +1064,13 @@ main {
 }
 
 .pdf-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--text-color);
-    margin: 0 0 0.5rem 0;
-    line-height: 1.3;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    max-width: 100%;
+    font-size: 1.1rem;
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .pdf-description {
@@ -1197,6 +1199,11 @@ main {
     .btn-pdf-download {
         justify-content: center;
         width: 100%;
+    }
+    
+    .pdf-title {
+        font-size: 0.98rem;
+        max-width: 90vw;
     }
 }
 

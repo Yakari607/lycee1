@@ -19,12 +19,13 @@ if (isset($_POST['save_meal'])) {
     $bio = isset($_POST['bio']) ? 1 : 0;
     $local = isset($_POST['local']) ? 1 : 0;
     $vegetarien = isset($_POST['vegetarien']) ? 1 : 0;
+    $point_chaud = isset($_POST['point_chaud']) ? 1 : 0;
     $meal_id = $_POST['meal_id'] ?? '';
     
     try {
         if (!empty($meal_id)) {
             // Mise à jour d'un repas existant
-            $stmt = $db->prepare("UPDATE repas SET jour_id = :jour_id, categorie_id = :categorie_id, nom = :nom, bio = :bio, local = :local, vegetarien = :vegetarien WHERE id = :id");
+            $stmt = $db->prepare("UPDATE repas SET jour_id = :jour_id, categorie_id = :categorie_id, nom = :nom, bio = :bio, local = :local, vegetarien = :vegetarien, point_chaud = :point_chaud WHERE id = :id");
             $stmt->execute([
                 ':jour_id' => $jour_id,
                 ':categorie_id' => $categorie_id,
@@ -32,25 +33,37 @@ if (isset($_POST['save_meal'])) {
                 ':bio' => $bio,
                 ':local' => $local,
                 ':vegetarien' => $vegetarien,
+                ':point_chaud' => $point_chaud,
                 ':id' => $meal_id
             ]);
             $success_message = "Repas mis à jour avec succès";
         } else {
             // Ajout d'un nouveau repas
-            $stmt = $db->prepare("INSERT INTO repas (jour_id, categorie_id, nom, bio, local, vegetarien) VALUES (:jour_id, :categorie_id, :nom, :bio, :local, :vegetarien)");
+            $stmt = $db->prepare("INSERT INTO repas (jour_id, categorie_id, nom, bio, local, vegetarien, point_chaud) VALUES (:jour_id, :categorie_id, :nom, :bio, :local, :vegetarien, :point_chaud)");
             $stmt->execute([
                 ':jour_id' => $jour_id,
                 ':categorie_id' => $categorie_id,
                 ':nom' => $nom,
                 ':bio' => $bio,
                 ':local' => $local,
-                ':vegetarien' => $vegetarien
+                ':vegetarien' => $vegetarien,
+                ':point_chaud' => $point_chaud
             ]);
             $success_message = "Repas ajouté avec succès";
         }
     } catch (PDOException $e) {
         $error_message = "Erreur lors de l'enregistrement : " . $e->getMessage();
     }
+} else {
+    // Valeurs par défaut si pas de POST
+    $jour_id = $jours[0]['id'] ?? '';
+    $categorie_id = $categories[0]['id'] ?? '';
+    $nom = '';
+    $bio = 0;
+    $local = 0;
+    $vegetarien = 0;
+    $point_chaud = 0;
+    $meal_id = '';
 }
 
 // Traitement de la suppression d'un repas
@@ -112,6 +125,24 @@ $repas = $stmt_repas->fetchAll(PDO::FETCH_ASSOC);
 
 // Inclure le header
 include 'header.php';
+
+// 2. Pré-remplir le formulaire si un plat est en édition :
+if (isset($_GET['edit_meal'])) {
+    $edit_id = (int)$_GET['edit_meal'];
+    $stmt_edit = $db->prepare("SELECT * FROM repas WHERE id = :id");
+    $stmt_edit->execute([':id' => $edit_id]);
+    $edit_meal = $stmt_edit->fetch(PDO::FETCH_ASSOC);
+    if ($edit_meal) {
+        $jour_id = $edit_meal['jour_id'];
+        $categorie_id = $edit_meal['categorie_id'];
+        $nom = $edit_meal['nom'];
+        $bio = $edit_meal['bio'];
+        $local = $edit_meal['local'];
+        $vegetarien = $edit_meal['vegetarien'];
+        $point_chaud = $edit_meal['point_chaud'];
+        $meal_id = $edit_meal['id'];
+    }
+}
 ?>
 
 <h1>Gestion des menus du restaurant scolaire</h1>
@@ -133,12 +164,12 @@ include 'header.php';
     <div class="tab-content active" id="tab-repas">
         <h2>Ajouter un nouveau repas</h2>
         <form method="post" action="" class="upload-form">
-            <input type="hidden" name="meal_id" value="">
+            <input type="hidden" name="meal_id" value="<?= htmlspecialchars($meal_id ?? '') ?>">
             <div class="form-group">
                 <label for="jour_id">Jour</label>
                 <select name="jour_id" id="jour_id" required>
                     <?php foreach ($jours as $jour): ?>
-                        <option value="<?= $jour['id'] ?>"><?= ucfirst($jour['jour']) ?></option>
+                        <option value="<?= $jour['id'] ?>" <?= ($jour['id'] == $jour_id) ? 'selected' : '' ?>><?= ucfirst($jour['jour']) ?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
@@ -146,7 +177,7 @@ include 'header.php';
                 <label for="categorie_id">Catégorie</label>
                 <select name="categorie_id" id="categorie_id" required>
                     <?php foreach ($categories as $categorie): ?>
-                        <option value="<?= $categorie['id'] ?>"><?= $categorie['nom'] ?></option>
+                        <option value="<?= $categorie['id'] ?>" <?= ($categorie['id'] == $categorie_id) ? 'selected' : '' ?>><?= $categorie['nom'] === 'Fromages & Laitages' ? 'Produit laitier' : $categorie['nom'] ?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
@@ -165,6 +196,9 @@ include 'header.php';
                     </label>
                     <label>
                         <input type="checkbox" name="vegetarien"> Végétarien
+                    </label>
+                    <label>
+                        <input type="checkbox" name="point_chaud"> Point chaud
                     </label>
                 </div>
             </div>
@@ -198,6 +232,7 @@ include 'header.php';
                     <th>Bio</th>
                     <th>Local</th>
                     <th>Végétarien</th>
+                    <th>Point chaud</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -211,12 +246,14 @@ include 'header.php';
                         <tr>
                             <td><?= $plat['id'] ?></td>
                             <td><?= ucfirst($plat['jour']) ?></td>
-                            <td><?= $plat['categorie_nom'] ?></td>
+                            <td><?= ($plat['categorie_nom'] === 'Fromages & Laitages') ? 'Produit laitier' : $plat['categorie_nom'] ?></td>
                             <td><?= $plat['nom'] ?></td>
                             <td><?= $plat['bio'] ? '<i class="fas fa-check" style="color: green;"></i>' : '<i class="fas fa-times" style="color: red;"></i>' ?></td>
                             <td><?= $plat['local'] ? '<i class="fas fa-check" style="color: green;"></i>' : '<i class="fas fa-times" style="color: red;"></i>' ?></td>
                             <td><?= $plat['vegetarien'] ? '<i class="fas fa-check" style="color: green;"></i>' : '<i class="fas fa-times" style="color: red;"></i>' ?></td>
+                            <td><?= $plat['point_chaud'] ? '<i class="fas fa-fire" style="color: orange;"></i>' : '<i class="fas fa-times" style="color: red;"></i>' ?></td>
                             <td>
+                                <a href="?edit_meal=<?= $plat['id'] ?>" class="btn btn-sm btn-warning">Modifier</a>
                                 <a href="?delete_meal=<?= $plat['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce repas ?');">Supprimer</a>
                             </td>
                         </tr>
@@ -239,7 +276,6 @@ include 'header.php';
 </div>
 
 <div class="admin-links" style="margin-top: 2rem;">
-    <a href="restaurant-admin.php" class="btn btn-secondary">Gestion des médias restaurant</a>
     <a href="../restaurant-scolaire.php" class="btn btn-secondary">Voir la page du restaurant</a>
 </div>
 

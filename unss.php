@@ -308,27 +308,26 @@
     </main>
 
     <!-- Footer -->
-    <!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-info">
-                <img src="images/logos/LOGO-UFA-MERMOZ-1.jpg" alt="Logo UFA Jean-Mermoz" class="footer-logo">
-                <p>&copy; 2024 Lycée Jean-Mermoz - Saint-Louis</p>
-            </div>
-            <div class="footer-links">
-                <a href="#">Mentions légales</a>
-                <a href="#">Accessibilité</a>
-                <a href="#">Plan du site</a>
-                <a href="admin/login.php">Administration</a>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <img src="images/logos/LOGO-UFA-MERMOZ-1.jpg" alt="Logo UFA Jean-Mermoz" class="footer-logo">
+                    <p>&copy; 2024 Lycée Jean-Mermoz - Saint-Louis</p>
+                </div>
+                <div class="footer-links">
+                    <a href="mentions-legales.php">Mentions légales</a>
+                    <a href="accessibilite.php">Accessibilité</a>
+                    <a href="#">Plan du site</a>
+                    <a href="admin/login.php">Administration</a>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<button class="theme-toggle" aria-label="Basculer le mode sombre">
-    <i class="fas fa-moon"></i>
-</button>
+    <button class="theme-toggle" aria-label="Basculer le mode sombre">
+        <i class="fas fa-moon"></i>
+    </button>
     <?php
     // Connexion à la base de données pour les plaquettes
     require_once 'includes/db_connect.php';

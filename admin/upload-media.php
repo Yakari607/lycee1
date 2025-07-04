@@ -12,6 +12,22 @@ $message = '';
 $error = '';
 $debug = '';
 
+// 1. Pré-remplir le formulaire si ?edit=ID est passé en GET
+$edit_mode = false;
+if (isset($_GET['edit'])) {
+    $edit_id = (int)$_GET['edit'];
+    $stmt = $db->prepare("SELECT * FROM medias_partage WHERE id = :id");
+    $stmt->execute([':id' => $edit_id]);
+    $edit_media = $stmt->fetch(PDO::FETCH_ASSOC);
+    if ($edit_media) {
+        $edit_mode = true;
+        $titre = $edit_media['titre'];
+        $description = $edit_media['description'];
+        $type_fichier = $edit_media['type_fichier'];
+        $media_id = $edit_media['id'];
+    }
+}
+
 // Traitement du formulaire de téléversement
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $titre = htmlspecialchars($_POST['titre'] ?? '');
@@ -129,6 +145,88 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
+// 2. Traitement de la modification si POST avec media_id
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['media_id']) && !empty($_POST['media_id'])) {
+    $media_id = (int)$_POST['media_id'];
+    $titre = htmlspecialchars($_POST['titre'] ?? '');
+    $description = htmlspecialchars($_POST['description'] ?? '');
+    $type_fichier = $_POST['type_fichier'] ?? 'pdf';
+    $nouveau_fichier = false;
+    $chemin_fichier = null;
+    if (isset($_FILES['fichier']) && $_FILES['fichier']['error'] === UPLOAD_ERR_OK) {
+        $fichier = $_FILES['fichier'];
+        $nom_fichier = $fichier['name'];
+        $tmp_path = $fichier['tmp_name'];
+        $extension = strtolower(pathinfo($nom_fichier, PATHINFO_EXTENSION));
+        $extensions_autorisees = array('pdf', 'jpg', 'jpeg', 'png', 'mp4');
+        if (in_array($extension, $extensions_autorisees)) {
+            $date = date('YmdHis');
+            $nouveau_nom = $date . '_' . uniqid() . '.' . $extension;
+            $chemin_fichier = 'uploads/medias-partage/' . $nouveau_nom;
+            $chemin_complet = '../' . $chemin_fichier;
+            if (move_uploaded_file($tmp_path, $chemin_complet)) {
+                chmod($chemin_complet, 0644);
+                $nouveau_fichier = true;
+            }
+        }
+    }
+    // Mettre à jour la base
+    if ($nouveau_fichier) {
+        // Supprimer l'ancien fichier
+        $stmt_old = $db->prepare("SELECT fichier_path FROM medias_partage WHERE id = :id");
+        $stmt_old->execute([':id' => $media_id]);
+        $old = $stmt_old->fetch(PDO::FETCH_ASSOC);
+        if ($old && file_exists('../' . $old['fichier_path'])) {
+            unlink('../' . $old['fichier_path']);
+        }
+        $stmt = $db->prepare("UPDATE medias_partage SET titre = :titre, description = :description, type_fichier = :type_fichier, fichier_path = :fichier_path WHERE id = :id");
+        $stmt->execute([
+            ':titre' => $titre,
+            ':description' => $description,
+            ':type_fichier' => $type_fichier,
+            ':fichier_path' => $chemin_fichier,
+            ':id' => $media_id
+        ]);
+    } else {
+        $stmt = $db->prepare("UPDATE medias_partage SET titre = :titre, description = :description, type_fichier = :type_fichier WHERE id = :id");
+        $stmt->execute([
+            ':titre' => $titre,
+            ':description' => $description,
+            ':type_fichier' => $type_fichier,
+            ':id' => $media_id
+        ]);
+    }
+    $_SESSION['message'] = "Média modifié avec succès.";
+    $_SESSION['message_type'] = 'success';
+    header('Location: upload-media.php');
+    exit;
+}
+
+// Suppression d'un média si ?delete=ID est passé en GET
+if (isset($_GET['delete'])) {
+    $delete_id = (int)$_GET['delete'];
+    // Récupérer le chemin du fichier pour le supprimer physiquement
+    $stmt = $db->prepare("SELECT fichier_path FROM medias_partage WHERE id = :id");
+    $stmt->execute([':id' => $delete_id]);
+    $media = $stmt->fetch(PDO::FETCH_ASSOC);
+    if ($media) {
+        $file_path = '../' . $media['fichier_path'];
+        if (file_exists($file_path)) {
+            unlink($file_path);
+        }
+        // Supprimer de la base
+        $stmt = $db->prepare("DELETE FROM medias_partage WHERE id = :id");
+        $stmt->execute([':id' => $delete_id]);
+        $_SESSION['message'] = "Média supprimé avec succès.";
+        $_SESSION['message_type'] = 'success';
+    } else {
+        $_SESSION['message'] = "Média introuvable.";
+        $_SESSION['message_type'] = 'danger';
+    }
+    header('Location: upload-media.php');
+    exit;
+}
+
 // Récupérer le message de session
 if (isset($_SESSION['message'])) {
     $message = $_SESSION['message'];
@@ -172,31 +270,34 @@ include 'header.php';
 <form action="" method="post" enctype="multipart/form-data" class="upload-form">
     <div class="form-group">
         <label for="titre">Titre:</label>
-        <input type="text" id="titre" name="titre" required>
+        <input type="text" id="titre" name="titre" required value="<?php echo $titre; ?>">
     </div>
     
     <div class="form-group">
         <label for="description">Description:</label>
-        <textarea id="description" name="description" rows="3"></textarea>
+        <textarea id="description" name="description" rows="3"><?php echo $description; ?></textarea>
     </div>
     
     <div class="form-group">
         <label for="type_fichier">Type de fichier:</label>
         <select id="type_fichier" name="type_fichier">
-            <option value="pdf">PDF</option>
-            <option value="image">Image</option>
-            <option value="video">Vidéo</option>
-            <option value="autre">Autre</option>
+            <option value="pdf" <?php echo $type_fichier === 'pdf' ? 'selected' : ''; ?>>PDF</option>
+            <option value="image" <?php echo $type_fichier === 'image' ? 'selected' : ''; ?>>Image</option>
+            <option value="video" <?php echo $type_fichier === 'video' ? 'selected' : ''; ?>>Vidéo</option>
+            <option value="autre" <?php echo $type_fichier === 'autre' ? 'selected' : ''; ?>>Autre</option>
         </select>
     </div>
     
     <div class="form-group">
         <label for="fichier">Fichier:</label>
-        <input type="file" id="fichier" name="fichier" required>
+        <input type="file" id="fichier" name="fichier">
         <small>Formats acceptés: PDF, JPG, PNG, MP4. Taille max: 20 Mo</small>
     </div>
     
+    <input type="hidden" id="media_id" name="media_id" value="<?php echo $media_id; ?>">
+    
     <button type="submit" class="btn btn-primary">Téléverser</button>
+    <a href="upload-media.php" class="btn btn-secondary">Annuler</a>
 </form>
 
 <h2>Médias partagés</h2>
@@ -225,8 +326,8 @@ include 'header.php';
             <td><?php echo date('d/m/Y H:i', strtotime($media['date_creation'])); ?></td>
             <td><?php echo $media['vues']; ?></td>
             <td>
-                <a href="edit-media.php?id=<?php echo $media['id']; ?>" class="btn btn-sm btn-warning">Modifier</a>
-                <a href="delete-media.php?id=<?php echo $media['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce média?')">Supprimer</a>
+                <a href="upload-media.php?edit=<?php echo $media['id']; ?>" class="btn btn-sm btn-warning">Modifier</a>
+                <a href="upload-media.php?delete=<?php echo $media['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce média?')">Supprimer</a>
             </td>
         </tr>
         <?php endforeach; ?>

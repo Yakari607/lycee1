@@ -424,5 +424,11 @@
             }
         }
     </style>
+
+    <div class="footer-links">
+        <a href="mentions-legales.php">Mentions légales</a>
+        <a href="accessibilite.php">Accessibilité</a>
+        <a href="#">Plan du site</a>
+    </div>
 </body>
 </html> 

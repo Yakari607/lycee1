@@ -281,7 +281,7 @@
         <section class="formation-hero" style="background-image: url('images/formations/pexels-pixabay-159740.jpg');">
             <div class="hero-content">
                 <h1>ÉCO-MERMOZ</h1>
-                <p>« Le lycée Jean-Mermoz, un modèle de développement durable ! »</p>
+                <p>" Le lycée Jean-Mermoz, un modèle de développement durable ! "</p>
             </div>
         </section>
 
@@ -1427,8 +1427,8 @@ Plusieurs partenaires y participent : Petite Camargue Alsacienne, Ligue de Prote
                     <p>&copy; 2024 Lycée Jean-Mermoz - Saint-Louis</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#">Mentions légales</a>
-                    <a href="#">Accessibilité</a>
+                    <a href="mentions-legales.php">Mentions légales</a>
+                    <a href="accessibilite.php">Accessibilité</a>
                     <a href="#">Plan du site</a>
                 </div>
             </div>

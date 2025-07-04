@@ -86,7 +86,7 @@
                             foreach ($categories as $categorie): 
                                 // Récupération des repas pour ce jour et cette catégorie
                                 $stmt_repas = $db->prepare("
-                                    SELECT nom, bio, local, vegetarien 
+                                    SELECT nom, bio, local, vegetarien, point_chaud 
                                     FROM repas 
                                     WHERE jour_id = :jour_id AND categorie_id = :categorie_id
                                 ");
@@ -97,7 +97,7 @@
                                 $repas = $stmt_repas->fetchAll(PDO::FETCH_ASSOC);
                             ?>
                                 <div class="meal-category">
-                                    <h4><?= $categorie['nom'] ?></h4>
+                                    <h4><?= $categorie['nom'] === 'Fromages & Laitages' ? 'Produit laitier' : $categorie['nom'] ?></h4>
                                     <ul class="meal-items">
                                         <?php foreach ($repas as $plat): ?>
                                             <li>
@@ -110,6 +110,9 @@
                                                 <?php endif; ?>
                                                 <?php if ($plat['vegetarien']): ?>
                                                     <span class="veggie-label">Végé</span>
+                                                <?php endif; ?>
+                                                <?php if (isset($plat['point_chaud']) && $plat['point_chaud']): ?>
+                                                    <span class="hot-label"><i class="fas fa-fire" style="color: orange;"></i> Point chaud</span>
                                                 <?php endif; ?>
                                             </li>
                                         <?php endforeach; ?>
@@ -178,8 +181,8 @@
                     <p>&copy; 2024 Lycée Jean-Mermoz - Saint-Louis</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#">Mentions légales</a>
-                    <a href="#">Accessibilité</a>
+                    <a href="mentions-legales.php">Mentions légales</a>
+                    <a href="accessibilite.php">Accessibilité</a>
                     <a href="#">Plan du site</a>
                 </div>
             </div>

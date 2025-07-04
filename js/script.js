@@ -241,6 +241,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (newsGrid && newsCards.length > 0 && sliderNavPrev && sliderNavNext) {
         let currentIndex = 0;
         
+        // Centrage automatique si 1 ou 2 actualités
+        if (newsCards.length <= 2) {
+            newsGrid.classList.add('centered');
+        } else {
+            newsGrid.classList.remove('centered');
+        }
+        
         // NOUVEAU CALCUL MOBILE - Simple et efficace
         function getVisibleCards() {
             if (window.innerWidth <= 576) {

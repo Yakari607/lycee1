@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le mot du Proviseur - Lycée Jean-Mermoz</title>
+    <title>Le mot de la Proviseure - Lycée Jean-Mermoz</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/pages/formation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -79,7 +79,7 @@
         <section class="formation-hero">
             <div class="hero-content">
                 <h1>L'Établissement</h1>
-                <p>Le mot du Proviseur</p>
+                <p>Le mot de la Proviseure</p>
             </div>
         </section>
 
@@ -88,13 +88,13 @@
                 <div class="proviseur-content">
                     <p>Le lycée polyvalent Jean Mermoz, fort de son dynamisme, est un lieu de formation, un lieu d'apprentissage et un lieu privilégié d'échanges, parfaitement ancré dans la cité, au sein de ce territoire transfrontalier.</p>
                     
-                    <p>Il est ce lieu VIVANT où l'Instruction citoyenne et l'ouverture au monde permettent l'épanouissement de chacun : chaque élève et chaque personnel trouve en son sein, sa place pleine et entière, dans le respect absolu les uns des autres.</p>
+                    <p>Il est ce lieu VIVANT où l'Instruction citoyenne et l'ouverture au monde permettent l'épanouissement de chacune et chacun : chaque élève et chaque personnel trouve en son sein, sa place pleine et entière, dans le respect absolu les unes et les autres.</p>
                     
                     <p>Ce grand lycée foisonne de multiples projets qui mettent les jeunes sur un parcours de vie, de découverte et, gageons-le, de réussite.</p>
                     
-                    <p>C'est autour des élèves, des apprentis et des étudiants qui nous sont confiés, que se concentrent notre attention et notre bienveillance, et c'est bien au service de leur réussite que nous œuvrons.</p>
+                    <p>C'est autour des élèves, des apprenties et des étudiantes qui nous sont confiées, que se concentrent notre attention et notre bienveillance, et c'est bien au service de leur réussite que nous œuvrons.</p>
                     
-                    <p>La satisfaction de la transmission du savoir pour les uns, la joie d'apprendre et de grandir pour les autres.</p>
+                    <p>La satisfaction de la transmission du savoir pour les unes, la joie d'apprendre et de grandir pour les autres.</p>
                     
                     <div class="proviseur-quote">
                         <p>« On ne peut vivre mieux qu'en cherchant à devenir meilleur, ni plus agréablement qu'en ayant pleine conscience de son amélioration »</p>
@@ -103,7 +103,7 @@
                     
                     <div class="proviseur-signature">
                         <p class="title">La Proviseure</p>
-                        <p class="motto">Un élan pour l'avenir</p>
+                        <p class="motto">Une élane pour l'avenir</p>
                     </div>
                 </div>
             </div>
@@ -119,8 +119,8 @@
                     <p>&copy; 2024 Lycée Jean-Mermoz - Saint-Louis</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#">Mentions légales</a>
-                    <a href="#">Accessibilité</a>
+                    <a href="mentions-legales.php">Mentions légales</a>
+                    <a href="accessibilite.php">Accessibilité</a>
                     <a href="#">Plan du site</a>
                     <a href="admin/login.php">Administration</a>
                 </div>

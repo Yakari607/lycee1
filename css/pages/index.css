@@ -937,4 +937,32 @@
     .contact-card {
         min-width: 0;
     }
+}
+
+.hero-subtitle {
+    white-space: nowrap;
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.2;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 600px) {
+    .hero-subtitle {
+        white-space: normal;
+        text-overflow: unset;
+    }
+}
+
+.hero-content {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 } 
