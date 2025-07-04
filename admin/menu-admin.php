@@ -183,7 +183,7 @@ if (isset($_GET['edit_meal'])) {
             </div>
             <div class="form-group">
                 <label for="nom">Nom du plat</label>
-                <input type="text" id="nom" name="nom" required>
+                <input type="text" id="nom" name="nom" value="<?= htmlspecialchars($nom ?? '') ?>" required>
             </div>
             <div class="form-group">
                 <label>Options</label>
